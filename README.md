@@ -407,25 +407,35 @@ como toda la configuración de dependencias:
 ├── package.json
 ├── src
 |  ├── data (según con qué data trabajes)
-|  |  ├── lol
-|  |  |  ├── lol.js
-|  |  |  ├── lol.json
-|  |  |  └── README.md
-|  |  ├── pokemon
-|  |  |  ├── pokemon.js
-|  |  |  ├── pokemon.json
-|  |  |  └── README.md
-|  |  └── rickandmorty
-|  |  |  ├── rickandmorty.js
-|  |  |  ├── rickandmorty.json
-|  |  |  └── README.md
 |  |  └── athletes
 |  |  |  ├── athletes.js
 |  |  |  ├── athletes.json
+|  |  |  ├── README.pt-BR.md
 |  |  |  └── README.md
 |  |  └── ghibli
 |  |  |  ├── ghibli.js
 |  |  |  ├── ghibli.json
+|  |  |  ├── README.pt-BR.md
+|  |  |  └── README.md
+|  |  └── harrypotter
+|  |  |  ├── data.js
+|  |  |  ├── harry.json
+|  |  |  ├── README.pt-BR.md
+|  |  |  └── README.md
+|  |  ├── lol
+|  |  |  ├── lol.js
+|  |  |  ├── lol.json
+|  |  |  ├── README.pt-BR.md
+|  |  |  └── README.md
+|  |  ├── pokemon
+|  |  |  ├── pokemon.js
+|  |  |  ├── pokemon.json
+|  |  |  ├── README.pt-BR.md
+|  |  |  └── README.md
+|  |  └── rickandmorty
+|  |  |  ├── rickandmorty.js
+|  |  |  ├── rickandmorty.json
+|  |  |  ├── README.pt-BR.md
 |  |  |  └── README.md
 |  ├── data.js
 |  ├── index.html
@@ -434,7 +444,7 @@ como toda la configuración de dependencias:
 └── test
    └── data.spec.js
 
-directory: 7 file: 20
+directory: 8 file: 29
 ```
 
 ### `src/index.html`
