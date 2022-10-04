@@ -316,6 +316,34 @@ Criterios de Aceptación para cada una.
 En la medida de lo posible, termina una historia de usuario antes de pasar
 a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
 
+#### [Historia de usuario 1]
+
+Yo como usuario [visitante del sitio] quiero poder VER todos los personajes/películas/deportistas para familiarizarme.
+
+**Criterios de Aceptación. Edita/agrega de acuerdo a tu implementación exactamente:**
+
+>* La UI es responsive (teléfonos y PC).
+>* Todos los personajes/películas/deportistas aparecen en una misma vista, en forma
+>de grilla (cuadrícula) sin ningún orden en particular.
+>* La vista no tiene paginación, se hace scroll desde el primer elemento hasta el último.
+>* Cada cuadrícula contiene:
+>
+>>* Nombre de personaje/película/deportista.
+>>* [XXX]
+>>
+>* Al hacer _click/tap_ en cada cuadrícula sucede [XXX].
+>
+>* La UI es exactamente igual al prototipo de alta fidelidad (colores, tamaños de bloques,tipo de letra, tamaño de letra, imágenes, etc. )
+
+**Definición de Terminado. Edita/agrega de acuerdo a tu implementación exactamente**
+
+>* Todo el código está en la rama principal/main del repositorio.
+>
+>* La página está publicada en Github Pages y es accesible mediante un enlace/link/liga.
+>* Cada estudiante del equipo ha hecho _code review_ del código escrito por la(s) otra persona(s).
+>* Se hacen pruebas de usabilidad con al menos 2 usuarias y se incorporan las mejoras identificadas en la versión.
+
+
 ### Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
@@ -609,24 +637,15 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
   Ojo que Cris no diferencia _Definición de terminado_ de _Criterios de
   Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
 * [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
-* [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
 
-## 9. Checklist
+## 9. Para considerar Project Feedback
 
 * [ ] Usa VanillaJS.
-* [ ] Pasa linter (`npm run pretest`)
 * [ ] Pasa tests (`npm test`)
 * [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
 * [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
 * [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
-  `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
-  en `README.md`.
-* [ ] Incluye link a Zeplin en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
-  usabilidad en el `README.md`.
 * [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
 * [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [ ] UI: Permite filtrar data en base a una condición.
