@@ -95,14 +95,14 @@ usuario necesita.
 
 ## 3. Objetivos de aprendizaje generales
 
-Como continuación del Proyecto 1, volverás a trabajar sobre fundamentos de JavaScript, Objetos e Arreglos, manipulación básica del DOM, fundamentos de HTML y CSS.
+Como continuación del Proyecto 1, volverás a trabajar sobre fundamentos de JavaScript, objetos y arreglos, manipulación básica del DOM, fundamentos de HTML y CSS.
 
 Mientras desarrollas este proyecto, te familiarizarás con estos nuevos conceptos:
 
-- Como trabajar con un juego de data y diseñar un interfaz para visualizar y manipular este data
-- Uso de Flexbox en CSS para lograr una pagina web responsiva  
-- Arreglos y sus metodos para manipularlos (`filter`, `sort`, `reduce`)
-- Como escribir HTML y manipular el DOM en una manera dinamica desde el JavaScript
+- Como trabajar con un juego de data y diseñar una interfaz para visualizar y manipular esta data.
+- Uso de Flexbox en CSS para lograr hacer una página web responsiva. 
+- Arreglos y sus métodos para manipularlos (`filter`, `sort`, `reduce`).
+- Como escribir HTML y manipular el DOM de una manera dinámica desde JavaScript.
 
 ## 4. Consideraciones generales
 
@@ -136,7 +136,7 @@ a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
 
 #### [Ejemplo de Historia de usuario]
 
-Yo como usuario [visitante del sitio] quiero poder VER todos los personajes/películas/deportistas para familiarizarme.
+Yo como usuario [visitante del sitio] quiero poder VER todos lxs personajes/películas/deportistas para familiarizarme.
 
 **Criterios de Aceptación. Edita/agrega de acuerdo a tu implementación exactamente:**
 
