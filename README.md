@@ -91,6 +91,14 @@ El objetivo principal de este proyecto es que aprendas a diseñar y construir un
 interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
 usuario necesita.
 
+
+### Objetivos generales
+
+1.Trabajar con un juego de data y diseñar un interfaz para visualizarlo.
+2.Hacer una interfaz responsiva usando CSS tipo flexbox
+3.Trabajar con arreglos y aprender sus metodos - filter, sort, reduce
+4.Hacer una interfaz mostrando la data en una manera dinamica desde el JavaScript.
+
 ## 3. Objetivos de aprendizaje
 
 Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
@@ -266,11 +274,11 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [ ] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
 
-### user-centricity
+### Centrado en el usuario
 
 - [ ] **Diseñar y desarrollar un producto o servicio poniendo a las usuarias en el centro**
 
-### product-design
+### Diseño de producto
 
 - [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
 
