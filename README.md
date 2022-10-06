@@ -95,7 +95,7 @@ usuario necesita.
 
 ## 3. Objetivos de aprendizaje generales
 
-Como continuación del proyecto de Proyecto 1, volverás a trabajar sobre fundamentos de JavaScript, Objetos e Arreglos, manipulación básica del DOM, fundamentos de HTML y CSS.
+Como continuación del Proyecto 1, volverás a trabajar sobre fundamentos de JavaScript, Objetos e Arreglos, manipulación básica del DOM, fundamentos de HTML y CSS.
 
 Mientras desarrollas este proyecto, te familiarizarás con estos nuevos conceptos:
 
