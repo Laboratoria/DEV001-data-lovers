@@ -316,7 +316,7 @@ Criterios de Aceptación para cada una.
 En la medida de lo posible, termina una historia de usuario antes de pasar
 a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
 
-#### [Historia de usuario 1]
+#### [Ejemplo de Historia de usuario]
 
 Yo como usuario [visitante del sitio] quiero poder VER todos los personajes/películas/deportistas para familiarizarme.
 
@@ -640,13 +640,9 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 
 ## 9. Para considerar Project Feedback
 
-* [ ] Usa VanillaJS.
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
-  lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
+ * [ ] Tiene una interfaz que cumple los criterios mínimos con al menos 3 Historias de Usuario.
+ * [ ] El proyecto será entregado incluyendo pruebas unitarias que cubren un mínimo del 70% de statements, functions, lines y branches (fijate en las funciones de filtrar, ordenar etc la data).
+ * [ ] El proyecto será entregado libre de errores de eslint (los warnings están ok).
+ * [ ] El proyecto será entregado subiendo tu código a GitHub.
+ * [ ] La interfaz será "desplegada" usando GitHub Pages.
+ * [ ] El README contiene una definición del producto e Historias de Usuario.
