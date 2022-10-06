@@ -93,13 +93,13 @@ interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
 usuario necesita.
 
 
-## 3. Objetivos generales
+## 3. Objetivos de aprendizaje generales
 
 Como continuación del proyecto de Proyecto 1, volverás a trabajar sobre fundamentos de JavaScript, Objetos e Arreglos, manipulación básica del DOM, fundamentos de HTML y CSS.
 
 Mientras desarrollas este proyecto, te familiarizarás con estos nuevos conceptos:
 
-- Como trabajar con un juego de data y diseñar un interfaz para visualizarlo
+- Como trabajar con un juego de data y diseñar un interfaz para visualizar y manipular este data
 - Uso de Flexbox en CSS para lograr una pagina web responsiva  
 - Arreglos y sus metodos para manipularlos (`filter`, `sort`, `reduce`)
 - Como escribir HTML y manipular el DOM en una manera dinamica desde el JavaScript
