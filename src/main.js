@@ -1,6 +1,6 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
+/* data => trae el objeto pokemon con 251 de ellos*/
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+/* Aquí irá nuestros IMPORTS a archivos JS */
+import { example, anotherExample } from "./js/data.js";
 
-console.log(example, data);
+console.log(data);
