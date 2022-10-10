@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Data Lovers - PokeLab</title>
     <!-- Reset CSS | Resetea los estilos por defecto del navegador -->
     <link rel="stylesheet" href="./css/reset.css" />
@@ -9,7 +9,50 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <main id="root">
+
+      <section class="container-header">
+        <nav class="container-nav">
+          <img src="#" alt="logo-pokelab">
+          <div class="container-responsive-type-pokemon" id="movil-type-pokemon">
+            <img src="" alt="icon-type-pokemon" class="icon-type-pokemon">
+          </div>
+        </nav>
+        <section class="container-intro-text">
+          <div class="container-type-pokemon" id="laptop-type-pokemon">
+            <img src="" alt="arrow-left">
+
+            <img src="" alt="arrow-rigth">
+          </div>
+          <section>
+            <img src="" alt="" />
+            <div>
+              <h1>Catch Pokémon<span>Find your buddy!</span></h1>
+              <img src="" alt="" />
+              <input
+                type="text"
+                placeholder="Search your pokémon..."
+                class="input-search-pokemon"
+              />
+            </div>
+            <img src="" alt="" />
+          </section>
+        </section>
+      </section>
+
+      <section class="container-cards">
+        <div class="sort-cards">
+          <h2 class="subtitle-pokemon">Pokemons <span class="subtitle-result">(251 results)</span></h2>
+          <select name="sort-pokemons-by" id="sort-pokemons-by" class="sort-pokemons-by">
+            <option value="a-z">A-Z</option>
+            <option value="a-z">Z-A</option>
+          </select>
+        </div>
+        <section class="container-numbers-pokemons" id="numbers-pokemons">
+
+        </section>
+      </section>
+    </main>
     <script src="./js/main.js" type="module"></script>
   </body>
 </html>
