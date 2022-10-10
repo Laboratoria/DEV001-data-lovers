@@ -1,9 +1,33 @@
-// estas funciones son de ejemplo
+import ghibli from "./data/ghibli/ghibli";
+const objetos = ghibli
 
-export const example = () => {
-  return 'example';
-};
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+const dataGhibli ={
+     datosTodasPeliculas :function(){
+      const films = objetos.films
+      let arrayFilms = [...films]
+       
+      
+      return arrayFilms
+     },
+     
+     mostrarPeliculaIndividual : function(id){
+        const arrayFilms = dataGhibli.datosTodasPeliculas
+        const idCard = id
+        const filmsId = arrayFilms.filter(arrayFilms => arrayFilms.id == idCard)
+
+        return filmsId
+     },
+
+    ordenarPelicula : function(){
+
+
+    },
+
+    
+
+
+}
+
+
+export default dataGhibli
