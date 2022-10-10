@@ -1,0 +1,24 @@
+:root {
+  --color-primary: #1512A8;
+  --color-secondary: #F20000;
+  /*pokémon's types colors*/
+  --color-bug: #92BD2D;
+  --color-dark: #595761;
+  --color-dragon: #0C6AC8;
+  --color-electric: #F2CF0C;
+  --color-fairy: #DB4ECD;
+  --color-fighting: #D73354;
+  --color-fire: #FD2020;
+  --color-flying: #5985D8;
+  --color-ghost: #4455B7;
+  --color-grass: #3B9D32;
+  --color-ground: #DF733C;
+  --color-ice: #39C0A9;
+  --color-normal: #838383;
+  --color-poison: #62087C;
+  --color-psychic: #FF6B67;
+  --color-rock: #B19526;
+  --color-steel: #308497;
+  --color-water: #219CE1;
+}
+
