@@ -95,7 +95,6 @@ const typesPokemon = [
 
 let counter = 0;
 
-
 const carouselTypes = {
   addTypesPokemon: (containerForTypes) => {
     typesPokemon.forEach((type) => {
@@ -106,32 +105,98 @@ const carouselTypes = {
     });
   },
   functionalityCarousel: (iconRigth, iconLeft, containerTypePokemon) => {
-    
-    iconRigth.addEventListener("click", ()=>{
-        counter++;
+    iconRigth.addEventListener("click", () => {
+      counter++;
 
-        /*containerTypePokemon.style.left = -(740 * counter) + "px 0";*/
-        for(let i of containerTypePokemon){
-            if (counter == 0) {i.style.left = "0px";}
-            if (counter == 1) {i.style.left = "-500px";}
-            if (counter == 2) {i.style.left = "-1000px";}
-            if (counter > 2) {counter = 2;}
+      if (window.screen.width < 600) {
+        for (let i of containerTypePokemon) {
+          if (counter == 0) {
+            i.style.left = "0px";
+          }
+          if (counter == 1) {
+            i.style.left = "-700px";
+          }
+          if (counter == 2) {
+            i.style.left = "-1400px";
+          }
+          if (counter == 3) {
+            i.style.left = "-2100px";
+          }
+          if (counter == 4) {
+            i.style.left = "-2800px";
+          }
+          if (counter == 5) {
+            i.style.left = "-3500px";
+          }
+          if (counter > 5) {
+            counter = 5;
+          }
         }
-
+      } else {
+        
+        for (let i of containerTypePokemon) {
+          if (counter == 0) {
+            i.style.left = "0px";
+          }
+          if (counter == 1) {
+            i.style.left = "-500px";
+          }
+          if (counter == 2) {
+            i.style.left = "-1000px";
+          }
+          if (counter > 2) {
+            counter = 2;
+          }
+        }
+      }
     });
 
-    iconLeft.addEventListener("click", ()=>{
-        counter--;
 
-        /*containerTypePokemon.style.left = -(740 * counter) + "px 0";*/
-        for(let i of containerTypePokemon){
-            if (counter == 0) {i.style.left = "0px";}
-            if (counter == 1) {i.style.left = "-500px";}
-            if (counter == 2) {i.style.left = "-1000px";}
-            if (counter < 0) {counter=0;}
+    iconLeft.addEventListener("click", () => {
+      counter--;
+
+      if (window.screen.width < 600) {
+        for (let i of containerTypePokemon) {
+          if (counter == 0) {
+            i.style.left = "0px";
+          }
+          if (counter == 1) {
+            i.style.left = "-700px";
+          }
+          if (counter == 2) {
+            i.style.left = "-1400px";
+          }
+          if (counter == 3) {
+            i.style.left = "-2100px";
+          }
+          if (counter == 4) {
+            i.style.left = "-2800px";
+          }
+          if (counter == 5) {
+            i.style.left = "-3500px";
+          }
+          if (counter > 5) {
+            counter = 5;
+          }
         }
-
+      } else {
+        for (let i of containerTypePokemon) {
+          if (counter == 0) {
+            i.style.left = "0px";
+          }
+          if (counter == 1) {
+            i.style.left = "-500px";
+          }
+          if (counter == 2) {
+            i.style.left = "-1000px";
+          }
+          if (counter < 0) {
+            counter = 0;
+          }
+        }
+      }
     });
+
 
   },
 };
