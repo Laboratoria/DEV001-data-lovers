@@ -1,5 +1,6 @@
 /* data => trae el objeto pokemon con 251 de ellos*/
-import data from './data/pokemon/pokemon.js';
+import pokemon from './data/pokemon/pokemon.js';
+
 /* Aquí irá nuestros IMPORTS a archivos JS */
 import carouselTypes from './js/CarouselTypes.js';
 import { example, anotherExample } from "./js/data.js";
@@ -18,6 +19,3 @@ const containerTypePokemon = document.querySelectorAll(".CardTypePokemon");
 
 carouselTypes.functionalityCarousel(iconRigth, iconLeft, containerTypePokemon);
 
-
-
-console.log(data);
