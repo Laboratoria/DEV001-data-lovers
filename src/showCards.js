@@ -9,7 +9,7 @@ let container = document.getElementById("numbers-pokemons")
     let showPokemons= pokeData.forEach ((pokemon) => {
         let data = `<section class="cuadroPokemon"><div class="parteSuperior" id="parteSuperior"> <p class="infoUp" id="num"> ${pokemon.num} </p> <p class= "infoUp" id="region">${pokemon.generation.name}</p> <div class="photoStyle" id="photoStyle"><img src=${pokemon.img} alt="pokemones"></div>
         <h1 class="introCard" id="introCard"> ${pokemon.name} </h1> </div>
-        <section class=parteInferior id="parteInferior"><p class "type" id="type"> ${pokemon.type}</p></section>`
+        <section class=parteInferior id="parteInferior"><button class "type" id="type" disabled> ${pokemon.type}</button></section>`
        
         container.insertAdjacentHTML("beforebegin", data);
 
