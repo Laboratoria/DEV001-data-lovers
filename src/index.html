@@ -6,7 +6,45 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <section class="modal" id="modal">
+      <div class="cabecero">
+         modal
+         <span class="close" id="close">&times;</span>
+      </div>
+     <div class="paginas" id="paginas">
+         <section id="muestra" class="muestra"></section>
+         <section id="personajes" class="personajes"></section>
+         <section id="locacion" class="locacion"></section>
+         <section id="vehiculos" class="vehiculos"></section>
+     </div>
+ </section>
+ 
+ <section class="todas" id="row">
+     <div class="container">
+         <div class="row mt-3">
+             <div class="col">
+                 <h2>Listado de datos</h2>
+                 <div class="my-3">
+                     <table class="table" id="lista-usuarios">
+                         <thead>
+                             <tr>
+                                 <th scope="col">title</th>
+                                 <th scope="col">description</th>
+                                 <th scope="col">director</th>
+                                 <th scope="col">poster</th>
+                                 
+                             </tr>
+                         </thead>
+                         <tbody>
+                         </tbody>
+                     </table>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+ </section>
+    
     <script src="main.js" type="module"></script>
   </body>
 </html>

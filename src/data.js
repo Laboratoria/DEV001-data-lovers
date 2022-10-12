@@ -1,4 +1,4 @@
-import ghibli from "./data/ghibli/ghibli";
+import ghibli from "./data/ghibli/ghibli.js";
 const objetos = ghibli
 
 
@@ -12,7 +12,7 @@ const dataGhibli ={
      },
      
      mostrarPeliculaIndividual : function(id){
-        const arrayFilms = dataGhibli.datosTodasPeliculas
+        const arrayFilms = dataGhibli.datosTodasPeliculas()
         const idCard = id
         const filmsId = arrayFilms.filter(arrayFilms => arrayFilms.id == idCard)
 
