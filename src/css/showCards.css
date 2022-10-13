@@ -5,6 +5,7 @@
 .container-cards{
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   background-color: #F7F8F8;
 
@@ -20,6 +21,9 @@
   gap: 20px;
   padding: 40px 60px;
   background-color: #F7F8F8;
+  box-sizing: border-box;
+  max-width: 1280px;
+  width: 100%;
 }
 
 .container-cards-pokemon-a{
@@ -28,6 +32,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 1280px;
   gap: 30px;
 
 }
@@ -58,6 +63,7 @@
   margin-bottom: 20px;
   margin-left: 2.3em;
 }
+
 #circle{
   z-index:0;
   background-color: rgb(216, 216, 216);
@@ -65,15 +71,12 @@
   height: 100px;
   border-radius: 100%;
   margin-top: 10px;
-
 }
 
 #img{
   position: absolute;
   z-index:0;
   justify-content: center;
-  
-  
 }
 
 .introCard{
@@ -83,7 +86,6 @@
   color: #16133A;
   font-size: 1.3em;
   text-transform: capitalize;
-
 }
 
 .sort-pokemons-by{
@@ -94,7 +96,6 @@
   font-weight: 600;
   border: none;
   flex-grow: 0.1;
-  
 }
 
 .subtitle-pokemon{
@@ -118,7 +119,6 @@
   color: #16133a ;
   font-weight: 600;
   opacity: 0.8;
-
 }
 
 #pokebola{
