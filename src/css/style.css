@@ -94,3 +94,9 @@
 .WaterColor{
   background: var(--color-water);
 }
+
+/*Clases que se utiliza para filtrar las cartas en el buscador*/
+
+.hideCard{
+  display: none !important;
+}
