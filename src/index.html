@@ -7,18 +7,77 @@
   </head>
   <body>
     <div id="root"></div>
-    <p>Prueba 1</p>
+
+    <header>
+      <nav>
+        <ul>
+          <li> <a href="">Inicio</a>
+          </li>
+          <li>
+            <a href="">Estadísticas</a>
+          </li>
+        </ul>
+       
+        
+      </nav>
+    </header>
+   
 
     <H1> Rick y Morty </H1>
 
+<p id="demo"> </p>
+
+
+    <h2> Filtrar </h2>
+    <div id="BotonesFiltro">
+      <button class="btn active" onclick="filterSelection('all')"> Todos los personajes</button>
+      <button class="btn" onclick="filterSelection('statusAlive')"> Status Alive </button>
+      <button class="btn" onclick="filterSelection('statusDead')"> Status Dead </button>
+      <button class="btn" onclick="filterSelection('géneroFemale')"> Género Female</button>
+      <button class="btn" onclick="filterSelection('géneroMale')"> Género Male</button>
+      <button class="btn" onclick="filterSelection('EspecieHuman')"> Especie Human </button>
+      <button class="btn" onclick="filterSelection('EspecieAlien')"> Especie Alien</button>
+    </div>
+
+<br>
+
+<section>
+  <input id="buscar" type="text" placeholder="Buscar personaje">
+</section>
+
+<br>
+<select name="filtrar" id="filter">
+  <option value="title">Filtrar</option>
+  <option value="status"> Alive</option>
+  <option value="status"> Dead</option>
+  <option value="género">Female</option>
+  <option value="género">Male</option>
+  <option value="Especie">Human</option>
+  <option value="Especie">Alien</option>
+  
+  </select>
+  <br> <br>
+
+<select name="ordenar" id="sort">
+<option value="title"> Ordenar </option>
+<option value="name"> Nombre</option>
+<option value="temporada">Temporada</option>
+
+</select>
     <section>
       <div>
-        Personajes 
+        <h2>Personajes </h2>
       </div>
     </section>
+  
 
 
 
+<br>
+
+<footer>
+  Desarrollado por P y G
+</footer>
 
 
     <script src="main.js" type="module"></script>
