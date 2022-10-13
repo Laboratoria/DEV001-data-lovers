@@ -1,0 +1,114 @@
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+:root {
+    --background-color: white;
+    --navbar-color: white;
+    --cards-section-color: paleturquoise;
+    --footer-color: gray;
+    --border-color: black;
+    --font-headings: ;
+    --font-body: ;
+}
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #home {
+    height: auto;
+    width: 300px;
+  }
+  .card-container {
+    background-color: grey;
+    height: 170px;
+    width: 170px;
+  }
+  .card-container img {
+    width: 20px;
+  }
+  /* INICIO GRID */ 
+  .container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr max-content 1fr;
+    gap: 8px 0px;
+    grid-auto-flow: row;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+      "nav nav nav"
+      "section-title section-title section-title"
+      "cards cards cards"
+      "footer footer footer";
+    width: 100%;
+    height: 100%;
+  }
+  
+  nav {
+    grid-area: nav;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+  }
+  
+  .section-title {
+    grid-area: section-title;
+    display: inline-flex;
+    gap: 5em;
+  }
+  
+  .cards { 
+    grid-area: cards;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .filter { 
+    grid-area: filter;
+  }
+  
+  footer { 
+    grid-area: footer; 
+    text-align: center;
+    background-color: paleturquoise;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 30px;
+  }
+  
+  /* FIN GRID */
+  
+  .cards img {
+    max-width: 10em;
+  }
+  .card-container {
+    max-width: 10em;
+    display: none;
+  }
+  .section-title, .cards {
+    background-color: paleturquoise;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: beige;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .card img {
+    justify-content: center;
+    align-self: center;
+  }
+
+  .card p {
+    justify-content: flex-start;
+  }

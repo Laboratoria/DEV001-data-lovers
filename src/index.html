@@ -1,23 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <nav></nav>
-      <section>
-        <div class="card">
-          <img src="img_avatar.png" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>John Doe</b></h4>
-            <p>Architect & Engineer</p>
-          </div>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  
+  <div class="container">
+    <nav>
+      <div class="statistics">
+        <div class="statistics-button">
+          <button>Estadísticas</button>
         </div>
-      </section>
+      </div>
+      <div class="logo">
+        <a href="index.html"><img
+            src="https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png"
+            id="home"></a>
+      </div>
+      <div class="quiz">
+        <a href="" class="quiz"><button>Quiz</button></a>
+      </div>
+    </nav>
+
+    
+    <div class="section-title">
+      <div class="category">
+        <h2>Personajes</h2>
+       
+        
+      </div>
+      <div class="filter-data">
+        <section>
+          <input id="buscar" type="text" placeholder="Buscar personaje">
+
+          <select name="filtrar" id="filter">
+            <option value="title">Filtrar</option>
+            <option value="all">Todos los personajes</option>
+            <option value="status"> Alive</option>
+            <option value="status"> Dead</option>
+            <option value="género">Female</option>
+            <option value="género">Male</option>
+            <option value="Especie">Human</option>
+            <option value="Especie">Alien</option>
+
+          </select>
+
+          <select name="ordenar" id="sort">
+            <option value="title"> Ordenar </option>
+            <option value="name"> Nombre</option>
+            <option value="temporada">Temporada</option>
+
+          </select>
+        </section>
+      </div>
     </div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+    <div class="cards" id="cards">
+      <div class="card-1">
+      </div>
+    </div>
+
+
+    <footer>
+      Desarrollado por Gabriela y Pilar
+       
+      
+    </footer>
+  </div>
+
+
+
+
+  
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
