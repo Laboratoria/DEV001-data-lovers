@@ -1,0 +1,30 @@
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 245px;
+  background-color: #D99982;
+  color: #f2f2f2;
+  font-size: 80px;
+  text-align: ;
+}
+
+.body {
+  height: 774px;
+  background-color: #FFEAE2;
+}
+
+.footer {
+  height: 61px;
+  background-color: #A68F97;
+}
+
+ .totoro {
+  position: fixed;
+  width: 288px;
+  height: 337px;
+  bottom: 0;
+  right: 0; 
+}
