@@ -12,9 +12,9 @@ let showPokemons = pokeData.forEach((pokemon) => {
   <span class="infoUp" id="num"> ${pokemon.num} </span> 
   <span class= "infoUp" id="region">${pokemon.generation.name}</span> 
   
-  <div class="photoStyle" id="photoStyle">
-  <img src=${pokemon.img} alt="pokemones">
-  </div>
+  <section class="photoStyle" id="photoStyle">
+  <img id= "img" src=${pokemon.img} alt="pokemones"> <div class = "circle" id= "circle"></div>
+  </section>
 
     <h1 class="introCard" id="introCard"> ${pokemon.name} </h1> 
     </div>

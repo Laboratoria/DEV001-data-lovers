@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background-color: #F7F8F8;
 }
 
 .sort-cards{
@@ -15,6 +16,7 @@
   align-items: center;
   gap: 20px;
   padding: 40px 60px;
+  background-color: #F7F8F8;
 }
 
 .container-cards-pokemon-a{
@@ -23,24 +25,74 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 20px;
+  gap: 30px;
 }
 
 .cuadroPokemon{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
+  padding: 20px;
   width: 200px;
   height: 200px;
-  background-color: aqua;
-  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
   gap: 20px;
+  box-shadow: 10px 5px 5px rgb(182, 182, 182)
 }
 
 .type-span{
   padding: 8px;
-  background-color: beige;
-  border-radius: 5px;
+  background-color: rgba(84, 3, 100, 0.26);
+  border-radius: 10px;
   margin-right: 10px;
+  font-weight: 600;
+}
+
+.photoStyle{
+  position:relative;
+  margin-bottom: 20px;
+}
+#circle{
+  z-index:0;
+  background-color: rgb(216, 216, 216);
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin-top: 10px;
+
+}
+
+#img{
+  position: absolute;
+  z-index:0;
+  
+  
+}
+
+.introCard{
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+  color: #16133A;
+  font-size: 1.3em;
+  text-transform: capitalize;
+
+}
+
+.sort-pokemons-by{
+  background-color: #1512A8;
+  border-radius:10px;
+  color: white;
+  padding: 5px;
+  font-weight: 600;
+  border: none;
+  
+}
+
+.subtitle-pokemon{
+  color: #16133a ;
+  font-weight: 600;
+  opacity: 0.8;
+
 }
