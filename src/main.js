@@ -4,23 +4,25 @@ import dataGhibli from './data.js';
 
 
 //mostrar todos
-const tabla = document.querySelector("#lista-usuarios tbody");
-mostrartodas();
-function mostrartodas() {
+
+mostrarEnPantalla();
+function mostrarEnPantalla() {
+  const pelicula = document.getElementById("peliculas");
    const array = dataGhibli.datosTodasPeliculas();
    for (let i = 0; i < array.length; i++) {
-      const row = document.createElement("tr");
-      row.innerHTML += `
-                   <td class="row">${array[i].title}</td>
-                  <td class="row" >${array[i].description}</td>
-                  <td class="row">${array[i].director}</td>
+     // pelicula.innerHTML = ""
+      pelicula.innerHTML += `
+                 <div class = "card_pelicula">
+                  <img src="${array[i].poster}" alt="${array[i].title}">
+                  <p>${array[i].title}</p>
+                  <p>${array[i].director}</p>
                   
                   <button class="select" id = "${array[i].id}" >Ver mas...</button>                    
-                  `;
-      tabla.appendChild(row);
+                  </div> `;
+    
     
   }
-}
+}//<p >${array[i].description}</p>
 
 //este es el modal con los detalles de las peliculas al dar click
 
@@ -107,6 +109,20 @@ function mostrarIndividual() {
   
    }
 }
+
+
+//seccion directores
+const directores = document.querySelectorAll(".menu_director");
+
+directores.forEach((director =>{
+   const directorI = director;
+  
+   directorI.addEventListener("click", () =>{
+      const idDirector = directorI.id;
+      const dataDirector = dataGhibli.filtrarDirectores(idDirector);
+      console.log(dataDirector);
+   })
+}))
 
 
 

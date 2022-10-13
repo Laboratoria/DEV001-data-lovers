@@ -1,50 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section class="modal" id="modal">
-      <div class="cabecero">
-         modal
-         <span class="close" id="close">&times;</span>
-      </div>
-     <div class="paginas" id="paginas">
-         <section id="muestra" class="muestra"></section>
-         <section id="personajes" class="personajes"></section>
-         <section id="locacion" class="locacion"></section>
-         <section id="vehiculos" class="vehiculos"></section>
-     </div>
- </section>
- 
- <section class="todas" id="row">
-     <div class="container">
-         <div class="row mt-3">
-             <div class="col">
-                 <h2>Listado de datos</h2>
-                 <div class="my-3">
-                     <table class="table" id="lista-usuarios">
-                         <thead>
-                             <tr>
-                                 <th scope="col">title</th>
-                                 <th scope="col">description</th>
-                                 <th scope="col">director</th>
-                                 <th scope="col">poster</th>
-                                 
-                             </tr>
-                         </thead>
-                         <tbody>
-                         </tbody>
-                     </table>
-                 </div>
-             </div>
-         </div>
-     </div>
-     
- </section>
-    
+</head>
+
+<body>
+    <header>
+
+        <div class="container__menu">
+            <div class="menu">
+                <nav class="nav_menu">
+                    <ul class ="lista_inicio">
+                        <li class="menu_inicio"><a href="#">inicio</a></li>
+                        <li class="menu_inicio"><a href="#">directores</a>
+                            <ul class="menu_directores">
+                                <li><a href="#" id="Hayao Miyazaki" class="menu_director">Hayao Miyazaki</a></li>
+                                <li><a href="#" id="Hiroyuki Morita" class="menu_director">Hiroyuki Morita</a></li>
+                                <li><a href="#" id="Yoshifumi Kondō" class="menu_director">Yoshifumi Kondō</a></li>
+                                <li><a href="#" id="Hiromasa Yonebayashi" class="menu_director">Hiromasa Yonebayashi</a></li>
+                                <li><a href="#" id="Isao Takahata" class="menu_director">Isao Takahata</a></li>
+                                <li><a href="#" id="Gorō Miyazaki" class="menu_director">Gorō Miyazaki</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_inicio"><a href="#" id="fecha">mas recientes</a></li>
+                        <li class="menu_inicio"><a href="#" id="popular">mas destacadas</a></li>
+                        <li class="menu_inicio"><a href="#"id ="orden">todas las peliculas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="modal" id="modal">
+            <div class="cabecero">
+                modal
+                <span class="close" id="close">&times;</span>
+            </div>
+
+            <div class="paginas" id="paginas">
+                <section id="muestra" class="muestra"></section>
+                <section id="personajes" class="personajes"></section>
+                <section id="locacion" class="locacion"></section>
+                <section id="vehiculos" class="vehiculos"></section>
+            </div>
+
+
+        </section>
+
+
+        <section class="peliculas" id="peliculas">
+           
+        
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
     <script src="main.js" type="module"></script>
-  </body>
+</body>
+
 </html>

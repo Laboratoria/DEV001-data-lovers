@@ -1,8 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
 body::-webkit-scrollbar{
     display: none;
 }
 
+.peliculas{
+    display:flex;
+    flex-wrap: wrap;
+}
 
+.card_pelicula{
+    width: 200px;
+    height:450px;
+    margin: 15px;
+}
+.card_pelicula img{
+    width: 100%;
+}
 .modal{
     display: none;
     width: 100%;
@@ -71,4 +90,117 @@ body::-webkit-scrollbar{
 
 .close{
     font-size: 50px;
+}
+
+
+/*menu*/
+
+.container__menu{
+    width: 100%;
+    height: 70px;
+    background: #fdfdfd;
+    padding: 0px 20px;
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+
+.nav_menu{
+    height: 100%;
+}
+
+
+.lista_inicio{
+    height: 100%;
+    display: flex;
+}
+
+
+.menu_inicio{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+
+.menu_inicio a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color: rgb(5, 0, 5);
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+
+
+.menu_inicio a:hover{
+    transform: scale(1.1);
+    background: #fcfeff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+
+/*SUBMENU*/
+
+
+.menu_directores{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(248, 248, 248);
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    z-index: 10;
+    transition: all 300ms ease;
+    list-style: none;
+}
+
+.menu_inicio:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+.menu_directores:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid rgb(255, 255, 255);
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+.menu_director a{
+    display: block;
+    color: #edf0f1;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+.menu_director a:hover{
+    background: #f0f0f0;
+    color: rgb(238, 243, 245);
+    transform: scale(1.2);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }

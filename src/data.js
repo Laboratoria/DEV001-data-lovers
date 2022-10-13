@@ -13,18 +13,27 @@ const dataGhibli ={
      
      mostrarPeliculaIndividual : function(id){
         const arrayFilms = dataGhibli.datosTodasPeliculas()
-        const idCard = id
-        const filmsId = arrayFilms.filter(arrayFilms => arrayFilms.id == idCard)
+        const idCard = id;
+        const filmsId = arrayFilms.filter(arrayFilms => arrayFilms.id == idCard);
 
         return filmsId
      },
 
-    ordenarPelicula : function(){
+    mostrarDataEnPantalla : function(data){
+      const datosPeliculas = data;
+       
 
-
+      return datosPeliculas;
     },
 
+    filtrarDirectores : function(directores){
+      const arrayFilms = dataGhibli.datosTodasPeliculas();
+      const filDirectores = directores;
+      const filtroDirectores =  arrayFilms.filter(arrayFilms => arrayFilms.director == filDirectores);
+      return filtroDirectores;
+    }
     
+
 
 
 }
