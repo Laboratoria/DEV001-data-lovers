@@ -1,85 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
 
-    <header>
-      <nav>
-        <ul>
-          <li> <a href="">Inicio</a>
-          </li>
-          <li>
-            <a href="">Estadísticas</a>
-          </li>
-        </ul>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  
+  <div class="container">
+    <nav>
+      <div class="statistics">
+        <div class="statistics-button">
+          <button>Estadísticas</button>
+        </div>
+      </div>
+      <div class="logo">
+        <a href="index.html"><img
+            src="https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png"
+            id="home"></a>
+      </div>
+      <div class="quiz">
+        <a href="" class="quiz"><button>Quiz</button></a>
+      </div>
+    </nav>
+
+    
+    <div class="section-title">
+      <div class="category">
+        <h2>Personajes</h2>
        
         
-      </nav>
-    </header>
-   
+      </div>
+      <div class="filter-data">
+        <section>
+          <input id="buscar" type="text" placeholder="Buscar personaje">
 
-    <H1> Rick y Morty </H1>
+          <select name="filtrar" id="filter">
+            <option value="title">Filtrar</option>
+            <option value="all">Todos los personajes</option>
+            <option value="status"> Alive</option>
+            <option value="status"> Dead</option>
+            <option value="género">Female</option>
+            <option value="género">Male</option>
+            <option value="Especie">Human</option>
+            <option value="Especie">Alien</option>
 
-<p id="demo"> </p>
+          </select>
 
+          <select name="ordenar" id="sort">
+            <option value="title"> Ordenar </option>
+            <option value="name"> Nombre</option>
+            <option value="temporada">Temporada</option>
 
-    <h2> Filtrar </h2>
-    <div id="BotonesFiltro">
-      <button class="btn active" onclick="filterSelection('all')"> Todos los personajes</button>
-      <button class="btn" onclick="filterSelection('statusAlive')"> Status Alive </button>
-      <button class="btn" onclick="filterSelection('statusDead')"> Status Dead </button>
-      <button class="btn" onclick="filterSelection('géneroFemale')"> Género Female</button>
-      <button class="btn" onclick="filterSelection('géneroMale')"> Género Male</button>
-      <button class="btn" onclick="filterSelection('EspecieHuman')"> Especie Human </button>
-      <button class="btn" onclick="filterSelection('EspecieAlien')"> Especie Alien</button>
+          </select>
+        </section>
+      </div>
     </div>
 
-<br>
-
-<section>
-  <input id="buscar" type="text" placeholder="Buscar personaje">
-</section>
-
-<br>
-<select name="filtrar" id="filter">
-  <option value="title">Filtrar</option>
-  <option value="status"> Alive</option>
-  <option value="status"> Dead</option>
-  <option value="género">Female</option>
-  <option value="género">Male</option>
-  <option value="Especie">Human</option>
-  <option value="Especie">Alien</option>
-  
-  </select>
-  <br> <br>
-
-<select name="ordenar" id="sort">
-<option value="title"> Ordenar </option>
-<option value="name"> Nombre</option>
-<option value="temporada">Temporada</option>
-
-</select>
-    <section>
-      <div>
-        <h2>Personajes </h2>
+    <div class="cards" id="cards">
+      <div class="card-1">
       </div>
-    </section>
+    </div>
+
+
+    <footer>
+      Desarrollado por Gabriela y Pilar
+       
+      
+    </footer>
+  </div>
+
+
+
+
   
+  <script src="main.js" type="module"></script>
+</body>
 
-
-
-<br>
-
-<footer>
-  Desarrollado por P y G
-</footer>
-
-
-    <script src="main.js" type="module"></script>
-  </body>
 </html>
