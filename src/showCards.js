@@ -10,11 +10,13 @@ let showPokemons = () => {
   pokeData.forEach((pokemon) => {
     let data = `<section class="cuadroPokemon">
   <div class="parteSuperior" id="parteSuperior"> 
-  <span class="infoUp" id="num"> ${pokemon.num} </span> 
-  <span class= "infoUp" id="region">${pokemon.generation.name}</span> 
+  <div class = "container-num-region">
   
+  <span class="infoleft" id="num"><img id ="pokebola" src="./assets/icons/pokebola.png">  ${pokemon.num} </span> 
+  <span class= "infoUp" id="region">${pokemon.generation.name}</span> 
+  </div>
   <section class="photoStyle" id="photoStyle">
-  <img id= "img" src=${pokemon.img} alt="pokemones">
+  <img id= "img" src=${pokemon.img} alt="pokemones"> 
   <div class = "circle" id= "circle"></div>
   </section>
 
