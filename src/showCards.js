@@ -23,8 +23,8 @@ let showPokemons = () => {
     <h1 class="introCard" id="introCard"> ${pokemon.name} </h1> 
     </div>
     <section class=parteInferior id="parteInferior">
-    <div class="type" id="type" disabled> ${pokemon.type
-      .map((type) => `<span class="type-span" >${type}</span>`)
+    <div class="typeSize" id="type"> ${pokemon.type
+      .map((type) => `<span class="type-span ${type}">${type}</span>`)
       .join("")}</div>
     </section>`;
 

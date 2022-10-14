@@ -43,7 +43,7 @@
   align-items: center;
   padding: 20px;
   width: 200px;
-  height: 200px;
+  height: 220px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   gap: 20px;
@@ -51,11 +51,14 @@
 }
 
 .type-span{
-  padding: 8px;
-  background-color: rgba(84, 3, 100, 0.26);
+  padding: 10px;
+  /*background-color: rgba(84, 3, 100, 0.26);*/
   border-radius: 10px;
   margin-right: 10px;
   font-weight: 600;
+  color: white;
+  justify-content: center;
+  margin-left: 1em;
 }
 
 .photoStyle{
@@ -86,6 +89,7 @@
   color: #16133A;
   font-size: 1.3em;
   text-transform: capitalize;
+  margin-bottom: 0.1em;
 }
 
 .sort-pokemons-by{
@@ -123,4 +127,11 @@
 
 #pokebola{
   width: 1em;
+}
+
+.typeSize{
+  width: 190px;
+  display: flex;
+  justify-content:space-around;
+
 }

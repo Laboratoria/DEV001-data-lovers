@@ -23,15 +23,19 @@ const containerTypePokemon = document.querySelectorAll(".CardTypePokemon");
 carouselTypes.functionalityCarousel(iconRigth, iconLeft, containerTypePokemon);
 
 
-
-
 /* Importamos elementos que utilizaremos para la funcionalidad de busqueda
 de pokemons para ello necesitaremos el contenedor de las cartas (showCards.js)*/
 
 showPokemons();
 const searchInputName = document.getElementById("input-search-name");
+//console.log(searchInputName)
 const arrayContainerCards = document.querySelectorAll(".cuadroPokemon");
+//console.log(arrayContainerCards)
 const arrayNamePokemons = document.querySelectorAll(".introCard");
 
 searchInput.searchPokemonByName(searchInputName, arrayContainerCards, arrayNamePokemons);
 
+
+
+//console.log(searchByType)
+ 
