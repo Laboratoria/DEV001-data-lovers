@@ -1,14 +1,28 @@
-import dataGhibli from './data.js';
+import ghibli from "./data/ghibli/ghibli.js";
+const objetos = ghibli
+
+import { mostrarDataEnPantalla} from './data.js';
+
+function datosTodasPeliculas  () {
+  const films = objetos.films
+  let arrayFilms = [...films]
+
+
+  return arrayFilms
+}
+
+
 //buscar las imagenes con enlaces rotos
 
-
-
-//mostrar todos
+ window.onload = () => {
+  mostrarDataEnPantalla("all", datosTodasPeliculas());
+};
 
 mostrarEnPantalla();
 function mostrarEnPantalla() {
   const pelicula = document.getElementById("peliculas");
-   const array = dataGhibli.datosTodasPeliculas();
+  
+   const array = mostrarDataEnPantalla("all", datosTodasPeliculas());
    for (let i = 0; i < array.length; i++) {
      // pelicula.innerHTML = ""
       pelicula.innerHTML += `
@@ -21,7 +35,7 @@ function mostrarEnPantalla() {
     
     
   }
-}//<p >${array[i].description}</p>
+}
 
 //boton para la siguiente HU 
 //<button class="select" id = "${array[i].id}" >Ver mas...</button>
