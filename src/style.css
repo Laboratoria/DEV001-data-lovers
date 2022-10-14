@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.header {
+header {
   height: 245px;
   background-color: #D99982;
   color: #f2f2f2;
@@ -17,9 +17,19 @@
   background-color: #FFEAE2;
 }
 
+nav a {
+  text-decoration: none;
+  color: #A68F97;
+}
+
 .footer {
   height: 61px;
   background-color: #A68F97;
+}
+
+nav {
+  width: 100%;
+  
 }
 
  .totoro {
