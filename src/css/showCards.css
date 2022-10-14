@@ -52,10 +52,11 @@
 
 .type-span{
   padding: 8px;
-  background-color: rgba(84, 3, 100, 0.26);
+  /*background-color: rgba(84, 3, 100, 0.26);*/
   border-radius: 10px;
   margin-right: 10px;
   font-weight: 600;
+  color: #ffff;
 }
 
 .photoStyle{

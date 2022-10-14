@@ -16,4 +16,5 @@ const searchInput = {
   },
 };
 
+
 export default searchInput;
