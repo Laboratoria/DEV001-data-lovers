@@ -23,75 +23,75 @@
 }
 
 /*Clases que contienen colores que añadiremos a los contenedores de los tipos de pokemon*/
-.BugColor{
+.bug{
   background: var(--color-bug)
 }
 
-.DarkColor{
+.dark{
   background: var(--color-dark);
 }
 
-.DragonColor{
+.dragon{
   background: var(--color-dragon);
 }
 
-.ElectricColor{
+.electric{
   background: var(--color-electric);
 }
 
-.FairyColor{
+.fairy{
   background: var(--color-fairy);
 }
 
-.FightingColor{
+.fighting{
   background: var(--color-fighting);
 }
 
-.FireColor{
+.fire{
   background: var(--color-fire);
 }
 
-.FlyingColor{
+.flying{
   background: var(--color-flying);
 }
 
-.GhostColor{
+.ghost{
   background: var(--color-ghost);
 }
 
-.GrassColor{
+.grass{
   background: var(--color-grass);
 }
 
-.GroundColor{
+.ground{
   background: var(--color-ground);
 }
 
-.IceColor{
+.ice{
   background: var(--color-ice);
 }
 
-.NormalColor{
+.normal{
   background: var(--color-normal);
 }
 
-.PoisonColor{
+.poison{
   background: var(--color-poison);
 }
 
-.PsychicColor{
+.psychic{
   background: var(--color-psychic);
 }
 
-.RockColor{
+.rock{
   background: var(--color-rock);
 }
 
-.SteelColor{
+.steel{
   background: var(--color-steel);
 }
 
-.WaterColor{
+.water{
   background: var(--color-water);
 }
 
