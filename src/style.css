@@ -1,45 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,800&display=swap');
+
+:root{
+    --verde_color: #445f34;
+    --rosa_color:#b64e69;
+    --rosa_fuerte_color:#9d002b;
+    --rosa_claro_color:#dc8eb5;
+    --verde_claro_color:#a19d7a;
+    --cremita_color:#b0978c;
+    --marron_color:#3c2f29;
+
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body::-webkit-scrollbar{
     display: none;
 }
 
+/* css de las card y del contenedor de las peliculas*/
 .contenedor{
-    margin: auto;
-   
-    width: 100%;
-    max-width: 1000px; 
-    text-align: center;
+    width: 90%; 
+    max-width:1200px ;
     overflow: hidden;
- }
+    margin:  auto;
+    padding: 60px 0;
+}
 
 .peliculas{
+   
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 10px;
+    justify-content: space-evenly;
+   
 }
 
 .card_pelicula{
-    width: 200px;
+    width: 250px;
     height:450px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 15px;
+    background-color: var(--cremita_color);
+
 }
 
 
 .card_pelicula img{
     width: 100%;
     height: 350px;
+    
+}
+.textos_card{
+    margin: 15px 0px;
+    padding: 0 10px;
+}
+
+.boton_card{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    align-items:center;
 }
 
 
-/*modal*/
+.boton_card i{
+    font-size: 20px;
+    color: #ffd60a
+}
+
+.boton_card p{
+   font-weight: 500;
+}
+
+.select{
+    background: var(--rosa_color);
+    border: none;
+    padding: 4px;
+    border-radius: 2px;
+    cursor: pointer
+}
+
+/* css  del modal*/
 .modal{
     display: none;
     width: 100%;
@@ -52,14 +100,87 @@ body::-webkit-scrollbar{
     position: fixed;
 }
 
+.cabecero_modal{
+    width: 100%;
+    height: 70px;
+    background: var(--verde_claro_color);
+    padding: 0px 20px;
+}
+.cabecero_modal_centro{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecero_modal_centro img{
+    width: 200px;
+    height: 100%;
+}
+.close{
+    color:var(--rosa_fuerte_color);
+    font-size: 30px;
+    padding: auto;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color: var(--marron_color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer
+}
 .modal::-webkit-scrollbar{
     display: none;
 }
 
-.paginas{
-    width: 100%;
+.modal_pelicula{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal_imagen{
+    width:50%;
+
+}
+.modal_imagen img{
+    width: 300px;
+    height: 400px;
+}
+.modal_titulo_descripcion{
+    width: 50%;
+    text-align: justify;
+    padding: 0 10px;
+    text-align: center
+
+}
+.modal_titulo_descripcion h2{
+    font-weight: 600;
+    font-size: 50px;
+    color: var(--verde_color)
 }
 
+.modal_director{
+    display:flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin: 15px 0px;
+}
+
+.modal_score_date{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+.modal_score_date i{
+    font-size: 25px;
+    color: #ffd60a
+}
+.modal_texto_largo{
+    display:flex;
+}
 .muestra{
     display: flex;
     flex-wrap: wrap;
@@ -71,10 +192,14 @@ body::-webkit-scrollbar{
     gap: 15px;
     flex-wrap: wrap;
 }
-
+.cont-people .cont-locacion .cont-vehiculos{ 
+    width: 100px;
+    height: 100px;
+    font-size: 15px;
+}
 .cont-people img{
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
 }
 
 .locacion{
@@ -85,8 +210,8 @@ body::-webkit-scrollbar{
 }
 
 .cont-locacion img{
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 00px;
 }
 
 .vehiculos{
@@ -97,18 +222,12 @@ body::-webkit-scrollbar{
 }
 
 .cont-vehiculos img{
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
 }
 
-.select{
-    background: violet;
-    border:1px solid;
-}
 
-.close{
-    font-size: 50px;
-}
+
 
 
 /*menu*/

@@ -1,7 +1,7 @@
 import ghibli from "./data/ghibli/ghibli.js";
 const objetos = ghibli
 
-import { mostrarDataEnPantalla} from './data.js';
+import { mostrarDataEnPantalla , mostrarPeliculaIndividual} from './data.js';
 
 function datosTodasPeliculas  () {
   const films = objetos.films
@@ -16,6 +16,7 @@ function datosTodasPeliculas  () {
 
  window.onload = () => {
   mostrarDataEnPantalla("all", datosTodasPeliculas());
+  mostrarIndividual()
 };
 
 mostrarEnPantalla();
@@ -28,103 +29,110 @@ function mostrarEnPantalla() {
       pelicula.innerHTML += `
                  <div class = "card_pelicula">
                   <img src="${array[i].poster}" alt="${array[i].title}">
-                  <p>${array[i].title}</p>
-                  <p>${array[i].director}</p>
-                  <p>${array[i].rt_score}</p>
+                  <div class = "textos_card"
+                     <p>${array[i].title}</p>
+                     <p>director: ${array[i].director}</p>
+                     
+                  </div>
+                  <div class = "boton_card" 
+                    <span><p><i class="bx bxs-star"></i>${array[i].rt_score}</p></span>
+                    <button class="select" id = "${array[i].id}" >view more...</button>
+                  </div>
                   </div> `;
     
     
   }
 }
 
-//boton para la siguiente HU 
-//<button class="select" id = "${array[i].id}" >Ver mas...</button>
-
 //este es el modal con los detalles de las peliculas al dar click
 
-// const modal = document.getElementById("modal");
-// const abrir = document.querySelectorAll(".select");
-// const cerrar = document.getElementById("close");
-// const buttons = document.querySelectorAll("button");
+const modal = document.getElementById("modal");
+const abrir = document.querySelectorAll(".select");
+const cerrar = document.getElementById("close");
+const buttons = document.querySelectorAll(".select");
 
-// abrir.forEach(abierto =>{
-//      abierto.addEventListener("click", () => {
-//       modal.style.display = "block";
-//     });
-// })
-//   cerrar.addEventListener("click", function () {
-//     modal.style.display = "none";
-// });
+abrir.forEach(abierto =>{
+     abierto.addEventListener("click", () => {
+      modal.style.display = "block";
+    });
+})
+  cerrar.addEventListener("click", function () {
+    modal.style.display = "none";
+});
 
-// mostrarIndividual();
-// function mostrarIndividual() {
-//   for (let i = 0; i < buttons.length; i++) {
-//     const boton = buttons[i];
-//     let idCard;
-//     const pagina = document.getElementById("muestra");
-//     const personajes = document.getElementById("personajes");
-//     const location = document.getElementById("locacion");
-//     const vehiculos = document.getElementById("vehiculos");
-//     boton.addEventListener("click", () => {
-//       idCard = boton.id;
-//       const id = dataGhibli.mostrarPeliculaIndividual(idCard);
+
+function mostrarIndividual() {
+  for (let i = 0; i < buttons.length; i++) {
+    const boton = buttons[i];
+    let idCard;
+    const pagina = document.getElementById("muestra");
+    const personajes = document.getElementById("personajes");
+    const location = document.getElementById("locacion");
+    const vehiculos = document.getElementById("vehiculos");
+    boton.addEventListener("click", () => {
+      idCard = boton.id;
+      const id = mostrarPeliculaIndividual(idCard, datosTodasPeliculas() );
       
-//       id.forEach(element => {
-//         pagina.innerHTML = `
-//         <img src="${element.poster}" alt="">
-//         <p>${element.title}</p>
-//         <p>${element.director}</p>
-//         <p>${element.description}</p>
-//         <p>${element.producer}</p>
-//         <p>${element.release_date}</p>
-//         <p>${element.rt_score}</p>
-         
-//         `;
-//           personajes.innerHTML = "";
-//           element.people.forEach(persona =>{
-//           personajes.innerHTML +=
-//            `<div class = "cont-people">
-//              <p>${persona.name}</p>
-//              <p>${persona.gender}</p>
-//              <p>${persona.age}</p>
-//              <p>${persona.eye_color}</p>
-//             <p>${persona.hair_color}</p>
-//             <p>${persona.specie}</p>
-//            </div>
-//            ` 
-//           });
+      id.forEach(element => {
+        pagina.innerHTML = `
+        <div class="modal_pelicula">
+           <div class="modal_imagen">
+              <img src="${element.poster}" alt="">
+           </div>
+           <div class="modal_titulo_descripcion">
+              <h2>${element.title}</h2>
+              <div class = "modal_director"
+                <p>producer: ${element.producer}</p>
+                <p>director: ${element.director}</p>
+              </div>
+              <div class="modal_texto_largo"  
+                 <p>${element.description}</p>
+              </div>  
+              <div class="modal_score_date"
+                <p>release date: ${element.release_date}</p>
+                <p>score: <i class="bx bxs-star"></i>${element.rt_score}</p>
+            </div>
+        </div>
+        `;
+          personajes.innerHTML = "";
+          element.people.forEach(persona =>{
+          personajes.innerHTML +=
+           `<div class = "cont-people">
+            <img src="${persona.img}" alt="${persona.name}">
+             <p>${persona.name}</p>
+             <p>${persona.specie}</p>
+           </div>
+           ` 
+          });
           
-//           location.innerHTML = ""
-//           element.locations.forEach(locacion =>{
+          location.innerHTML = ""
+          element.locations.forEach(locacion =>{
           
-//             location.innerHTML +=
-//             `<div class = "cont-locacion">
-//             <p>${locacion.name}</p>
-//             <p>${locacion.climate}</p>
-//             <p>${locacion.terrain}</p>
-//             <p>${locacion.surface_water}</p>
-            
-//             </div>`
+            location.innerHTML +=
+            `<div class = "cont-locacion">
+               <img src="${locacion.img}" alt="${locacion.name}">
+               <p>${locacion.name}</p>
+               <p>${locacion.climate}</p>
+            </div>`
 
-//           });
+          });
           
-//           vehiculos.innerHTML = ""
-//           element.vehicles.forEach(vehiculo =>{
-//             vehiculos.innerHTML +=
-//             `<div class = "cont-vehiculos">
-//             <p>${vehiculo.name}</p>
-//             <p>${vehiculo.description}</p>
-//             <p>${vehiculo.vehicle_class}</p>
-//             <p>${vehiculo.length}</p>
-//             <p>${vehiculo.pilot.name}</p>
+          vehiculos.innerHTML = ""
+          element.vehicles.forEach(vehiculo =>{
+            vehiculos.innerHTML +=
+            `<div class = "cont-vehiculos">
+            <img src="${vehiculo.img}" alt="${vehiculo.name}">
+            <p>${vehiculo.name}</p>
+            <p>${vehiculo.description}</p>
+            <p>${vehiculo.pilot.name}</p>
                      
-//             </div>`
-//           });
-//         });
-//        });
+            </div>`
+          });
+        });
+       });
   
-//    }
-// }
+   }
+}
 
 
 // //seccion directores
