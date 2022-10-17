@@ -140,6 +140,7 @@
         font-size: 40px;
         text-align: center;
         border-radius: 20px;
+      
     }
 
     .search-pikachu {
@@ -152,4 +153,25 @@
         display: none;
     }
 
+}
+
+.adviceError {
+	display: flex;
+
+}
+
+.noError{
+  display: none;
+}
+
+
+#adviceError{
+  color: rgb(243, 0, 0);
+  font-weight: 500;
+  margin-top: 15px;
+  opacity: 0.8;
+  width: 300px;
+  height: 25px;
+  font-size: 1em;
+  text-align: center;
 }

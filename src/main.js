@@ -60,10 +60,7 @@ showPokemons();
 const searchInputName = document.getElementById("input-search-name");
 const arrayContainerCards = document.querySelectorAll(".cuadroPokemon");
 const arrayNamePokemons = document.querySelectorAll(".introCard");
-
 searchInput.searchPokemonByName(searchInputName, arrayContainerCards, arrayNamePokemons);
 */
 
 searchInput.searchPokemonByName();
-
-

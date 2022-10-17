@@ -26,7 +26,6 @@ let showPokemons = (newPokemonArray) => {
   <img id= "img" src=${pokemon.img} alt="pokemones"> 
   <div class = "circle" id= "circle"></div>
   </section>
-
     <h1 class="introCard" id="introCard"> ${pokemon.name} </h1> 
     </div>
     <section class=parteInferior id="parteInferior">
@@ -47,6 +46,7 @@ let showPokemons = (newPokemonArray) => {
     searchInput.searchPokemonByName(arrayContainerCards, arrayNamePokemons);
   });
 };
+
 
 //let type= pokemonCards.filter(pokemon=> pokemon.type == "fire")
 //console.log (type)

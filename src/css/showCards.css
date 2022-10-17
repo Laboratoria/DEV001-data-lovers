@@ -43,7 +43,7 @@
   align-items: center;
   padding: 20px;
   width: 200px;
-  height: 200px;
+  height: 220px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   gap: 20px;
@@ -87,6 +87,7 @@
   color: #16133A;
   font-size: 1.3em;
   text-transform: capitalize;
+  margin-bottom: 0.1em;
 }
 
 .sort-pokemons-by{
@@ -124,4 +125,11 @@
 
 #pokebola{
   width: 1em;
+}
+
+.typeSize{
+  width: 190px;
+  display: flex;
+  justify-content:space-around;
+
 }
