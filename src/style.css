@@ -1,14 +1,24 @@
 * {
   font-family: 'Inter', sans-serif;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  color: #F2F2F2;
 }
 
 #root {
   display: flex;
   flex-direction: column;
+  max-width:1920px;
+  margin:auto;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 header {
-  height: 245px;
+  padding: 0px;
+  width: 100%;
   background-color: #D99982;
   color: #f2f2f2;
   font-size: 80px;
@@ -18,13 +28,16 @@ header {
 
 header h1 {
   font-size: 90px;
-  padding: 0;
+  padding: 20px;
   margin: 0;
   margin-bottom: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .body {
-  height: 774px;
+  padding: 20px;
+  width: 100%;
   background-color: #FFEAE2;
   font-size: 40px;
   text-align: center;
@@ -35,23 +48,19 @@ header h1 {
   font-weight: 1200;
 }
 
+#root nav {
+  width: 100%;
+  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+}
+
 nav a {
   text-decoration: none;
   color: #A68F97;
-}
-
-.footer {
-  height: 61px;
-  background-color: #A68F97;
-}
-
-.footer a {
-  text-decoration: none;
-}
-
-nav {
-  width: 100%;
-  
+  background-color: #F2F2F2;
 }
 
  .totoro {
@@ -88,4 +97,16 @@ nav {
   font-size: 80px;
   margin: 0;
   height: 0;
+}
+
+
+.footer {
+  padding: 20px;
+  height: 61px;
+  width: 100%;
+  background-color: #A68F97;
+}
+
+.footer a {
+  text-decoration: none;
 }
