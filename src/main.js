@@ -8,13 +8,13 @@ const gFilms=data.films;
 
 
     //console.log(data["films"][k]["producer"]);
-    const productor = document.querySelector(".productores"); //aquí accedo al div con el class = "productores"
-    const mostrarProductor = document.createDocumentFragment();
+    const producer = document.querySelector(".producers"); //aquí accedo al div con el class = "productores"
+    const showProducer = document.createDocumentFragment();
 
     for (let i=0; i<filterData(gFilms,"producer").length;i++) {
-        const item = document.createElement("DIV"); //Esto crea un elemento de HTML (es en mayúscula porque esta sensible)
+        const item = document.createElement("DIV"); //Esto crea un elemento de HTML (es en mayúscula porque es sensible)
         item.innerHTML = filterData(gFilms,"producer")[i]; //esto lo va guardando en un div
-        mostrarProductor.appendChild(item); //esto crea el div
+        showProducer.appendChild(item); //esto crea el div
     }
     
-    productor.appendChild(mostrarProductor); //y aquí se muestra
+    producer.appendChild(showProducer); //y aquí se muestra
