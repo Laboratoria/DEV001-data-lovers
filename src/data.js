@@ -1,4 +1,6 @@
 
+ 
+
   export const mostrarPeliculaIndividual =(id, data) => {
     const idCard = id;
     const filmsId = data.filter(data => data.id == idCard);
@@ -6,21 +8,7 @@
     return filmsId
   }
 
-  export const mostrarDataEnPantalla =(datos, data) => {
-    const datosPeliculas = datos;
-     let datosPantalla;
-     if(datosPeliculas === "all"){
-        datosPantalla =  data
-     }
-     if(datosPeliculas === "directores"){
-      datosPantalla =  filtrarDirectores()
-     }
-     if(datosPeliculas === "year"){
-      datosPantalla =  ordenarYears()
-     }
-     
-    return datosPantalla;
-  }
+
 
   export const filtrarDirectores = (directores, data) => {
     

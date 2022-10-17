@@ -1,21 +1,27 @@
 //importar las funciones puras desde el data js 
+import {mostrarPeliculaIndividual,filtrarDirectores} from '../src/data.js';
+
 const dataGhibli=[
   {
+    "id":"2baf70d1-42bb-4437-b551-e5fed5a87abe",
     "title": "Castle in the Sky",
     "director": "Hayao Miyazaki",
     "release_date": "1986"
   },
   {
+    "id": "58611129-2dbc-4a81-a72f-77ddfc1b1b49",
     "title": "My Neighbor Totoro",
     "director": "Hayao Miyazaki",
     "release_date": "1988"
   },
   {
+    "id" :"90b72513-afd4-4570-84de-a56c312fdf81",
     "title": "The Cat Returns",
     "director": "Hiroyuki Morita",
     "release_date": "2002"
   },
-  {
+  {  
+    "id" : "112c1e67-726f-40b1-ac17-6974127bb9b9",
     "title": "Tales from Earthsea",
     "director": "Gorō Miyazaki",
     "release_date": "2006"
@@ -23,42 +29,59 @@ const dataGhibli=[
 
 ]
 
+
+//funcion filtrar por director
 describe('la funcion filter director deberia retornarme todas las peliculas filtradas de un mismo director', () => {
-  it('deberia retornar una funcion', () => {
-    expect(typeof filterDirector).toBe('function');
-  });
-  // it('retornar peliculas', () => {
-  //   expect( filterDirector("Gorō Miyazaki", dataGhibli)).toEqual({"Tales from Earthsea"});
-  // });
-});
-
-
-
-describe('dataGhibli.mostrarPeliculaIndividual', () => {
   it('is a function', () => {
-    expect(typeof dataGhibli.mostrarPeliculaIndividual).toBe('function');
+    expect(typeof filtrarDirectores).toBe('function');
   });
+  
+  it('retornar peliculas', () => {
+        expect( filtrarDirectores("Gorō Miyazaki", dataGhibli)).toEqual([{
+          "id": "112c1e67-726f-40b1-ac17-6974127bb9b9",
+          "title": "Tales from Earthsea",
+          "director": "Gorō Miyazaki",
+          "release_date": "2006"
+        }]);
+   });
 
 });
 
-describe('dataGhibli.mostrarDataEnPantalla', () => {
+//funcion filtrar por id
+
+
+describe('Esta funcion muestra la pelicula segun el id seleccionado', () => {
   it('is a function', () => {
-    expect(typeof dataGhibli.mostrarDataEnPantalla).toBe('function');
+    expect(typeof mostrarPeliculaIndividual).toBe('function');
   });
-
-
+   
+  it('retornar pelicula por id', () => {
+         expect( mostrarPeliculaIndividual("58611129-2dbc-4a81-a72f-77ddfc1b1b49", dataGhibli)).toEqual([{
+          "id": "58611129-2dbc-4a81-a72f-77ddfc1b1b49",
+          "title": "My Neighbor Totoro",
+          "director": "Hayao Miyazaki",
+          "release_date": "1988"
+        }]);
+       });
 });
 
-describe('dataGhibli.filtrarDirectores', () => {
-  it('is a function', () => {
-    expect(typeof dataGhibli.filtrarDirectores).toBe('function');
-  });
+// describe('la funcion filter director deberia retornarme todas las peliculas filtradas de un mismo director', () => {
+//   it('deberia retornar una funcion', () => {
+//     expect(typeof filterDirector).toBe('function');
+//   });
+//   it('retornar peliculas', () => {
+//     expect( filterDirector("Gorō Miyazaki", dataGhibli)).toEqual({"Tales from Earthsea"});
+//   });
+// });
 
-});
 
-describe('dataGhibli.ordenarYears', () => {
-  it('is a function', () => {
-    expect(typeof dataGhibli.ordenarYears).toBe('function');
-  });
 
-});
+
+
+
+// describe('dataGhibli.ordenarYears', () => {
+//   it('is a function', () => {
+//     expect(typeof dataGhibli.ordenarYears).toBe('function');
+//   });
+
+// });

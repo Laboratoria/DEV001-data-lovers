@@ -1,9 +1,10 @@
 import ghibli from "./data/ghibli/ghibli.js";
 const objetos = ghibli
 
-import { mostrarDataEnPantalla , mostrarPeliculaIndividual} from './data.js';
+import {  mostrarPeliculaIndividual, filtrarDirectores} from './data.js';
 
-function datosTodasPeliculas  () {
+
+function datosTodasPeliculas() {
   const films = objetos.films
   let arrayFilms = [...films]
 
@@ -11,34 +12,27 @@ function datosTodasPeliculas  () {
   return arrayFilms
 }
 
-
-//buscar las imagenes con enlaces rotos
-
- window.onload = () => {
-  mostrarDataEnPantalla("all", datosTodasPeliculas());
-  mostrarIndividual()
-};
-
-mostrarEnPantalla();
-function mostrarEnPantalla() {
-  const pelicula = document.getElementById("peliculas");
-  
-   const array = mostrarDataEnPantalla("all", datosTodasPeliculas());
+const pelicula = document.getElementById("peliculas");
+function mostrarEnPantalla(data) {
+  const array = data;
    for (let i = 0; i < array.length; i++) {
-     // pelicula.innerHTML = ""
+    
       pelicula.innerHTML += `
-                 <div class = "card_pelicula">
-                  <img src="${array[i].poster}" alt="${array[i].title}">
-                  <div class = "textos_card"
-                     <p>${array[i].title}</p>
-                     <p>director: ${array[i].director}</p>
+                 
+                     <div class = "card_pelicula">
+                        <img src="${array[i].poster}" alt="${array[i].title}">
+                        <div class = "textos_card"
+                           <p>${array[i].title}</p>
+                           <p>director: ${array[i].director}</p>
                      
-                  </div>
-                  <div class = "boton_card" 
-                    <span><p><i class="bx bxs-star"></i>${array[i].rt_score}</p></span>
-                    <button class="select" id = "${array[i].id}" >view more...</button>
-                  </div>
-                  </div> `;
+                        </div>
+                     <div class = "boton_card" 
+                       <span><p><i class="bx bxs-star"></i>${array[i].rt_score}</p></span>
+                       <button class="select" id = "${array[i].id}" >view more...</button>
+                     </div>
+                    </div> 
+                   
+                  `;
     
     
   }
@@ -134,19 +128,25 @@ function mostrarIndividual() {
    }
 }
 
+//seccion directores
+const directores = document.querySelectorAll(".menu_director");
 
-// //seccion directores
-// const directores = document.querySelectorAll(".menu_director");
-
-// directores.forEach((director =>{
-//    const directorI = director;
+directores.forEach((director =>{
+   const directorI = director;
   
-//    directorI.addEventListener("click", () =>{
-//       const idDirector = directorI.id;
-//       const dataDirector = dataGhibli.filtrarDirectores(idDirector);
-//       console.log(dataDirector);
-//    })
-// }))
+   directorI.addEventListener("click", () =>{
+    pelicula.innerHTML = "";
+      const idDirector = directorI.id;
+     const dataDirec =filtrarDirectores(idDirector, datosTodasPeliculas());
+   
+     mostrarEnPantalla(dataDirec);
+    
+   })
+}))
 
 
 
+window.onload = () => {
+  mostrarEnPantalla(datosTodasPeliculas());
+   mostrarIndividual()
+  };
