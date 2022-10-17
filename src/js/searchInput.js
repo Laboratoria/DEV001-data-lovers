@@ -1,3 +1,5 @@
+const searchInputName = document.getElementById("input-search-name");
+
 const searchInput = {
   searchPokemonByName: (searchInputName, arrayContainerCards, arrayNamePokemons) => {
     searchInputName.addEventListener("input", () => {

@@ -1,21 +1,21 @@
-import dataPokemon from "./../data/pokemon/pokemon.js";
-import showCards from "./../showCards.js";
+import pokemonData from './../data/pokemon/pokemon.js';
+import showPokemons from './../showCards.js';
 
-let containerFather= document.getElementById("pokemonsContainer");
-console.log(containerFather.childNodes)
-
-const filteredPokemons= (name) => {
-    const newPokemons = dataPokemon.pokemon.filter((pokemon)=>
-        pokemon.type.includes(name)
-    )   //console.log("filtro", newPokemons)
-
-    while (containerFather.childNodes.length > 2) {
-        containerFather.removeChild(containerFather.firstChild);
-      }
-      
-      showCards(newPokemons);
-    
-}
+let containerForCards = document.getElementById("pokemonsContainer");
 
 
-export default filteredPokemons;
+const filterPokemonTypes = (nameType)=>{
+    const newPokemonArray = pokemonData.pokemon.filter((pokemon) =>
+        pokemon.type.includes(nameType)
+    );
+
+    while(containerForCards.childNodes.length > 2){
+        containerForCards.removeChild(containerForCards.firstChild);
+    };
+
+    //console.log("filtro", newPokemonArray)
+    showPokemons(newPokemonArray);
+};
+
+//console.log("filtro", pokemon.type)
+export default filterPokemonTypes;
