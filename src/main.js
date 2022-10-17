@@ -5,6 +5,7 @@ import pokemon from './data/pokemon/pokemon.js';
 import carouselTypes from './js/CarouselTypes.js';
 import searchInput from './js/searchInput.js';
 import showPokemons from './showCards.js';
+import filteredPokemons from './js/filters.js';
 //import { example, anotherExample } from "./js/data.js";
 
 
@@ -27,8 +28,9 @@ carouselTypes.functionalityCarousel(iconRigth, iconLeft, containerTypePokemon);
 de pokemons para ello necesitaremos el contenedor de las cartas (showCards.js)*/
 
 showPokemons();
+
 const searchInputName = document.getElementById("input-search-name");
-//console.log(searchInputName)
+
 const arrayContainerCards = document.querySelectorAll(".cuadroPokemon");
 //console.log(arrayContainerCards)
 const arrayNamePokemons = document.querySelectorAll(".introCard");
@@ -36,6 +38,14 @@ const arrayNamePokemons = document.querySelectorAll(".introCard");
 searchInput.searchPokemonByName(searchInputName, arrayContainerCards, arrayNamePokemons);
 
 
+//Importamos elementos para el filtrado
 
+const cardsTypes = document.querySelectorAll(".CardTypePokemon"); //nombre de los botones del carrusel
+cardsTypes.forEach(card => {
+    card.addEventListener("click", ( )=> {
+        const name = card.className.split(" ")[0]
+        filteredPokemons(name)
+    } )
+
+});
 //console.log(searchByType)
- 

@@ -57,13 +57,15 @@
               type="text"
               placeholder="Search your pokémon..."
               class="input-search-pokemon"
-              id="input-search-pokemon"
+              id="input-search-name"
             />
+            <p class ="noError" id="adviceError"></p>
           </div>
+          
           <img
             src="./assets/images/DRAGONITE.png"
             alt="pokemon-dragonite"
-            class="img-pokemon-header" 
+            class="img-pokemon-header"
           />
         </section>
       </section>
@@ -83,7 +85,7 @@
             <option value="a-z">Z-A</option>
           </select>
         </div>
-        <div class="container-cards-pokemon-a">
+        <div class="container-cards-pokemon-a" id="pokemonsContainer">
           <section
             class="container-numbers-pokemons"
             id="numbers-pokemons"
@@ -92,6 +94,6 @@
       </section>
     </main>
     <script src="./main.js" type="module"></script>
-    <!--<script src="./showCards.js" type="module"></script>//-->
+    <!-- <script src="./showCards.js" type="module"></script> -->
   </body>
 </html>
