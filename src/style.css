@@ -25,6 +25,11 @@ nav a {
 .footer {
   height: 61px;
   background-color: #A68F97;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer a {
+  text-decoration: none;
 }
 
 nav {
