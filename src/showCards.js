@@ -1,4 +1,5 @@
 import pokemon from "./data/pokemon/pokemon.js";
+import searchInput from "./js/searchInput.js";
 
 let pokeData = pokemon.pokemon;
 //console.log (pokeData)
@@ -6,13 +7,19 @@ let container = document.getElementById("numbers-pokemons");
 //container.insertAdjacentHTML("afterbegin" , "<p>Holi moli</p>");
 
 //forEach recorre el array y realiza la funcion sobre cada elemento que lo compone
-let showPokemons = () => {
-  pokeData.forEach((pokemon) => {
+let showPokemons = (newPokemonArray) => {
+  //newPokemonArray => es el nuevo array filtrado
+  let dataOptions = newPokemonArray || pokeData;
+
+  dataOptions.forEach((pokemon) => {
     let data = `<section class="cuadroPokemon">
   <div class="parteSuperior" id="parteSuperior"> 
   <div class = "container-num-region">
   
-  <span class="infoleft" id="num"><img id ="pokebola" src="./assets/icons/pokebola.png">  ${pokemon.num} </span> 
+  <span class="infoleft" id="num">
+  <img id ="pokebola" src="./assets/icons/pokebola.png">${
+    pokemon.num
+  } </span> 
   <span class= "infoUp" id="region">${pokemon.generation.name}</span> 
   </div>
   <section class="photoStyle" id="photoStyle">
@@ -29,6 +36,15 @@ let showPokemons = () => {
     </section>`;
 
     container.insertAdjacentHTML("beforebegin", data);
+
+    /*creamos los siguientes arrays para nuestro buscador, de esta manera será dinamica*/
+    /*Importamos elementos que utilizaremos para la funcionalidad de busqueda
+    de pokemons para ello necesitaremos el contenedor de las cartas (showCards.js)*/
+
+    const arrayContainerCards = document.querySelectorAll(".cuadroPokemon");
+    const arrayNamePokemons = document.querySelectorAll(".introCard");
+
+    searchInput.searchPokemonByName(arrayContainerCards, arrayNamePokemons);
   });
 };
 
