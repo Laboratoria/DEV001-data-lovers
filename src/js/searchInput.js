@@ -1,11 +1,13 @@
+const searchInputName = document.getElementById("input-search-name");
+
 const searchInput = {
-  searchPokemonByName: (inputSearch, arrayContainerCards, arrayNamePokemons) => {
-    inputSearch.addEventListener("input", () => {
+  searchPokemonByName: (arrayContainerCards, arrayNamePokemons) => {
+    searchInputName.addEventListener("input", () => {
       arrayNamePokemons.forEach((name, index) => {
         if (
           !name.innerText
             .toLowerCase()
-            .includes(inputSearch.value.toLowerCase())
+            .includes(searchInputName.value.toLowerCase())
         ) {
           arrayContainerCards[index].classList.add("hideCard");
         } else {
