@@ -1,15 +1,3 @@
-// estas funciones son de ejemplo
-
-// export const example = () => {
-//   return 'example';
-// };
-
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
-
-//export const filterfem = rickandmorty.filter(rickandmorty.results = `${results.gender}` === "female");
-
 export const filterGender = (data, gender) => {
   const filtrado = data.filter(item => item.gender === gender);
 return filtrado;
@@ -24,3 +12,33 @@ export const filterSpecies = (data, species) => {
   const filtrado = data.filter(item => item.species === species);
 return filtrado;
 };
+
+export const orden = (dataFilter) => {
+ const sortOrden =  dataFilter.sort(function (a, b) {
+    if (a.name < b.name) {
+      return 1;
+    }
+    if (a.name > b.name) {
+      return -1;
+    }
+    return 0;
+   
+})
+return sortOrden;
+};
+
+export const sortOrdenZ = (dataFilter) => {
+const sortOrdenZ =  dataFilter.sort(function (a, b) {
+  if (a.name > b.name) {
+    return 1;
+  }
+  if (a.name < b.name) {
+    return -1;
+  }
+  return 0;
+ 
+})
+return sortOrdenZ;
+}  
+
+
