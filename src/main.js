@@ -4,12 +4,8 @@ import pokemon from './data/pokemon/pokemon.js';
 /* Aquí irá nuestros IMPORTS a archivos JS */
 import carouselTypes from './js/CarouselTypes.js';
 import showPokemons from './showCards.js';
-<<<<<<< HEAD
-import filteredPokemons from './js/filters.js';
-=======
 import searchInput from './js/searchInput.js';
 import filterPokemonTypes from './js/filters.js';
->>>>>>> 7d080f349e64cbc45844cb2bc1eb4fdafdfc6eb1
 //import { example, anotherExample } from "./js/data.js";
 
 
@@ -32,8 +28,6 @@ const containerTypePokemon = document.querySelectorAll(".CardTypePokemon");
 carouselTypes.functionalityCarousel(iconRigth, iconLeft, containerTypePokemon);
 
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -57,37 +51,16 @@ pokemonTypeName.forEach((cardType)=>{
 
 
 
->>>>>>> 7d080f349e64cbc45844cb2bc1eb4fdafdfc6eb1
 /* Importamos elementos que utilizaremos para la funcionalidad de busqueda
 de pokemons para ello necesitaremos el contenedor de las cartas (showCards.js)*/
 
 showPokemons();
 
-<<<<<<< HEAD
-=======
 /*
->>>>>>> 7d080f349e64cbc45844cb2bc1eb4fdafdfc6eb1
 const searchInputName = document.getElementById("input-search-name");
-
 const arrayContainerCards = document.querySelectorAll(".cuadroPokemon");
-//console.log(arrayContainerCards)
 const arrayNamePokemons = document.querySelectorAll(".introCard");
-
 searchInput.searchPokemonByName(searchInputName, arrayContainerCards, arrayNamePokemons);
 */
 
 searchInput.searchPokemonByName();
-
-
-
-//Importamos elementos para el filtrado
-
-const cardsTypes = document.querySelectorAll(".CardTypePokemon"); //nombre de los botones del carrusel
-cardsTypes.forEach(card => {
-    card.addEventListener("click", ( )=> {
-        const name = card.className.split(" ")[0]
-        filteredPokemons(name)
-    } )
-
-});
-//console.log(searchByType)
