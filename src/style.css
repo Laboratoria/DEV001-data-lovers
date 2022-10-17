@@ -1,3 +1,7 @@
+* {
+  font-family: 'Inter', sans-serif;
+}
+
 #root {
   display: flex;
   flex-direction: column;
@@ -15,6 +19,13 @@ header {
 .body {
   height: 774px;
   background-color: #FFEAE2;
+  font-size: 40px;
+  text-align: center;
+  color: #D99982;
+}
+
+.body h3 {
+  font-weight: 1200;
 }
 
 nav a {
@@ -25,7 +36,6 @@ nav a {
 .footer {
   height: 61px;
   background-color: #A68F97;
-  font-family: 'Inter', sans-serif;
 }
 
 .footer a {
