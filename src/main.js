@@ -12,7 +12,7 @@ const gFilms=data.films;
     const mostrarProductor = document.createDocumentFragment();
 
     for (let i=0; i<filterData(gFilms,"producer").length;i++) {
-        const item = document.createElement("DIV"); //Esto crea un elemento de HTML (es en mayúscula porque esta sensible)
+        const item = document.createElement("DIV"); //Esto crea un elemento de HTML (es en mayúscula porque es sensible)
         item.innerHTML = filterData(gFilms,"producer")[i]; //esto lo va guardando en un div
         mostrarProductor.appendChild(item); //esto crea el div
     }
