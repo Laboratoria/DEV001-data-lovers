@@ -1,10 +1,10 @@
 // estas funciones son de ejemplo
-
+// const valorLibros=document.getElementById("data").value= data.books;
+// valorLibros="";
 export const example = () => {
 
-  function mostrar(){
-    document.getElementById("data").value= data.books
-  }
+   
+  
   /*
   fetch("./data/harrypotter/harry.json")
   .then(Response => Response.json())
