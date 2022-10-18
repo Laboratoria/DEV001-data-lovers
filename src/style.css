@@ -37,9 +37,9 @@ header h1 {
   width: 100%;
   background-color: #FFEAE2;
   display: flex;
-  flex-wrap:wrap;
-  text-align:left;
+  flex-wrap: wrap; 
   justify-content: space-between;
+  align-items:center;
 
 }
 
@@ -49,24 +49,32 @@ nav a {
   background-color: #F2F2F2;
   font-size: 36px;
   font-weight: 900;
-  padding: 15px;
+  padding: 20px;
+  line-height: 50px;
+  flex-grow:1;
+
+}
+
+.menuLeft {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.menuLeft img {
+  height: 50px;
   vertical-align: top;
-  line-height: 70px;
-  flex-grow: 1;
+  background-color: #F2F2F2;
+  padding: 20px;
 }
 
-.menuLeft{
-width: 50%;
-display: flex ;
-flex-wrap:wrap;
-
+.menuRight {
+  width: 50%;
+  display:flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
-
-.home img {
-  width: 70px;
-  vertical-align:baseline;
-}
-
 
 section {
   padding: 20px;
