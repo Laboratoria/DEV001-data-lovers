@@ -40,7 +40,6 @@ const searchInputName = document.getElementById("input-search-name");
 
 //?Recorremos el array de los contenedores que muestran los tipos y del que le den click traeremos su clase:
 
-const nameTypePokemon = document.querySelectorAll(".name-type-pokemon")
 
 pokemonTypeName.forEach((cardType)=>{
     cardType.addEventListener("click", ()=>{
