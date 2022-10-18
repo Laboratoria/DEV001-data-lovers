@@ -101,6 +101,7 @@
   display: none !important;
 }
 
+
 /*Clase para validar y mostrar si el usuario ingresa solo letras en el input buscador*/
 
 #text-error{
@@ -111,4 +112,77 @@
   color: ghostwhite;
   font-size: 15px;
   text-align: center;
+}
+=======
+.bug:hover{
+  background: rgb(103, 167, 1);
+
+}
+
+.dark:hover{
+  background: rgb(48, 47, 47);
+}
+
+.dragon:hover{
+  background: rgb(31, 144, 209);
+}
+
+.electric:hover{
+  background: rgb(190, 190, 4);
+}
+
+.fairy:hover{
+  background: rgb(214, 2, 214);
+}
+
+.fighting:hover{
+  background: rgb(197, 33, 60);
+}
+
+.fire:hover{
+  background: rgb(219, 3, 3);
+}
+
+.flying:hover{
+  background: rgb(92, 92, 190);
+}
+
+.ghost:hover{
+  background: rgb(57, 57, 172);
+}
+
+.grass:hover{
+  background: rgb(2, 133, 2);
+}
+
+.ground:hover{
+  background: rgb(187, 89, 24)
+}
+
+.ice:hover{
+  background: rgb(0, 224, 224);
+}
+
+.normal:hover{
+  background: rgb(105, 105, 105);
+}
+
+.poison:hover{
+  background: rgb(71, 0, 88);
+}
+
+.psychic:hover{
+  background: rgb(243, 76, 104);
+}
+
+.rock:hover{
+  background: rgb(150, 132, 33);
+}
+
+.steel:hover{
+  background: rgb(48, 107, 112);
+}
+
+.water:hover{
+  background: rgb(1, 138, 180);
 }

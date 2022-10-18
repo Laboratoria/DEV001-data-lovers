@@ -43,29 +43,40 @@
   align-items: center;
   padding: 20px;
   width: 200px;
-  height: 200px;
+  height: 220px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   gap: 20px;
   box-shadow: 10px 5px 5px rgb(182, 182, 182)
 }
 
+.type{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
 .type-span{
   padding: 8px;
   /*background-color: rgba(84, 3, 100, 0.26);*/
   border-radius: 10px;
-  margin-right: 10px;
   font-weight: 600;
   color: #ffff;
+  width: 60px;
+  text-align: center;
+
 }
 
 .photoStyle{
   position:relative;
-  margin-bottom: 20px;
-  margin-left: 2.3em;
+  margin-bottom: 28px;
+
+
 }
 
 #circle{
+  position:relative;
   z-index:0;
   background-color: rgb(216, 216, 216);
   width: 100px;
@@ -76,8 +87,8 @@
 
 #img{
   position: absolute;
-  z-index:0;
-  justify-content: center;
+  z-index:1;
+  width: 120%;
 }
 
 .introCard{
@@ -91,7 +102,7 @@
 
 .sort-pokemons-by{
   background-color: #1512A8;
-  border-radius:18px;
+  border-radius:12px;
   color: white;
   padding: 10px;
   font-weight: 600;
@@ -103,25 +114,118 @@
   color: #16133a ;
   font-weight: 900;
   font-size: 1.4em;
+  font-size: 22px;
+
+}
+
+
+.parteSuperior{
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -4%;
 
 }
 
 .container-num-region{
   display: flex;
-  justify-content: space-between;
-  width: 190px;
   text-transform: capitalize;
+  font-size: 17px;
   font-weight: 600;
   opacity: 0.8;
-  align-items: center;
+  justify-content: space-between;
+  width: 220px;
 }
 
 .subtitle-result{
   color: #16133a ;
   font-weight: 600;
   opacity: 0.8;
+  font-size: 17px;
 }
 
 #pokebola{
   width: 1em;
+}
+
+
+
+
+/*Media query celular*/
+
+@media screen and (max-device-width: 600px) {
+
+  .sort-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    max-width: 580px;
+  }
+
+  .sort-pokemons-by{
+    border-radius: 15px;
+    width: 85%;
+    padding: 15px 15px 15px 15px;
+    font-size: 20px;
+  }
+
+  .subtitle-pokemon{
+    font-size: 35px;
+  
+  }
+
+  .subtitle-result{
+    font-size: 25px;
+  }
+
+  .container-cards-pokemon-a{
+    gap: 45px;
+  
+  }
+
+  .cuadroPokemon{
+    padding: 20px;
+    width: 30%;
+    height: 270px;
+    gap: 25px;
+  }
+
+  .type-span{
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 70px;
+  
+  }
+
+  #circle{
+    width: 120px;
+    height: 120px;
+  }
+
+  #img{
+    width: 130%;
+  }
+  
+  .introCard{
+    font-size: 25px;
+    margin-bottom: 1px;
+  }
+  
+  .parteSuperior{
+    width: 300px;
+  
+  }
+
+  .container-num-region{
+    font-size: 22px;
+    width: 300px;
+  }
+
+
+  
 }
