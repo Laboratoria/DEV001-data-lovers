@@ -1,7 +1,7 @@
 import ghibli from "./data/ghibli/ghibli.js";
 const objetos = ghibli
 
-import { mostrarPeliculaIndividual, filtrarDirectores} from './data.js';
+import { mostrarPeliculaIndividual, filtrarDirectores,ordenarYears} from './data.js';
 //Variables globales
 const pelicula = document.getElementById("peliculas");
 const modal = document.getElementById("modal");
@@ -11,7 +11,7 @@ const pagina = document.getElementById("muestra");
 const personajes = document.getElementById("personajes");
 const location = document.getElementById("locacion");
 const vehiculos = document.getElementById("vehiculos");
-
+const fecha = document.getElementById("fecha");
 
 window.onload = () => {
   mostrarEnPantalla(datosTodasPeliculas());
@@ -66,7 +66,7 @@ function mostrarEnPantalla(data) {
                         <div class = "textos_card"
                            <p>${array[i].title}</p>
                            <p>director: ${array[i].director}</p>
-                     
+                           <p>year: ${array[i].release_date}</p>
                         </div>
                      <div class = "boton_card" 
                        <span><p><i class="bx bxs-star"></i>${array[i].rt_score}</p></span>
@@ -167,11 +167,17 @@ pelicula.addEventListener('mouseup', (e) => {
       });
 
 
-cerrar.addEventListener("click", function () {
+cerrar.addEventListener("click", function() {
     modal.style.display = "none";
 });
 
 
+fecha.addEventListener("click",function(){
+  pelicula.innerHTML = ""
+  const mostrarYear = ordenarYears(datosTodasPeliculas())
+  mostrarEnPantalla(mostrarYear)
+});
+
 //esto es la siguiente categoria a agregar si da el tiempo
-// <li class="menu_inicio"><a href="#" id="fecha">more recent</a></li>
+
 // <li class="menu_inicio"><a href="#" id="popular">most prominent</a></li>
