@@ -113,7 +113,9 @@
   font-size: 15px;
   text-align: center;
 }
-=======
+
+/*Hover para las clases de las tarjetas que contienen el tipo de pokemon*/
+
 .bug:hover{
   background: rgb(103, 167, 1);
 
