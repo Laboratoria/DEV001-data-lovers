@@ -8,9 +8,7 @@
   align-items: center;
   gap: 20px;
   background-color: #F7F8F8;
-
-  
-  
+  margin-bottom: 50px;
 }
 
 .sort-cards{
@@ -26,7 +24,18 @@
   width: 100%;
 }
 
-.container-cards-pokemon-a{
+.container-cards-pokemon-a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  gap: 30px;
+
+}
+
+.container-numbers-pokemons{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
