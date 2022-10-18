@@ -1,9 +1,44 @@
-// estas funciones son de ejemplo
+export const filterGender = (data, gender) => {
+  const filtrado = data.filter(item => item.gender === gender);
+return filtrado;
+};
 
-// export const filterdata = (data, condition) => {
-//   return data.filter (personaje === condition) ;
-// };
+export const filterStatus = (data, status) => {
+  const filtrado = data.filter(item => item.status === status);
+return filtrado;
+};
 
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
+export const filterSpecies = (data, species) => {
+  const filtrado = data.filter(item => item.species === species);
+return filtrado;
+};
+
+export const orden = (dataFilter) => {
+ const sortOrden =  dataFilter.sort(function (a, b) {
+    if (a.name < b.name) {
+      return 1;
+    }
+    if (a.name > b.name) {
+      return -1;
+    }
+    return 0;
+   
+})
+return sortOrden;
+};
+
+export const sortOrdenZ = (dataFilter) => {
+const sortOrdenZ =  dataFilter.sort(function (a, b) {
+  if (a.name > b.name) {
+    return 1;
+  }
+  if (a.name < b.name) {
+    return -1;
+  }
+  return 0;
+ 
+})
+return sortOrdenZ;
+}  
+
+
