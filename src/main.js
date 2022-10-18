@@ -9,8 +9,6 @@ import filterPokemonTypes from './js/filters.js';
 //import { example, anotherExample } from "./js/data.js";
 
 
-
-
 /* Importamos el contenedor donde añadiremos los tipos de pokemons */
 const containerForTypes = document.getElementById("containerTypes");
 
@@ -39,16 +37,18 @@ const pokemonTypeName = document.querySelectorAll(".CardTypePokemon");
 
 //?Recorremos el array de los contenedores que muestran los tipos y del que le den click traeremos su clase:
 
+const nameTypePokemons= document.querySelectorAll(".name-type-pokemon");
+console.log(nameTypePokemons)
 pokemonTypeName.forEach((cardType)=>{
     cardType.addEventListener("click", ()=>{
-        const nameType = cardType.className.split(" ")[0];
+        const nameType = cardType.className.split(" ")[0]
         console.log(nameType);
         filterPokemonTypes(nameType);
-    });
+
+
+        
 });
-
-
-
+})
 
 
 /* Importamos elementos que utilizaremos para la funcionalidad de busqueda
