@@ -101,6 +101,19 @@
   display: none !important;
 }
 
+
+/*Clase para validar y mostrar si el usuario ingresa solo letras en el input buscador*/
+
+#text-error{
+  display: none;
+  background-color: #fe4a22;
+  padding: 8px 20px;
+  border-radius: 5px;
+  color: ghostwhite;
+  font-size: 15px;
+  text-align: center;
+}
+=======
 .bug:hover{
   background: rgb(103, 167, 1);
 
