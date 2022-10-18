@@ -1,6 +1,7 @@
 * {
   font-family: 'Inter', sans-serif;
   padding: 0px;
+  margin: 0px;
   box-sizing: border-box;
 }
 
@@ -11,29 +12,63 @@ body {
 #root {
   display: flex;
   flex-direction: column;
-  max-width:1920px;
-  margin:auto;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  max-width: 1920px;
+  margin: auto;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 header {
   padding: 0px;
   width: 100%;
-  background-color: #D99982;
+
   color: #f2f2f2;
   font-size: 80px;
-  left: 0;
-  bottom: 0;
+
 }
 
 header h1 {
-  font-size: 90px;
-  padding: 20px;
-  margin: 0;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-top: 20px;
+  font-size: 80px;
+  padding-top: 135px;
+  padding-left: 40px;
+  padding-bottom: 30px;
+  background-color: #D99982
 }
+
+#root nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #FFEAE2;
+
+}
+
+.home {
+  width: 10px;
+  height: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #A68F97;
+  background-color: #F2F2F2;
+  font-size: 36px;
+  font-weight: 900;
+  padding: 20px;
+}
+
+.menuLeft {
+  position: relative;
+}
+
+.singIn {
+  position: absolute;
+  width: 103px;
+  height: 44px;
+  left: 1421px;
+  top: 270px;
+
+}
+
 
 .body {
   padding: 20px;
@@ -48,27 +83,12 @@ header h1 {
   font-weight: 1200;
 }
 
-#root nav {
-  width: 100%;
-  
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  
-}
-
-nav a {
-  text-decoration: none;
-  color: #A68F97;
-  background-color: #F2F2F2;
-}
-
- .totoro {
+.totoro {
   position: fixed;
   width: 288px;
   height: 337px;
   bottom: 0;
-  right: 0; 
+  right: 0;
 }
 
 
@@ -77,7 +97,7 @@ nav a {
   flex-flow: row wrap;
   justify-content: space-around;
   height: 774px;
-  background-color: #FFEAE2; 
+  background-color: #FFEAE2;
 }
 
 .producers div {
@@ -85,7 +105,7 @@ nav a {
   height: 150px;
   background-color: gainsboro;
   text-align: center;
-  padding-top: 90px;
+  padding-top: 30px;
   line-height: 50px;
   margin: 10px 10px;
   font-size: 40px;
