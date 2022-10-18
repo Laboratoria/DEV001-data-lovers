@@ -36,6 +36,7 @@ carouselTypes.functionalityCarousel(iconRigth, iconLeft, containerTypePokemon);
 y lo convertimos en un array, esto nos permitira filtrar segun su nombre*/
 
 const pokemonTypeName = document.querySelectorAll(".CardTypePokemon");
+const searchInputName = document.getElementById("input-search-name");
 
 //?Recorremos el array de los contenedores que muestran los tipos y del que le den click traeremos su clase:
 
@@ -44,10 +45,13 @@ pokemonTypeName.forEach((cardType)=>{
         const nameType = cardType.className.split(" ")[0];
         console.log(nameType);
         filterPokemonTypes(nameType);
+
+        //para limpiar el input del buscador y que vuelva al focus, en otras palabras al inicio.
+        searchInputName.value = "";
+        searchInputName.focus();
+        document.querySelector("#text-error").style.display = "none";
     });
 });
-
-
 
 
 
