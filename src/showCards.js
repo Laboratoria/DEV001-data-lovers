@@ -17,9 +17,8 @@ let showPokemons = (newPokemonArray) => {
   <div class = "container-num-region">
   
   <span class="infoleft" id="num">
-  <img id ="pokebola" src="./assets/icons/pokebola.png">${
-    pokemon.num
-  } </span> 
+  <img id ="pokebola" src="./assets/icons/pokebola.png"><span class="space"> </span>${pokemon.num //añadi un span entre la pokebola y numero para separar
+      } </span> 
   <span class= "infoUp" id="region">${pokemon.generation.name}</span> 
   </div>
   <section class="photoStyle" id="photoStyle">
@@ -30,8 +29,8 @@ let showPokemons = (newPokemonArray) => {
     </div>
     <section class=parteInferior id="parteInferior">
     <div class="type" id="type" disabled> ${pokemon.type
-      .map((type) => `<span class="type-span ${type}" >${type}</span>`)
-      .join("")}</div>
+        .map((type) => `<span class="type-span ${type}" >${type}</span>`)
+        .join("")}</div>
     </section>`;
 
     container.insertAdjacentHTML("beforebegin", data);
