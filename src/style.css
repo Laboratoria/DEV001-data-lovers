@@ -59,6 +59,7 @@ body::-webkit-scrollbar{
     height: 350px;
     
 }
+
 .textos_card{
     margin: 15px 0px;
     padding: 0 10px;
@@ -294,7 +295,7 @@ body::-webkit-scrollbar{
     width: 200px;
     display: flex;
     flex-direction: column;
-    background: rgb(248, 248, 248);
+    background: #f8f8f8;
     position: absolute;
     top: 90px;
     left: -5px;
@@ -344,3 +345,163 @@ body::-webkit-scrollbar{
     font-size: 14px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
+
+/*ELEMENTOS RESPONSIVOS*/
+
+.icon__menu{
+    margin-top: 10px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    width: 30px;
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+
+#label__check{
+    width: 30px;
+    height: 100%;
+    display: none;
+}
+
+#check__menu{
+    display: none;
+}
+
+
+@media (max-width: 720px){
+    
+    .modal_titulo_descripcion h2{
+        font-weight: 600;
+        font-size:30px;
+    }
+    
+    .modal_director{
+        font-size: 10px;
+    }
+    
+    .modal_texto_largo{
+        font-size: 10px;
+    }
+     
+    .modal_score_date{
+        font-size: 10px;
+    }
+    .modal_score_date i{
+        font-size: 10px;
+    }
+    
+    .cont-people{
+        font-size: 10px;
+    } 
+    
+    .cont-locacion{
+        font-size: 10px;
+    }
+
+    .cont-vehiculos{
+        font-size: 10px;
+    }
+    
+    .modal_imagen img{
+        width: 200px;
+        height: 250px;
+    }
+     
+    .close{
+        font-size:20px;
+        width: 80px;
+        height: 30px;
+
+    }
+    .cabecero_modal{
+        height: 50px;
+    }
+    
+    .cabecero_modal_centro img{
+        width: 100px;
+       
+    }
+    .container__menu{
+       height: 50px;
+       align-items: center;
+    }
+
+    /*cambiar top cuando se agregue el header */
+    .lista_inicio{
+        flex-direction: column;
+        background-color: var(--rosa_claro_color);
+        position: fixed;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        height: 0px;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .menu_inicio a{
+        font-size: 10px;
+        padding: 10px;
+    }
+    .menu_inicio a:hover{
+        transform: scale(1);
+    }
+    
+    .menu_directores{
+        left: 100px;
+        font-size: 15px;
+    }
+  /* cambiar cuando se agregue el header*/
+    .menu_inicio:hover .menu_directores{
+        top: 40px;
+    }
+
+    #label__check{
+        display: block;
+    }
+
+    .icon__menu{
+        display: flex;
+    }
+
+    #check__menu:checked ~ nav > ul{
+        height: 200px;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px){
+    .card_pelicula{
+        width: 150px;
+        height: 300px;
+    }
+
+    .card_pelicula img{
+        width: 100%;
+        height: 200px;
+        
+    }
+    .textos_card{
+        margin: 5px 0px;
+        padding: 0 10px;
+        font-size: 10px;
+    }
+
+    .boton_card i{
+        font-size: 10px;
+       
+    }
+    
+    .boton_card p{
+        font-size: 10px;
+       font-weight: 300;
+    }
+    
+
+}
+

@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
@@ -12,10 +13,14 @@
     <header id="header_inicio">
         <div class="container__menu">
             <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label for="check__menu" id="label__check">
+                    <i class="bx bx-menu icon__menu"></i>
+                </label>
                 <nav class="nav_menu">
                     <ul class ="lista_inicio">
-                        <li class="menu_inicio"><a href="#header_inicio">inicio</a></li>
-                        <li class="menu_inicio"><a href="#">directores</a>
+                        <li class="menu_inicio"><a href="#header_inicio" id="home">home</a></li>
+                        <li class="menu_inicio"><a href="#">directors</a>
                             <ul class="menu_directores">
                                 <li><a href="#" id="Hayao Miyazaki" class="menu_director">Hayao Miyazaki</a></li>
                                 <li><a href="#" id="Hiroyuki Morita" class="menu_director">Hiroyuki Morita</a></li>
@@ -26,6 +31,7 @@
                             </ul>
                         </li>
                        
+                        
                     </ul>
                 </nav>
             </div>

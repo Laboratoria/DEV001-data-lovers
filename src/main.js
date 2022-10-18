@@ -1,9 +1,23 @@
 import ghibli from "./data/ghibli/ghibli.js";
 const objetos = ghibli
 
-import {  mostrarPeliculaIndividual, filtrarDirectores} from './data.js';
+import { mostrarPeliculaIndividual, filtrarDirectores} from './data.js';
+//Variables globales
+const pelicula = document.getElementById("peliculas");
+const modal = document.getElementById("modal");
+const cerrar = document.getElementById("close");
+const home = document.getElementById("home");
+const pagina = document.getElementById("muestra");
+const personajes = document.getElementById("personajes");
+const location = document.getElementById("locacion");
+const vehiculos = document.getElementById("vehiculos");
 
 
+window.onload = () => {
+  mostrarEnPantalla(datosTodasPeliculas());
+ // mostrarIndividual()
+  
+  };
 function datosTodasPeliculas() {
   const films = objetos.films
   let arrayFilms = [...films]
@@ -12,13 +26,40 @@ function datosTodasPeliculas() {
   return arrayFilms
 }
 
-const pelicula = document.getElementById("peliculas");
+
+//mostrarIndividual()
+
+//seccion directores
+const directores = document.querySelectorAll(".menu_director");
+
+directores.forEach((director =>{
+   const directorI = director;
+  
+   directorI.addEventListener("click", () =>{
+      pelicula.innerHTML = "";
+      const idDirector = directorI.id;
+      const dataDirec =filtrarDirectores(idDirector, datosTodasPeliculas());
+   
+     mostrarEnPantalla(dataDirec);
+    
+   })
+   
+}))
+
+
+
+
+home.addEventListener("click", () =>{
+  pelicula.innerHTML = ""
+  mostrarEnPantalla(datosTodasPeliculas());
+})
+
+
 function mostrarEnPantalla(data) {
   const array = data;
    for (let i = 0; i < array.length; i++) {
     
       pelicula.innerHTML += `
-                 
                      <div class = "card_pelicula">
                         <img src="${array[i].poster}" alt="${array[i].title}">
                         <div class = "textos_card"
@@ -32,42 +73,38 @@ function mostrarEnPantalla(data) {
                      </div>
                     </div> 
                    
-                  `;
-    
-    
-  }
+                  `
+               }
+              
 }
+
 
 //este es el modal con los detalles de las peliculas al dar click
 
-const modal = document.getElementById("modal");
-const abrir = document.querySelectorAll(".select");
-const cerrar = document.getElementById("close");
-const buttons = document.querySelectorAll(".select");
+let abrir;
 
-abrir.forEach(abierto =>{
-     abierto.addEventListener("click", () => {
+pelicula.addEventListener('mouseup', (e) => {
+  
+ 
+   abrir =e.path[2].classList.value
+   if(abrir === "select"){
+    
       modal.style.display = "block";
-    });
-})
-  cerrar.addEventListener("click", function () {
-    modal.style.display = "none";
-});
-
-
-function mostrarIndividual() {
-  for (let i = 0; i < buttons.length; i++) {
-    const boton = buttons[i];
-    let idCard;
-    const pagina = document.getElementById("muestra");
-    const personajes = document.getElementById("personajes");
-    const location = document.getElementById("locacion");
-    const vehiculos = document.getElementById("vehiculos");
-    boton.addEventListener("click", () => {
-      idCard = boton.id;
-      const id = mostrarPeliculaIndividual(idCard, datosTodasPeliculas() );
       
-      id.forEach(element => {
+   }
+   
+   
+})
+
+
+  
+ pelicula.addEventListener('mouseup', (e) => {
+  let idCard;
+  idCard = e.path[2].id
+ 
+  const id = mostrarPeliculaIndividual(idCard, datosTodasPeliculas() );
+  
+        id.forEach(element => {
         pagina.innerHTML = `
         <div class="modal_pelicula">
            <div class="modal_imagen">
@@ -123,30 +160,14 @@ function mostrarIndividual() {
             </div>`
           });
         });
-       });
-  
-   }
-}
-
-//seccion directores
-const directores = document.querySelectorAll(".menu_director");
-
-directores.forEach((director =>{
-   const directorI = director;
-  
-   directorI.addEventListener("click", () =>{
-    pelicula.innerHTML = "";
-      const idDirector = directorI.id;
-     const dataDirec =filtrarDirectores(idDirector, datosTodasPeliculas());
-   
-     mostrarEnPantalla(dataDirec);
-    
-   })
-}))
+      });
 
 
+cerrar.addEventListener("click", function () {
+    modal.style.display = "none";
+});
 
-window.onload = () => {
-  mostrarEnPantalla(datosTodasPeliculas());
-   mostrarIndividual()
-  };
+
+//esto es la siguiente categoria a agregar si da el tiempo
+// <li class="menu_inicio"><a href="#" id="fecha">more recent</a></li>
+// <li class="menu_inicio"><a href="#" id="popular">most prominent</a></li>
