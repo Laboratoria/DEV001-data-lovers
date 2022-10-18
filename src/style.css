@@ -49,8 +49,8 @@ nav a {
   background-color: #F2F2F2;
   font-size: 36px;
   font-weight: 900;
-  padding: 20px;
-  line-height: 50px;
+  padding: 16px;
+  line-height: 70px;
   flex-grow:1;
 
 }
@@ -59,21 +59,20 @@ nav a {
   width: 50%;
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
 }
 
 .menuLeft img {
-  height: 50px;
+  height: 100px;
   vertical-align: top;
   background-color: #F2F2F2;
   padding: 20px;
 }
 
-.menuRight {
-  width: 50%;
-  display:flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
+.menuRight img {
+  height: 100px;
+  vertical-align: top;
+  background-color: #F2F2F2;
+  padding: 20px;
 }
 
 section {
