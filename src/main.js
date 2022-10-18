@@ -46,9 +46,8 @@ pokemonTypeName.forEach((cardType)=>{
         console.log(nameType);
         filterPokemonTypes(nameType);
 
-        //para limpiar el input del buscador y que vuelva al focus, en otras palabras al inicio.
+        //para limpiar el input del buscador.
         searchInputName.value = "";
-        searchInputName.focus();
         document.querySelector("#text-error").style.display = "none";
     });
 });
