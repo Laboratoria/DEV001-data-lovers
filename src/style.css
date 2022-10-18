@@ -8,7 +8,7 @@
     --verde_claro_color:#a19d7a;
     --cremita_color:#b0978c;
     --marron_color:#3c2f29;
-
+   
 }
 
 *{
@@ -23,6 +23,7 @@
 
 body::-webkit-scrollbar{
     display: none;
+    
 }
 
 /* css de las card y del contenedor de las peliculas*/

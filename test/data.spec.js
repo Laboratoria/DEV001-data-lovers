@@ -65,23 +65,4 @@ describe('Esta funcion muestra la pelicula segun el id seleccionado', () => {
        });
 });
 
-// describe('la funcion filter director deberia retornarme todas las peliculas filtradas de un mismo director', () => {
-//   it('deberia retornar una funcion', () => {
-//     expect(typeof filterDirector).toBe('function');
-//   });
-//   it('retornar peliculas', () => {
-//     expect( filterDirector("Gorō Miyazaki", dataGhibli)).toEqual({"Tales from Earthsea"});
-//   });
-// });
 
-
-
-
-
-
-// describe('dataGhibli.ordenarYears', () => {
-//   it('is a function', () => {
-//     expect(typeof dataGhibli.ordenarYears).toBe('function');
-//   });
-
-// });

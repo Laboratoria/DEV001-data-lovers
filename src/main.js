@@ -17,7 +17,8 @@ window.onload = () => {
   mostrarEnPantalla(datosTodasPeliculas());
  // mostrarIndividual()
   
-  };
+};
+
 function datosTodasPeliculas() {
   const films = objetos.films
   let arrayFilms = [...films]
@@ -42,9 +43,9 @@ directores.forEach((director =>{
    
      mostrarEnPantalla(dataDirec);
     
-   })
+   });
    
-}))
+}));
 
 
 
@@ -52,7 +53,7 @@ directores.forEach((director =>{
 home.addEventListener("click", () =>{
   pelicula.innerHTML = ""
   mostrarEnPantalla(datosTodasPeliculas());
-})
+});
 
 
 function mostrarEnPantalla(data) {
@@ -84,9 +85,11 @@ function mostrarEnPantalla(data) {
 let abrir;
 
 pelicula.addEventListener('mouseup', (e) => {
-  
- 
-   abrir =e.path[2].classList.value
+  abrir =e.path[0].className
+   
+   //abrir = e.path[2].classList.value
+   //console.log(e.srcElement.className)
+  //console.log(e.path[0].className)
    if(abrir === "select"){
     
       modal.style.display = "block";
@@ -99,9 +102,10 @@ pelicula.addEventListener('mouseup', (e) => {
 
   
  pelicula.addEventListener('mouseup', (e) => {
+  //console.log(e.path[0].id)
   let idCard;
-  idCard = e.path[2].id
- 
+  //idCard = e.path[2].id
+  idCard = e.path[0].id
   const id = mostrarPeliculaIndividual(idCard, datosTodasPeliculas() );
   
         id.forEach(element => {
