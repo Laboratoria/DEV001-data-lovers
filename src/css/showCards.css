@@ -102,7 +102,7 @@
 
 .sort-pokemons-by{
   background-color: #1512A8;
-  border-radius:18px;
+  border-radius:12px;
   color: white;
   padding: 10px;
   font-weight: 600;
@@ -114,8 +114,10 @@
   color: #16133a ;
   font-weight: 900;
   font-size: 1.4em;
+  font-size: 22px;
 
 }
+
 
 .parteSuperior{
   display: flex;
@@ -141,6 +143,7 @@
   color: #16133a ;
   font-weight: 600;
   opacity: 0.8;
+  font-size: 17px;
 }
 
 #pokebola{
