@@ -100,7 +100,7 @@ const carouselTypes = {
     typesPokemon.forEach((type) => {
       containerForTypes.innerHTML += `<div class="${type.color} CardTypePokemon" id="CardTypePokemon">
       <div class="container-img-type"><img src="${type.icon}" alt="icon-type-pokemon" class="icon-type-pokemon"></div>
-      <p class="name-type-pokemon">${type.name}</p>
+      <p class="name-type-pokemon" id="name-type-pokemon">${type.name}</p>
       </div>`;
     });
   },

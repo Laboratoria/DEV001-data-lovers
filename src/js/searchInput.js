@@ -9,7 +9,7 @@ const searchInput = {
       const onlyLetters = /^[/^[-_ a-zA-Z]+$/;
       const nameValidate = onlyLetters.test(inputValue);
 
-      if (nameValidate === true || nameValidate === " "){
+      if (nameValidate === true){
         arrayNamePokemons?.forEach((name, index) => {
           if (
             !name.innerText
