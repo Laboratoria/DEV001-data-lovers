@@ -63,13 +63,6 @@ pokemonTypeName.forEach((cardType)=>{
         searchInputName.value = "";
         document.querySelector("#text-error").style.display = "none";
 
-        
-
-
-
-
-
-
 
     });
 });
