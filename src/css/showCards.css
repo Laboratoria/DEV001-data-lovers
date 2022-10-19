@@ -111,12 +111,13 @@
 
 .sort-pokemons-by{
   background-color: #1512A8;
-  border-radius:12px;
+  border-radius:8px;
   color: white;
-  padding: 10px;
+  padding: 10px 15px;
   font-weight: 600;
   border: none;
   flex-grow: 0.1;
+  font-size: 0.75rem;
 }
 
 .subtitle-pokemon{
