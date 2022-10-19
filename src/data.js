@@ -11,6 +11,4 @@ export const filterData = (data, condition) => {
   return arrayData;
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+
