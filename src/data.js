@@ -41,4 +41,8 @@ const sortOrdenZ =  dataFilter.sort(function (a, b) {
 return sortOrdenZ;
 }  
 
-
+export const statisticsFrequency = (originalDataLength, categoryDataLength) => {
+  let firstData = originalDataLength.length;
+  let secondData = categoryDataLength.length;
+  return Math.round(secondData * 100 / firstData);
+}
