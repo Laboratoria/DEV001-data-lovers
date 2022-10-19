@@ -75,4 +75,31 @@ const arrayNamePokemons = document.querySelectorAll(".introCard");
 searchInput.searchPokemonByName(searchInputName, arrayContainerCards, arrayNamePokemons);
 */
 
+
 searchInput.searchPokemonByName();
+
+
+
+
+
+/* ESTA ES LA PRUEBA CON LUNA DONDE ME EXPLICABA LO DE LA FUNSIÓN PURA Y FILTER 
+
+const datapoke = data.pokemon;
+
+const filterXGeneration= document.getElementById("generationClass");
+filterXGeneration.addEventListener("change", ()=>{
+    switch (filterXGeneration.value) {
+        case "all":
+            showPokemons(data.pokemon)
+            break;
+        case "kanto":
+            showPokemons(filterGeneration("normal", datapoke) )
+        break;
+        case "johto":
+            showPokemons(filterGeneration("special", datapoke))
+            break;
+    }
+} )
+*/
+
+// esto es para probar subir bien la info
