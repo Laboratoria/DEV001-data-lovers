@@ -37,7 +37,7 @@ export const ordenarYears = (data) => {
   }
 
   
-}
+};
 
 export const ordenarScore = (data) => {
   let clave
@@ -59,7 +59,18 @@ export const ordenarScore = (data) => {
   }
 
   
-}
+};
 
+
+export const estadisticaData = (data) => {
+    const directorEstadistica = []
+   data.forEach((datos =>{
+      directorEstadistica.push(datos.director)
+   }));
+
+   const resultado = directorEstadistica.reduce((previousValue, currentValue) => ((previousValue[currentValue] = previousValue[currentValue] + 1 || 1), previousValue), {})
+   
+   return resultado;
+}
 
 

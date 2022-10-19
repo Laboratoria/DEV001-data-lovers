@@ -1,7 +1,7 @@
 import ghibli from "./data/ghibli/ghibli.js";
 const objetos = ghibli
 
-import { mostrarPeliculaIndividual, filtrarDirectores,ordenarYears,ordenarScore} from './data.js';
+import { mostrarPeliculaIndividual, filtrarDirectores,ordenarYears,ordenarScore, estadisticaData} from './data.js';
 //Variables globales
 const pelicula = document.getElementById("peliculas");
 const modal = document.getElementById("modal");
@@ -184,3 +184,7 @@ popular.addEventListener("click",function(){
   const mostrarPopular = ordenarScore(datosTodasPeliculas());
   mostrarEnPantalla(mostrarPopular);
 }); 
+
+
+const estadistica = estadisticaData(datosTodasPeliculas());
+console.log(estadistica);
