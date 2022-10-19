@@ -75,6 +75,7 @@ const arrayNamePokemons = document.querySelectorAll(".introCard");
 searchInput.searchPokemonByName(searchInputName, arrayContainerCards, arrayNamePokemons);
 */
 
+
 searchInput.searchPokemonByName();
 
 
