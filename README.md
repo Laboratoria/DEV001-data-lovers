@@ -13,17 +13,19 @@ Esta aplicación está destinada a usuarios fanáticos y casuales de las pelícu
 Entre los usuarios más casuales se manifestó la necesidad de ver las películas más populares y las más recientes mientras que los usuarios más devotos se manifestó la necesidad de ver la descripción más detallada de cada película con información de cada personaje.
 
 - En base a los datos obtenidos se decidió crear una página de inicio con un menú que contenga enlace a los diferentes filtros dependiendo de los gustos de cada usuario.
-(foto aquí)
+
 
 - Para todos aquellos usuarios que desean ver las películas más detalladamente se creó un modal que se activa con el botón de ‘ver más’ , este modal contiene información más detallada de cada película como sus personajes y características.
- (foto aquí)
+ 
  
 - Para los usuarios que desean ver las películas más populares esta seria la vista.
- (foto aquí)
+
  
 - Para todos aquellos usuarios que desean ver las películas más detalladamente se creó un modal que se activa con el botón de ‘ver más’ , este modal contiene   información más detallada de cada película como sus personajes y características.
-  (foto aquí)
  
  
-## 3. Prototipos de alta fidelidad
+ 
+## 3. Prototipos de baja fidelidad
 (foto aquí)
+
+## 3. Prototipos de alta fidelidad
