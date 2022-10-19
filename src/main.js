@@ -38,41 +38,28 @@ const searchInputName = document.getElementById("input-search-name");
 
 //?Recorremos el array de los contenedores que muestran los tipos y del que le den click traeremos su clase:
 
-const nameTypePokemons= document.querySelectorAll(".name-type-pokemon");
 //console.log(nameTypePokemons)
 pokemonTypeName.forEach((cardType)=>{
     cardType.addEventListener("click", ()=>{
         const nameType = cardType.className.split(" ")[0]
-        console.log(nameType);
+        cleanClass(); //limpiar la clase borderRed asi en cada click la elimina 
+
         filterPokemonTypes(nameType);
-
-        nameTypePokemons.forEach ((element) =>{
-            let minusType= element.innerText.toLowerCase();
-            //console.log(minusType)
-            if (nameType != minusType){
-                cardType.classList.add("borderRed")
-            } else{
-                cardType.classList.remove("borderRed")
-            }
-
-        })
-
-
+        cardType.classList.add("borderRed")
 
         //para limpiar el input del buscador.
         searchInputName.value = "";
         document.querySelector("#text-error").style.display = "none";
 
-        
-
-
-
-
-
-
-
     });
 });
+
+const cleanClass= ()=>
+    pokemonTypeName.forEach((cardType)=>{
+        cardType.classList.remove("borderRed")
+})
+
+
 
 
 
@@ -89,3 +76,27 @@ searchInput.searchPokemonByName(searchInputName, arrayContainerCards, arrayNameP
 */
 
 searchInput.searchPokemonByName();
+
+
+
+
+
+/* ESTA ES LA PRUEBA CON LUNA DONDE ME EXPLICABA LO DE LA FUNSIÓN PURA Y FILTER 
+
+const datapoke = data.pokemon;
+
+const filterXGeneration= document.getElementById("generationClass");
+filterXGeneration.addEventListener("change", ()=>{
+    switch (filterXGeneration.value) {
+        case "all":
+            showPokemons(data.pokemon)
+            break;
+        case "kanto":
+            showPokemons(filterGeneration("normal", datapoke) )
+        break;
+        case "johto":
+            showPokemons(filterGeneration("special", datapoke))
+            break;
+    }
+} )
+*/

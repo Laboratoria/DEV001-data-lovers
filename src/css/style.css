@@ -193,6 +193,7 @@
 .borderRed{
   border-width: 3px;
   border-style: solid;
-  border-color: rgb(85, 85, 85);
+  border-color: rgb(139, 148, 163);
+  box-shadow: 3px 2px 2px rgb(182, 182, 182)
 }
 
