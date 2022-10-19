@@ -15,7 +15,9 @@
     <main id="root">
       <section class="container-header">
         <nav class="container-nav">
-         <a href="index.html"> <img src="./assets/images/pokelab.png" alt="logo-pokelab" /></a>
+          <a href="index.html">
+            <img src="./assets/images/pokelab.png" alt="logo-pokelab"
+          /></a>
         </nav>
 
         <section class="container-type-pokemon" id="type-pokemon">
@@ -59,9 +61,11 @@
               class="input-search-pokemon"
               id="input-search-name"
             />
-            <p id="text-error" class="text-error-validator">Enter only letters</p>
+            <p id="text-error" class="text-error-validator">
+              Enter only letters
+            </p>
           </div>
-          
+
           <img
             src="./assets/images/DRAGONITE.png"
             alt="pokemon-dragonite"
@@ -75,15 +79,28 @@
           <h2 class="subtitle-pokemon">
             Pokemons <span class="subtitle-result">(251 results)</span>
           </h2>
-          <select
-            name="sort-pokemons-by"
-            id="sort-pokemons-by"
-            class="sort-pokemons-by"
-          >
-            <option disabled selected>Sort pokemons by:</option>
-            <option value="a-z">A-Z</option>
-            <option value="a-z">Z-A</option>
-          </select>
+          <div>
+            <select
+              name="filter-generation"
+              id="filter-generation"
+              class="sort-pokemons-by"
+            >
+              <option disabled selected>Filter by Generation:</option>
+              <option value="all">All Generations</option>
+              <option value="kanto">Kanto</option>
+              <option value="johto">Johto</option>
+            </select>
+            <select
+              name="sort-pokemons-by"
+              id="sort-pokemons-by"
+              class="sort-pokemons-by"
+            >
+              <option disabled selected>Sort pokemons by:</option>
+              <option value="all">Default</option>
+              <option value="a-z">A-Z</option>
+              <option value="a-z">Z-A</option>
+            </select>
+          </div>
         </div>
         <div class="container-cards-pokemon-a" id="pokemonsContainer">
           <section

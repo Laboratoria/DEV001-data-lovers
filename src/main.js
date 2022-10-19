@@ -1,91 +1,75 @@
 /* data => trae el objeto pokemon con 251 de ellos*/
-import pokemon from './data/pokemon/pokemon.js';
+import data from "./data/pokemon/pokemon.js";
 
 /* Aquí irá nuestros IMPORTS a archivos JS */
-import carouselTypes from './js/CarouselTypes.js';
-import showPokemons from './showCards.js';
-import searchInput from './js/searchInput.js';
-import filterPokemonTypes from './js/filters.js';
-//import { example, anotherExample } from "./js/data.js";
+import carouselTypes from "./js/CarouselTypes.js";
+import { showPokemons } from "./showCards.js";
+import { filterByType, filterByGeneration } from "./js/data.js";
+import { cleanClass, validateInput } from "./js/functions.js";
 
+/* Llamamos a la función que mostrara la data*/
+showPokemons(data.pokemon);
 
 /* Importamos el contenedor donde añadiremos los tipos de pokemons */
-const containerForTypes = document.getElementById("containerTypes");
-
-carouselTypes.addTypesPokemon(containerForTypes);
-
-
-
+const containerForCardTypes = document.getElementById("containerTypes");
+carouselTypes.addTypesPokemon(containerForCardTypes);
 
 /* Importamos los iconos del carusel */
 const iconRigth = document.getElementById("img-carousel-rigth");
 const iconLeft = document.getElementById("img-carousel-left");
 
-const containerTypePokemon = document.querySelectorAll(".CardTypePokemon");
-
-carouselTypes.functionalityCarousel(iconRigth, iconLeft, containerTypePokemon);
-
-
-
-
-
-
 /* Importamos el contenedor de cada tarjeta que muestra el tipo del pokemon
 y lo convertimos en un array, esto nos permitira filtrar segun su nombre*/
+const allCardTypes = document.querySelectorAll(".CardTypePokemon");
+carouselTypes.functionalityCarousel(iconRigth, iconLeft, allCardTypes);
 
-const pokemonTypeName = document.querySelectorAll(".CardTypePokemon");
+//let containerForCards = document.getElementById("pokemonsContainer");
 const searchInputName = document.getElementById("input-search-name");
-
 //?Recorremos el array de los contenedores que muestran los tipos y del que le den click traeremos su clase:
 
-//console.log(nameTypePokemons)
-pokemonTypeName.forEach((cardType)=>{
-    cardType.addEventListener("click", ()=>{
-        const nameType = cardType.className.split(" ")[0]
-        cleanClass(); //limpiar la clase borderRed asi en cada click la elimina 
+allCardTypes.forEach((cardType) => {
+  cardType.addEventListener("click", () => {
+    const nameType = cardType.className.split(" ")[0];
 
-        filterPokemonTypes(nameType);
-        cardType.classList.add("borderRed")
+    //limpiar la clase borderRed asi en cada click la elimina
+    cleanClass(allCardTypes);
+    //añade la clase borderRed asi en cada click la elimina
+    cardType.classList.add("borderRed");
 
-        //para limpiar el input del buscador.
-        searchInputName.value = "";
-        document.querySelector("#text-error").style.display = "none";
+    /*while (containerForCards.childNodes.length > 2) {
+      containerForCards.removeChild(containerForCards.firstChild);
+    }*/
+    
+    showPokemons(filterByType(nameType, data));
 
-    });
+    //para limpiar el input del buscador.
+    searchInputName.value = "";
+    document.querySelector("#text-error").style.display = "none";
+  });
 });
 
-const cleanClass= ()=>
-    pokemonTypeName.forEach((cardType)=>{
-        cardType.classList.remove("borderRed")
-})
+/**/
 
-
-
-
-
-/* Importamos elementos que utilizaremos para la funcionalidad de busqueda
-de pokemons para ello necesitaremos el contenedor de las cartas (showCards.js)*/
-
-showPokemons();
-
-/*
-const searchInputName = document.getElementById("input-search-name");
-const arrayContainerCards = document.querySelectorAll(".cuadroPokemon");
-const arrayNamePokemons = document.querySelectorAll(".introCard");
-searchInput.searchPokemonByName(searchInputName, arrayContainerCards, arrayNamePokemons);
-*/
-
-
-searchInput.searchPokemonByName();
-
-
-
-
+searchInputName.addEventListener("input", () => {
+  const arrayContainerCards = document.querySelectorAll(".cuadroPokemon");
+  const arrayNamePokemons = document.querySelectorAll(".introCard");
+  let inputValue = searchInputName.value.toLowerCase();
+  if (validateInput(inputValue) || inputValue === "") {
+    arrayNamePokemons?.forEach((name, index) => {
+      if (!name.innerText.toLowerCase().includes(inputValue)) {
+        arrayContainerCards[index].classList.add("hideCard");
+      } else {
+        arrayContainerCards[index].classList.remove("hideCard");
+      }
+    });
+    document.querySelector("#text-error").style.display = "none";
+  } else {
+    document.querySelector("#text-error").style.display = "flex";
+  }
+});
 
 /* ESTA ES LA PRUEBA CON LUNA DONDE ME EXPLICABA LO DE LA FUNSIÓN PURA Y FILTER 
-
 const datapoke = data.pokemon;
-
 const filterXGeneration= document.getElementById("generationClass");
 filterXGeneration.addEventListener("change", ()=>{
     switch (filterXGeneration.value) {
