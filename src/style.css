@@ -3,4 +3,15 @@
 }
 table {
     border-spacing: 30px 30px;
-  }
+}
+
+ul{
+    list-style-type: none;
+
+}
+
+li{
+    float:left;
+}
+  
+

@@ -1,5 +1,6 @@
 import data from './data/harrypotter/data.js';
 
+
 let tbody= document.querySelector ("tr");
 tbody.style.setProperty("background-color", "#6ab150");
 
@@ -18,10 +19,7 @@ let tablaProducto = document.getElementById('libros');
 let cuerpoTabla = document.createElement('tbody');
 let cuerpoTabla2 = document.createElement('tbody');
 
-/*
-let portadas=["https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/HarryPotterYElMisterioPrincipe.jpg","https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/HarryPotterYElLegadoMaldito.jpg","https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/HarryPotterYLaCamaraSecreta.jpg", "https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/HarryPotterYLaOrdenDelFenix.jpg"
-];
-*/
+
 
 p4.forEach(p => {
     //console.log(p.id);
