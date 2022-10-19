@@ -100,3 +100,5 @@ filterXGeneration.addEventListener("change", ()=>{
     }
 } )
 */
+
+// esto es para probar subir bien la info
