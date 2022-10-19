@@ -71,7 +71,8 @@ body {
     grid-area: section-title;
     display: inline-flex;
     gap: 5em;
-    border-radius: 20px 20px 30px 30px;
+    border-radius: 1rem;
+    border: #0D0D0D solid 2px;
   }
   
   .cards { 
@@ -81,6 +82,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    background-color: var(--footer-color);
+    padding: 20px;
+    border:#0D0D0D solid 2px;
   }
   .filter { 
     grid-area: filter;
@@ -91,25 +95,26 @@ body {
     text-align: center;
     background-color: var(--footer-color);
     margin-top: 10px;
-    border-radius: 5px;
     padding: 30px;
     width: 100%;
+    bottom: 0;
   }
   
   /* FIN GRID */
   
   .cards img {
     max-width: 10em;
-      box-shadow: 2px 2px 2px 2px rgb(84, 81, 81); 
+    box-shadow: 2px 2px 2px 2px rgb(84, 81, 81); 
   }
   .card-container {
     max-width: 10em;
     display: none;
   }
-  .section-title, .cards {
+  .section-title{
     background-color: #D8DFE0;
     padding: 20px;
   }
+
   
   .card {
     background-color: beige;
@@ -118,11 +123,15 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     padding: 10px;
-      box-shadow: 2px 2px 2px 2px rgb(84, 81, 81); 
+    box-shadow: 2px 2px 2px 2px rgb(84, 81, 81); 
+    border-radius: 1rem;
+    border: #0D0D0D solid 3px;
   }
   .card img {
     justify-content: center;
     align-self: center;
+    border-radius: .5rem;
+    border: #0D0D0D solid 3px;
   }
 
   .card p {
@@ -165,7 +174,7 @@ span {
   font-family: var(--font-body);
   font-weight: 700;
 }
-#buscar, #filter, #sort {
+#buscar, #filter, #sort, #filterStatus, #filterGender, #filterSpecies {
   padding: .5rem;
   border-radius: .5rem;
   margin-right: 7px ;
