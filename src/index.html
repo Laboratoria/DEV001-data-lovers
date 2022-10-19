@@ -9,16 +9,15 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/header-style.css" />
     <link rel="stylesheet" href="./css/carousel-style.css" />
-    <!-- Link que añadí para dar estilos a los contenedores de los tipos de pokémon-->
+    <link rel="stylesheet" href="./css/showCards.css" />
   </head>
   <body>
     <main id="root">
       <section class="container-header">
         <nav class="container-nav">
-          <img
-            src="./assets/images/pokelab.png"
-            alt="logo-pokelab"
-          />
+          <a href="index.html">
+            <img src="./assets/images/pokelab.png" alt="logo-pokelab"
+          /></a>
         </nav>
 
         <section class="container-type-pokemon" id="type-pokemon">
@@ -28,7 +27,7 @@
             class="img-carousel"
             id="img-carousel-left"
           />
-          <div class="containerTypesPoke"  id="containerTypes">
+          <div class="containerTypesPoke" id="containerTypes">
             <!-- Añadimos con javascript, los tipos de pokemos (nombre, icono y color del contenedor)-->
           </div>
           <img
@@ -39,26 +38,39 @@
           />
         </section>
 
-        <section class="container-intro-text" id="">
+        <section class="container-intro-text">
+          <img
+            src="./assets/images/TOGEPI.png"
+            alt="pokemon-togepi"
+            class="img-pokemon-header"
+          />
+          <div class="container-search">
+            <h1 class="title-header">
+              Catch Pokémon
+              <p>Find your buddy!</p>
+            </h1>
+
             <img
-              src="./assets/images/TOGEPI.png"
-              alt="pokemon-togepi"
-              class="img-pokemon-header"
+              src="./assets/images/pikachu.png"
+              alt="search-pikachu"
+              class="search-pikachu"
             />
-            <div>
-              <h1 class="title-header">Catch Pokémon<p>Find your buddy!</p></h1>
-              <img src="#" alt=".." width="20%" />
-              <input
-                type="text"
-                placeholder="Search your pokémon..."
-                class="input-search-pokemon"
-              />
-            </div>
-            <img
-              src="./assets/images/DRAGONITE.png"
-              alt="pokemon-dragonite"
-              class="img-pokemon-header"
+            <input
+              type="text"
+              placeholder="Search your pokémon..."
+              class="input-search-pokemon"
+              id="input-search-name"
             />
+            <p id="text-error" class="text-error-validator">
+              Enter only letters
+            </p>
+          </div>
+
+          <img
+            src="./assets/images/DRAGONITE.png"
+            alt="pokemon-dragonite"
+            class="img-pokemon-header"
+          />
         </section>
       </section>
 
@@ -67,22 +79,38 @@
           <h2 class="subtitle-pokemon">
             Pokemons <span class="subtitle-result">(251 results)</span>
           </h2>
-          <select
-            name="sort-pokemons-by"
-            id="sort-pokemons-by"
-            class="sort-pokemons-by"
-          >
-            <option disabled selected>Sort pokemons by:</option>
-            <option value="a-z">A-Z</option>
-            <option value="a-z">Z-A</option>
-          </select>
+          <div>
+            <select
+              name="filter-generation"
+              id="filter-generation"
+              class="sort-pokemons-by"
+            >
+              <option disabled selected>Filter by Generation:</option>
+              <option value="all">All Generations</option>
+              <option value="kanto">Kanto</option>
+              <option value="johto">Johto</option>
+            </select>
+            <select
+              name="sort-pokemons-by"
+              id="sort-pokemons-by"
+              class="sort-pokemons-by"
+            >
+              <option disabled selected>Sort pokemons by:</option>
+              <option value="all">Default</option>
+              <option value="a-z">A-Z</option>
+              <option value="a-z">Z-A</option>
+            </select>
+          </div>
         </div>
-        <section
-          class="container-numbers-pokemons"
-          id="numbers-pokemons"
-        ></section>
+        <div class="container-cards-pokemon-a" id="pokemonsContainer">
+          <section
+            class="container-numbers-pokemons"
+            id="numbers-pokemons"
+          ></section>
+        </div>
       </section>
     </main>
     <script src="./main.js" type="module"></script>
+    <!-- <script src="./showCards.js" type="module"></script> -->
   </body>
 </html>

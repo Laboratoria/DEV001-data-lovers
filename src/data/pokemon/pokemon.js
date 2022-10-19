@@ -2668,7 +2668,7 @@ export default {
   },
   {
     "num": "029",
-    "name": "nidoran ♀ (female)",
+    "name": "nidoran ♀(fem)",
     "generation": {
       "num": "generation i",
       "name": "kanto"
