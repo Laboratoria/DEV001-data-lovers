@@ -1,18 +1,11 @@
-import pokemon from "./data/pokemon/pokemon.js";
-import searchInput from "./js/searchInput.js";
-
-let pokeData = pokemon.pokemon;
-//console.log (pokeData)
 let container = document.getElementById("numbers-pokemons");
-//container.insertAdjacentHTML("afterbegin" , "<p>Holi moli</p>");
 
 //forEach recorre el array y realiza la funcion sobre cada elemento que lo compone
-let showPokemons = (newPokemonArray) => {
-  //newPokemonArray => es el nuevo array filtrado
-  let dataOptions = newPokemonArray || pokeData;
+export let showPokemons = (data) => {
+  container.innerHTML= " ";
 
-  dataOptions.forEach((pokemon) => {
-    let data = `<section class="cuadroPokemon">
+  data.forEach((pokemon) => {
+    let dataPokemon = `<section class="cuadroPokemon">
   <div class="parteSuperior" id="parteSuperior"> 
   <div class = "container-num-region">
   
@@ -32,22 +25,9 @@ let showPokemons = (newPokemonArray) => {
         .map((type) => `<span class="type-span ${type}" >${type}</span>`)
         .join("")}</div>
     </section>`;
-
-    container.insertAdjacentHTML("beforebegin", data);
-
-    /*creamos los siguientes arrays para nuestro buscador, de esta manera será dinamica*/
-    /*Importamos elementos que utilizaremos para la funcionalidad de busqueda
-    de pokemons para ello necesitaremos el contenedor de las cartas (showCards.js)*/
-
-    const arrayContainerCards = document.querySelectorAll(".cuadroPokemon");
-    const arrayNamePokemons = document.querySelectorAll(".introCard");
-
-    searchInput.searchPokemonByName(arrayContainerCards, arrayNamePokemons);
+  
+      container.insertAdjacentHTML("beforeend", dataPokemon);
+  
   });
+
 };
-
-
-//let type= pokemonCards.filter(pokemon=> pokemon.type == "fire")
-//console.log (type)
-
-export default showPokemons;
