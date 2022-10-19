@@ -9,8 +9,6 @@ import filterPokemonTypes from './js/filters.js';
 //import { example, anotherExample } from "./js/data.js";
 
 
-
-
 /* Importamos el contenedor donde añadiremos los tipos de pokemons */
 const containerForTypes = document.getElementById("containerTypes");
 
@@ -40,21 +38,28 @@ const searchInputName = document.getElementById("input-search-name");
 
 //?Recorremos el array de los contenedores que muestran los tipos y del que le den click traeremos su clase:
 
-
+//console.log(nameTypePokemons)
 pokemonTypeName.forEach((cardType)=>{
     cardType.addEventListener("click", ()=>{
-        const nameType = cardType.className.split(" ")[0];
-        console.log(nameType);
+        const nameType = cardType.className.split(" ")[0]
+        cleanClass(); //limpiar la clase borderRed asi en cada click la elimina 
+
         filterPokemonTypes(nameType);
+        cardType.classList.add("borderRed")
 
         //para limpiar el input del buscador.
         searchInputName.value = "";
         document.querySelector("#text-error").style.display = "none";
 
-        
-
     });
 });
+
+const cleanClass= ()=>
+    pokemonTypeName.forEach((cardType)=>{
+        cardType.classList.remove("borderRed")
+})
+
+
 
 
 

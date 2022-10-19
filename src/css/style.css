@@ -188,3 +188,10 @@
 .water:hover{
   background: rgb(1, 138, 180);
 }
+
+
+.borderRed{
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(139, 148, 163);
+}
