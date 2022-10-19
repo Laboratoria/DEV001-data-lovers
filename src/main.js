@@ -1,7 +1,7 @@
 import ghibli from "./data/ghibli/ghibli.js";
 const objetos = ghibli
 
-import { mostrarPeliculaIndividual, filtrarDirectores,ordenarYears} from './data.js';
+import { mostrarPeliculaIndividual, filtrarDirectores,ordenarYears,ordenarScore} from './data.js';
 //Variables globales
 const pelicula = document.getElementById("peliculas");
 const modal = document.getElementById("modal");
@@ -12,6 +12,7 @@ const personajes = document.getElementById("personajes");
 const location = document.getElementById("locacion");
 const vehiculos = document.getElementById("vehiculos");
 const fecha = document.getElementById("fecha");
+const popular = document.getElementById("popular");
 
 window.onload = () => {
   mostrarEnPantalla(datosTodasPeliculas());
@@ -178,6 +179,8 @@ fecha.addEventListener("click",function(){
   mostrarEnPantalla(mostrarYear)
 });
 
-//esto es la siguiente categoria a agregar si da el tiempo
-
-// <li class="menu_inicio"><a href="#" id="popular">most prominent</a></li>
+popular.addEventListener("click",function(){
+  pelicula.innerHTML = "";
+  const mostrarPopular = ordenarScore(datosTodasPeliculas());
+  mostrarEnPantalla(mostrarPopular);
+}); 
