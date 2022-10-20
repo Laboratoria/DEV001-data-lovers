@@ -4,7 +4,7 @@ import data from "./data/pokemon/pokemon.js";
 /* Aquí irá nuestros IMPORTS a archivos JS */
 import carouselTypes from "./js/CarouselTypes.js";
 import { showPokemons } from "./showCards.js";
-import { filterByType, filterByRegion, sortPokemons, sortPokemonsInvertido } from "./js/data.js";
+import { filterByType, filterByRegion, sortPokemons, sortPokemonsInvertido, sortNumber, sortNumberInverted } from "./js/data.js";
 import { cleanClass, validateInput } from "./js/functions.js";
 
 /* Llamamos a la función que mostrara la data*/
@@ -72,6 +72,8 @@ searchInputName.addEventListener("input", () => {
 
 //** AQUI VA FILTRADO POR REGION */
 
+var pokeData = data.pokemon
+
 const filterXRegion= document.getElementById("regionName");
 //console.log(filterXRegion)
 
@@ -94,7 +96,7 @@ const sortSelect= document.getElementById("sort-pokemons-by");
 
 sortSelect.addEventListener("change", ()=>{
     switch (sortSelect.value){
-        case "default":
+        case "all":
             showPokemons(data.pokemon);
             break;
         case "a-z":
@@ -103,8 +105,29 @@ sortSelect.addEventListener("change", ()=>{
         case "z-a":
             showPokemons(sortPokemonsInvertido(data.pokemon));
             break;
+        default:{
+            break;
+        }
 
     }
-})
 
-//pruebadesubirgit
+    );
+
+//SORT POR NUMERO DE POKEDEX
+
+const sortNumberSelect= document.getElementById("sort-by-Num");
+
+sortNumberSelect.addEventListener("change", ()=>{
+    switch (sortNumberSelect.value){
+        case "00-MAX":
+            showPokemons(sortNumber( data.pokemon));
+            break;
+        case "MAX-00":
+            showPokemons(sortNumberInverted(data.pokemon));
+            break;
+        default:{
+            break;
+        }
+
+    }
+});
