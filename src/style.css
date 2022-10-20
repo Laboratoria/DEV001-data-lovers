@@ -57,6 +57,7 @@ nav a {
 .menuLeft {
   display: flex;
   flex-grow:1;
+  flex-wrap: wrap;
 
 }
 
@@ -74,7 +75,9 @@ section {
   font-size: 40px;
   text-align: center;
   color: #D99982;
+
 }
+
 
 section h1 {
   padding-bottom: 60px;
@@ -82,11 +85,14 @@ section h1 {
   font-size: 80px;
 }
 
+.index div {
+  margin-bottom: 30px;
+}
+
 
 .totoro {
   position: fixed;
-  width: 288px;
-  height: 337px;
+  width: 15%;
   bottom: 0;
   right: 0;
 }
@@ -128,4 +134,35 @@ section h1 {
 
 .footer p {
   color: #FFEAE2;
+}
+
+@media screen and (max-width: 800px) {
+	.root {
+		flex-direction:column;
+	}
+
+	header {
+		flex-direction:column;
+		padding:0;
+	}
+
+	header .logo {
+		margin:20px 0;
+	}
+
+	header nav {
+		width: 100%;
+	}
+
+	
+}
+
+@media screen and (max-width: 600px) {
+	aside {
+		flex-direction:column;
+	}
+
+	footer {
+		justify-content:space-around;
+	}
 }
