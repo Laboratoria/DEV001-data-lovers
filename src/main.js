@@ -72,8 +72,6 @@ searchInputName.addEventListener("input", () => {
 
 //** AQUI VA FILTRADO POR REGION */
 
-var pokeData = data.pokemon
-
 const filterXRegion= document.getElementById("regionName");
 //console.log(filterXRegion)
 
@@ -89,14 +87,14 @@ filterXRegion.addEventListener("change", () =>{
             showPokemons(filterByRegion(filterXRegion.value, data.pokemon))
             break
     }
-})
+});
 
 //** AQUI VAMOS A INSERTAR SORT DE A-Z Z-A */
 const sortSelect= document.getElementById("sort-pokemons-by");
 
 sortSelect.addEventListener("change", ()=>{
     switch (sortSelect.value){
-        case "all":
+        case "default":
             showPokemons(data.pokemon);
             break;
         case "a-z":
@@ -105,13 +103,8 @@ sortSelect.addEventListener("change", ()=>{
         case "z-a":
             showPokemons(sortPokemonsInvertido(data.pokemon));
             break;
-        default:{
-            break;
-        }
-
-    }
-
-    );
+     }
+});
 
 //SORT POR NUMERO DE POKEDEX
 
@@ -125,9 +118,6 @@ sortNumberSelect.addEventListener("change", ()=>{
         case "MAX-00":
             showPokemons(sortNumberInverted(data.pokemon));
             break;
-        default:{
-            break;
-        }
-
     }
 });
+
