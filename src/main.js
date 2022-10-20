@@ -1,7 +1,7 @@
 import data from './data/harrypotter/data.js';
 
 
-let tbody= document.querySelector ("tr");
+/*let tbody= document.querySelector ("tr");
 tbody.style.setProperty("background-color", "#6ab150");
 
 const libros=data.books;
@@ -36,12 +36,6 @@ p4.forEach(p => {
     img.style.display="block";
     img.style.margin="auto";
     fila.appendChild(img);
-
-    
-   
-
-  
-    
     cuerpoTabla.appendChild(fila);
 
 });
@@ -68,7 +62,7 @@ u4.forEach(p => {
     cuerpoTabla2.appendChild(fila2);
 });
 
-tablaProducto.appendChild(cuerpoTabla2);
+tablaProducto.appendChild(cuerpoTabla2);*/
 
 
 

@@ -1,17 +1,85 @@
 .home{
     display: flex;
 }
-table {
+/*table {
     border-spacing: 30px 30px;
 }
-
 ul{
     list-style-type: none;
 
 }
-
 li{
     float:left;
+}*/
+ 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(76, 97, 253);    
 }
-  
 
+.container{
+    width: 100%;    
+}
+
+.header{
+    background: rgb(255, 255, 255);    
+/* fixed= posicion fija*/
+    position:fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.logo-nav-container{
+    display: flex;
+    /*space-between=espaciado uniforme*/
+    justify-content:space-between;
+    align-items: center;   
+}
+
+.header a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+        .nav-input, .nav-label{
+            display: none;
+        }
+
+.navigation ul{
+list-style: none;
+display:grid;
+    grid-auto-flow: column;
+    gap: 3em;
+}
+
+.nav-item{
+    color: blueviolet;
+}
+.main{
+    padding-top: 15%;
+    padding-left: 5%;
+}
+
+.footer{
+    background: rgb(202, 202, 202);
+    padding: 2% 0;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+
+
+/*#Inicio{
+    display: flex;
+    block-size: 700px ;
+    height: 400px;
+    background-repeat: no-repeat;
+  /*background-image: url("https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Harry-Potter-y-la-camara-de-los-secretos-scaled.jpg") ;
+}*//*
+
+/*
+#libros01{
+    display: flex;
+}
+*/
