@@ -17,28 +17,49 @@ export const filterByRegion = (selection, pokemonData)=>{
 
 export const sortPokemons = (pokemonData)=>{
   const pokemonSort= pokemonData.sort((prev,next) =>{
-    if(prev.name > next.name){
-      return 1
-    }
-    else if (prev.name < next.name){
+    if(prev.name < next.name){
       return -1
-    } else {
-      return 0
+    }
+    if (prev.name > next.name){
+      return 1
     } 
-    console.log(pokemonSort)}) 
+      return 0
+    
+    }) 
   return pokemonSort
 }
 
 export const sortPokemonsInvertido = (pokemonData)=>{
-  const pokemonSort= pokemonData.sort((next,prev) =>{
-    if(prev.name > next.name){
+  const pokemonSort= pokemonData.sort((prev,next) =>{
+    if(prev.name < next.name){
       return 1
     }
-    else if (prev.name < next.name){
+    else if (prev.name > next.name){
       return -1
-    } else {
+    }
       return 0
-    } 
-    }) 
+    } )
   return pokemonSort
+}
+
+export const sortNumber = (pokemonData)=>{
+  const sortByNumber= pokemonData.sort((min,max)=>{
+    if(min.num < max.num){
+      return -1
+    } if (min.num > max.num){
+      return 1
+    } return 0
+  })
+  return sortByNumber
+}
+
+export const sortNumberInverted = (pokemonData)=>{
+  const sortByNumber= pokemonData.sort((min,max)=>{
+    if(min.num < max.num){
+      return 1
+    } if (min.num > max.num){
+      return -1
+    } return 0
+  })
+  return sortByNumber
 }
