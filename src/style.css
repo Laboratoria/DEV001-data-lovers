@@ -118,10 +118,9 @@ section h1 {
   background-color: #A68F97;
   display: flex;
   flex-flow: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
-.footer a {
-  text-decoration: none;
+.footer p {
   color: #FFEAE2;
 }
