@@ -9,8 +9,6 @@ const cerrar = document.getElementById("close");
 const home = document.getElementById("home");
 const pagina = document.getElementById("muestra");
 const personajes = document.getElementById("personajes");
-const location = document.getElementById("locacion");
-const vehiculos = document.getElementById("vehiculos");
 const fecha = document.getElementById("fecha");
 const popular = document.getElementById("popular");
 
@@ -64,8 +62,9 @@ function mostrarEnPantalla(data) {
       pelicula.innerHTML += `
                      <div class = "card_pelicula">
                         <img src="${array[i].poster}" alt="${array[i].title}">
-                        <div class = "textos_card"
-                           <p>${array[i].title}</p>
+                       
+                        <div class = "textos_card">
+                           <h2>${array[i].title}</h2>
                            <p>director: ${array[i].director}</p>
                            <p>year: ${array[i].release_date}</p>
                         </div>
@@ -118,7 +117,7 @@ pelicula.addEventListener('mouseup', (e) => {
            <div class="modal_titulo_descripcion">
               <h2>${element.title}</h2>
               <div class = "modal_director"
-                <p>producer: ${element.producer}</p>
+                <p >producer: ${element.producer}</p>
                 <p>director: ${element.director}</p>
               </div>
               <div class="modal_texto_largo"  
@@ -133,37 +132,17 @@ pelicula.addEventListener('mouseup', (e) => {
           personajes.innerHTML = "";
           element.people.forEach(persona =>{
           personajes.innerHTML +=
-           `<div class = "cont-people">
-            <img src="${persona.img}" alt="${persona.name}">
-             <p>${persona.name}</p>
-             <p>${persona.specie}</p>
+           `<div class = "cont_people">
+              <img src="${persona.img}" alt="${persona.name}">
+              <div class ="con_people_text"
+                <p>Name: ${persona.name}</p>
+                <p>Specie: ${persona.specie}</p>
+              </div> 
            </div>
            ` 
           });
           
-          location.innerHTML = ""
-          element.locations.forEach(locacion =>{
-          
-            location.innerHTML +=
-            `<div class = "cont-locacion">
-               <img src="${locacion.img}" alt="${locacion.name}">
-               <p>${locacion.name}</p>
-               <p>${locacion.climate}</p>
-            </div>`
-
-          });
-          
-          vehiculos.innerHTML = ""
-          element.vehicles.forEach(vehiculo =>{
-            vehiculos.innerHTML +=
-            `<div class = "cont-vehiculos">
-            <img src="${vehiculo.img}" alt="${vehiculo.name}">
-            <p>${vehiculo.name}</p>
-            <p>${vehiculo.description}</p>
-            <p>${vehiculo.pilot.name}</p>
-                     
-            </div>`
-          });
+         
         });
       });
 
@@ -188,3 +167,9 @@ popular.addEventListener("click",function(){
 
 const estadistica = estadisticaData(datosTodasPeliculas());
 console.log(estadistica);
+
+
+//menu
+
+
+
