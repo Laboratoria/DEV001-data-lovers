@@ -103,7 +103,7 @@ sortSelect.addEventListener("change", ()=>{
         case "z-a":
             showPokemons(sortPokemonsInvertido(data.pokemon));
             break;
-    };
+     }
 });
 
 //SORT POR NUMERO DE POKEDEX
@@ -117,6 +117,7 @@ sortNumberSelect.addEventListener("change", ()=>{
             break;
         case "MAX-00":
             showPokemons(sortNumberInverted(data.pokemon));
-            break;  
+            break;
     }
 });
+
