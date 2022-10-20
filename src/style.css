@@ -1,0 +1,315 @@
+body{
+    background-image: url("https://allgamersin.com/wp-content/uploads/2020/02/Hogwarts1.jpg");
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#rectangle{
+    height: 100px;
+    left: 0px;
+    top: -100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 70px;
+}
+
+.imag{
+    width: 100%;
+    max-width: 150px;
+    display: flex;
+    position: relative;
+    left: -150px;
+    
+}
+
+
+
+li{
+    margin: 20px;
+    padding: 15px;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 47px;
+    }
+a{
+    font-family: Krub;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 30px;
+    line-height: 47px;
+    color: #FFFFFF;
+    text-decoration: unset;
+    display: inline-block;
+
+}
+
+a:hover{
+background:#FFFFFF;
+color: #000;
+}
+#buscador{
+    margin: 9px;
+    padding: 4px;
+    
+}
+.prototipo{
+width: 1000px;
+display: flex;
+    position: relative;
+    left: 800px;
+    top:40px;
+}
+
+#buscarBoton {
+    background-image: url("img/LUPA.png");
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35px 35px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: 20px;
+    background-color:#FFFFFF;
+    border-radius: 10px;
+    margin-top: -10px;
+    position:relative;
+    top:-8px;
+
+}
+
+
+#buscador{
+    width: 400px;
+    height: 35px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin: 0 auto;
+    left: 0;
+    right: 5;
+    position: relative;
+    top: -8px;
+}
+/*.primeraimagen{
+display: flex;
+justify-content: center;
+}
+.flexbox1{
+display: flex;
+align-items:flex-start;
+margin: 85px;
+padding: 60px;
+}
+.primeraimagen{
+margin:40px;
+padding:30px;
+display: block;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+.segundaimagen{
+    margin:40px;
+    padding:30px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;   
+}
+.terceraimagen{
+    margin:40px;
+    padding:30px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+.cuartaimagen{
+    margin:40px;
+    padding:30px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+
+}*/
+.lista{
+display: flex;
+justify-content: center;
+margin: 50px;
+padding: 20px;
+
+}
+#peliculas{
+    background-color: rgba(192, 192, 192, 0.3);
+    background-image: url("img/peliculas.jpeg");
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: 250px 250px;
+    border-bottom-color: rgb(0, 0, 0);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(0, 0, 0);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(0, 0, 0);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(0, 0, 0);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-style: none;
+    border-top-width: 0px;
+    cursor: pointer;
+    height: 250px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 8px;
+    width: 250px;
+    margin: 30px;
+    padding: 15px;
+    
+    
+}
+#libros{
+    background-color: rgba(192, 192, 192, 0.3);
+    background-image: url("img/libros.jpg");
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: 250px 250px;
+    border-bottom-color: rgb(0, 0, 0);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(0, 0, 0);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(0, 0, 0);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(0, 0, 0);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-style: none;
+    border-top-width: 0px;
+    cursor: pointer;
+    height: 250px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 250px;
+    margin: 30px;
+    padding: 15px;
+}
+#precuelas{
+    background-color: rgba(192, 192, 192, 0.3);
+    background-image: url("img/casas.jpg");
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: 250px 250px;
+    border-bottom-color: rgb(0, 0, 0);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(0, 0, 0);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(0, 0, 0);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(0, 0, 0);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-style: none;
+    border-top-width: 0px;
+    cursor: pointer;
+    height: 250px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 250px;
+    margin: 30px;
+    padding: 15px;
+}
+#deporte{
+    background-color: rgba(192, 192, 192, 0.3);
+    background-image: url("img/pociones.webp");
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: 250px 250px;
+    border-bottom-color: rgb(0, 0, 0);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(0, 0, 0);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(0, 0, 0);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(0, 0, 0);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-style: none;
+    border-top-width: 0px;
+    cursor: pointer;
+    height: 250px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 250px;
+    margin: 30px;
+    padding: 15px;
+    
+}
+
+.texto{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+
+
+
