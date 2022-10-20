@@ -4,7 +4,7 @@ import data from "./data/pokemon/pokemon.js";
 /* Aquí irá nuestros IMPORTS a archivos JS */
 import carouselTypes from "./js/CarouselTypes.js";
 import { showPokemons } from "./showCards.js";
-import { filterByType, filterByGeneration } from "./js/data.js";
+import { filterByType, filterByRegion, sortPokemons, sortPokemonsInvertido } from "./js/data.js";
 import { cleanClass, validateInput } from "./js/functions.js";
 
 /* Llamamos a la función que mostrara la data*/
@@ -42,10 +42,12 @@ allCardTypes.forEach((cardType) => {
     
     showPokemons(filterByType(nameType, data));
 
-    //para limpiar el input del buscador.
-    searchInputName.value = "";
-    document.querySelector("#text-error").style.display = "none";
-  });
+        //para limpiar el input del buscador.
+        searchInputName.value = "";
+        document.querySelector("#text-error").style.display = "none";
+
+
+    });
 });
 
 /**/
@@ -68,22 +70,41 @@ searchInputName.addEventListener("input", () => {
   }
 });
 
-/* ESTA ES LA PRUEBA CON LUNA DONDE ME EXPLICABA LO DE LA FUNSIÓN PURA Y FILTER 
-const datapoke = data.pokemon;
-const filterXGeneration= document.getElementById("generationClass");
-filterXGeneration.addEventListener("change", ()=>{
-    switch (filterXGeneration.value) {
+//** AQUI VA FILTRADO POR REGION */
+
+const filterXRegion= document.getElementById("regionName");
+//console.log(filterXRegion)
+
+filterXRegion.addEventListener("change", () =>{
+    switch (filterXRegion.value){
         case "all":
-            showPokemons(data.pokemon)
+            showPokemons(data.pokemon);
             break;
         case "kanto":
-            showPokemons(filterGeneration("normal", datapoke) )
-        break;
+            showPokemons(filterByRegion(filterXRegion.value, data.pokemon))
+            break
         case "johto":
-            showPokemons(filterGeneration("special", datapoke))
+            showPokemons(filterByRegion(filterXRegion.value, data.pokemon))
+            break
+    }
+})
+
+//** AQUI VAMOS A INSERTAR SORT DE A-Z Z-A */
+const sortSelect= document.getElementById("sort-pokemons-by");
+
+sortSelect.addEventListener("change", ()=>{
+  console.log(data.pokemon);
+    switch (sortSelect.value){
+        case "default":
+            showPokemons(data.pokemon);
+            break;
+        case "a-z":
+            showPokemons(sortPokemons( data.pokemon));
+            break;
+        case "z-a":
+            showPokemons(sortPokemonsInvertido(data.pokemon));
             break;
     }
-} )
-*/
+})
 
-// esto es para probar subir bien la info
+//pruebadesubirgit

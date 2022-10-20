@@ -80,8 +80,6 @@
 .photoStyle{
   position:relative;
   margin-bottom: 28px;
-
-
 }
 
 #circle{
@@ -125,7 +123,6 @@
   font-weight: 900;
   font-size: 1.4em;
   font-size: 22px;
-
 }
 
 
@@ -173,23 +170,33 @@
     justify-content: center;
     align-items: center;
     gap: 25px;
-    max-width: 580px;
+    /*max-width: 580px;*/
+  }
+
+  .father-selects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
   }
 
   .sort-pokemons-by{
     border-radius: 15px;
-    width: 85%;
-    padding: 15px 15px 15px 15px;
-    font-size: 20px;
+    width: 80%;
+    padding: 20px 30px;
+    font-size: 40px;
+    text-align: center;
   }
 
   .subtitle-pokemon{
-    font-size: 35px;
+    font-size: 45px;
   
   }
 
   .subtitle-result{
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .container-cards-pokemon-a{
