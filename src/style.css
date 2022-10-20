@@ -38,6 +38,8 @@ div nav {
   flex-wrap: wrap; 
   justify-content: space-between;
   align-items:center;
+
+  
 }
 
 nav a {
@@ -48,11 +50,14 @@ nav a {
   font-weight: 900;
   padding: 15px;
   line-height: 70px;
+  flex-grow:1;
+ 
 }
 
 .menuLeft {
-  width: 50%;
   display: flex;
+  flex-grow:1;
+
 }
 
 .menuLeft img {
