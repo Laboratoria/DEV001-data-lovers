@@ -10,8 +10,7 @@ export const filterByType = (nameType, pokemonData) => {
 
 export const filterByRegion = (selection, pokemonData) => {
   const filteredRegion = pokemonData.filter(
-    (pokemon) => pokemon.generation.name == selection
-  );
+  (pokemon) => pokemon.generation.name == selection);
   return filteredRegion;
 };
 
@@ -44,4 +43,27 @@ export const sortPokemonsInvertido = (pokemonData) => {
     }
   });
   return pokemonSort;
+};
+
+
+export const sortNumber = (pokemonData)=>{
+  const sortByNumber= pokemonData.sort((min,max)=>{
+    if(min.num < max.num){
+      return -1
+    } if (min.num > max.num){
+      return 1
+    } return 0
+  })
+  return sortByNumber
+};
+
+export const sortNumberInverted = (pokemonData)=>{
+  const sortByNumber= pokemonData.sort((min,max)=>{
+    if(min.num < max.num){
+      return 1
+    } if (min.num > max.num){
+      return -1
+    } return 0
+  })
+  return sortByNumber
 };

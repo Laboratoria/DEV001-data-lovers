@@ -20,11 +20,13 @@
           /></a>
         </nav>
 
+
         <div class="container-title-carousel">
           <h2 class="title-carousel">Select the type of Pokemons.<span class="span-title">&#160;</span></h2>
           <img src="./assets/images/Pokemon10.png" alt="pokebola-title" class="img-title-carousel">
         </div>
         
+
         <section class="container-type-pokemon" id="type-pokemon">
           <img
             src="./assets/images/left-icon.png"
@@ -86,11 +88,20 @@
           </h2>
           <div class="father-selects">
             <select
+              name="sort-by-Num"
+              id="sort-by-Num"
+              class="sort-pokemons-by"
+            >
+              <option disabled selected>Sort pokemons by # Pokedex:</option>
+              <option value="00-MAX">MIN-MAX</option>
+              <option value="MAX-00">MAX-MIN</option>
+            </select>
+            <select
               name="filter-generation"
               id="regionName"
               class="sort-pokemons-by"
             >
-              <option disabled selected>Filter by Generation:</option>
+              <option disabled selected>Filter by region:</option>
               <option value="all">All Generations</option>
               <option value="kanto">Kanto</option>
               <option value="johto">Johto</option>
