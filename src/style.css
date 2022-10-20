@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    width: 100%;
+    background-color: #010208;
+}
+
+.header {
+    background: url(fotosHP/fotocuatro.jpeg)no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    overflow: hidden;
+}
+
+/*Para que al posicionarnos sobre BOOKS,
+el menú desplegable se centrara*/ 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ESTE NAV ES PARA FONDO TAMAÑO Y COLOR */
+nav {
+    max-width: 900px;
+    margin: auto;
+    background-color: #010208;
+    font-size: 20px;
+}
+
+/*Display: flex es para que los botones se coloquen uno al lado del otro / Juntify content se utiliza para colocar los botones en el centro*/ 
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Menú de listas (botones)*/ 
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+/*Para que al posicionarme sobre los botones se pinte de gris (HOVER)*/ 
+.menu li a:hover {
+    background-color: #999494;
+}
+
+/* PENSAMOS QUE ERA PARA CENTRAR EL MENU DESPLEGABLE*/
+/*.menu > li {
+    float:left;
+    text-align: center;
+  }*/
+
+/*Para que no aparezca las viñetas,
+ni se resalte la lista/ /Position absolute,
+se usa para que al posicionarnos en BOOKS y despeglar el menú,
+la foto no se vaya hasta abajo,
+sino que se lea encima de la foto*/ 
+.menu li ul {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    list-style: none;
+}
+
+/*Para que aparezca el menú desplegable*/ 
+.menu li:hover>ul {
+    display: block;
+}
+
+.inicio {
+    color: white;
+    text-align: center;
+    background: url(fotosHP/harry3.jpeg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.inicio h1 {
+    font-size: 50px;
+    text-shadow: 2px 2px 0px rgb(0, 0, 0), 4px 4px 0px rgb(16, 47, 1);
+}
+
+.inicio p {
+    font-size: 30px;
+    font-weight: 900;
+    text-shadow: 2px 2px 0px rgb(0, 0, 0), 4px 4px 0px rgb(16, 47, 1);
+}
+
+
+.foto2 {
+    background: url(fotosHP/harry3.jpeg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.curioso {
+    background: url(fotosHP/harry3.jpeg);
+    background-size: cover;
+    height: 100vh;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.personajes {
+    background: url(fotosHP/harry3.jpeg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.footer {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.tarjeta {
+    background: black;
+    width: 200px;
+    color: aqua;
+    overflow: hidden;
+
+}
+
+.header_tarjeta img {
+    height: 300px;
+    width: 200px;
+    display: inline-block;
+    object-fit: cover;
+}
+
+.barajas {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+/*  COMENTAR */
