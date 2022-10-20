@@ -1,0 +1,32 @@
+body{
+    background-image: url("https://allgamersin.com/wp-content/uploads/2020/02/Hogwarts1.jpg");
+    background-repeat:no-repeat;
+    background-size: 100%;
+}
+
+#rectangle{
+    height: 100px;
+    left: 0px;
+    top: -100px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imag{
+    width: 100%;
+    max-width: 150px;
+    display: flex;
+    position: relative;
+    left: -200px;
+}
+
+il{
+    color:aliceblue;
+    position: relative;
+    left: -800px;
+    font-size: 40px;
+
+}
