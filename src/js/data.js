@@ -9,14 +9,16 @@ export const filterByType = (nameType, pokemonData) => {
 }
 
 export const filterByRegion = (selection, pokemonData)=>{
-  const filteredRegion= pokemonData.filter(pokemon=> pokemon.generation.name == selection)
+  const filteredRegion= pokemonData.filter(
+  (pokemon)=> pokemon.generation.name == selection)
   return filteredRegion
-}
+};
 
 //*aqui va el sort*/
 
 export const sortPokemons = (pokemonData)=>{
-  const pokemonSort= pokemonData.sort((prev,next) =>{
+  let copyData = [...pokemonData];
+  const pokemonSort= copyData.sort((prev,next) =>{
     if(prev.name < next.name){
       return -1
     }
@@ -27,10 +29,11 @@ export const sortPokemons = (pokemonData)=>{
     
     }) 
   return pokemonSort
-}
+};
 
 export const sortPokemonsInvertido = (pokemonData)=>{
-  const pokemonSort= pokemonData.sort((prev,next) =>{
+  let copyData = [...pokemonData]; //dentro de un array copia todo lo que esta en data
+  const pokemonSort= copyData.sort((prev,next) =>{
     if(prev.name < next.name){
       return 1
     }
@@ -40,7 +43,8 @@ export const sortPokemonsInvertido = (pokemonData)=>{
       return 0
     } )
   return pokemonSort
-}
+};
+
 
 export const sortNumber = (pokemonData)=>{
   const sortByNumber= pokemonData.sort((min,max)=>{
@@ -49,9 +53,9 @@ export const sortNumber = (pokemonData)=>{
     } if (min.num > max.num){
       return 1
     } return 0
-  })
+  });
   return sortByNumber
-}
+};
 
 export const sortNumberInverted = (pokemonData)=>{
   const sortByNumber= pokemonData.sort((min,max)=>{
@@ -60,6 +64,6 @@ export const sortNumberInverted = (pokemonData)=>{
     } if (min.num > max.num){
       return -1
     } return 0
-  })
+  });
   return sortByNumber
-}
+};
