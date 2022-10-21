@@ -6,6 +6,44 @@ body{
     background-attachment: fixed;
 }
 
+
+.listas{
+display: flex;
+justify-content:space-between;
+align-items: center;
+flex-wrap: wrap;
+background-image: url("img/555.jpg");
+background-repeat:no-repeat;
+background-size: 100%;
+background-position: center center;
+background-attachment: fixed;
+}
+
+.informacion{
+display: flex;
+flex-direction: column;
+width: 300px;
+padding:30px;
+margin: 20px;
+border-radius: 10px;
+box-shadow: 2px 20px 20px 2px rgba(212, 222, 234, 0.3);
+background-image:url(img/fondo\ \(2\).jpg);
+}
+.informacion img {
+align-self:center;
+}
+  
+    /*position: relative;
+	width: 100%;
+    max-width: 500px;
+    margin: auto;
+	
+    
+	/*flex-direction: column;
+	//align-items: center;
+    /*background-color: rgb(34, 54, 107);*/
+
+
 #rectangle{
     height: 100px;
     left: 0px;
@@ -49,17 +87,18 @@ a{
 }
 
 a:hover{
-background:#FFFFFF;
-color: #000;
+    background:#FFFFFF;
+    color: #000;
 }
+
 #buscador{
     margin: 9px;
     padding: 4px;
     
 }
 .prototipo{
-width: 1000px;
-display: flex;
+    width: 1000px;
+    display: flex;
     position: relative;
     left: 800px;
     top:40px;
@@ -148,7 +187,7 @@ padding: 20px;
 }
 #peliculas{
     background-color: rgba(192, 192, 192, 0.3);
-    background-image: url("img/peliculas.jpeg");
+    background-image: url("img/libros.jpg");
     background-position-x: 50%;
     background-position-y: 50%;
     background-repeat: no-repeat;
@@ -188,7 +227,7 @@ padding: 20px;
 }
 #libros{
     background-color: rgba(192, 192, 192, 0.3);
-    background-image: url("img/libros.jpg");
+    background-image: url("img/peliculas.jpeg");
     background-position-x: 50%;
     background-position-y: 50%;
     background-repeat: no-repeat;
