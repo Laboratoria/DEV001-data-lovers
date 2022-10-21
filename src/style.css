@@ -20,7 +20,6 @@ header {
   width: 100%;
   color: #f2f2f2;
   font-size: 80px;
-
 }
 
 header h1 {
@@ -28,7 +27,7 @@ header h1 {
   padding-top: 135px;
   padding-left: 40px;
   padding-bottom: 30px;
-  background-color: #D99982
+  background-color: #D99982;
 }
 
 div nav {
@@ -42,30 +41,40 @@ div nav {
   
 }
 
-nav a {
+.menuLeft a {
   text-decoration: none;
   color: #A68F97;
   background-color: #F2F2F2;
-  font-size: 36px;
+  font-size: 50px;
   font-weight: 900;
-  padding: 15px;
-  line-height: 70px;
+  padding: 17px;
   flex-grow:1;
- 
+}
+
+.menuLeft a:hover, .menuLeft img:hover {
+  background-color: #ffffff;
+}
+
+.producers div:hover {
+  background-color: #515a6c;
+  color: #FFFFFF;
+  text-shadow: none;
+  font-size: 50px;
+  width: 350px;
+  height: 250px;
+  transition: 1s;
 }
 
 .menuLeft {
   display: flex;
   flex-grow:1;
   flex-wrap: wrap;
-
 }
 
-.menuLeft img {
-  height: 100px;
-  vertical-align: top;
+a img {
+  height: 50px;
   background-color: #F2F2F2;
-  padding: 20px;
+  vertical-align: middle;
 }
 
 section {
