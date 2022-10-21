@@ -1,7 +1,7 @@
 // estas funciones relizan solo una cosa.
 
 export const filterByType = (nameType, pokemonData) => {
-  const filterType = pokemonData.pokemon.filter((pokemon) =>
+  const filterType = pokemonData.filter((pokemon) =>
     pokemon.type.includes(nameType)
   );
   console.log(filterType);
@@ -26,7 +26,7 @@ export const sortPokemons = (pokemonData) => {
     } else {
       return 0;
     }
-    console.log(pokemonSort);
+
   });
   return pokemonSort;
 };
