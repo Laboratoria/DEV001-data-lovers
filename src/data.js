@@ -13,8 +13,8 @@ export const filterSpecies = (data, species) => {
 return filtrado;
 };
 
-export const orden = (dataFilter) => {
- const sortOrden =  dataFilter.sort(function (a, b) {
+export const ordenZA = (dataFilter) => {
+ const sortOrdenZA =  dataFilter.sort(function (a, b) {
     if (a.name < b.name) {
       return 1;
     }
@@ -23,11 +23,11 @@ export const orden = (dataFilter) => {
     }
 //return 0;
 })
-return sortOrden;
+return sortOrdenZA;
 };
 
-export const sortOrdenZ = (dataFilter) => {
-const sortOrdenZ =  dataFilter.sort(function (a, b) {
+export const ordenAZ = (dataFilter) => {
+const sortOrdenAZ =  dataFilter.sort(function (a, b) {
   if (a.name > b.name) {
     return 1;
   }
@@ -37,7 +37,7 @@ const sortOrdenZ =  dataFilter.sort(function (a, b) {
   //return 0;
  
 })
-return sortOrdenZ;
+return sortOrdenAZ;
 }  
 
 export const statisticsFrequency = (originalDataLength, categoryDataLength) => {

@@ -2,22 +2,28 @@
 html, body {
     height: 100%;
     width: 100%;
+    background-color: black
   }
 :root {
-    --background-color: #F2F2F2;
-    --navbar-color: white;
+    --background-color: black;
+    --navbar-color: black;
     --cards-section-color: paleturquoise;
     --footer-color: #96D966;
     --border-color: black;
+    --button-color: #69D91A;
+    --white-color: #fff;
+    --blue-color: #5791E7;
+    --grey-color:#2D2E2D;
+
     --font-headings: 'Grandstander', cursive;
     --font-body: 'Nunito', sans-serif; ;
 }
 
 
-  * {
+* {
     margin: 0;
     padding: 0;
-  }
+}
 body {
   font-family: var(--font-body);
 }
@@ -31,6 +37,7 @@ body {
   font-family: var(--font-headings);
   font-weight: 900;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
   .card-container {
@@ -67,12 +74,15 @@ body {
     gap: 5em;
   }
   
-  .section-title {
+  .section-title, .category {
     grid-area: section-title;
-    display: inline-flex;
-    gap: 5em;
+    display: flex;
     border-radius: 1rem;
-    border: #0D0D0D solid 2px;
+    background-color: #2d2f30;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
   }
   
   .cards { 
@@ -82,9 +92,11 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    background-color: var(--footer-color);
+    background-image: url("/src/img/rickandmortypattern.svg");
+    border-radius: 8px;
     padding: 20px;
-    border:#0D0D0D solid 2px;
+    max-width: 1250px;
+    min-width: auto;
   }
   .filter { 
     grid-area: filter;
@@ -96,42 +108,36 @@ body {
     background-color: var(--footer-color);
     margin-top: 10px;
     padding: 30px;
-    width: 100%;
     bottom: 0;
+    border-radius: 8px;
   }
   
   /* FIN GRID */
   
   .cards img {
-    max-width: 10em;
-    box-shadow: 2px 2px 2px 2px rgb(84, 81, 81); 
+    max-width: 10em; 
   }
   .card-container {
     max-width: 10em;
     display: none;
   }
-  .section-title{
-    background-color: #D8DFE0;
-    padding: 20px;
-  }
-
+ 
   
   .card {
-    background-color: beige;
+    background-color: #FFFDFD;
     width: 250px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 10px;
-    box-shadow: 2px 2px 2px 2px rgb(84, 81, 81); 
-    border-radius: 1rem;
-    border: #0D0D0D solid 3px;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
   }
   .card img {
     justify-content: center;
     align-self: center;
-    border-radius: .5rem;
-    border: #0D0D0D solid 3px;
+    border-radius: 8px;
   }
 
   .card p {
@@ -141,16 +147,16 @@ body {
 button {
   width: auto;
   height: 3rem;
-  background: white;
-  border: #11AEBF solid 4px;
   border-radius: 1rem;
   margin: 1rem;
   padding: .5rem;
   font-family: var(--font-headings);
   font-size: 1.5rem;
   font-weight: 900;
-  color: #11AEBF;
+  color: var(--white-color);
+  border: #90BF49 solid 4px;
   box-shadow: #D4D955 2px;
+  background-color: var(--background-color);
 }
 
 @keyframes hover-button {
@@ -181,7 +187,7 @@ span {
 }
 
 select {
-  background-color:  #11AEBF;
+  background-color:  var(--button-color);
   position: relative;
   box-shadow: 2px 2px 2px 2px rgb(84, 81, 81); 
   font-family: var(--font-headings);
@@ -190,4 +196,49 @@ select {
 #schwifty {
   font-family: var(--font-headings);
   font-weight: 900;
+  font-size: 20px;
+}
+
+.search{
+  background-color: #69D91A;
+  display: inline-block ;
+  margin: 5px;
+  padding: 10px;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-size: 25;
+  text-align: center;
+}
+#sort {
+  background-color: var(--blue-color);
+}
+
+h2 {
+  color: #FFFBFB;
+  text-shadow: 2px 2px #28711C;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+h3 {
+  color: #FFFBFB;
+  margin-bottom: 10px;
+  text-shadow:2px 2px 2px black;
+  }
+.seccion-botones{
+  background-color: #000000;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  display: inline-flex ;
+  position: relative;
+  align-items: center;
+  text-align: center;
+}
+
+.section-title, .seccion-botones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
 }

@@ -1,5 +1,5 @@
 import rickandmorty from './data/rickandmorty/rickandmorty.js';
-import {filterGender, filterStatus, filterSpecies, orden, sortOrdenZ, statisticsFrequency} from './data.js';
+import {filterGender, filterStatus, filterSpecies, statisticsFrequency, ordenAZ, ordenZA} from './data.js';
 let data = rickandmorty.results;
 
 
@@ -174,11 +174,11 @@ filterOptionStatus.addEventListener("change",() => {
       sortOption.addEventListener("click", () => {        
            if (sortOption.value == "name") {
             containerData.innerHTML = ""
-           return templateTarjeta (orden(dataFiltrada));   
+           return templateTarjeta (ordenAZ(dataFiltrada));   
         }
         else if (sortOption.value == "nameZ") {
             containerData.innerHTML = ""
-        return templateTarjeta (sortOrdenZ(dataFiltrada)); }
+        return templateTarjeta (ordenZA(dataFiltrada)); }
        
     });
 
