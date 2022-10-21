@@ -47,12 +47,14 @@ allCardTypes.forEach((cardType) => {
     /*while (containerForCards.childNodes.length > 2) {
       containerForCards.removeChild(containerForCards.firstChild);
     }*/
+
     showPokemons(filterByType(nameType, data.pokemon));
     showModal();
     //para limpiar el input del buscador.
     searchInputName.value = "";
     document.querySelector("#text-error").style.display = "none";
   });
+
 });
 
 //*EL BUSCADOR DE LA PÁGINA*/
