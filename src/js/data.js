@@ -1,7 +1,7 @@
 // estas funciones relizan solo una cosa.
 
 export const filterByType = (nameType, pokemonData) => {
-  const filterType = pokemonData.pokemon.filter((pokemon) =>
+  const filterType = pokemonData.filter((pokemon) =>
     pokemon.type.includes(nameType)
   );
   console.log(filterType);
@@ -10,7 +10,7 @@ export const filterByType = (nameType, pokemonData) => {
 
 export const filterByRegion = (selection, pokemonData) => {
   const filteredRegion = pokemonData.filter(
-  (pokemon) => pokemon.generation.name == selection);
+  (pokemon)=> pokemon.generation.name == selection);
   return filteredRegion;
 };
 
@@ -26,7 +26,7 @@ export const sortPokemons = (pokemonData) => {
     } else {
       return 0;
     }
-    console.log(pokemonSort);
+
   });
   return pokemonSort;
 };
@@ -53,7 +53,7 @@ export const sortNumber = (pokemonData)=>{
     } if (min.num > max.num){
       return 1
     } return 0
-  })
+  });
   return sortByNumber
 };
 
@@ -64,6 +64,6 @@ export const sortNumberInverted = (pokemonData)=>{
     } if (min.num > max.num){
       return -1
     } return 0
-  })
+  });
   return sortByNumber
 };

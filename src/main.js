@@ -40,7 +40,7 @@ allCardTypes.forEach((cardType) => {
       containerForCards.removeChild(containerForCards.firstChild);
     }*/
     
-    showPokemons(filterByType(nameType, data));
+    showPokemons(filterByType(nameType, data.pokemon));
 
         //para limpiar el input del buscador.
         searchInputName.value = "";
@@ -57,7 +57,7 @@ searchInputName.addEventListener("input", () => {
   const arrayNamePokemons = document.querySelectorAll(".introCard");
   let inputValue = searchInputName.value.toLowerCase();
   if (validateInput(inputValue) || inputValue === "") {
-    arrayNamePokemons?.forEach((name, index) => {
+    arrayNamePokemons.forEach((name, index) => {
       if (!name.innerText.toLowerCase().includes(inputValue)) {
         arrayContainerCards[index].classList.add("hideCard");
       } else {
