@@ -29,6 +29,10 @@ let randomArrayToTestTheTest=[
   }
 ]
 
+
+
+
+
 let bugPokemon=[{
   num:  '010',
   name: 'caterpie',
@@ -52,4 +56,5 @@ describe('filterByType', () => {
   });
 
 });
+
 
