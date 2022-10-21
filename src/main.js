@@ -129,6 +129,7 @@ const closeModal = document.getElementById("close");
 
 allCardPokemons.forEach((cardPokemon) => {
   cardPokemon.addEventListener("click", () => {
+    console.log("hola")
     document.querySelector("#modal").style.display = "flex";
   });
 
