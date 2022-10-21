@@ -21,8 +21,7 @@ export const orden = (dataFilter) => {
     if (a.name > b.name) {
       return -1;
     }
-    return 0;
-   
+//return 0;
 })
 return sortOrden;
 };
@@ -35,7 +34,7 @@ const sortOrdenZ =  dataFilter.sort(function (a, b) {
   if (a.name < b.name) {
     return -1;
   }
-  return 0;
+  //return 0;
  
 })
 return sortOrdenZ;
