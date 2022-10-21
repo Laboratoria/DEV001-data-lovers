@@ -6,6 +6,7 @@ import carouselTypes from "./js/CarouselTypes.js";
 import { showPokemons } from "./showCards.js";
 import { filterByType, filterByRegion, sortPokemons, sortPokemonsInvertido, sortNumber, sortNumberInverted } from "./js/data.js";
 import { cleanClass, validateInput } from "./js/functions.js";
+import modalOfCards from "./js/modal.js";
 
 /* Llamamos a la función que mostrara la data*/
 showPokemons(data.pokemon);
@@ -50,7 +51,7 @@ allCardTypes.forEach((cardType) => {
     });
 });
 
-/**/
+/*EL BUSCADOR DE LA PAGINA*/
 
 searchInputName.addEventListener("input", () => {
   const arrayContainerCards = document.querySelectorAll(".cuadroPokemon");
@@ -127,16 +128,19 @@ sortNumberSelect.addEventListener("change", ()=>{
 const allCardPokemons = document.querySelectorAll(".cuadroPokemon");
 const closeModal = document.getElementById("close");
 
-allCardPokemons.forEach((cardPokemon) => {
+allCardPokemons.forEach((cardPokemon, index) => {
   cardPokemon.addEventListener("click", () => {
-    console.log("hola")
     document.querySelector("#modal").style.display = "flex";
+    modalOfCards(data.pokemon[index])
+    
   });
+  
 
   closeModal.addEventListener("click", ()=>{
     document.querySelector("#modal").style.display = "none";
   })
 });
+
 
 
 

@@ -5,7 +5,7 @@ export let showPokemons = (data) => {
   container.innerHTML= " ";
 
   data.forEach((pokemon) => {
-    let dataPokemon = `<section class="cuadroPokemon">
+    let dataPokemon = `<section class="cuadroPokemon" data-id="forModal">
   <div class="parteSuperior" id="parteSuperior"> 
   <div class = "container-num-region">
   
