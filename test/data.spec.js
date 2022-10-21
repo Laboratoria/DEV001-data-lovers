@@ -52,5 +52,4 @@ describe('filterByType', () => {
   });
 
 });
-//primeros test, se coloca informacion para testear
 
