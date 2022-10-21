@@ -121,3 +121,21 @@ sortNumberSelect.addEventListener("change", ()=>{
     }
 });
 
+
+//FUNCION MOSTRAR MODAL
+
+const allCardPokemons = document.querySelectorAll(".cuadroPokemon");
+const closeModal = document.getElementById("close");
+
+allCardPokemons.forEach((cardPokemon) => {
+  cardPokemon.addEventListener("click", () => {
+    document.querySelector("#modal").style.display = "flex";
+  });
+
+  closeModal.addEventListener("click", ()=>{
+    document.querySelector("#modal").style.display = "none";
+  })
+});
+
+
+

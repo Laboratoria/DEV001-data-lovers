@@ -59,6 +59,11 @@
   box-shadow: 10px 5px 5px rgb(182, 182, 182)
 }
 
+.cuadroPokemon:hover{
+  cursor: pointer;
+  background-color: rgb(214, 214, 214);
+}
+
 .type{
   display: flex;
   flex-direction: row;
