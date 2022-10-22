@@ -12,14 +12,14 @@ body {
   display: flex;
   flex-direction: column;
   margin: auto;
+  background-color: #FFEAE2;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 header {
   padding: 0px;
   width: 100%;
-  color: #f2f2f2;
-  font-size: 80px;
+  color: #F2F2F2;
 }
 
 header h1 {
@@ -30,14 +30,7 @@ header h1 {
   background-color: #D99982;
 }
 
-div nav {
-  width: 100%;
-  background-color: #FFEAE2;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 .menuLeft a {
   text-decoration: none;
@@ -46,7 +39,6 @@ div nav {
   font-size: 50px;
   font-weight: 900;
   padding: 17px;
-  flex-grow: 1;
 }
 
 .menuLeft a:hover,
@@ -68,22 +60,36 @@ div nav {
   transition: 1s;
 }
 
-.menuLeft {
+nav{
+
+  background-color: #FFEAE2;
   display: flex;
-  flex-grow: 1;
   flex-wrap: wrap;
+}
+
+.menuLeft {
+
+  width: 97%;
+  margin:auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+  background-color: #F2F2F2;
+
 }
 
 a img {
   height: 50px;
-  background-color: #F2F2F2;
+  background-color:transparent;
   vertical-align: middle;
 }
 
 section {
   padding: 150px;
   width: 100%;
-  background-color: #FFEAE2;
+  background-color: transparent;
   font-size: 40px;
   text-align: center;
   color: #D99982;
