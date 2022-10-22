@@ -1,25 +1,34 @@
-/* data => trae el objeto pokemon con 251 de ellos*/
+//* data => trae el objeto pokemon con 251 de ellos*/
 import data from "./data/pokemon/pokemon.js";
 
-/* Aquí irá nuestros IMPORTS a archivos JS */
+//* Aquí irá nuestros IMPORTS a archivos JS */
 import carouselTypes from "./js/CarouselTypes.js";
 import { showPokemons } from "./showCards.js";
-import { filterByType, filterByRegion, sortPokemons, sortPokemonsInvertido, sortNumber, sortNumberInverted } from "./js/data.js";
+import {
+  filterByType,
+  filterByRegion,
+  sortPokemons,
+  sortPokemonsInvertido,
+  sortNumber,
+  sortNumberInverted,
+} from "./js/data.js";
 import { cleanClass, validateInput } from "./js/functions.js";
+import modalOfCards from "./js/modal.js";
 
-/* Llamamos a la función que mostrara la data*/
+//* Llamamos a la función que mostrara la data*/
 showPokemons(data.pokemon);
+showModal();
 
-/* Importamos el contenedor donde añadiremos los tipos de pokemons */
+//* Importamos el contenedor donde añadiremos los tipos de pokemons */
 const containerForCardTypes = document.getElementById("containerTypes");
 carouselTypes.addTypesPokemon(containerForCardTypes);
 
-/* Importamos los iconos del carusel */
+//* Importamos los iconos del carusel */
 const iconRigth = document.getElementById("img-carousel-rigth");
 const iconLeft = document.getElementById("img-carousel-left");
 
-/* Importamos el contenedor de cada tarjeta que muestra el tipo del pokemon
-y lo convertimos en un array, esto nos permitira filtrar segun su nombre*/
+//* Importamos el contenedor de cada tarjeta que muestra el tipo del pokemon*/
+//*y lo convertimos en un array, esto nos permitira filtrar segun su nombre*//
 const allCardTypes = document.querySelectorAll(".CardTypePokemon");
 carouselTypes.functionalityCarousel(iconRigth, iconLeft, allCardTypes);
 
@@ -39,15 +48,14 @@ allCardTypes.forEach((cardType) => {
     /*while (containerForCards.childNodes.length > 2) {
       containerForCards.removeChild(containerForCards.firstChild);
     }*/
-    
+
     showPokemons(filterByType(nameType, data.pokemon));
+    showModal();
+    //para limpiar el input del buscador.
+    searchInputName.value = "";
+    document.querySelector("#text-error").style.display = "none";
+  });
 
-        //para limpiar el input del buscador.
-        searchInputName.value = "";
-        document.querySelector("#text-error").style.display = "none";
-
-
-    });
 });
 
 /**/
@@ -68,56 +76,79 @@ searchInputName.addEventListener("input", () => {
   } else {
     document.querySelector("#text-error").style.display = "flex";
   }
+  showModal();
 });
 
 //** AQUI VA FILTRADO POR REGION */
 
-const filterXRegion= document.getElementById("regionName");
+const filterXRegion = document.getElementById("regionName");
 //console.log(filterXRegion)
 
-filterXRegion.addEventListener("change", () =>{
-    switch (filterXRegion.value){
-        case "all":
-            showPokemons(data.pokemon);
-            break;
-        case "kanto":
-            showPokemons(filterByRegion(filterXRegion.value, data.pokemon))
-            break
-        case "johto":
-            showPokemons(filterByRegion(filterXRegion.value, data.pokemon))
-            break
-    }
+filterXRegion.addEventListener("change", () => {
+  switch (filterXRegion.value) {
+    case "all":
+      showPokemons(data.pokemon);
+      break;
+    case "kanto":
+      showPokemons(filterByRegion(filterXRegion.value, data.pokemon));
+      break;
+    case "johto":
+      showPokemons(filterByRegion(filterXRegion.value, data.pokemon));
+      break;
+  }
+  showModal();
 });
 
 //** AQUI VAMOS A INSERTAR SORT DE A-Z Z-A */
-const sortSelect= document.getElementById("sort-pokemons-by");
+const sortSelect = document.getElementById("sort-pokemons-by");
 
-sortSelect.addEventListener("change", ()=>{
-    switch (sortSelect.value){
-        case "default":
-            showPokemons(data.pokemon);
-            break;
-        case "a-z":
-            showPokemons(sortPokemons( data.pokemon));
-            break;
-        case "z-a":
-            showPokemons(sortPokemonsInvertido(data.pokemon));
-            break;
-     }
+sortSelect.addEventListener("change", () => {
+  switch (sortSelect.value) {
+    case "default":
+      showPokemons(data.pokemon);
+      break;
+    case "a-z":
+      showPokemons(sortPokemons(data.pokemon));
+      break;
+    case "z-a":
+      showPokemons(sortPokemonsInvertido(data.pokemon));
+      break;
+  }
+  showModal();
 });
 
-//SORT POR NUMERO DE POKEDEX
+//*SORT POR NUMERO DE POKEDEX/
 
-const sortNumberSelect= document.getElementById("sort-by-Num");
+const sortNumberSelect = document.getElementById("sort-by-Num");
 
-sortNumberSelect.addEventListener("change", ()=>{
-    switch (sortNumberSelect.value){
-        case "00-MAX":
-            showPokemons(sortNumber( data.pokemon));
-            break;
-        case "MAX-00":
-            showPokemons(sortNumberInverted(data.pokemon));
-            break;
-    }
+sortNumberSelect.addEventListener("change", () => {
+  switch (sortNumberSelect.value) {
+    case "00-MAX":
+      showPokemons(sortNumber(data.pokemon));
+      break;
+    case "MAX-00":
+      showPokemons(sortNumberInverted(data.pokemon));
+      break;
+  }
+  showModal();
 });
+
+//*FUNCION MOSTRAR MODAL/
+
+function showModal() {
+  const allCardPokemons = document.querySelectorAll(".cuadroPokemon");
+  const closeModal = document.getElementById("close");
+  allCardPokemons.forEach((cardPokemon, index) => {
+    cardPokemon.addEventListener("click", () => {
+      //console.log(index);
+      document.querySelector("#modal").style.display = "flex";
+      modalOfCards(data.pokemon[index])
+    });
+
+    closeModal.addEventListener("click", () => {
+      document.querySelector("#modal").style.display = "none";
+      
+    });
+  });
+}
 

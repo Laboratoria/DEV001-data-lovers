@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Raleway:wght@200;400;600;700;900&display=swap');
+
+
+/*Modal Result Pokemon*/
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 5;
+    background: rgba(25, 26, 32, 0.9);
+  }
+  
+  .modal-container {
+    background-color: white;
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90%;
+    padding: 50px 10px 40px 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    border: 2px solid #ff7800;
+  }
+  
+  .modal-container img {
+    width: 20%;
+    position: absolute;
+    left: -10%;
+    top: -158px;
+    animation-name: bounce;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .modal-container p {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 600;
+    color: rgb(44, 43, 43);
+  }
+  
+  .modal-container h3 {
+    color: #072146;
+    font-size: 1.2rem;
+  }
+  
+  
+  

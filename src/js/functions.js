@@ -8,3 +8,4 @@ export const validateInput = (inputValue) => {
   const onlyLetters = /^[/^[-_ a-zA-Z]+$/;
   return onlyLetters.test(inputValue);
 };
+

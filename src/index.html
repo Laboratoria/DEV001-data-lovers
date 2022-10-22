@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/header-style.css" />
     <link rel="stylesheet" href="./css/carousel-style.css" />
     <link rel="stylesheet" href="./css/showCards.css" />
+    <link rel="stylesheet" href="./css/modal.css">
   </head>
   <body>
     <main id="root">
@@ -126,6 +127,24 @@
         </div>
       </section>
     </main>
+
+    <!-- Contenedor Modal -->
+    <section id="modal" class="modalHide">
+      <div class="modal-container">
+        <img
+          src="./assets/images/Pokemon06.png"
+          id="img-modal"
+          alt="img-modal"
+        />
+        <h3 id="countdown">Hola amigos</h3>
+        <p id="enteredCard">The entered card is:</p>
+        <h3 id="title-modal"></h3>
+        <div id="conteinerModal" class="conteinerModal"></div>
+        <button id="close" class="close-button-modal">salir</button>
+      </div>
+    </section>
+
+
     <script src="./main.js" type="module"></script>
     <!-- <script src="./showCards.js" type="module"></script> -->
   </body>
