@@ -137,7 +137,7 @@ sortNumberSelect.addEventListener("change", () => {
 function showModal() {
   const allCardPokemons = document.querySelectorAll(".cuadroPokemon");
   const closeModal = document.getElementById("close");
-  allCardPokemons.forEach((cardPokemon, index) => {
+  allCardPokemons.forEach((cardPokemon) => {
     cardPokemon.addEventListener("click", () => {
       //console.log(index);
       document.querySelector("#modal").style.display = "flex";
