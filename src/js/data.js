@@ -4,7 +4,7 @@ export const filterByType = (nameType, pokemonData) => {
   const filterType = pokemonData.filter((pokemon) =>
     pokemon.type.includes(nameType)
   );
-  console.log(filterType);
+  //console.log(filterType);
   return filterType;
 };
 
@@ -26,7 +26,7 @@ export const sortPokemons = (pokemonData) => {
     } else {
       return 0;
     }
-
+    
   });
   return pokemonSort;
 };
