@@ -5,9 +5,9 @@ let data = rickandmorty.results;
 
 
 
-
+let containerMobile = document.getElementById("container-mobile");
 let containerData = document.getElementById("cards");
-let filterOption = document.getElementById("filter");
+// let filterOption = document.getElementById("filter");
 let sortOption = document.getElementById("sort");
 let filterOptionStatus = document.getElementById("filterStatus");
 let filterOptionGender = document.getElementById ("filterGender");
@@ -45,7 +45,19 @@ filterOptionGender.addEventListener("change",() => {
         templateTarjeta (dataFiltrada);                 
             break;       
 
-    }});
+    }
+    // funcion ordenar
+    sortOption.addEventListener("click", () => {        
+        if (sortOption.value == "name") {
+         containerData.innerHTML = ""
+        return templateTarjeta (ordenAZ(dataFiltrada));   
+     }
+     else if (sortOption.value == "nameZ") {
+         containerData.innerHTML = ""
+     return templateTarjeta (ordenZA(dataFiltrada)); }
+    
+    });
+        });
 
     //funcion filtrado por Species
     filterOptionSpecies.addEventListener("change",() => { 
@@ -104,7 +116,18 @@ filterOptionGender.addEventListener("change",() => {
             templateTarjeta (dataFiltrada);                 
                 break;       
     
-        }});
+        }
+        sortOption.addEventListener("click", () => {        
+            if (sortOption.value == "name") {
+             containerData.innerHTML = ""
+            return templateTarjeta (ordenAZ(dataFiltrada));   
+         }
+         else if (sortOption.value == "nameZ") {
+             containerData.innerHTML = ""
+         return templateTarjeta (ordenZA(dataFiltrada)); }
+        
+     });
+    });
     
 //funcion filtrado por Status
 filterOptionStatus.addEventListener("change",() => { 
@@ -127,51 +150,62 @@ filterOptionStatus.addEventListener("change",() => {
         templateTarjeta (dataFiltrada);                 
             break;       
 
-    }});
+    }
+    sortOption.addEventListener("click", () => {        
+        if (sortOption.value == "name") {
+         containerData.innerHTML = ""
+        return templateTarjeta (ordenAZ(dataFiltrada));   
+     }
+     else if (sortOption.value == "nameZ") {
+         containerData.innerHTML = ""
+     return templateTarjeta (ordenZA(dataFiltrada)); }
+    
+ });
+});
 
 //funcion filtrado
- filterOption.addEventListener("change", () => {
-    let dataFiltrada;
-    switch (filterOption.value) {
-        case "generoFem": containerData.innerHTML = ""; 
-        dataFiltrada =  filterGender (data, "Female");
-        templateTarjeta (dataFiltrada);   
-            break;
-        case "generoMale": containerData.innerHTML = ""; 
-        dataFiltrada =  filterGender (data, "Male");
-        templateTarjeta (dataFiltrada); 
-            break;
-        case "generoindefinido": containerData.innerHTML = ""; 
-        dataFiltrada = templateTarjeta (filterGender (data, "Unknown" )); 
-        templateTarjeta (filterGender (data, "Genderless"));   
-            break;
-        case "statusAlive": containerData.innerHTML = "";
-            dataFiltrada = filterStatus (data, "Alive");
-            templateTarjeta (dataFiltrada);             
-            break;
-        case "statusDead": containerData.innerHTML = "";
-            dataFiltrada = filterStatus (data, "Dead");
-            templateTarjeta(dataFiltrada);           
-            break;
-        case "speciesHuman": containerData.innerHTML = "";
-            dataFiltrada =  filterSpecies (data, "Human");
-        templateTarjeta (dataFiltrada);             
-            break;
-        case "speciesAlien": containerData.innerHTML = "";
-        dataFiltrada =  filterSpecies (data, "Alien");
-        templateTarjeta (dataFiltrada);                        
-            break;
-        case "all": containerData.innerHTML = "";
-            dataFiltrada = templateTarjeta (data);
-            templateTarjeta (dataFiltrada);                 
-            break; 
+//  filterOption.addEventListener("change", () => {
+//     let dataFiltrada;
+//     switch (filterOption.value) {
+//         case "generoFem": containerData.innerHTML = ""; 
+//         dataFiltrada =  filterGender (data, "Female");
+//         templateTarjeta (dataFiltrada);   
+//             break;
+//         case "generoMale": containerData.innerHTML = ""; 
+//         dataFiltrada =  filterGender (data, "Male");
+//         templateTarjeta (dataFiltrada); 
+//             break;
+//         case "generoindefinido": containerData.innerHTML = ""; 
+//         dataFiltrada = templateTarjeta (filterGender (data, "Unknown" )); 
+//         templateTarjeta (filterGender (data, "Genderless"));   
+//             break;
+//         case "statusAlive": containerData.innerHTML = "";
+//             dataFiltrada = filterStatus (data, "Alive");
+//             templateTarjeta (dataFiltrada);             
+//             break;
+//         case "statusDead": containerData.innerHTML = "";
+//             dataFiltrada = filterStatus (data, "Dead");
+//             templateTarjeta(dataFiltrada);           
+//             break;
+//         case "speciesHuman": containerData.innerHTML = "";
+//             dataFiltrada =  filterSpecies (data, "Human");
+//         templateTarjeta (dataFiltrada);             
+//             break;
+//         case "speciesAlien": containerData.innerHTML = "";
+//         dataFiltrada =  filterSpecies (data, "Alien");
+//         templateTarjeta (dataFiltrada);                        
+//             break;
+//         case "all": containerData.innerHTML = "";
+//             dataFiltrada = templateTarjeta (data);
+//             templateTarjeta (dataFiltrada);                 
+//             break; 
                
             
-    }
+//     }
     
   
 // funcion ordenar
-      sortOption.addEventListener("click", () => {        
+  /*     sortOption.addEventListener("click", () => {        
            if (sortOption.value == "name") {
             containerData.innerHTML = ""
            return templateTarjeta (ordenAZ(dataFiltrada));   
@@ -180,10 +214,10 @@ filterOptionStatus.addEventListener("change",() => {
             containerData.innerHTML = ""
         return templateTarjeta (ordenZA(dataFiltrada)); }
        
-    });
+    }); */
 
-    });
- 
+    // });
+
     //lo comenté mientras porque arrojaba error en test! 
 // // Sección estadísticas
 const filterFemale = filterGender (data, "Female");
@@ -206,3 +240,16 @@ console.log(statisticsFrequency(data, filterFemale))
 // const filterunknown = filterStatus (data, "Unknown");
 // console.log(filterunknown.length)
 // console.log(statisticsFrequency(data, filterunknown));
+const mediaQueryList = window.matchMedia("(orientation: portrait)");
+const x = window.matchMedia("(max-width:700px)")
+function mobileScreen(x) {
+    if (x.matches && containerMobile.style.display === "none") {
+        return containerMobile.style.display = "block";
+    } else {
+        return containerMobile.style.display = "none";
+    }
+}
+
+mobileScreen(x);
+// Add the callback function as a listener to the query list.
+mediaQueryList.addEventListener('change', mobileScreen);

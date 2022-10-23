@@ -13,35 +13,35 @@ export const filterSpecies = (data, species) => {
 return filtrado;
 };
 
-export const ordenZA = (dataFilter) => {
- const sortOrdenZA =  dataFilter.sort(function (a, b) {
+export const ordenAZ = (dataFilter) => {
+ const sortOrdenAZ =  dataFilter.sort(function (a, b) {
     if (a.name < b.name) {
       return 1;
     }
     if (a.name > b.name) {
       return -1;
     }
-//return 0;
+return 0;
 })
-return sortOrdenZA;
+return sortOrdenAZ;
 };
 
-export const ordenAZ = (dataFilter) => {
-const sortOrdenAZ =  dataFilter.sort(function (a, b) {
+export const ordenZA = (dataFilter) => {
+const sortOrdenZA =  dataFilter.sort(function (a, b) {
   if (a.name > b.name) {
     return 1;
   }
   if (a.name < b.name) {
     return -1;
   }
-  //return 0;
+ return 0;
  
 })
-return sortOrdenAZ;
-}  
+return sortOrdenZA;
+};
 
 export const statisticsFrequency = (originalDataLength, categoryDataLength) => {
   let firstData = originalDataLength.length;
   let secondData = categoryDataLength.length;
   return Math.round(secondData * 100 / firstData);
-}
+};
