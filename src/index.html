@@ -7,78 +7,82 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="container logo-nav-container">
-        <a href="#Inicio" class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/800px-Harry_Potter_wordmark.svg.png" style="width: 30%; padding-left:20px"></a>
-        <label for="menu" class="nav-label">
-          <img src="src\src_imagenes\3844438-hamburger-menu-more-navigation_110319.png" class="nav-img">
-        </label>
-        <input type="checkbox" id="menu" class="nav-input">
-        <nav class="navigation">
-          <ul>
-            <li><a href="#Inicio" class="nav-item">Inicio</a></li>
-            <li><a href="#Libros" class="nav-item">Libros</a></li>
-            <li><a href="#Pociones" class="nav-item">Pociones</a></li>
-            <li><a href="#Hechizos" class="nav-item">Hechizos</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!--<nav class="menu">
-      <ul>
-        <li><a href="#libros">Libros</a></li>
-      </ul>
-    </nav><br>--->
-    <main class="main">
-    <section id="Inicio">
-      <h1>Inicio</h1>
-      <p>Harry Potter es una serie de novelas fantásticas escrita por la autora
-        británica J. K. Rowling, en la que se describen las aventuras del joven 
-        aprendiz de magia y hechicería Harry Potter y sus amigos Hermione 
-        Granger y Ron Weasley, durante los años que pasan en el Colegio 
-        Hogwarts de Magia y Hechicería </p>
-        <img src="https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Harry-Potter-y-la-camara-de-los-secretos-scaled.jpg" style="width:50%;">
-    </section>
+    <div class="padre">
+      <header class="header">
+        <div class="container">
+          <a href="#Inicio" class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/800px-Harry_Potter_wordmark.svg.png" style="width: 100px; padding-left:20px"></a>
+          <label for="menu" class="nav-label">
+            <img src="https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/3844438-hamburger-menu-more-navigation_110319.png" style="width: 45px" class="nav-img">
+          </label>
+          <!--despues del elemento checkbox,tiene que ir mi lista de menu para que este checkbox funcione como queremos-->
+          <input type="checkbox" id="menu" class="nav-input">
+            
+          <nav class="navigation">
+            <ul>
+              <li><a href="#Inicio" class="nav-item">Inicio</a></li>
+              <li><a href="#Libros" class="nav-item">Libros</a></li>
+              <li><a href="#Pociones" class="nav-item">Pociones</a></li>
+              <li><a href="#Hechizos" class="nav-item">Hechizos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="main">
+        <section class="Inicio">
+          <div id="recuadro">         
+            <div id="descripcion">
+              <p>Harry Potter es una serie de novelas fantásticas escrita por la autora
+                británica J. K. Rowling, en la que se describen las aventuras del joven 
+                aprendiz de magia y hechicería Harry Potter y sus amigos Hermione 
+                Granger y Ron Weasley, durante los años que pasan en el Colegio 
+                Hogwarts de Magia y Hechicería 
+                <!--<div class= "imagen" style="width: 200px; height: 714px;"></div>-->
+              </p>
+            </div>
+          </div> 
+        </section>
 
-    <section id="Libros">
-      <h1>libros</h1>
-      <p>This work contains material which may be subject to trademark laws in one or more jurisdictions. Before using this content, please ensure that you have the right to use it under the laws which apply in the circumstances of your intended use. You are solely responsible for ensuring that you do not infringe the rights to this trademark. See our general disclaimer. The use of this trademark does not indicate endorsement of the holder by Wikimedia Commons or the Wikimedia Foundation, nor vice versa. </p>
+        <section class="Libros">
+          <h1>libros</h1>
+          <p>This work contains material which may be subject to trademark laws in one or more jurisdictions. Before using this content, please ensure that you have the right to use it under the laws which apply in the circumstances of your intended use. You are solely responsible for ensuring that you do not infringe the rights to this trademark. See our general disclaimer. The use of this trademark does not indicate endorsement of the holder by Wikimedia Commons or the Wikimedia Foundation, nor vice versa. 
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/800px-Harry_Potter_wordmark.svg.png">
+          
+          </p>
+        </section>
+        <section class="Pociones">
+          <h1>Pociones</h1>
+          <p>Harry Potter es una serie de novelas fantásticas escrita por la autora
+            británica J. K. Rowling, en la que se describen las aventuras del joven 
+            aprendiz de magia y hechicería Harry Potter y sus amigos Hermione 
+            Granger y Ron Weasley, durante los años que pasan en el Colegio 
+            Hogwarts de Magia y Hechicería 
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/800px-Harry_Potter_wordmark.svg.png">
+          </p>
+        </section>
 
-      <img src="https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/HarryPotterYLaPiedraFilosofal.jpg" style="width: 200px;">
-    </section>
-    <section id="Pociones">
-      <h1>Pociones</h1>
-      <p>Harry Potter es una serie de novelas fantásticas escrita por la autora
-        británica J. K. Rowling, en la que se describen las aventuras del joven 
-        aprendiz de magia y hechicería Harry Potter y sus amigos Hermione 
-        Granger y Ron Weasley, durante los años que pasan en el Colegio 
-        Hogwarts de Magia y Hechicería </p>
-    </section>
+        <section class="Hechizos">
+          <h1>hechizos</h1>
+          <p>Harry Potter es una serie de novelas fantásticas escrita por la autora
+              británica J. K. Rowling, en la que se describen las aventuras del joven 
+              aprendiz de magia y hechicería Harry Potter y sus amigos Hermione 
+              Granger y Ron Weasley, durante los años que pasan en el Colegio 
+              Hogwarts de Magia y Hechicería 
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/800px-Harry_Potter_wordmark.svg.png">
+          </p>
+        </section>
 
-    <section id="Hechizos">
-
-      <h1>hechizos</h1>
-      <p>Harry Potter es una serie de novelas fantásticas escrita por la autora
-        británica J. K. Rowling, en la que se describen las aventuras del joven 
-        aprendiz de magia y hechicería Harry Potter y sus amigos Hermione 
-        Granger y Ron Weasley, durante los años que pasan en el Colegio 
-        Hogwarts de Magia y Hechicería </p>
-    </section>
-  </main>
-
-    <!--- <section id="libros01">
-      <table id="libros" border="1">
-        <thead>
-          <th>Libros</th>
-        </thead>
-      </table>
-    </section> --->
-
-<footer class="footer">
-  <div class="container">
-    <p>Página diseñada por</p>
-  </div>
-</footer>
+          <!--<section id="libros01">
+            <table id="libros" border="1">
+              <thead>
+                <th>Libros</th>
+              </thead>
+            </table>
+          </section> -->
+      </main>
+      <footer class="footer">
+        Diseñado por Nicole Robayo Y Jennyfer Gamboa
+      </footer>
+    </div>
     <script src="main.js" type="module"></script>
   </body>
 </html>

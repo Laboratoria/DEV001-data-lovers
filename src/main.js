@@ -1,4 +1,4 @@
-import data from './data/harrypotter/data.js';
+/*import data from './data/harrypotter/data.js';
 
 
 /*let tbody= document.querySelector ("tr");
@@ -52,6 +52,8 @@ u4.forEach(p => {
     fila2.appendChild(td2);
 
     let img = document.createElement('img');
+    img.classList.add("string"
+    )
     img.src = p.portada;
     img.height= 400;
     img.style.display="block";
@@ -62,8 +64,8 @@ u4.forEach(p => {
     cuerpoTabla2.appendChild(fila2);
 });
 
-tablaProducto.appendChild(cuerpoTabla2);*/
-
+tablaProducto.appendChild(cuerpoTabla2);
+*/
 
 
 

@@ -11,6 +11,7 @@
     "open-coverage-report": "opener ./coverage/lcov-report/index.html",
     "start": "serve src/",
     "deploy": "gh-pages -d src"
+    
   },
   "dependencies": {
     "@babel/core": "^7.6.2",
@@ -26,5 +27,5 @@
   "engines": {
     "node": ">=16.x"
   }
+ 
 }
-

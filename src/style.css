@@ -1,6 +1,9 @@
-.home{
+/**{
     display: flex;
-}
+    margin:0; 
+    
+}*/
+
 /*table {
     border-spacing: 30px 30px;
 }
@@ -11,64 +14,123 @@ ul{
 li{
     float:left;
 }*/
- 
+/*title{
+    display: none;
+} 
+
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(76, 97, 253);    
+    background-color: rgb(76, 97, 253);   
+    
+    
 }
 
-.container{
-    width: 100%;    
-}
+.container{ 
+    width: 100%; 
+    /*space-between=espaciado uniforme*/
+    /*justify-content:space-between;
+    align-items: center;    
+}*/
 
-.header{
+/*.header{
+   display: flex;
     background: rgb(255, 255, 255);    
 /* fixed= posicion fija*/
-    position:fixed;
+   /* position:fixed;
     left: 0;
     right: 0;
     top: 0;
 }
 
-.logo-nav-container{
-    display: flex;
-    /*space-between=espaciado uniforme*/
-    justify-content:space-between;
-    align-items: center;   
-}
-
 .header a{
     color: rgb(0, 0, 0);
     text-decoration: none;
+    
 }
-        .nav-input, .nav-label{
-            display: none;
-        }
 
+.nav-input, .nav-label{
+    display: none;
+}
+
+.navigation{
+   
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    margin: 0;
+}
 .navigation ul{
-list-style: none;
-display:grid;
-    grid-auto-flow: column;
+    list-style: none;
     gap: 3em;
 }
+.navigation ul li{
+    flex-direction: row;
+    }
 
-.nav-item{
-    color: blueviolet;
-}
 .main{
-    padding-top: 15%;
-    padding-left: 5%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:  wrap ;
+    
+}
+.Inicio{
+    background-image:url("https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Harry-Potter-y-la-camara-de-los-secretos-scaled.jpg");
+    background-size: cover;
+    text-align: center;
+    
+
+}
+
+#descripcion{
+    background: rgba(240, 248, 255, 0.646);
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: auto;    
+}
+
+#Libros, #Pociones, #Hechizos{
+    padding: 30px;
+    flex-direction: column;
+    
+ 
 }
 
 .footer{
-    background: rgb(202, 202, 202);
-    padding: 2% 0;
-    text-align: center;
-    left: 0;
-    right: 0;
+    flex: auto;
 }
+*/
+/*
+@media (max-width:700px) {
+    .nav-label{
+        /*display:block= mi info se muestre*/
+      /*  display: block;
+        /*cursor:pointer= al pasar el cursor sobre mi elemento,en este caso el nav-label que contiene la imagen del menu hamburgues, el cursor se convierta en una  manito de seleccion */
+      /*  cursor: pointer;
+        }
+        .navigation{
+            /* position:fixed= salga del flujo, es decir ya no este*/
+        /*    position:fixed;
+            /* top:80px= salga del flujo*/
+        /*    top:49px;
+            /* apartir de la cantidad de pixeles (80px) ocupe todo el alto */
+        /*    background: rgb(0, 145, 255);
+            width: 50%;
+            right:0;
+            display: none;
+            text-align: right;       
+    } 
 
+    .navigation ul{
+        display: flex;
+        flex-direction: column;
+        padding-right: 20px;
+    }  
 
+    
+    .nav-input:checked + .navigation{
+       display:block;
+    }
+};*/
 
 /*#Inicio{
     display: flex;
@@ -83,3 +145,101 @@ display:grid;
     display: flex;
 }
 */
+
+
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+    .header{
+        display: flex;  
+        flex-flow: column nowrap;
+        background-color: aqua;
+        position: fixed;
+        right: 0;
+        left: 0;
+        top:0;
+        
+    }
+        .container{
+            display: flex; 
+            flex-flow: row; 
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+            .logo{
+
+            }
+
+            .nav-label, .nav-input{
+                display: none;
+            }
+            .nav-label{
+
+            }
+            .nav-input{
+
+            }
+            .navigation{
+                display: flex;
+                flex-flow: row wrap;
+                
+               
+            }
+                .navigation ul{
+                    display: flex;
+                    flex-flow: row wrap;
+                    list-style: none;
+                    gap: 48px;
+                    
+                    
+                }
+                    .nav-item{
+                        text-decoration: none;
+                        color:black;
+                        
+                    }
+    .main{
+        padding-top: 30px;
+        display: flex;
+        flex-flow: row wrap;
+        
+       
+    }
+        .Inicio{
+            display: flex;
+            background-image: url("https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Harry-Potter-y-la-camara-de-los-secretos-scaled.jpg");
+           
+            background-size: cover;
+            background-repeat:no-repeat;
+
+         
+           
+        }
+            #recuadro{
+                padding: 300px 50px;
+            }
+
+                #descripcion{
+                    background-color: rgba(255, 255, 255, 0.504);
+                    padding: 50px;        
+                }
+           
+        .Libros{
+
+        }
+        .Pociones{
+
+        }
+        .Hechizos{
+
+        }
+    .footer{
+
+    }
