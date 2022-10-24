@@ -58,7 +58,7 @@ allCardTypes.forEach((cardType) => {
 
 });
 
-//*EL BUSCADOR DE LA PÁGINA*/
+/**/
 
 searchInputName.addEventListener("input", () => {
   const arrayContainerCards = document.querySelectorAll(".cuadroPokemon");
@@ -148,7 +148,7 @@ function showModal() {
     });
 
     closeModal.addEventListener("click", () => {
-      document.querySelector("#modal").style.display = "none";
+      document.querySelector("#modal").style.display = "none"; 
     });
   });
 }

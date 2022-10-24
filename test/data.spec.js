@@ -4,7 +4,8 @@ import {
   sortPokemons,
   sortPokemonsInvertido,
   sortNumber,
-  sortNumberInverted
+  sortNumberInverted,
+  findById
 } from "../src/js/data.js";
 
 let randomArrayToTestTheTest = [
@@ -243,7 +244,7 @@ describe("sortNumber", () => {
   });
 });
 
-
+ 
 //TEST SORT NÚMEROS INVERTIDOS
 
 let arraySortNumbersInverted = [
@@ -270,3 +271,27 @@ describe("sortNumberInverted", () => {
     expect(sortNumberInverted(arraySortNumbersInverted)).toEqual(arraySortMaxMim);
   });
 });
+
+// AQUI VA EL TEST DE FIND
+
+let findResult=
+{
+  num: "011",
+  name: "metapod",
+  type: "bug",
+  generation: {
+    num: "generation i",
+    name: "johto",
+  }
+}
+
+
+describe("findById", () =>{
+  it("es una funcion find", () =>{
+    expect (typeof findById).toBe("function");
+  });
+  
+  it("deberia retornar el primer elemento que coincida con el id del pokemon en especifico", () =>{
+    expect(findById("011", randomArrayToTestTheTest)).toEqual(findResult);
+  });
+})
