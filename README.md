@@ -28,4 +28,4 @@ Entre los usuarios más casuales se manifestó la necesidad de ver las película
 ## 3. Prototipos de baja fidelidad
 (foto aquí)
 
-## 3. Prototipos de alta fidelidad
+## 4. Prototipos de alta fidelidad

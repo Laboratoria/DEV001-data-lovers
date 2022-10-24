@@ -22,7 +22,6 @@
 }
 
 
-
 body::-webkit-scrollbar{
     display: none;
     
@@ -325,7 +324,7 @@ body::-webkit-scrollbar{
 
 
 .menu{
-    max-width: 1200px;
+   
     margin: auto;
     height: 100%;
    
@@ -432,6 +431,137 @@ body::-webkit-scrollbar{
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
+/*division*/
+
+.division{
+    width: 100%;
+    height: 60px;
+    background: var(--modal_degradado);
+    
+   
+}
+.figure{
+    height: 100%;
+    width: 100%;
+    animation-name: moverTotoro;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.figure img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+@keyframes moverTotoro{
+    0%{
+        transform: translateX(0%)
+    }
+    100%{
+        transform: translateX(100%)
+    }
+}
+
+
+/*estadistica*/
+.texto_estadistica h2{
+    font-family: 'PT Serif', serif;
+    text-align: center;
+    font-size: 50px;
+    font-weight:700;
+    color: var(--rosa_claro_color);
+    -webkit-text-stroke: 1px rgba(157, 0, 41, 0.8);
+    margin-bottom: 10px;
+}
+.estadistica{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+
+.cont_imagenes{
+    width: 100%;
+    display:flex;
+    margin-left: 260px;
+   
+}
+
+.directores img{
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   margin-left: 40px;
+}
+.contenedor_etadistica{
+    margin-left: 300px;
+     width:380px;
+     height:80%;
+}
+
+.contenedor_etadistica.horizontal .cont_estadistica{
+    transform:rotate(-90deg);
+}
+
+.contenedor_etadistica.horizontal .barra::after{
+  
+    transform: rotate(45deg);
+    padding-top:0px;
+    display: block;
+}
+.contenedor_etadistica .cont_estadistica{
+    margin-left:0px;
+    position:relative;
+    padding: 5px 0 5px 0;
+    height:100%;
+    width:100%;
+    
+}
+
+.contenedor_etadistica .cont_estadistica::before{
+    font-size:15px;
+    font-weight:bold;
+    content:'0%';
+    position:absolute;
+    
+    
+}
+.contenedor_etadistica .cont_estadistica::after{
+    font-size:15px;
+    font-weight:bold;
+    content:'100%';
+    position:absolute;
+    right:-16px;
+    top:-16px;
+}
+.contenedor_etadistica.horizontal .cont_estadistica::before, .contenedor_etadistica.horizontal .cont_estadistica::after {
+    transform: rotate(90deg);
+}
+
+.contenedor_etadistica .barra {
+    width: var(--bar-value);
+    height:50px;
+    margin:50px 0;
+    background-color:var(--rosa_fuerte_color);
+    border-radius:0 3px 3px 0;
+}
+
+.contenedor_etadistica .barra:hover{
+    opacity:0.7;
+}
+
+.contenedor_etadistica .barra::after{
+    content:attr(data-name);
+    margin-left:100%;
+    padding:10px;
+    display:inline-block;
+    white-space:nowrap;
+}
+
+
 /*footer*/
 
 footer{
@@ -522,260 +652,3 @@ footer{
     display: none;
 }
 
-@media screen and (max-width: 800px){ 
-
-    .footer_content{
-        justify-content:center;
-    }
-
-    .social_media{
-        width: 80%;
-        justify-content: space-evenly;
-    }
-
-    .social_media_icon{
-        margin-left: 0;
-    }
-
-    .social_media i{
-      margin-left: 0;
-    }
-    
-    .contact_us{
-        text-align: center;
-        width: 80%;
-        margin-bottom: 40px;
-    }
-   
-}
-
-@media (max-width: 720px){
-    .titulo h1{
-        font-size: 25px;
-    }
-    .modal_titulo_descripcion h2{
-        font-weight: 600;
-        font-size:30px;
-    }
-    
-    .modal_director{
-        font-size: 10px;
-    }
-    
-    .modal_texto_largo{
-        font-size: 10px;
-    }
-     
-    .modal_score_date{
-        font-size: 10px;
-    }
-    .modal_score_date i{
-        font-size: 10px;
-    }
-    
-    .cont_people{
-        font-size: 10px;
-        width: 100px;
-    } 
-    
-    .cont_people img{
-        width: 100%;
-        height: 80px;
-    }
-    .con_people_text{
-        font-size: 10px;
-    }
-    .modal_imagen img{
-        width: 200px;
-        height: 250px;
-    }
-     
-    .close{
-        font-size:20px;
-        width: 80px;
-        height: 30px;
-
-    }
-    .cabecero_modal{
-        height: 50px;
-    }
-    
-    .cabecero_modal_centro img{
-        width: 100px;
-       
-    }
-
-    /*menu*/
-    .container__menu{
-        height: 50px;
-        align-items: center;
-    }
- 
-    .lista_inicio{
-        flex-direction: column;
-        background: var(--menu_degradado);
-        position: fixed;
-        left: 0;
-        top: 50px;
-        width: 100%;
-        height: 0px;
-        transition: all 300ms ease;
-        z-index: 100;
-        opacity: 0;
-        visibility: hidden;
-    } 
-     
-    .menu_inicio a{
-        font-size: 10px;
-        padding: 10px;
-    }
-
-    .menu_inicio a:hover{
-        transform: scale(1);
-    }
-
-    .menu_directores{
-        left: 100px;
-        font-size: 15px;
-    }
-
-    .menu_inicio:hover .menu_directores{
-        top: 50px;
-        
-    }
-    
-    #label__check{
-        display: block;
-    }
-
-    .icon__menu{
-        display: flex;
-    }
-
-    #check__menu:checked ~ nav > ul{
-        height: 200px;
-        visibility: visible;
-        opacity: 1;
-    }
-
-
-
-
-    .footer_content{
-        justify-content:center;
-    }
-
-    .social_media{
-        width: 80%;
-        justify-content: space-evenly;
-    }
-
-    .social_media_icon{
-        margin-left: 0;
-    }
-
-    .social_media i{
-      margin-left: 0;
-    }
-    
-    .contact_us{
-        text-align: center;
-        width: 80%;
-        margin-bottom: 40px;
-    }
-}
-
-@media (max-width: 600px){
-    .textos_card h2{
-        font-size:10px;
-    }
-    .titulo h1{
-        font-size: 20px;
-        -webkit-text-stroke: 0.1px white;
-    }
-    .card_pelicula{
-        width: 150px;
-    }
-    .card_pelicula img{
-        width: 100%;
-        height: 200px;
-        
-    }
-    .textos_card{
-        margin: 5px 0px;
-        padding: 0 10px;
-        font-size: 10px;
-    }
-
-    .boton_card i{
-        font-size: 10px;
-       
-    }
-    
-    .boton_card p{
-        font-size: 10px;
-       font-weight: 300;
-    }
-
-     .modal_pelicula{
-        flex-direction: column;
-        margin-top: 0px;
-        padding:0px;
-    }
-
-    .close{
-        width: 50px;
-    }
-
-    .modal_imagen img{
-        margin-left: 60px;
-        padding: auto;
-        width: 250px;
-        height: 300px;
-    }
-
-    .modal_imagen{
-        width: 100%;
-    }
-
-    .modal_titulo_descripcion{
-    
-        width: 100%;
-    }
-    .contenedor{
-        padding-top: 40px;
-    }
-
-    .card_pelicula{
-        height: 315px;
-        font-size: 8px;
-    }
-
-
-}
-
-@media (max-width: 500px){
-    .card_pelicula{
-        margin-left: 5px;
-    }
-
-    .social_media{
-        width: 100%;
-    }
-    
-    .contact_us{
-        width: 90%;
-    }
-
-   
-}
-
-@media (max-width:450px) {
-    .img_header img{
-        width: 250px;
-    }
-    .titulo h1{
-        font-size: 15px;
-        -webkit-text-stroke: 0.1px white;
-    }
-}

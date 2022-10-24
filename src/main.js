@@ -1,4 +1,5 @@
 import ghibli from "./data/ghibli/ghibli.js";
+
 const objetos = ghibli
 
 import { mostrarPeliculaIndividual, filtrarDirectores,ordenarYears,ordenarScore, estadisticaData} from './data.js';
@@ -163,13 +164,55 @@ popular.addEventListener("click",function(){
   const mostrarPopular = ordenarScore(datosTodasPeliculas());
   mostrarEnPantalla(mostrarPopular);
 }); 
+ 
 
 
-const estadistica = estadisticaData(datosTodasPeliculas());
-console.log(estadistica);
 
 
-//menu
+
+
+
+estadisticasData();
+function estadisticasData(){
+  const estadistica = estadisticaData(datosTodasPeliculas());
+
+const imgDirect =[
+
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Gor%C5%8D_Miyazaki.jpg/220px-Gor%C5%8D_Miyazaki.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/e/e2/Hayao_Miyazaki_cropped_1_Hayao_Miyazaki_201211.jpg",
+   "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hiromasa_Yonebayashi.jpg/220px-Hiromasa_Yonebayashi.jpg",
+   "https://lthumb.lisimg.com/709/103709.jpg?width=280&sharpen=true",
+  "https://m.media-amazon.com/images/M/MV5BNDM5OTc2NjI1MV5BMl5BanBnXkFtZTgwOTI3MjA4MTE@._V1_.jpg",
+  "https://www.cartoonbrew.com/wp-content/uploads/2016/02/isaotakahata.jpg",
+]
+
+const img = [...imgDirect]
+  const estadistic = document.getElementById("contenedor_etadistica");
+  const estadisticImg = document.getElementById("cont_imagenes");
+ for(const [key, value] of Object.entries(estadistica)){
+  const porcentaje = (value * 100)/20;
+    estadistic.innerHTML +=
+   `
+   <div class="barra" style="--bar-value:${porcentaje}%;" data-name="⭐${key}" title="${key} ${porcentaje}%"></div>
+      
+  `
+  
+ }
+ for (let clave in img){
+  estadisticImg.innerHTML +=
+  `<div class="directores">
+  <img src="${img[clave]}" alt=""></img>
+  </div>
+  `
+}
+ 
+ 
+}
+  
+
+
+
+
 
 
 

@@ -1,5 +1,5 @@
 //importar las funciones puras desde el data js 
-import {mostrarPeliculaIndividual,filtrarDirectores,ordenarYears, ordenarScore} from '../src/data.js';
+import {mostrarPeliculaIndividual,filtrarDirectores,ordenarYears, ordenarScore, estadisticaData} from '../src/data.js';
 
 const dataGhibli=[
   {
@@ -151,5 +151,22 @@ describe('Esta funcion muestra la pelicula desde la mas popular hasta la menos p
             "rt_score": "41"
           }
          ]);
+       });
+});
+
+
+describe('Esta funcion muestra los directores y al lado su numero de peliculas', () => {
+  it('is a function', () => {
+    expect(typeof estadisticaData).toBe('function');
+  });
+   
+  it('retornar los directores y su numero de peliculas realizadas', () => {
+         expect( estadisticaData( dataGhibli)).toEqual(
+          {
+            "Hayao Miyazaki": 2,
+            "Hiroyuki Morita" : 1,
+            "Gorō Miyazaki" : 1
+          }
+      );
        });
 });
