@@ -74,7 +74,7 @@ nav{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+
   box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
   background-color: #F2F2F2;
 
@@ -154,7 +154,7 @@ section h1 {
   color: #FFEAE2;
 }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 930px) {
     .menuLeft a:not(:first-child) {
       display: none;
     }
@@ -175,12 +175,13 @@ section h1 {
       display: block;
     }
 
-    div nav {
+    nav div  {
       display: block;
     }
 
     .menuLeft.responsive {
       position: relative;
+      display: block;
     }
 
     .menuLeft.responsive .menuLeft__Hamburger {
