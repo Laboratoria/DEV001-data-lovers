@@ -3,6 +3,7 @@
 
 /*Modal Result Pokemon*/
 
+
 #modal {
     position: fixed;
     top: 0;
@@ -17,24 +18,24 @@
   .modal-container {
     background-color: white;
     margin: auto;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     max-height: 90%;
-    padding: 50px 10px 40px 10px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     border-radius: 15px;
-    border: 2px solid #ff7800;
+    /*border: 5px solid #5b5b5b;*/
+    font-family: "Poppins", sans-serif;
   }
   
-  .modal-container img {
-    width: 20%;
+  .modal-container .img-modal {
+    width: 25%;
     position: absolute;
-    left: -10%;
-    top: -158px;
+    right: -15%;
+    bottom: -20px;
     animation-name: bounce;
     animation-duration: 6s;
     animation-iteration-count: infinite;
@@ -52,6 +53,50 @@
     100% {
       transform: scale(1);
     }
+  }
+
+  .modal-features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .close-button-modal{
+    width: 10%;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    transition: 2s;
+  }
+  .close-button-modal:hover{
+    cursor: pointer;
+    width: 12%;
+    right: -22px;
+    top: -22px;
+    transition: 2s;
+  }
+
+/*estilos para el primer hijo*/
+  .childrenOne{
+    width: 100%;
+    /*background-color:#fdae01;*/
+    border-radius: 0 0 98% 98% / 100%;
+  }
+
+  .container-img-num-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+  }
+
+  .generation-and-id{
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 400;
   }
   
   .modal-container p {
