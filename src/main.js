@@ -3,7 +3,7 @@ import data from "./data/pokemon/pokemon.js";
 
 //* Aquí irá nuestros IMPORTS a archivos JS */
 import carouselTypes from "./js/CarouselTypes.js";
-import { showPokemons } from "./showCards.js";
+import { showPokemons, showPokemonFeature } from "./showCards.js";
 import {
   filterByType,
   filterByRegion,
@@ -11,6 +11,7 @@ import {
   sortPokemonsInvertido,
   sortNumber,
   sortNumberInverted,
+  findById
 } from "./js/data.js";
 import { cleanClass, validateInput } from "./js/functions.js";
 
@@ -138,9 +139,12 @@ function showModal() {
   const allCardPokemons = document.querySelectorAll(".cuadroPokemon");
   const closeModal = document.getElementById("close");
   allCardPokemons.forEach((cardPokemon) => {
+
     cardPokemon.addEventListener("click", () => {
-      //console.log(index);
       document.querySelector("#modal").style.display = "flex";
+      const idPokemonCard = cardPokemon.className.split(" ")[0];
+      //console.log(idPokemonCard)
+      showPokemonFeature(findById(idPokemonCard, data.pokemon));
     });
 
     closeModal.addEventListener("click", () => {
@@ -148,3 +152,6 @@ function showModal() {
     });
   });
 }
+
+
+
