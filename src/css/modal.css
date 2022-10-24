@@ -30,6 +30,17 @@
     /*border: 5px solid #5b5b5b;*/
     font-family: "Poppins", sans-serif;
   }
+
+  .container-features-poke{
+    border-radius: 10px;
+  }
+
+  .header-img{
+    width: 10%;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+  }
   
   .modal-container .img-modal {
     width: 25%;
@@ -81,6 +92,7 @@
 /*estilos para el primer hijo*/
   .childrenOne{
     width: 100%;
+    height: 150px;
     /*background-color:#fdae01;*/
     border-radius: 0 0 98% 98% / 100%;
   }
@@ -93,10 +105,20 @@
     width: 95%;
   }
 
+  #id-pokemon{
+    padding-left: 20px;
+  }
+
   .generation-and-id{
-    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 600;
+    width: 90%;
   }
   
   .modal-container p {
