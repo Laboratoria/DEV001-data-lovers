@@ -77,12 +77,17 @@ describe('filterByType', () => {
     expect(typeof filterByType).toBe('function');
   });
 
-  it('returns an array of objects containing only the pokemon with the correct type BUG', () => {
+  it('returns an array of objects containing only the pokemon with the correct type bug', () => {
     expect(filterByType("bug", randomArrayToTestTheTest)).toEqual(bugPokemon);
   });
 
-  it('returns an array of objects containing only the pokemon with the correct type FIRE', () => {
+  it('returns an array of objects containing only the pokemon with the correct type fire', () => {
     expect(filterByType("fire", randomArrayToTestTheTest)).toEqual(firePokemon);
+  });
+
+  it("expect to have a property", () =>{
+    expect(filterByType("bug", randomArrayToTestTheTest)).toHaveProperty("type");
+
   });
 
 });

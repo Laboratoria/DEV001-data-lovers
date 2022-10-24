@@ -67,3 +67,12 @@ export const sortNumberInverted = (pokemonData)=>{
   });
   return sortByNumber
 };
+
+
+/*Aqui va el find*/
+
+export const findById= (id, pokemonData) =>{
+  const findByIdPokemon= pokemonData.find((element) =>
+    element.num == id)
+    console.log(findByIdPokemon)
+}
