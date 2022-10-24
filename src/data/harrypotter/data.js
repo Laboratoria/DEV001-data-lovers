@@ -16196,7 +16196,7 @@ export default {
       "id": 4,
       "title": "Harry Potter and the Goblet of Fire",
       "releaseDay": "July 8, 2000",
-      "img": "https://panamericana.vteximg.com.br/arquivos/ids/355688-1080-1080/harry-potter-y-el-caliz-de-fuego-9789585234079.jpg?v=637293981884030000",
+      "img": "https://images.cdn3.buscalibre.com/fit-in/360x360/06/61/0661f9a2780ba19e5ae99d4afc44dadf.jpg",
       "author": "J. K. Rowling",
       "description": "Hogwarts prepares for the Triwizard Tournament, in which three schools of wizardry will compete. To everyone's surprise, Harry Potter is chosen to participate in the competition, in which he must fight dragons, enter the water and face his greatest fears."
     },
