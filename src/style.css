@@ -171,6 +171,15 @@
                     padding-top: 10px;
                   }
 
+								.buttonVerMas{
+									margin: 0 auto;
+									text-align: center;
+								}
+						#libros1{
+							display:none;
+						}
+										
+				
 								
 								
         .Pociones{
