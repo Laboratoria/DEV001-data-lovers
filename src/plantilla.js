@@ -4,14 +4,14 @@ export const tarjeta = (datos) => {
     let plantilla = `
     <article class="tarjeta">
         <header class="header_tarjeta">
-          <img src="${datos.img} ">
+          <img src="${datos.img}">
         </header>
         <div class="tarjetabody">
           <p class="title">${datos.title} </p>
           <p class="descripcion">${datos.author} </p>
           <p class="fecha"> ${datos.releaseDay}</p>
         </div>
-       </article>
+    </article>
      `
     return plantilla
 }
