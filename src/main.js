@@ -51,7 +51,6 @@ allCardTypes.forEach((cardType) => {
 
     showPokemons(filterByType(nameType, data.pokemon));
     showModal();
-    modalOfCards(data.pokemon[index])
     //para limpiar el input del buscador.
     searchInputName.value = "";
     document.querySelector("#text-error").style.display = "none";
@@ -140,19 +139,19 @@ function showModal() {
   const allCardPokemons = document.querySelectorAll(".cuadroPokemon");
   const closeModal = document.getElementById("close");
   allCardPokemons.forEach((cardPokemon) => {
-    cardPokemon.addEventListener("click", () => {
-      
-      const idPokemonCard= cardPokemon.className.split(" ")[0]
-      console.log(idPokemonCard);
-      showPokemonFeature(findById(idPokemonCard, data.pokemon))
-      document.querySelector("#modal").style.display = "flex";
 
+    cardPokemon.addEventListener("click", () => {
+      document.querySelector("#modal").style.display = "flex";
+      const idPokemonCard = cardPokemon.className.split(" ")[0];
+      //console.log(idPokemonCard)
+      showPokemonFeature(findById(idPokemonCard, data.pokemon));
     });
 
     closeModal.addEventListener("click", () => {
-      document.querySelector("#modal").style.display = "none";
-      
+      document.querySelector("#modal").style.display = "none"; 
     });
   });
 }
+
+
 

@@ -5,7 +5,7 @@ export let showPokemons = (data) => {
   container.innerHTML= " ";
 
   data.forEach((pokemon) => {
-    let dataPokemon = `<section class="${pokemon.num} cuadroPokemon" data-id="forModal">
+    let dataPokemon = `<section class="${pokemon.num} cuadroPokemon">
   <div class="parteSuperior" id="parteSuperior"> 
   <div class = "container-num-region">
   
@@ -72,14 +72,14 @@ export let showPokemonFeature = (objectData) => {
   <div class="resistant-and-weaknesses">
     <div class="resistant">
       <h2>Resistance:</h2>
-      <div class="type-resistant" id="resistant-pokemon" disabled> ${objectData.resistant
+      <div class="type-resistant" id="resistant-pokemon"> ${objectData.resistant
         .map((type) => `<span class="type-poke ${type}"> ${type} </span>`)
         .join("")}
       </div>
     </div>
     <div class="resistant">
       <h2>Weaknesses:</h2>
-      <div class="type-weaknesses" id="weaknesses-pokemon" disabled> ${objectData.weaknesses
+      <div class="type-weaknesses" id="weaknesses-pokemon"> ${objectData.weaknesses
         .map((type) => `<span class="type-poke ${type}"> ${type} </span>`)
         .join("")}
       </div>
@@ -87,7 +87,7 @@ export let showPokemonFeature = (objectData) => {
   </div>
   <section class="special-attack">
     <h2>Special Attack:</h2>
-    <div class="special-attack-pokemon" id="attack" disabled> ${objectData["special-attack"]
+    <div class="special-attack-pokemon" id="attack"> ${objectData["special-attack"]
       .map((attack) => `<span class="attack-name"> ${attack.name} </span>`)
       .join("")}
     </div>
@@ -104,3 +104,6 @@ export let showPokemonFeature = (objectData) => {
 containerCharacteristics.insertAdjacentHTML("beforeend", pokemonFeatures);
 
 }
+
+/*<p>${objectData.evolution["next-evolution"][0].num}</p>
+    <p>${objectData.evolution["next-evolution"][0].name}</p>*/
