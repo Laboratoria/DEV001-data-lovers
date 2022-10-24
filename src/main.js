@@ -6,6 +6,20 @@ const gFilms=data.films;
 
 //console.log(data["films"][0]["producer"]);
 
+    const iconHamburger = document.getElementById("hamburgerIcon");
+
+    iconHamburger.addEventListener('click', showMenuLeftResponsive);
+    
+    function showMenuLeftResponsive () {
+        
+    var x = document.getElementById("menuLeft");
+    if (x.className === "menuLeft") {
+        x.className += " responsive";
+    } else {
+        x.className = "menuLeft";
+    }
+}
+      
 
     //console.log(data["films"][k]["producer"]);
     const producer = document.querySelector(".producers"); //aquí accedo al div con el class = "productores"
@@ -18,3 +32,4 @@ const gFilms=data.films;
     }
     
     producer.appendChild(showProducer); //y aquí se muestra
+

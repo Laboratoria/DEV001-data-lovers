@@ -10,7 +10,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Estudio Ghibli</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
@@ -21,22 +21,24 @@
     <header>
       <h1>Estudio Ghibli</h1>
       <nav>
-        <div class="menuLeft">
+        <div class="menuLeft" id="menuLeft">
             <a href="index.html"><img src="./img/home.png" alt="Home"> Home </a>         
             <a href="producers.html"><img src="./img/producers.png" alt="Producers"> Producers</a>
             <a href="#"><img src="./img/aboutUs.png" alt="About Us"> About Us</a>
+            <a  class="menuLeft__Hamburger" id = "hamburgerIcon"><img src="./img/hamburger.png" alt="hamburgerIcon"></a>
         </div>
       </nav>
     </header>
-    <section class="index">
-      <h1>Bienvenidos a Estudio Ghibli</h1>
-      <div>Estudio Ghibli es un estudio japonés de animación, considerado por la crítica especializada como uno de los mejores estudios de animación del mundo en la actualidad.</div>
-      <div>Aquí encontrarás información sobre: quienes y cuántos productores/directores hay involucrados, cuántos y cuáles ánimes se han realizado, qué ánimes son mejores según la audiencia; y mucho más.</div>
+    <section class="section">
+      <h1 class="section__title">Bienvenidos a Estudio Ghibli</h1>
+      <div class="section__description">Estudio Ghibli es un estudio japonés de animación, considerado por la crítica especializada como uno de los mejores estudios de animación del mundo en la actualidad.</div>
+      <div class="section__description">Aquí encontrarás información sobre: quienes y cuántos productores/directores hay involucrados, cuántos y cuáles ánimes se han realizado, qué ánimes son mejores según la audiencia; y mucho más.</div>
     </section>
     <footer class="footer">
       <p>Copyright © 2022</p>
     </footer>
   </div>
+  <script src="main.js" type="module"></script>
 </body>
 
 </html>
