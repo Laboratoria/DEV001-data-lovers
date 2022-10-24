@@ -1,71 +1,34 @@
-/*import data from './data/harrypotter/data.js';
+import data from './data/harrypotter/harry.js';
 
-
-/*let tbody= document.querySelector ("tr");
-tbody.style.setProperty("background-color", "#6ab150");
 
 const libros=data.books;
+const caja= document.getElementById("libros");
+const contenedorCeldas=document.createElement("div");
 
-let mitad= libros.length/2;
-console.log(mitad);
+contenedorCeldas.className="contenedorCeldas";
 
-let p4= libros.slice(0,mitad);
-console.log(p4);
-
-let u4=libros.slice(mitad);
-console.log(u4);
-
-let tablaProducto = document.getElementById('libros');
-let cuerpoTabla = document.createElement('tbody');
-let cuerpoTabla2 = document.createElement('tbody');
-
-
-
-p4.forEach(p => {
-    //console.log(p.id);
-    let fila = document.createElement('td');
+libros.forEach(l =>{
     
-            
-    let td = document.createElement('tr');
-    td.innerText = p.title;
-    fila.appendChild(td);
+    const celdas=document.createElement("div");
+    celdas.className="celdas";
 
     let img = document.createElement('img');
-    img.src = p.portada;
+    img.src = l.portada;
     img.height= 400;
     img.style.display="block";
     img.style.margin="auto";
-    fila.appendChild(img);
-    cuerpoTabla.appendChild(fila);
+    img.style.borderRadius="10px";
+    celdas.appendChild(img);
 
-});
-tablaProducto.appendChild(cuerpoTabla);
+    const h1Celdas=document.createElement("h1");
+    h1Celdas.className="h1Celdas";
+    h1Celdas.innerHTML=l.title;
 
+    celdas.appendChild(h1Celdas);
 
-u4.forEach(p => {
-    //console.log(p.id);
-    let fila2 = document.createElement('td');
-
-            
-    let td2 = document.createElement('tr');
-    td2.innerText = p.title;
-    fila2.appendChild(td2);
-
-    let img = document.createElement('img');
-    img.classList.add("string"
-    )
-    img.src = p.portada;
-    img.height= 400;
-    img.style.display="block";
-    img.style.margin="auto";
-    fila2.appendChild(img);
-
-
-    cuerpoTabla2.appendChild(fila2);
-});
-
-tablaProducto.appendChild(cuerpoTabla2);
-*/
+    contenedorCeldas.appendChild(celdas);
+})
+caja.appendChild(contenedorCeldas);
 
 
 

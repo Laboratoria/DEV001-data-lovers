@@ -1,106 +1,4 @@
-/**{
-    display: flex;
-    margin:0; 
-    
-}*/
-
-/*table {
-    border-spacing: 30px 30px;
-}
-ul{
-    list-style-type: none;
-
-}
-li{
-    float:left;
-}*/
-/*title{
-    display: none;
-} 
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(76, 97, 253);   
-    
-    
-}
-
-.container{ 
-    width: 100%; 
-    /*space-between=espaciado uniforme*/
-    /*justify-content:space-between;
-    align-items: center;    
-}*/
-
-/*.header{
-   display: flex;
-    background: rgb(255, 255, 255);    
-/* fixed= posicion fija*/
-   /* position:fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-}
-
-.header a{
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    
-}
-
-.nav-input, .nav-label{
-    display: none;
-}
-
-.navigation{
-   
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    margin: 0;
-}
-.navigation ul{
-    list-style: none;
-    gap: 3em;
-}
-.navigation ul li{
-    flex-direction: row;
-    }
-
-.main{
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap:  wrap ;
-    
-}
-.Inicio{
-    background-image:url("https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Harry-Potter-y-la-camara-de-los-secretos-scaled.jpg");
-    background-size: cover;
-    text-align: center;
-    
-
-}
-
-#descripcion{
-    background: rgba(240, 248, 255, 0.646);
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin: auto;    
-}
-
-#Libros, #Pociones, #Hechizos{
-    padding: 30px;
-    flex-direction: column;
-    
- 
-}
-
-.footer{
-    flex: auto;
-}
-*/
-/*
-@media (max-width:700px) {
+/*@media (max-width:700px) {
     .nav-label{
         /*display:block= mi info se muestre*/
       /*  display: block;
@@ -146,10 +44,11 @@ body{
 }
 */
 
-
 *{
     box-sizing: border-box;
     margin:0;
+    font-family: 'Nanum Gothic', sans-serif;
+
 }
 .padre{
     display: flex;
@@ -163,16 +62,16 @@ body{
         position: fixed;
         right: 0;
         left: 0;
-        top:0;
-        
+        top:0;        
     }
+
         .container{
             display: flex; 
             flex-flow: row; 
             align-items: center;
-            justify-content: space-between;
-            
+            justify-content: space-between;    
         }
+
             .logo{
 
             }
@@ -212,7 +111,11 @@ body{
         
        
     }
+    h1{
+        font-family: 'Cinzel', serif;
+    }
         .Inicio{
+            
             display: flex;
             background-image: url("https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Harry-Potter-y-la-camara-de-los-secretos-scaled.jpg");
            
@@ -223,19 +126,55 @@ body{
            
         }
             #recuadro{
-                padding: 300px 50px;
+              padding: 300px 50px;
             }
 
                 #descripcion{
-                    background-color: rgba(255, 255, 255, 0.504);
-                    padding: 50px;        
+                  background-color: rgba(255, 255, 255, 0.504);
+                  padding: 50px;        
                 }
-           
+        .Libros,.Pociones, .Hechizos {
+					padding:5%;
+					background-color: #1F4068;
+				}  
+
+
         .Libros{
+          display: flex;
+          flex-direction: column;
+            
+        }	
 
-        }
+						.h1Seccion{
+							color: white;
+							padding-bottom: 2%;
+						}
+            #libros{
+              display: flex;
+            }
+
+				    	.contenedorCeldas{
+                display: flex;
+                flex-flow: row wrap;
+                gap: 10px 10px;	
+
+							}
+
+							.celdas{	
+								background: white;
+                flex: 1 1 20%;
+                border-radius: 20px;
+                padding: 20px;
+							}
+                .h1Celdas{
+                    text-align: center;
+                    padding-top: 10px;
+                  }
+
+								
+								
         .Pociones{
-
+					display: flex;
         }
         .Hechizos{
 
