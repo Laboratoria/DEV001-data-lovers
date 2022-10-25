@@ -160,24 +160,77 @@
 
 							}
 
-							.celdas{	
-								background: white;
-                flex: 1 1 20%;
-                border-radius: 20px;
-                padding: 20px;
-							}
-                .h1Celdas{
-                    text-align: center;
-                    padding-top: 10px;
-                  }
-
-								.buttonVerMas{
-									margin: 0 auto;
-									text-align: center;
+								.celdas{	
+									background: white;
+									flex: 1 1 20%;
+									border-radius: 20px;
+									padding: 20px;
 								}
+									.h1Celdas{
+											text-align: center;
+											padding-top: 10px;
+										}
+
+									.buttonVerMas{
+										margin: 0 auto;
+										text-align: center;
+									}
 						#libros1{
-							display:none;
+							display:flex;
+                            
 						}
+							.contenedorCeldas1{
+								display: flex;
+								flex-flow: row wrap;
+								gap: 10px 10px;	
+
+							}
+
+							.celdas1{	
+								display: flex;
+								flex-flow: row wrap;
+								background: white;
+								flex: 1 1 80%;
+								border-radius: 20px;
+								padding: 20px;
+								align-items: center;
+ 					 			
+
+							}
+								.h1Celdas1{
+										order: 2;
+										flex:1 1 70%;
+										text-align: center;
+										font-size: 50pt;	
+								}
+								
+								.img1{
+									order: 1;
+									height: auto;
+									width: 1px;
+									flex: 1 1 20%;
+									border-radius: 30px;
+									padding: 20px;
+								
+								}
+
+								.p1Celdas1{
+									order: 3;
+									flex: 1 1 100%;
+
+
+
+								}
+								.p2Celdas1{
+									order: 4;
+									flex: 1 1 100%;
+									
+								}
+								.p3Celdas1{
+									order: 5;
+									flex: 1 1 100%;
+									
+								}
 										
 				
 								
