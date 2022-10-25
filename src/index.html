@@ -14,13 +14,21 @@
       <img src="fotosHP/fotocuatro.jpeg"alt="fotoprincipal" class="cabecera" />
     </section>
   </header>
-
-  <nav>
+  <!-- con este data target logramnos cargar la pagweb con 4 pestañas y 1 solo html  -->
+<div class="menu">
+  <p data-target="#inicio">Home</p>
+  <p data-target="#books">Books</p>
+  <p data-target="#characters">Characters</p>
+  <p data-target="#funfacts">Funfacts</p>
+</div>
+  <!-- <nav>
     <ul class="menu">
       <li><a href="index.html">Home</a></li>
-      <li><a href="books.html">Books</a>
 
-        <!--  <ul>
+      <button> <a href="books.html">prueba</a> </button>
+      
+
+          <ul>
             <li class="libro"><a href="">Book 1</a></li>
             <li class="libro"><a href="">Book 2</a></li>
             <li class="libro"><a href="">Book 3</a></li>
@@ -29,42 +37,64 @@
             <li class="libro"><a href="">Book 6</a></li>
             <li class="libro"><a href="">Book 7</a></li>
             <li class="libro"><a href="">Book 8</a></li>
-          </ul> >-->
+          </ul> >
       </li>
       <li><a href="characters.html">Characters</a></li>
       <li><a href="funfacts.html">Funfacts</a></li><br><br>
     </ul>
-  </nav>
-
+  </nav>-->
+  <!-- con este data content logramos vincular los menu junto al data target  -->
   <main>
-    <section class="inicio">
-   <!-- <section class="barajas"></section> -->
-      <article class="presentacion">
-        <h1>El Fantástico mundo de Harry Potter</h1><br>
-        <p class = texto>
-          Harry Potter es una serie de novelas fantásticas, escritas por la autora 
-          británica J. K. Rowling, en las que se describen las aventuras del joven 
-          aprendiz de magia y hechicería Harry Potter y sus amigos: Hermione Granger 
-          y Ron Weasley, durante los años que pasan en el Colegio de Magia y Hechicería, 
-          HOGWARTS.
-        </p><br>
-        <p class = texto>
-          El argumento se centra principalmente en la lucha entre Harry Potter y el 
-          malvado mago lord Voldemort, quien asesinó a los padres de Harry en su afán 
-          de conquistar el mundo mágico.
-        </p><br>
-      </article>
-    <!--    <img src="fotosHP/harry3.jpeg" alt="fototrio">-->
-    </section>
-  </main>
+    <div class="main" > 
+      <div data-content id="inicio" class="active"> 
+        <div class="inicio">
+          <!-- <section class="barajas"></section> -->
+             <article class="presentacion">
+               <h1>El Fantástico mundo de Harry Potter</h1><br>
+               <p class = texto>
+                 Harry Potter es una serie de novelas fantásticas, escritas por la autora 
+                 británica J. K. Rowling, en las que se describen las aventuras del joven 
+                 aprendiz de magia y hechicería Harry Potter y sus amigos: Hermione Granger 
+                 y Ron Weasley, durante los años que pasan en el Colegio de Magia y Hechicería, 
+                 HOGWARTS.
+               </p><br>
+               <p class = texto>
+                 El argumento se centra principalmente en la lucha entre Harry Potter y el 
+                 malvado mago lord Voldemort, quien asesinó a los padres de Harry en su afán 
+                 de conquistar el mundo mágico.
+               </p><br>
+             </article>
+           
+        </div>
+      </div>
+    </div>
+    <!-- con este data content logramos vincular los menu -->
+   <div data-content id="books" class="foto2">
+    <div class="barajas">
+    </div>    
+   </div>
+    
+   <div data-content id="characters" class="persona">
+    <div class="personajes">
+      <br> <p>Descubre a todos los personajes</p>
+    </div>    
+   </div>
 
-  <footer>
+   <div data-content id="funfacts" class="curiosidades">
+    <div class="funfact">
+      <br> <p>Probablemente no sabias que...</p>
+    </div>    
+   </div>
+  </div>
+
+</main>
+ <footer>
     <section class="footer">
       By Adriana y Lorena
     </section>
   </footer>
 
-  <script src="main.js" type="module"></script>
+   <script src="main.js" type="module"></script>
 
   </body>
 </html>

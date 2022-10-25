@@ -12058,7 +12058,7 @@ export default {
       "content": "Harry's wand and Voldemort's wand were twins, that's why they couldn't kill each other"
     }
   ],
-  spells: [
+    spells:[
     {
       "id": 1,
       "name": "Aberto",
@@ -16177,6 +16177,7 @@ export default {
       "description": "On his birthday, Harry Potter discovers that he is the son of two well-known wizards, from whom he has inherited magical powers. He must attend a famous school of magic and sorcery, where he establishes a friendship with two young men who will become his companions on his adventure. During his first year at Hogwarts, he discovers that a malevolent and powerful wizard named Voldemort is in search of a philosopher's stone that prolongs the life of its owner."
     },
     {
+
       "id": 2,
       "title": "Harry Potter and the chamber of secrets",
       "releaseDay": "July 2, 1998",

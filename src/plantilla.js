@@ -15,3 +15,23 @@ export const tarjeta = (datos) => {
      `
     return plantilla
 }
+
+export const tarjeta2 = (datos) => {
+  //plantillas de llos personajes que se van a mostrar//
+  //<img src="${ }"> esta linea es para agregar una imagen si lo queremos (lineaa24)
+  let plantilla2 = `
+  <article class="tarjeta2">
+      <header class="header_tarjeta2">
+       
+      </header>
+      <div class="tarjeta2body">
+        <p class="name">${datos.name} </p>
+        <p class="birth">${datos.birth} </p>
+        <p class="species"> ${datos.species}</p>
+        <p class="gender"> ${datos.gender}</p>
+        <p class="house"> ${datos.house}</p>
+      </div>
+  </article>
+   `
+  return plantilla2
+ }
