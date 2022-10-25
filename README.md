@@ -35,3 +35,11 @@ Entre los usuarios más casuales se manifestó la necesidad de ver las película
 [![modal-pelicula.png](https://i.postimg.cc/QdRk1vjQ/modal-pelicula.png)](https://postimg.cc/NKkHwJ9F)
 
 ## 4. Prototipos de alta fidelidad
+[![estadistica.png](https://i.postimg.cc/fLbFkJZ2/estadistica.png)](https://postimg.cc/HJf3hWrX)
+[![footer.png](https://i.postimg.cc/nzgJJv7Y/footer.png)](https://postimg.cc/tZ3fdnBY)
+[![header.png](https://i.postimg.cc/P5TkTfLc/header.png)](https://postimg.cc/zVtQkrFS)
+[![main.png](https://i.postimg.cc/qBKfK6yS/main.png)](https://postimg.cc/YjtyK9Xz)
+[![menu.png](https://i.postimg.cc/15Kj0GtC/menu.png)](https://postimg.cc/VddgmbXn)
+[![modal.png](https://i.postimg.cc/tCDBn9S8/modal.png)](https://postimg.cc/hfzLHRq0)
+[![puntuacion.png](https://i.postimg.cc/B6WpfbbP/puntuacion.png)](https://postimg.cc/06fDp8p9)
+[![recientes.png](https://i.postimg.cc/28Hx823D/recientes.png)](https://postimg.cc/GHyDXPk7)
