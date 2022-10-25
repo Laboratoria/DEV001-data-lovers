@@ -7,8 +7,5 @@
   };*/
   import data from './data/harrypotter/harry.js';
 
- function compare (a){
-  
- }
   
   

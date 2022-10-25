@@ -161,6 +161,8 @@
 							}
 
 								.celdas{	
+									display: flex;
+									flex-direction: column;
 									background: white;
 									flex: 1 1 20%;
 									border-radius: 20px;
@@ -175,8 +177,48 @@
 										margin: 0 auto;
 										text-align: center;
 									}
+
+									.modal {
+										display: none; /* Hidden by default */
+										position: fixed; /* Stay in place */
+										z-index: 1; /* Sit on top */
+										padding-top: 100px; /* Location of the box */
+										left: 0;
+										top: 0;
+										width: 100%; /* Full width */
+										height: 100%; /* Full height */
+										overflow: auto; /* Enable scroll if needed */
+										background-color: rgb(0,0,0); /* Fallback color */
+										background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+									}
+									
+									/* Modal Content */
+									.modal-content {
+										background-color: #fefefe;
+										margin: auto;
+										padding: 20px;
+										border: 1px solid #888;
+										width: 80%;
+									}
+									
+									/* The Close Button */
+									.close {
+										color: #aaaaaa;
+										float: right;
+										font-size: 28px;
+										font-weight: bold;
+									}
+									
+									.close:hover,
+									.close:focus {
+										color: #000;
+										text-decoration: none;
+										cursor: pointer;
+									}
+
 						#libros1{
 							display:flex;
+							
                             
 						}
 							.contenedorCeldas1{
@@ -238,9 +280,59 @@
         .Pociones{
 					display: flex;
         }
-        .Hechizos{
 
-        }
+				.contenedorCeldas{
+					display: flex;
+					flex-flow: row wrap;
+					gap: 10px 10px;	
+
+				}
+
+					.celdas{	
+						display: flex;
+						flex-direction: column;
+						background: white;
+						flex: 1 1 20%;
+						border-radius: 20px;
+						padding: 20px;
+					}
+						.h1Celdas{
+								text-align: center;
+								padding-top: 10px;
+							}
+        .Hechizos{
+				}
+
+					.contenedorCeldas3{
+						display: flex;
+						flex-flow: column wrap;
+						gap: 10px 10px;	
+
+					}
+
+						.celdas3{	
+							display: flex;
+							flex-flow: row wrap;
+							background: white;
+							border-radius: 20px;
+							padding: 20px;
+							align-items: center;
+								
+
+						}
+							.h1Celdas3{
+									order: 2;
+									
+									text-align: center;
+									font-size: 50pt;	
+							}
+							
+							
+							.p1Celdas3{
+								order: 3;
+							
+
+        
     .footer{
 
     }
