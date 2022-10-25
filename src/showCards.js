@@ -95,7 +95,12 @@ export let showPokemonFeature = (objectData) => {
   <section class="evolution-pokemon">
     <h2>Evolution:</h2>
     <div class="evolution-pokemon-1" id="evolution-1"> 
-        ${evolutions(objectData)}
+        <div class="evolution-one">
+        ${evolutionsOne(objectData)}
+        </div>
+        <div class="evolution-two">
+        ${evolutionsTwo(objectData)}
+        </div>
     </div>
   </section>
   </div>
@@ -105,16 +110,50 @@ containerCharacteristics.insertAdjacentHTML("beforeend", pokemonFeatures);
 
 }
 
-let evolutions = (objectData)=>{
+let evolutionsOne = (objectData)=>{
+
   if(objectData.evolution["next-evolution"]){
-    let nextEvolution = `<p>${objectData.evolution["next-evolution"][0].num}</p>
+    let nextEvolution = `<h2>Next Evolution:</h2>
+    <p>${objectData.evolution["next-evolution"][0].num}</p>
     <p>${objectData.evolution["next-evolution"][0].name}</p>`
     return nextEvolution;
   } else{
-    let notEvolution = `<p> no existe evolución </p>`
+    let notEvolution = `<h2>Prev Evolution:</h2>
+    <p>${objectData.evolution["prev-evolution"][0].num}</p>
+    <p>${objectData.evolution["prev-evolution"][0].name}</p>`
     return notEvolution;
   }
+  
 }
 
-/*<p>${objectData.evolution["next-evolution"][0].num}</p>
-    <p>${objectData.evolution["next-evolution"][0].name}</p>*/
+
+let evolutionsTwo = (objectData)=>{
+
+  if(objectData.evolution["prev-evolution"] && objectData.evolution["next-evolution"] ){
+    let caseEvolution = `<h2>Prev Evolution:</h2>
+    <p>${objectData.evolution["prev-evolution"][0].num}</p>
+    <p>${objectData.evolution["prev-evolution"][0].name}</p>`
+    return caseEvolution;
+  }
+
+  if(objectData.evolution["next-evolution"]){
+    let nextEvolution = `<h2>Next Evolution:</h2>
+    <p>${objectData.evolution["next-evolution"][0]["next-evolution"][0].num}</p>
+    <p>${objectData.evolution["next-evolution"][0]["next-evolution"][0].name}</p>`
+    return nextEvolution;
+  } 
+  else{
+    let notEvolution = `<h2>Prev Evolution:</h2>
+    <p>${objectData.evolution["prev-evolution"][0]["prev-evolution"][0].num}</p>
+    <p>${objectData.evolution["prev-evolution"][0]["prev-evolution"][0].name}</p>`
+    return notEvolution;
+  }
+
+}
+
+
+
+/*if(objectData.evolution["prev-evolution"] == undefined && objectData.evolution["next-evolution"] == undefined){
+    let nothing = `<h2>Next Evolution:</h2>`
+    return nothing;
+  }*/
