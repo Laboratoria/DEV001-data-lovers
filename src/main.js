@@ -12,6 +12,7 @@ const pagina = document.getElementById("muestra");
 const personajes = document.getElementById("personajes");
 const fecha = document.getElementById("fecha");
 const popular = document.getElementById("popular");
+const header = document.getElementById("header_inicio")
 
 window.onload = () => {
   mostrarEnPantalla(datosTodasPeliculas());
@@ -94,7 +95,7 @@ pelicula.addEventListener('mouseup', (e) => {
    if(abrir === "select"){
     
       modal.style.display = "block";
-      
+      header.style.display = "none"
    }
    
    
@@ -150,6 +151,7 @@ pelicula.addEventListener('mouseup', (e) => {
 
 cerrar.addEventListener("click", function() {
     modal.style.display = "none";
+    header.style.display = "block";
 });
 
 
@@ -189,14 +191,23 @@ const imgDirect =[
 const img = [...imgDirect]
   const estadistic = document.getElementById("contenedor_etadistica");
   const estadisticImg = document.getElementById("cont_imagenes");
+  const nameDirec = document.getElementById("name_direc");
  for(const [key, value] of Object.entries(estadistica)){
-  const porcentaje = (value * 100)/20;
+   nameDirec.innerHTML += 
+   `<div class="directores_name">
+     <p>⭐${key}</p>
+   </div>`
+   
+    const porcentaje = (value * 100)/20;
     estadistic.innerHTML +=
+
    `
-   <div class="barra" style="--bar-value:${porcentaje}%;" data-name="⭐${key}" title="${key} ${porcentaje}%"></div>
       
+      <div class="barra" style="--bar-value:${porcentaje}%;" data-name="⭐${key}" title="${key} ${porcentaje}%"></div>
+    
+
   `
-  
+  //<div class="barra_name"></div>⭐${key}
  }
  for (let clave in img){
   estadisticImg.innerHTML +=

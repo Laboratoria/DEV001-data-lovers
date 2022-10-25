@@ -1,0 +1,139 @@
+footer{
+    background:var(--menu_degradado);
+    padding-bottom: 0.1px;
+}
+
+.footer_content{
+   display: flex; 
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   padding-top: 20px;
+   padding-bottom: 10px;
+}
+
+.contact_us{
+    width: 40%;
+    color: #fff;
+}
+
+.brand{
+  font-weight: 500;  
+  font-size:40px;
+}
+
+.brand+p{
+  font-weight:500;  
+}
+
+.social_media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social_media_icon{
+   display:  inline-block; 
+   margin-left: 20px;
+   width: 60px;
+   height: 60px;
+   border: 1px solid #fff;
+   border-radius: 50%;
+   text-align: center;
+   color: #fff;
+}
+
+.social_media_icon:hover{
+    background: #fff;
+    color: var(--rosa_fuerte_color);
+}
+
+.social_media_icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.line{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 40px;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 800px){ 
+    .footer_content{
+        justify-content:center;
+    }
+
+    .social_media{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .social_media_icon{
+        margin-left: 0;
+    }
+
+    .social_media i{
+      margin-left: 0;
+    }
+    
+    .contact_us{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+   
+}
+
+
+@media (max-width: 720px){
+    .footer_content{
+        justify-content:center;
+    }
+
+    .social_media{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .social_media_icon{
+        margin-left: 0;
+    }
+
+    .social_media i{
+      margin-left: 0;
+    }
+    
+    .contact_us{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    } 
+} 
+
+
+@media (max-width: 500px){
+    .social_media{
+         width: 100%;
+     }
+     
+     .contact_us{
+         width: 90%;
+     }
+     
+     .division{
+         height:60px;
+     }
+ 
+     .figure img{
+         width: 60px;
+     }
+    
+ }
+ 
+ 

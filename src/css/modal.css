@@ -1,0 +1,229 @@
+.modal{
+    display: none;
+    width: 100%;
+	height:100%;
+    z-index:1;
+    overflow: scroll;
+    background: var(--modal_fondo);
+    top:0;
+    left: 0;
+    position: fixed;
+}
+
+.cabecero_modal{
+    width: 100%;
+    height: 70px;
+    background: var(--modal_degradado);
+    padding: 0px 20px;
+    
+}
+.cabecero_modal_centro{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecero_modal_centro img{
+    width: 150px;
+    height: 100%;
+}
+.close{
+    color:var(--rosa_fuerte_color);
+    font-size: 30px;
+    padding: auto;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color: var(--marron_color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer
+}
+.modal::-webkit-scrollbar{
+    display: none;
+}
+
+.modal_pelicula{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal_imagen{
+    width:50%;
+
+}
+.modal_imagen img{
+    border-radius: 5px;
+    width: 300px;
+    height: 400px;
+}
+.modal_titulo_descripcion{
+    width: 50%;
+    text-align: justify;
+    padding: 0 10px;
+    text-align: center;
+    text-align: left
+
+}
+.modal_titulo_descripcion h2{
+    font-weight: 700;
+    font-size: 50px;
+    color: var(--verde_color);
+    font-family: 'PT Serif', serif;
+    
+}
+
+.modal_director{
+    display:flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin: 15px 0px;
+}
+
+.modal_score_date{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+.modal_score_date i{
+    font-size: 25px;
+    color: #ffd60a
+}
+.modal_texto_largo{
+    display:flex;
+}
+.muestra{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section_personajes{
+    padding-top: 40px;
+    text-align: center;
+}
+.personajes{
+    text-align: center;
+    margin-top: 20px;
+    display:flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-left: 10px;
+}
+.section_personajes h2{
+    color: var(--marron_color);
+    font-size: 30px;
+}
+.afterF{
+    color: var(--verde_color);
+}
+
+
+.cont_people{ 
+    text-align: left;
+    width: 150px;
+    height: 180px;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+
+.con_people_text{
+    padding-left: 5px;
+    padding-bottom: 20px;
+    font-size: 13px;
+
+}
+.cont_people img{
+    border-radius: 5px 5px 0 0 ;
+    width: 100%;
+    height: 100px;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 720px){
+    .modal_titulo_descripcion h2{
+        font-weight: 600;
+        font-size:30px;
+    }
+    
+    .modal_director{
+        font-size: 10px;
+    }
+    
+    .modal_texto_largo{
+        font-size: 10px;
+    }
+     
+    .modal_score_date{
+        font-size: 10px;
+    }
+    .modal_score_date i{
+        font-size: 10px;
+    }
+    
+    .cont_people{
+        font-size: 10px;
+        width: 100px;
+    } 
+    
+    .cont_people img{
+        width: 100%;
+        height: 80px;
+    }
+    .con_people_text{
+        font-size: 10px;
+    }
+    .modal_imagen img{
+        width: 200px;
+        height: 250px;
+    }
+     
+    .close{
+        font-size:20px;
+        width: 80px;
+        height: 30px;
+
+    }
+    .cabecero_modal{
+        height: 50px;
+    }
+    
+    .cabecero_modal_centro img{
+        width: 100px;
+       
+    }
+}
+
+@media (max-width: 600px){
+    .modal_pelicula{
+        flex-direction: column;
+        margin-top: 0px;
+        padding:0px;
+    }
+
+    .close{
+        width: 50px;
+    }
+
+    .modal_imagen img{
+        margin-left: 60px;
+        padding: auto;
+        width: 250px;
+        height: 300px;
+    }
+
+    .modal_imagen{
+        width: 100%;
+    }
+
+    .modal_titulo_descripcion{
+    
+        width: 100%;
+    }
+}

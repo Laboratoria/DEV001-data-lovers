@@ -1,0 +1,115 @@
+
+
+.peliculas{
+    padding: 10px 0px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+   
+}
+
+.card_pelicula{
+    border-radius: 5px;
+    width: 250px;
+    height:450px;
+    box-shadow: var(--sombra);
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 15px;
+    background-color: var(--cremita_color);
+    color: white
+}
+.textos_card{
+    margin: 5px 0px;
+    padding: 0 10px;
+}
+
+
+.textos_card h2{
+    font-family: 'PT Serif', serif;
+    color: white;
+    font-weight: bold;
+    font-size:12px;
+}
+
+.card_pelicula img{
+   border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 350px;
+    
+}
+
+.boton_card{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    align-items:center;
+}
+
+
+.boton_card i{
+    font-size: 20px;
+    color: #ffd60a
+}
+
+.boton_card p{
+   font-weight: 600;
+}
+
+.select{
+    background: var(--rosa_color);
+    border: none;
+    padding: 4px;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+}
+
+.select:hover{
+    transform: scale(1.1);
+    background: var(--rosa_fuerte_color);
+    box-shadow: var(--sombra);
+    color: white;
+}
+
+/*RESPONSIVE */
+
+@media (max-width: 600px){
+    .textos_card h2{
+        font-size:10px;
+    }
+
+    .card_pelicula{
+        width: 150px;
+        height: 315px;
+        font-size: 8px;
+    }
+    .card_pelicula img{
+        width: 100%;
+        height: 200px;
+        
+    }
+    .textos_card{
+        margin: 5px 0px;
+        padding: 0 10px;
+        font-size: 10px;
+    }
+
+    .boton_card i{
+        font-size: 10px;
+       
+    }
+    
+    .boton_card p{
+        font-size: 10px;
+       font-weight: 300;
+    }
+
+}
+
+@media (max-width: 500px){
+    .card_pelicula{
+        margin-left: 5px;
+    }
+}
