@@ -98,9 +98,9 @@ describe('ordenAZ', () => {
     expect(typeof ordenAZ).toBe('function');
   });
 
-  // it('returns true si la función orden() ordena `name` de forma ascendente', () => {
-  //   expect(orden(data)).toStrictEqual(data.sort(data.name));
-  // });
+  //  it('returns true si la función orden() ordena `name` de forma ascendente', () => {
+  //    expect(ordenAZ(data)).toStrictEqual(data.sort(data.name));
+  //  });
   it('returns true si la función ordenAZ() ordena `name` de forma ascendente', () => {
     expect(ordenAZ(data)).toStrictEqual([
       {
