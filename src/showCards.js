@@ -108,7 +108,7 @@ export let showPokemonFeature = (objectData) => {
   <section class="evolution-pokemon">
     <h2>Evolution:</h2>
     <div class="evolution-pokemon-1" id="evolution-1"> 
-       ${evolutionTwo(objectData)}    
+      ${evolutionsTwo(objectData)}
     </div>
   </section>
   </div>
@@ -118,15 +118,16 @@ containerCharacteristics.insertAdjacentHTML("beforeend", pokemonFeatures);
 
 }
 
-let evolutionTwo = (objectData)=>{
-  const actual= objectData.evolution;
-  
-  if(!actual["next-evolution"] && !actual["prev-evolution"]){
-    let notEvolution = `<p> no existe evolución </p>`
-    return notEvolution;
-    }
+let evolutionsTwo = (objectData)=>{
+  const actual = objectData.evolution;
 
-  if(actual["next-evolution"] && actual["prev-evolution"]){
+  if(!actual["next-evolution"] && !actual["prev-evolution"]){
+    let notEvolution = `<p>No evolutions</p>`
+    //console.log(notEvolution);
+    return notEvolution;
+  } 
+
+  if(actual["prev-evolution"] && actual["next-evolution"]){
     let nextAndPrevEvolution = `<div class="children-one">
     <h2>Prev Evolution:</h2>
     <p>${actual["prev-evolution"][0].num}</p>
@@ -138,8 +139,59 @@ let evolutionTwo = (objectData)=>{
     <p>${actual["next-evolution"][0].name}</p>
     </div>`
 
+    //console.log(objectData.evolution["prev-evolution"]);
+    //console.log(objectData.evolution["next-evolution"]);
+    
     return nextAndPrevEvolution;
+  }
+
+  //*Prev Evolutions and item evolution */
+
+  if(actual["prev-evolution"] && actual["prev-evolution"][0]["prev-evolution"]){
+    let prevAndPrevEvolution = `<div class="children-one">
+    <h2>Prev Evolution:</h2>
+    <p>${actual["prev-evolution"][0].num}</p>
+    <p>${actual["prev-evolution"][0].name}</p>
+    </div>
+    <div class="children-two">
+    <h2>Prev Evolution:</h2>
+    <p>${actual["prev-evolution"][0]["prev-evolution"][0].num}</p>
+    <p>${actual["prev-evolution"][0]["prev-evolution"][0].name}</p>
+    </div>`
+
+    //console.log(actual["prev-evolution"]);
+    //console.log(actual["prev-evolution"][0]["prev-evolution"]);
+
+    return prevAndPrevEvolution;
   } 
+
+  if(actual["prev-evolution"] && actual["prev-evolution"][0]["evolution-item"]){
+    let prevAndItemEvolution = `<div class="children-one">
+    <h2>Prev Evolution:</h2>
+    <p>${actual["prev-evolution"][0].num}</p>
+    <p>${actual["prev-evolution"][0].name}</p>
+    </div>`
+
+    //console.log(actual["prev-evolution"]);
+    //console.log(actual["prev-evolution"][0]["evolution-item"]);
+
+    return prevAndItemEvolution;
+  } 
+
+  if(actual["prev-evolution"]){
+    let preEvolution = `<div class="children-one">
+    <h2>Prev Evolution:</h2>
+    <p>${actual["prev-evolution"][0].num}</p>
+    <p>${actual["prev-evolution"][0].name}</p>
+    </div>`
+
+    //console.log(actual["prev-evolution"]);
+    //console.log(actual["prev-evolution"][0]["evolution-item"]);
+
+    return preEvolution;
+  } 
+
+  //*Next Evolutions and item evolution */
   if(actual["next-evolution"] && actual["next-evolution"][0]["next-evolution"]){
     let nextAndNextEvolution = `<div class="children-one">
     <h2>Next Evolution:</h2>
@@ -151,61 +203,30 @@ let evolutionTwo = (objectData)=>{
     <p>${actual["next-evolution"][0]["next-evolution"][0].num}</p>
     <p>${actual["next-evolution"][0]["next-evolution"][0].name}</p>
     </div>`
+    //console.log(actual["next-evolution"]);
+    //console.log(actual["next-evolution"][0]["next-evolution"]);
     return nextAndNextEvolution;
-  }
+  } 
 
-  if(actual["prev-evolution"] && actual["prev-evolution"][0]["prev-evolution"]){
-    let prevAndPrevEvolution=`<div class="children-one">
-    <h2>Prev Evolution:</h2>
-    <p>${actual["prev-evolution"][0].num}</p>
-    <p>${actual["prev-evolution"][0].name}</p>
-    </div>
-    <div class="children-two">
-    <h2>Prev Evolution:</h2>
-    <p>${actual["prev-evolution"][0]["prev-evolution"][0].num}</p>
-    <p>${actual["prev-evolution"][0]["prev-evolution"][0].name}</p>
-    </div>`
-    return prevAndPrevEvolution;
-  }
-
-if(actual["next-evolution"] && actual["next-evolution"][0]["evolution-item"]){
-  let nextAndItemEvolution= `<div class="children-one">
-  <h2>Next Evolution:</h2>
-  <p>${actual["next-evolution"][0].num}</p>
-  <p>${actual["next-evolution"][0].name}</p>
-  </div>`
-  return nextAndItemEvolution;
-}
-
-if (actual["prev-evolution"] && actual["prev-evolution"][0]["evolution-item"]){
-  let prevAndItemEvolution= `<div class="children-one">
-  <h2>Prev Evolution:</h2>
-  <p>${actual["prev-evolution"][0].num}</p>
-  <p>${actual["prev-evolution"][0].name}</p>
-  </div>`
-  return prevAndItemEvolution;
-}
-
-
-  if(actual["next-evolution"]){
-    let onlyOneNextEvolution = `<div class="children-one">
-    <h2>Solo una Next Evolution:</h2>
+  if(actual["next-evolution"] && actual["next-evolution"][0]["evolution-item"]){
+    let nextAndItemEvolution = `<div class="children-one">
+    <h2>Next Evolution:</h2>
     <p>${actual["next-evolution"][0].num}</p>
     <p>${actual["next-evolution"][0].name}</p>
     </div>`
+    //console.log(actual["next-evolution"]);
+    //console.log(actual["next-evolution"][0]["evolution-item"]);
+    return nextAndItemEvolution;
+  } 
 
-    return onlyOneNextEvolution;
-  }
-  if(actual["prev-evolution"]){
-    let onlyOnePrevEvolution = `<div class="children-one">
-    <h2>Solo una Prev Evolution:</h2>
-    <p>${actual["prev-evolution"][0].num}</p>
-    <p>${actual["prev-evolution"][0].name}</p>
+  if(actual["next-evolution"]){
+    let nextEvolution = `<div class="children-one">
+    <h2>Next Evolution:</h2>
+    <p>${actual["next-evolution"][0].num}</p>
+    <p>${actual["next-evolution"][0].name}</p>
     </div>`
-
-    return onlyOnePrevEvolution;
+    //console.log(actual["next-evolution"]);
+    //console.log(actual["next-evolution"][0]["evolution-item"]);
+    return nextEvolution;
   }
-
-
-  
-  }
+};
