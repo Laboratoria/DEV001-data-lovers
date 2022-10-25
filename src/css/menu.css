@@ -148,6 +148,12 @@
 
 /*RESPONSIVE */
 
+@media (max-width: 768px){
+    .menu_inicio a{
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 720px) {
      
      .container__menu{
@@ -184,7 +190,7 @@
     }
 
     .menu_inicio:hover .menu_directores{
-        top: 50px;
+        top: 32px;
         
     }
     
