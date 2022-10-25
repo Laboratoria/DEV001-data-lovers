@@ -4,6 +4,12 @@
   font-family: "Poppins", sans-serif;
 }
 
+/*esto ayuda a que al hacerle click a la imagen que va hacia arriba
+lo haga más lento*/
+html{
+  scroll-behavior: smooth;
+}
+
 .container-header {
   display: flex;
   flex-direction: column;
@@ -213,9 +219,9 @@
     }
     
     .img-title-carousel{
-      width: 15%;
-      left: 80px;
-      top: 260px;
+      width: 25%;
+      left: -110px;
+      top: 0px;
     }
     
     .span-title{

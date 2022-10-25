@@ -43,19 +43,26 @@ export let showPokemonFeature = (objectData) => {
   let pokemonFeatures =`<section class="container-features-poke">
   <div class="${objectData.type[0]} childrenOne">
     <section class="container-img-num-name">
-      <div class="generation-and-id">
+    <div class="generationId">
         <span id="id-pokemon">${objectData.num}</span>
         <span id="generation-pokemon">${objectData.generation.name}</span>
-      </div>
+        <div class="background"><span class="background"> <img
+        src="./assets/images/fondo.png"
+        class="fondo"
+        id="fondo"
+        alt="img-modal"
+      />
+      </div></div>
       <h2 id="name-pokemon">${objectData.name}</h2>
       <div class="img-pokemon-modal">
-        <div></div>
+        <div>
         <img
         src=${objectData.img}
         class="img-poke"
         id="img-poke"
         alt="img-pokemon"
         />
+        <div class = "circleTwo" id= "circleTwo"></div>
       </div>
     </section>
   </div>
@@ -63,12 +70,18 @@ export let showPokemonFeature = (objectData) => {
   <section class="about-pokemon">
     ${objectData.about}
   </section>
-  <section class="stats-pokemon">
-    <h2 class="title-stats">Stats:</h2>
-    <p class="stats-information"> Base attack: ${objectData.stats["base-attack"]}</p>
-    <p class="stats-information"> Base defense: ${objectData.stats["base-defense"]}</p>
-    <p class="stats-information"> Base stamina: ${objectData.stats["base-stamina"]}</p>
-  </section>
+  <table class="stats-pokemon">
+  <tr>
+    <th class="title-table">Stats:</th>
+    <th class="title-table">Encounter;</th>
+    </tr>
+    <tr class:"body-table">
+    <td class="stats-information"> Base attack: ${objectData.stats["base-attack"]}</td>
+    <td class="encounter-information"> Encounter:
+    <td class="stats-information"> Base defense: ${objectData.stats["base-defense"]}</td>
+    <td class="stats-information"> Base stamina: ${objectData.stats["base-stamina"]}</td>
+    </tr>
+  </table>
   <div class="resistant-and-weaknesses">
     <div class="resistant">
       <h2>Resistance:</h2>
@@ -95,7 +108,7 @@ export let showPokemonFeature = (objectData) => {
   <section class="evolution-pokemon">
     <h2>Evolution:</h2>
     <div class="evolution-pokemon-1" id="evolution-1"> 
-    
+      ${evolutionsTwo(objectData)}
     </div>
   </section>
   </div>
@@ -105,5 +118,115 @@ containerCharacteristics.insertAdjacentHTML("beforeend", pokemonFeatures);
 
 }
 
-/*<p>${objectData.evolution["next-evolution"][0].num}</p>
-    <p>${objectData.evolution["next-evolution"][0].name}</p>*/
+let evolutionsTwo = (objectData)=>{
+  const actual = objectData.evolution;
+
+  if(!actual["next-evolution"] && !actual["prev-evolution"]){
+    let notEvolution = `<p>No evolutions</p>`
+    //console.log(notEvolution);
+    return notEvolution;
+  } 
+
+  if(actual["prev-evolution"] && actual["next-evolution"]){
+    let nextAndPrevEvolution = `<div class="children-one">
+    <h2>Prev Evolution:</h2>
+    <p>${actual["prev-evolution"][0].num}</p>
+    <p>${actual["prev-evolution"][0].name}</p>
+    </div>
+    <div class="children-two">
+    <h2>Next Evolution:</h2>
+    <p>${actual["next-evolution"][0].num}</p>
+    <p>${actual["next-evolution"][0].name}</p>
+    </div>`
+
+    //console.log(objectData.evolution["prev-evolution"]);
+    //console.log(objectData.evolution["next-evolution"]);
+    
+    return nextAndPrevEvolution;
+  }
+
+  //*Prev Evolutions and item evolution */
+
+  if(actual["prev-evolution"] && actual["prev-evolution"][0]["prev-evolution"]){
+    let prevAndPrevEvolution = `<div class="children-one">
+    <h2>Prev Evolution:</h2>
+    <p>${actual["prev-evolution"][0].num}</p>
+    <p>${actual["prev-evolution"][0].name}</p>
+    </div>
+    <div class="children-two">
+    <h2>Prev Evolution:</h2>
+    <p>${actual["prev-evolution"][0]["prev-evolution"][0].num}</p>
+    <p>${actual["prev-evolution"][0]["prev-evolution"][0].name}</p>
+    </div>`
+
+    //console.log(actual["prev-evolution"]);
+    //console.log(actual["prev-evolution"][0]["prev-evolution"]);
+
+    return prevAndPrevEvolution;
+  } 
+
+  if(actual["prev-evolution"] && actual["prev-evolution"][0]["evolution-item"]){
+    let prevAndItemEvolution = `<div class="children-one">
+    <h2>Prev Evolution:</h2>
+    <p>${actual["prev-evolution"][0].num}</p>
+    <p>${actual["prev-evolution"][0].name}</p>
+    </div>`
+
+    //console.log(actual["prev-evolution"]);
+    //console.log(actual["prev-evolution"][0]["evolution-item"]);
+
+    return prevAndItemEvolution;
+  } 
+
+  if(actual["prev-evolution"]){
+    let preEvolution = `<div class="children-one">
+    <h2>Prev Evolution:</h2>
+    <p>${actual["prev-evolution"][0].num}</p>
+    <p>${actual["prev-evolution"][0].name}</p>
+    </div>`
+
+    //console.log(actual["prev-evolution"]);
+    //console.log(actual["prev-evolution"][0]["evolution-item"]);
+
+    return preEvolution;
+  } 
+
+  //*Next Evolutions and item evolution */
+  if(actual["next-evolution"] && actual["next-evolution"][0]["next-evolution"]){
+    let nextAndNextEvolution = `<div class="children-one">
+    <h2>Next Evolution:</h2>
+    <p>${actual["next-evolution"][0].num}</p>
+    <p>${actual["next-evolution"][0].name}</p>
+    </div>
+    <div class="children-two">
+    <h2>Next Evolution:</h2>
+    <p>${actual["next-evolution"][0]["next-evolution"][0].num}</p>
+    <p>${actual["next-evolution"][0]["next-evolution"][0].name}</p>
+    </div>`
+    //console.log(actual["next-evolution"]);
+    //console.log(actual["next-evolution"][0]["next-evolution"]);
+    return nextAndNextEvolution;
+  } 
+
+  if(actual["next-evolution"] && actual["next-evolution"][0]["evolution-item"]){
+    let nextAndItemEvolution = `<div class="children-one">
+    <h2>Next Evolution:</h2>
+    <p>${actual["next-evolution"][0].num}</p>
+    <p>${actual["next-evolution"][0].name}</p>
+    </div>`
+    //console.log(actual["next-evolution"]);
+    //console.log(actual["next-evolution"][0]["evolution-item"]);
+    return nextAndItemEvolution;
+  } 
+
+  if(actual["next-evolution"]){
+    let nextEvolution = `<div class="children-one">
+    <h2>Next Evolution:</h2>
+    <p>${actual["next-evolution"][0].num}</p>
+    <p>${actual["next-evolution"][0].name}</p>
+    </div>`
+    //console.log(actual["next-evolution"]);
+    //console.log(actual["next-evolution"][0]["evolution-item"]);
+    return nextEvolution;
+  }
+};
