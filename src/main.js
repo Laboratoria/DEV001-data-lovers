@@ -1,4 +1,4 @@
-import { filterData } from './data.js';
+import { filterData} from './data.js';
 
 import data from './data/ghibli/ghibli.js';
 
@@ -32,4 +32,3 @@ const gFilms=data.films;
     }
     
     producer.appendChild(showProducer); //y aquí se muestra
-
