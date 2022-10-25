@@ -1,9 +1,9 @@
-// estas funciones son de ejemplo
+import harrypotter from "./data/harrypotter/data.js"
+const getBooks = () => {
+    return Object.values(harrypotter.books);
+}
 
-export const example = () => {
-  return 'example';
-};
+export {
+    getBooks
+}
 
-export const anotherExample = () => {
-  return 'OMG';
-};
