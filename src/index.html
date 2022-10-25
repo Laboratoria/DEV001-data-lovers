@@ -4,17 +4,56 @@
 <head>
   <meta charset="utf-8">
   <title>Data Lovers</title>
+  <script src="https://kit.fontawesome.com/da6daf1276.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+<!--Inicio menu-->
+  <div id="container-mobile">
+    <input type="checkbox" id="inMenu">
+    <label for="inMenu"><i class="fa-solid fa-bars"></i></label>
+    <select name="Gender" id="filterGender">
+    <optgroup label="Gender" >    
+      <option value="all">Todos los Géneros</option>
+      <option value="genderMale">Male</option>
+      <option value="genderFem">Female</option>
+      <option value="genderLess">Genderless</option>
+      <option value="genderUnknown">Unknown</option>
+     </optgroup> 
+    </select>
+    <select name="Status" id="filterStatus">
+     <optgroup label="Status">
+            <option value="all">Todos los Status</option>
+            <option value="statusAlive">Alive</option>
+            <option value="statusDead">Dead</option>
+            <option value="statusUnknown">Unknown</option>
+    </optgroup>
+  </select>
+  <select name="Species" id="filterSpecies">
+    <optgroup label="Species" >      
+            <option value="all">Todos las Especies</option>
+            <option value="speciesHuman">Human</option>
+            <option value="speciesAlien">Alien</option>
+            <option value="speciesMytholog">Mytholog</option>
+            <option value="speciesUnknown">Unknown</option>
+            <option value="speciesRobot">Robot</option>
+            <option value="speciesPoopybutthole">Poopybutthole</option>
+            <option value="speciesParasite">Parasite</option>
+            <option value="speciesAnimal">Animal</option>
+            <option value="speciesDisease">Disease</option>
+            <option value="speciesHumanoid">Humanoid</option>
+            <option value="speciesCronenberg">Cronenberg</option>
+            <option value="speciesVampire">Vampire</option>
+    </optgroup>
+  </select>
+  </div> 
 
-  
   <div class="container">
     <nav>
       <div class="statistics">
         <div class="statistics-button">
-          <button>Estadísticas</button>
+          <a href="index2.html"><button>Statistics</button></a>
         </div>
       </div>
       <div class="logo">
@@ -26,128 +65,52 @@
         <a href="" class="quiz"><button>Quiz</button></a>
       </div>
     </nav>
-
-    
-    <div class="section-title">
-      <div class="category">
-        <h2>Personajes</h2>
-       
+<!--Fin menu-->
+<!--Inicio menú categorías, search y sort-->            
+      <div class="category" id="category">
         
-      </div>
-      <div class="filter-data">
-        <section>
-          
-          <input id="buscar" type="text" placeholder="Buscar personaje">
+       <div class="section-title">
+        <h2>CHARACTERS</h2>
+        
+        <div class="seccion-botones">
+            <div class="search"> 
+              <h3>Search</h3>
+              <input id="buscar" type="text" placeholder="Buscar personaje">
+            </div>
             
-            
-          <select name="filtrar" id="filter">
-            <option value="title">Filtrar</option>
-            <option value="all">Todos los personajes</option>
-            <option value="statusAlive"> Alive</option>
-            <option value="statusDead"> Dead</option>
-            <option value="generoFem" id="generoFem">Female</option>
-            <option value="generoMale">Male</option>
-            <option value="generoindefinido">Indefinite gender</option>
-            <option value="speciesHuman">Human</option>
-            <option value="speciesAlien">Alien</option>
-
-          </select>
-
-
-          
-          <select name="filterSpecies" id="filterSpecies">
-            <option value="title">Species</option>
-            <option value="all">Todos las Especies</option>
-            <option value="speciesHuman"> Human</option>
-            <option value="speciesAlien"> Alien</option>
-            <option value="speciesMytholog"> Mytholog</option>
-            <option value="speciesUnknown"> Unknown</option>
-            <option value="speciesRobot"> Robot</option>
-            <option value="speciesPoopybutthole"> Poopybutthole</option>
-            <option value="speciesParasite"> Parasite</option>
-            <option value="speciesAnimal"> Animal</option>
-            <option value="speciesDisease"> Disease</option>
-            <option value="speciesHumanoid"> Humanoid</option>
-            <option value="speciesCronenberg"> Cronenberg</option>
-            <option value="speciesVampire"> Vampire</option>
-                  
-
-          </select>
-
-          <select name="filterGender" id="filterGender">
-            <option value="title">Gender</option>
-            <option value="all">Todos los personajes</option>
-            <option value="genderMale"> Male</option>
-            <option value="genderFem"> Female</option>
-            <option value="genderLess"> Genderless</option>
-            <option value="genderUnknown"> Unknown</option>
-          </select>
-
-          <select name="filterStatus" id="filterStatus">
-            <option value="title"> Status</option>
-            <option value="all">Todos los personajes</option>
-            <option value="statusAlive"> Alive</option>
-            <option value="statusDead"> Dead</option>
-            <option value="statusUnknown"> Unknown</option>
-          </select>
-
-
-
+            <div class="filter-data">
+              <h3>Order the characters</h3>
+            <section>
           <select name="ordenar" id="sort">
-            <option value="title"> Ordenar </option>
-            <option value="name"> Nombre A-Z </option>
-            <option value="nameZ"> Nombre Z-A </option>
+            <option value="title">Ordenar</option>
+            <option value="name">Nombre A-Z</option>
+            <option value="nameZ">Nombre Z-A</option>
 
           </select>
-        </section>
+          </section>
+            </div>
+        </div>
+       </div>
       </div>
-    </div>
-
+<!--Fin menú categorías, search y sort-->      
+<!--Inicio sección cards de personajes-->
     <div class="cards" id="cards">
       <div class="card-1">
       </div>
     </div>
+   
 
-
+    
+<!--Fin sección cards de personajes-->
+<!--Inicio footer-->
     <footer>
-      <div class="credits">Made with &#x1F499 by <span>Gabriela</span> and <span>Pilar</span> for #DEV001 Laboratoria
+      <div class="credits">Made with &#x1F499 by <span>Gabriela Villarreal</span> and <span>Pilar Muñoz</span> for #DEV001 Laboratoria
        <p id="schwifty">You gotta get schwifty!</p>
       </div>
     </footer>
+<!--Fin footer-->
   </div>
 
- <!-- Total Personajes: 493
-  Species: 
-  Alien: 132
-  Human: 244
-  Mytholog: 7
-  unknow: 5
-  Robot: 11
-  Poopybutthole: 6
-  Parasite: 1
-  Animal: 17
-  Disease: 6
-  Humanoid: 53
-  Cronenberg: 8
-  Vampire: 3
-
- Gender:
-  Female: 73
-  Male: 372
-  unknown: 42
-  Genderless: 6
-
- Status:
-  Alive:281
-  Dead: 147
-  unknown: 65
-
-
-
--->
-
-
-  
   <script src="main.js" type="module"></script>
 </body>
 

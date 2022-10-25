@@ -1,4 +1,4 @@
-import { filterGender, orden, filterStatus, filterSpecies, statisticsFrequency, sortOrdenZ} from '../src/data.js';
+import { filterGender, filterStatus, filterSpecies, statisticsFrequency, ordenAZ, ordenZA} from '../src/data.js';
 
 const originalData = {
   "results": [
@@ -93,16 +93,16 @@ describe('filterStatus', () => {
   
 });
 // método sort (A-Z)
-describe('orden', () => {
+describe('ordenAZ', () => {
   it('is a function', () => {
-    expect(typeof orden).toBe('function');
+    expect(typeof ordenAZ).toBe('function');
   });
 
-  // it('returns true si la función orden() ordena `name` de forma ascendente', () => {
-  //   expect(orden(data)).toStrictEqual(data.sort(data.name));
-  // });
-  it('returns true si la función orden() ordena `name` de forma ascendente', () => {
-    expect(orden(data)).toBe([
+  //  it('returns true si la función orden() ordena `name` de forma ascendente', () => {
+  //    expect(ordenAZ(data)).toStrictEqual(data.sort(data.name));
+  //  });
+  it('returns true si la función ordenAZ() ordena `name` de forma ascendente', () => {
+    expect(ordenAZ(data)).toStrictEqual([
       {
         "id": 16,
         "name": "Amish Cyborg",
@@ -137,17 +137,17 @@ describe('orden', () => {
 });
 
 // método sort (Z-A)
-describe('sortOrdenZ', () => {
+describe('ordenZA', () => {
   it('is a function', () => {
-    expect(typeof sortOrdenZ).toBe('function');
+    expect(typeof ordenZA).toBe('function');
   });
 
   // it('returns true si la función sortOrdenZ() ordena `name` de forma descendente', () => {
   //   expect(sortOrdenZ(data)).toStrictEqual(data.sort(data.name).reverse());
   // });
 
-  it('returns true si la función sortOrdenZ() ordena `name` de forma descendente', () => {
-    expect(sortOrdenZ(1)).toStrictEqual([ 
+  it('returns true si la función orderZA() ordena `name` de forma descendente', () => {
+    expect(ordenZA(data)).toStrictEqual([ 
       {
         "id": 3,
         "name": "Summer Smith",

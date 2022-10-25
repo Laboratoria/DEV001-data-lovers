@@ -1,27 +1,24 @@
 import rickandmorty from './data/rickandmorty/rickandmorty.js';
-import {filterGender, filterStatus, filterSpecies, orden, sortOrdenZ, statisticsFrequency} from './data.js';
+import {filterGender, filterStatus, filterSpecies, statisticsFrequency, ordenAZ, ordenZA, buscar} from './data.js';
 let data = rickandmorty.results;
 
-
-
-
-
+// let containerMobile = document.getElementById("container-mobile");
 let containerData = document.getElementById("cards");
-let filterOption = document.getElementById("filter");
 let sortOption = document.getElementById("sort");
 let filterOptionStatus = document.getElementById("filterStatus");
 let filterOptionGender = document.getElementById ("filterGender");
-let filterOptionSpecies = document.getElementById ("filterSpecies")
-
+let filterOptionSpecies = document.getElementById ("filterSpecies");
+let buscarPersonajes = document.querySelector("#buscar");
+// Template de cards personajes, muestra las cards en la interfaz. Depende de la data ingresada
 const templateTarjeta = (x) =>{
    x.forEach ((results) => {
         let info = `<div class="card"><img src="${results.image}"><br><p><strong>Name:</strong> ${results.name}</p><br><p><strong>Status:</strong> ${results.status}</p><br><p><strong>Species:</strong> ${results.species}</p><br><p><strong>Gender:</strong> ${results.gender}</p><br><p><strong>Origin:</strong> ${results["origin"].name}</p></div>`;
         containerData.insertAdjacentHTML("afterbegin", info);
 })};
+templateTarjeta(data);
 
-  
-//funcion filtrado por gender
-filterOptionGender.addEventListener("change",() => { 
+//funcion filtrado por Gender
+filterOptionGender.addEventListener("click",() => { 
     let dataFiltrada;
     switch (filterOptionGender.value) {
         case "genderFem": containerData.innerHTML = ""; 
@@ -44,11 +41,24 @@ filterOptionGender.addEventListener("change",() => {
         dataFiltrada = templateTarjeta (data);
         templateTarjeta (dataFiltrada);                 
             break;       
+    }
 
-    }});
-
+    // funcion sort AZ - ZA
+    sortOption.addEventListener("click", () => {        
+        if (sortOption.value == "name") {
+         containerData.innerHTML = ""
+        return templateTarjeta (ordenAZ(dataFiltrada));   
+     }
+     else if (sortOption.value == "nameZ") {
+         containerData.innerHTML = ""
+     return templateTarjeta (ordenZA(dataFiltrada)); }
+    
+    });
+    let options = filterOptionGender.value;
+   alert(`Did you know that ${options} represents ${statisticsFrequency(data, dataFiltrada)}% of the ${data.length} characters in the show`);
+});
     //funcion filtrado por Species
-    filterOptionSpecies.addEventListener("change",() => { 
+    filterOptionSpecies.addEventListener("click",() => { 
         let dataFiltrada;
         switch (filterOptionSpecies.value) {
             case "speciesHuman": containerData.innerHTML = ""; 
@@ -64,7 +74,7 @@ filterOptionGender.addEventListener("change",() => {
             templateTarjeta (dataFiltrada);   
                 break;  
             case "speciesUnknown": containerData.innerHTML = ""; 
-            dataFiltrada =  filterSpecies (data, "Unknown");
+            dataFiltrada =  filterSpecies (data, "unknown");
             templateTarjeta (dataFiltrada);   
                 break; 
             case "speciesRobot": containerData.innerHTML = ""; 
@@ -104,8 +114,19 @@ filterOptionGender.addEventListener("change",() => {
             templateTarjeta (dataFiltrada);                 
                 break;       
     
-        }});
-    
+        }
+        // función ordenar AZ - ZA
+        sortOption.addEventListener("click", () => {        
+            if (sortOption.value == "name") {
+             containerData.innerHTML = ""
+            return templateTarjeta (ordenAZ(dataFiltrada));   
+         }
+         else if (sortOption.value == "nameZ") {
+             containerData.innerHTML = ""
+         return templateTarjeta (ordenZA(dataFiltrada)); }
+        
+     });
+    });
 //funcion filtrado por Status
 filterOptionStatus.addEventListener("change",() => { 
     let dataFiltrada;
@@ -127,69 +148,28 @@ filterOptionStatus.addEventListener("change",() => {
         templateTarjeta (dataFiltrada);                 
             break;       
 
-    }});
-
-//funcion filtrado
- filterOption.addEventListener("change", () => {
-    let dataFiltrada;
-    switch (filterOption.value) {
-        case "generoFem": containerData.innerHTML = ""; 
-        dataFiltrada =  filterGender (data, "Female");
-        templateTarjeta (dataFiltrada);   
-            break;
-        case "generoMale": containerData.innerHTML = ""; 
-        dataFiltrada =  filterGender (data, "Male");
-        templateTarjeta (dataFiltrada); 
-            break;
-        case "generoindefinido": containerData.innerHTML = ""; 
-        dataFiltrada = templateTarjeta (filterGender (data, "Unknown" )); 
-        templateTarjeta (filterGender (data, "Genderless"));   
-            break;
-        case "statusAlive": containerData.innerHTML = "";
-            dataFiltrada = filterStatus (data, "Alive");
-            templateTarjeta (dataFiltrada);             
-            break;
-        case "statusDead": containerData.innerHTML = "";
-            dataFiltrada = filterStatus (data, "Dead");
-            templateTarjeta(dataFiltrada);           
-            break;
-        case "speciesHuman": containerData.innerHTML = "";
-            dataFiltrada =  filterSpecies (data, "Human");
-        templateTarjeta (dataFiltrada);             
-            break;
-        case "speciesAlien": containerData.innerHTML = "";
-        dataFiltrada =  filterSpecies (data, "Alien");
-        templateTarjeta (dataFiltrada);                        
-            break;
-        case "all": containerData.innerHTML = "";
-            dataFiltrada = templateTarjeta (data);
-            templateTarjeta (dataFiltrada);                 
-            break; 
-               
-            
     }
+    // función ordenar AZ - ZA
+    sortOption.addEventListener("click", () => {        
+        if (sortOption.value == "name") {
+         containerData.innerHTML = ""
+        return templateTarjeta (ordenAZ(dataFiltrada));   
+     }
+     else if (sortOption.value == "nameZ") {
+         containerData.innerHTML = ""
+     return templateTarjeta (ordenZA(dataFiltrada)); }
     
-  
-// funcion ordenar
-      sortOption.addEventListener("click", () => {        
-           if (sortOption.value == "name") {
-            containerData.innerHTML = ""
-           return templateTarjeta (orden(dataFiltrada));   
-        }
-        else if (sortOption.value == "nameZ") {
-            containerData.innerHTML = ""
-        return templateTarjeta (sortOrdenZ(dataFiltrada)); }
-       
-    });
+ });
+});
 
-    });
- 
-    //lo comenté mientras porque arrojaba error en test! 
-// // Sección estadísticas
+
+// Sección estadísticas
+// Estadística de proporción de categorías en el total de la data
 const filterFemale = filterGender (data, "Female");
-// console.log(filterFemale.length)
-// console.log(data.length)
+console.log(filterFemale.length)
+console.log(data.length)
 console.log(statisticsFrequency(data, filterFemale))
+
 
 // const filterMale = filterGender (data, "Male");
 // console.log(filterMale.length);
@@ -206,3 +186,27 @@ console.log(statisticsFrequency(data, filterFemale))
 // const filterunknown = filterStatus (data, "Unknown");
 // console.log(filterunknown.length)
 // console.log(statisticsFrequency(data, filterunknown));
+
+// Menú-mobile responsivo según orientación del dispositivo
+// const mediaQueryList = window.matchMedia("(orientation: portrait)");
+// const x = window.matchMedia("(max-width:700px)")
+// function mobileScreen(x) {
+//     if (x.matches && containerMobile.style.display === "none") {
+//         return containerMobile.style.display = "block";
+//     } else {
+//         return containerMobile.style.display = "none";
+//     }
+// }
+
+// mobileScreen(x);
+// // Escucha evento 'change' cuando dispositivo mobile cambia a orientación portrait y ejecuta función mobileScreen
+// mediaQueryList.addEventListener('change', mobileScreen);
+
+//buscar
+
+
+buscarPersonajes.addEventListener('keyup', () => {
+    data = buscar(data, 'name', buscarPersonajes.value);
+    containerData.innerHTML = "";
+    templateTarjeta(data);
+  });
