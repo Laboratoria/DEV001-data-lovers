@@ -26,6 +26,12 @@ Entre los usuarios más casuales se manifestó la necesidad de ver las película
  
  
 ## 3. Prototipos de baja fidelidad
-(foto aquí)
+[![data-piedepagina.png](https://i.postimg.cc/WpnnC97V/data-piedepagina.png)](https://postimg.cc/231hB7J9)
+[![directores.png](https://i.postimg.cc/tCvzCYfm/directores.png)](https://postimg.cc/7f7zKYqg)
+[![filtro-productor.png](https://i.postimg.cc/3xyFy3Qr/filtro-productor.png)](https://postimg.cc/XrbCmSvt)
+[![header-menu.png](https://i.postimg.cc/BQng0xhK/header-menu.png)](https://postimg.cc/QVv5gWZ8)
+[![HU1.png](https://i.postimg.cc/rFTp0j6D/HU1.png)](https://postimg.cc/XX2WtwYW)
+[![main-peliculas.png](https://i.postimg.cc/k4CQh86D/main-peliculas.png)](https://postimg.cc/NyN2KKxw)
+[![modal-pelicula.png](https://i.postimg.cc/QdRk1vjQ/modal-pelicula.png)](https://postimg.cc/NKkHwJ9F)
 
 ## 4. Prototipos de alta fidelidad
