@@ -1,14 +1,13 @@
-// estas funciones son de ejemplo
-
 export const filterData = (data, condition) => {
-  let arrayData = [];
-  for (let k in data) {
-    if (!arrayData.includes(data[k][condition])) {
-      arrayData.push(data[k][condition]);
-    }
-  }
-  
-  return arrayData;
-};
+  const result = [];
 
+  data.filter((data) => {
+    if (!result.includes(data[condition])) { result.push(data[condition]); }
+
+    return result;
+
+  });
+
+  return result;
+};
 
