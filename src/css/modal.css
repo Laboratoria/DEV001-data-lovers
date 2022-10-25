@@ -30,6 +30,21 @@
     /*border: 5px solid #5b5b5b;*/
     font-family: "Poppins", sans-serif;
   }
+
+  .container-features-poke{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-img{
+    width: 10%;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+  }
   
   .modal-container .img-modal {
     width: 25%;
@@ -69,6 +84,7 @@
     right: -20px;
     top: -20px;
     transition: 2s;
+    z-index: 100;
   }
   .close-button-modal:hover{
     cursor: pointer;
@@ -81,22 +97,55 @@
 /*estilos para el primer hijo*/
   .childrenOne{
     width: 100%;
+    height: 210px;
     /*background-color:#fdae01;*/
     border-radius: 0 0 98% 98% / 100%;
+    margin-bottom: 2rem;
+    box-shadow: 0px 5px 5px rgb(36, 36, 36, 0.5)
   }
 
   .container-img-num-name{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 95%;
   }
 
-  .generation-and-id{
-    padding: 5px;
-    font-size: 20px;
-    font-weight: 400;
+  #id-pokemon{
+    position: absolute;
+    left: 3rem;
+    z-index: 100;
+    top:17px;
+  }
+
+  #generation-pokemon{
+    z-index: 100;
+    padding-right: 20px;
+    position: absolute;
+    right: 1.2rem;
+    top:17px;
+    text-transform: uppercase;
+  }
+
+  .background{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: -2%;
+  
+  }
+  
+
+  .generationId{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    color:rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 1.2rem;
   }
   
   .modal-container p {
@@ -116,3 +165,55 @@
     border-radius: 30px;
   }
   
+  #name-pokemon{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    z-index: 100;
+    text-shadow: 3px 4px 4px rgba(15, 15, 15, 0.5);
+
+  }
+
+  #circleTwo{
+    position:absolute;
+    z-index:2;
+    background-color: rgb(255, 255, 255);
+    width: 145px;
+    height: 145px;
+    border-radius: 100%;
+    top: 90px;
+    box-shadow: 0px 5px 5px rgb(36, 36, 36, 0.5);
+    right: 35%;
+  }
+
+  #img-poke{
+    position: absolute;
+    z-index: 100;
+    width: 140px;
+    right: 35%;
+    top:90px
+    
+  }
+
+  .childrenTwo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4%;
+  }
+
+  .about-pokemon{
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  #fondo{
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top:0
+
+  }
