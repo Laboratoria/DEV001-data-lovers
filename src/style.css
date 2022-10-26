@@ -48,7 +48,11 @@
     box-sizing: border-box;
     margin:0;
     font-family: 'Nanum Gothic', sans-serif;
+		
 
+}
+body{
+	background-color: #1F4068;
 }
 .padre{
     display: flex;
@@ -94,17 +98,18 @@
                     display: flex;
                     flex-flow: row wrap;
                     list-style: none;
-                    gap: 48px;                   
+                    gap: 48px;          							      
                 }
 
                     .nav-item{
                         text-decoration: none;
                         color:black;
-                        
+												font-weight: bold;
+	
                     }
 
 					.nav-item:hover{
-						color: #8300c9;                
+						color: #24691A;                
 				 }
     .main{
         padding-top: 30px;
@@ -120,10 +125,9 @@
             
             display: flex;
             background-image: url("https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Harry-Potter-y-la-camara-de-los-secretos-scaled.jpg");
-           
-            background-size: cover;
+            background-size: contain;
             background-repeat:no-repeat;
-
+						
          
            
         }
@@ -134,11 +138,16 @@
                 #descripcion{
                   background-color: rgba(255, 255, 255, 0.504);
                   padding: 50px;
-				  border-radius: 10px;        
+				  				border-radius: 10px;
+									        
                 }
-        .Libros,.Pociones, .Hechizos {
+
+									#textoDescripcion{
+										font-size: 20pt;
+									}
+        .Libros,.Personajes,.Pociones, .Hechizos {
 					padding:5%;
-					background-color: #1F4068;
+					
 				}  
 
 
@@ -277,9 +286,38 @@
 									
 								}
 										
+				.Personajes{
+					display: flex;
+					flex-direction: column ;
+        }
+
+					.contenedorCeldas4{
+						display: flex;
+						flex-flow: row wrap;
+						gap: 10px 10px;	
+
+					}
+
+						.celdas4{	
+							display: flex;
+							flex-direction: column;
+							background: white;
+							flex: 1 1 14%;
+							border-radius: 20px;
+							padding: 20px;
+						}
+							
+							.nameCeldas4{
+								text-align: center;
+								padding-top: 10px;
+							}
+							.houseCeldas4{
+								
+								text-align:center;
+								padding-top: 10px;
+							}
+	
 				
-								
-								
         .Pociones{
 					display: flex;
 					flex-direction: column ;

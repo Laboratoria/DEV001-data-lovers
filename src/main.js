@@ -4,6 +4,7 @@ import data from './data/harrypotter/harry.js';
 
 
 const dataLibros=data.books;
+const dataPersonajes=data.characters;
 const dataPociones=data.potions;
 const dataHechizos=data.spells;
 
@@ -103,6 +104,46 @@ dataLibros.forEach(l =>{
     contenedorCeldas1.appendChild(celdas1);
 })
 caja1.appendChild(contenedorCeldas1);
+
+
+const caja4= document.getElementById("Personajes");
+const contenedorCeldas4=document.createElement("div");
+
+contenedorCeldas4.className="contenedorCeldas4";
+
+dataPersonajes.forEach(l =>{
+    // eslint-disable-next-line no-unused-vars
+    
+    
+    const celdas4=document.createElement("div");
+    celdas4.className="celdas4";
+
+    const nameCeldas4=document.createElement("h1");
+    nameCeldas4.className="nameCeldas4";
+    nameCeldas4.innerHTML=l.name;
+    celdas4.appendChild(nameCeldas4);
+
+    
+    const houseCeldas4=document.createElement("p");
+    houseCeldas4.className="houseCeldas4";
+    houseCeldas4.innerHTML= "<b>Casa: </b>" + l.house;
+    celdas4.appendChild(houseCeldas4);
+
+  
+    
+   /* const buttonData=document.getElementById("buttonData")
+    const button=document.createElement("input");
+    button.type="button";
+    button.value="Ver más";
+    button.className="buttonVerMas";
+    button.label="Ver más";
+    buttonData.appendChild(button);
+    celdas.appendChild(buttonData);*/
+
+    contenedorCeldas4.appendChild(celdas4);  
+}) 
+caja4.appendChild(contenedorCeldas4);
+
 
 
 
