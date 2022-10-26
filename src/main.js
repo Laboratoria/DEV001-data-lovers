@@ -1,7 +1,6 @@
 import {getBooks} from './data.js';
 
 (function(){
-  const listElements = document.querySelectorAll('.menu__item');
   const list = document.querySelector('.menu__links');
   const menu = document.querySelector('.menu__hamburguer');
 
