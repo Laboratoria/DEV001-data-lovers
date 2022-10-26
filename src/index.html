@@ -2,11 +2,41 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <nav class="menu">
+      <section class="menu__container">
+        <h1 class="menu__logo">Inicio</h1>
+        <ul class="menu__links">
+          <li class="menu__item">Casas</li>
+            <ul class="menu__nesting">
+              <li class="menu__inside">Gryffindor</li>
+              <li class="menu__inside">Slytherin</li>
+              <li class="menu__inside">Hufflepuff</li>
+              <li class="menu__inside">Ravenclaw</li>
+            </ul>
+          <li class="menu__item">Pociones</li>
+          <li class="menu__item">Curiosidades</li>
+        </ul>
+      </section>
+    </nav>
+      <div class="menu__hamburguer">
+        <a href="#menu" class="boxMenu"></a>
+      </div>
+    <section class="botones">
+      <img src="img/HarryPotter.png" alt="" class="prototipo" id="foto">
+      <div id="lista" class="lista">
+        <button class="harry" type="button" id="peliculas"></button>
+        <button class="harry" type="button" id="libros"></button>
+        <button class="harry" type="button" id="personajes"></button>
+        <button class="harry" type="button" id="deporte"></button>
+      </div>
+      <div id="listas" class="listas">
+      </div>
+    </section> 
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
