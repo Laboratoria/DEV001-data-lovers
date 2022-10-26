@@ -58,11 +58,12 @@
     .header{
         display: flex;  
         flex-flow: column nowrap;
-        background-color: aqua;
+        background-color: rgb(255, 255, 255);
         position: fixed;
         right: 0;
         left: 0;
-        top:0;        
+        top:0; 
+		padding:10px;   
     }
 
         .container{
@@ -73,7 +74,7 @@
         }
 
             .logo{
-
+				text-align: center;
             }
 
             .nav-label, .nav-input{
@@ -87,23 +88,24 @@
             }
             .navigation{
                 display: flex;
-                flex-flow: row wrap;
-                
-               
+                flex-flow: row wrap;   
             }
                 .navigation ul{
                     display: flex;
                     flex-flow: row wrap;
                     list-style: none;
-                    gap: 48px;
-                    
-                    
+                    gap: 48px;                   
                 }
+
                     .nav-item{
                         text-decoration: none;
                         color:black;
                         
                     }
+
+					.nav-item:hover{
+						color: #8300c9;                
+				 }
     .main{
         padding-top: 30px;
         display: flex;
@@ -131,7 +133,8 @@
 
                 #descripcion{
                   background-color: rgba(255, 255, 255, 0.504);
-                  padding: 50px;        
+                  padding: 50px;
+				  border-radius: 10px;        
                 }
         .Libros,.Pociones, .Hechizos {
 					padding:5%;
@@ -311,38 +314,38 @@
 								padding-top: 10px;
 							}
 
-        .Hechizos{
-				}
+        .Hechizos
+				{
+					display: flex;
+					flex-direction: column ;
+        }
 
 					.contenedorCeldas3{
 						display: flex;
-						flex-flow: column wrap;
+						flex-flow: row wrap;
 						gap: 10px 10px;	
 
 					}
 
 						.celdas3{	
 							display: flex;
-							flex-flow: row wrap;
+							flex-direction: column;
 							background: white;
+							flex: 1 1 17%;
 							border-radius: 20px;
 							padding: 20px;
-							align-items: center;
-								
-
 						}
 							.h1Celdas3{
-									order: 2;
-									
-									text-align: center;
-									font-size: 50pt;	
+								text-align: center;
+								padding-top: 10px;
 							}
 							
-							
-							.p1Celdas3{
-								order: 3;
+							.pCeldas3{
+								
+								text-align:center;
+								padding-top: 10px;
 							}
-							
+
 
         
     .footer{
