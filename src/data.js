@@ -1,9 +1,15 @@
-// estas funciones son de ejemplo
+import harrypotter from "./data/harrypotter/data.js"
+const getBooks = () => {
+    return Object.values(harrypotter.books);
+}
 
-export const example = () => {
-  return 'example';
+export {
+    getBooks
 };
+/*
+(function(){
+  const list = document.querySelector('.menuItems');
+  const menu = document.querySelector('.boxMenu');
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+  menu.addEventListener('click', ()=> list.classList.toggle('mostrar'));
+})*/
