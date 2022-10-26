@@ -29,7 +29,8 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 0px;
+    padding: 10px;
+    font-size: 20px;
 }
 
 
@@ -123,6 +124,23 @@ main {
     color: white;
     text-align: center;
     height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px;
+    justify-content: space-around;
+}
+
+.tarjeta2 {
+    background-color: #aeada4;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid #4c7a87;
+    border-radius: 15px;
+    width: 40%;
+    margin-bottom: 16px;
+    padding: 16px 16px 16px 16px;
+    padding: 16px 0;
+    box-shadow: 4px 4px 6px 1px rgb(249 245 245 / 50%)
 }
 
 .funfact{
@@ -131,7 +149,7 @@ main {
     height: 100vh;
 }
 
-[ data-content] {
+[data-content] {
     display: none;
 }
 
@@ -140,11 +158,26 @@ main {
     
 }
 
+.barra {
+    justify-content: center;
+    color: white;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+}
+
 .footer {
     color: white;
     font-size: 15px;
     text-align: center;
     margin: 10px;
+}
+
+.tarjeta2body {
+    color: black;
+    font-size: 20px;
+    text-align: center;
 }
 
 /* Visualización para tablets (media query) */
@@ -159,6 +192,10 @@ main {
     
     .tarjeta {
         width: 25%;
+    }
+
+    .tarjeta2 {
+        width: 20%;
     }
 }
 

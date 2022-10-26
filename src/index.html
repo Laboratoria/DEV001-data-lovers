@@ -9,43 +9,25 @@
 </head>
 
 <body>
+
   <header>
     <section class="header">
       <img src="fotosHP/fotocuatro.jpeg"alt="fotoprincipal" class="cabecera" />
     </section>
   </header>
+
   <!-- con este data target logramnos cargar la pagweb con 4 pestañas y 1 solo html  -->
-<div class="menu">
-  <p data-target="#inicio">Home</p>
-  <p data-target="#books">Books</p>
-  <p data-target="#characters">Characters</p>
-  <p data-target="#funfacts">Funfacts</p>
-</div>
-  <!-- <nav>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
+  <div class="menu">
+    <p data-target="#inicio">Home</p>
+    <p data-target="#books">Books</p>
+    <p data-target="#characters">Characters</p>
+    <p data-target="#funfacts">Funfacts</p>
+  </div>
+  
 
-      <button> <a href="books.html">prueba</a> </button>
-      
-
-          <ul>
-            <li class="libro"><a href="">Book 1</a></li>
-            <li class="libro"><a href="">Book 2</a></li>
-            <li class="libro"><a href="">Book 3</a></li>
-            <li class="libro"><a href="">Book 4</a></li>
-            <li class="libro"><a href="">Book 5</a></li>
-            <li class="libro"><a href="">Book 6</a></li>
-            <li class="libro"><a href="">Book 7</a></li>
-            <li class="libro"><a href="">Book 8</a></li>
-          </ul> >
-      </li>
-      <li><a href="characters.html">Characters</a></li>
-      <li><a href="funfacts.html">Funfacts</a></li><br><br>
-    </ul>
-  </nav>-->
-  <!-- con este data content logramos vincular los menu junto al data target  -->
   <main>
     <div class="main" > 
+  <!-- con este data content logramos vincular los menu junto al data target  -->
       <div data-content id="inicio" class="active"> 
         <div class="inicio">
           <!-- <section class="barajas"></section> -->
@@ -63,28 +45,48 @@
                  malvado mago lord Voldemort, quien asesinó a los padres de Harry en su afán 
                  de conquistar el mundo mágico.
                </p><br>
-             </article>
-           
+             </article>           
         </div>
       </div>
-    </div>
-    <!-- con este data content logramos vincular los menu -->
-   <div data-content id="books" class="foto2">
-    <div class="barajas">
-    </div>    
-   </div>
-    
-   <div data-content id="characters" class="persona">
-    <div class="personajes">
-      <br> <p>Descubre a todos los personajes</p>
-    </div>    
-   </div>
 
-   <div data-content id="funfacts" class="curiosidades">
-    <div class="funfact">
-      <br> <p>Probablemente no sabias que...</p>
-    </div>    
-   </div>
+
+    <!-- con este data content logramos vincular los menu -->
+    <div data-content id="books" class="foto2">
+      <div class="barajas">
+      </div>    
+    </div>
+    
+    <div data-content id="characters" class="persona">
+      
+      <div class="barra">
+        <span>Sort</span>
+        <select name="" id="selectordenar">
+          <option value="default">Default</option>
+          <option value="az">De A a Z</option>
+          <option value="za">De Z a A</option>
+        </select>
+
+        <span> Filter House </span>
+        <select name="" id="selectfiltrar">
+          <option value="Default">Default</option>
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Slytherin">Slytherin</option>
+          <option value="Hufflepuff">Hufflepuff</option>
+          <option value="Ravenclaw">Ravenclaw</option>
+        </select>
+      </div>
+
+      <div class="personajes">
+
+      </div>    
+    </div>
+
+    <div data-content id="funfacts" class="curiosidades">
+      <div class="funfact">
+        <br> <p>Probablemente no sabias que...</p>
+      </div>    
+    </div>
+  
   </div>
 
 </main>

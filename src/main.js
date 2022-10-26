@@ -17,7 +17,7 @@ targets.forEach(target => {
 //import { example } from './data.js';
 // import data from './data/harrypotter/data.js';
 import data from './data/harrypotter/data.js';
-import {getbooks, getcharacters } from "./data.js"
+import { getbooks, getcharacters, filterByHouse } from "./data.js"
 //aqui importamos la tarjeta desde el archivo que creamos nosotras plantilla.js
 import { tarjeta, tarjeta2 } from './plantilla.js'
 
@@ -33,8 +33,25 @@ let capturetarjeta2 = document.querySelector (".personajes")
 })
 //el foreach recorre todos los personajes//
 getcharacters(data).forEach ( nombre => {
-    capturetarjeta2.insertAdjacentHTML("beforeend", tarjeta(nombre));
+    capturetarjeta2.insertAdjacentHTML("beforeend", tarjeta2(nombre));
  })
+
+
+
+ // con el id seleccionamos la casa y con el change sabemos cuando se cambia de casa
+let select = document.getElementById("selectfiltrar")
+select.addEventListener("change", (e) => {
+   let arreglofiltrado = filterByHouse(data, e.target.value)
+   console.log(arreglofiltrado);
+
+   let personajesfiltros = document.querySelector(".personajes")
+   personajesfiltros.innerHTML = ""
+   arreglofiltrado.forEach(personajes => {
+      capturetarjeta2.insertAdjacentHTML("beforeend", tarjeta2(personajes));
+   })
+})
+
+
 
 
 
