@@ -279,27 +279,38 @@
 								
         .Pociones{
 					display: flex;
+					flex-direction: column ;
         }
 
-				.contenedorCeldas{
-					display: flex;
-					flex-flow: row wrap;
-					gap: 10px 10px;	
-
-				}
-
-					.celdas{	
+					.contenedorCeldas2{
 						display: flex;
-						flex-direction: column;
-						background: white;
-						flex: 1 1 20%;
-						border-radius: 20px;
-						padding: 20px;
+						flex-flow: row wrap;
+						gap: 10px 10px;	
+
 					}
-						.h1Celdas{
+
+						.celdas2{	
+							display: flex;
+							flex-direction: column;
+							background: white;
+							flex: 1 1 17%;
+							border-radius: 20px;
+							padding: 20px;
+						}
+							.idCeldas2{
 								text-align: center;
 								padding-top: 10px;
 							}
+							.nameCeldas2{
+								text-align: center;
+								padding-top: 10px;
+							}
+							.desCeldas2{
+								
+								text-align:center;
+								padding-top: 10px;
+							}
+
         .Hechizos{
 				}
 
@@ -330,9 +341,9 @@
 							
 							.p1Celdas3{
 								order: 3;
+							}
 							
 
         
     .footer{
-
-    }
+		}

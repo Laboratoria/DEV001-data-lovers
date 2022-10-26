@@ -129,13 +129,13 @@ dataPociones.forEach(l =>{
     
     const nameCeldas2=document.createElement("h1");
     nameCeldas2.className="nameCeldas2";
-    nameCeldas2.innerHTML=l.name;
+    nameCeldas2.innerHTML= l.name;
     celdas2.appendChild(nameCeldas2);
 
     
     const desCeldas2=document.createElement("p");
     desCeldas2.className="desCeldas2";
-    desCeldas2.innerHTML=l.description;
+    desCeldas2.innerHTML= "<b>Descripción: </b>" + l.description;
     celdas2.appendChild(desCeldas2);
     
    /* const buttonData=document.getElementById("buttonData")
