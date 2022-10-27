@@ -20,15 +20,16 @@ function verMas(){
 
 const caja= document.getElementById("libros");
 const contenedorCeldas=document.createElement("div");
-
 contenedorCeldas.className="contenedorCeldas";
+
 
 dataLibros.forEach(l =>{
     // eslint-disable-next-line no-unused-vars
     
-    
     const celdas=document.createElement("div");
     celdas.className="celdas";
+
+
 
     let img = document.createElement('img');
     img.src = l.portada;
@@ -42,20 +43,81 @@ dataLibros.forEach(l =>{
     h1Celdas.className="h1Celdas";
     h1Celdas.innerHTML=l.title;
     celdas.appendChild(h1Celdas);
+
     
-   /* const buttonData=document.getElementById("buttonData")
     const button=document.createElement("input");
     button.type="button";
     button.value="Ver más";
     button.className="buttonVerMas";
     button.label="Ver más";
-    buttonData.appendChild(button);
-    celdas.appendChild(buttonData);*/
+    celdas.appendChild(button);
 
+    
+    
+
+    for (let i=0;i<8; i++){
+      let llamarbutton=celdas.lastElementChild;
+      llamarbutton.id=[i];
+      console.log(llamarbutton);
+      
+    }
+
+    const modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+
+// Get the <span> element that closes the modal
+    const span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+    button.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    
     contenedorCeldas.appendChild(celdas);  
 }) 
 
 caja.appendChild(contenedorCeldas);
+
+
+
+/*const modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+const btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}*/
 
 
 
@@ -65,6 +127,7 @@ const contenedorCeldas1=document.createElement("div");
 contenedorCeldas1.className="contenedorCeldas1";
 
 dataLibros.forEach(l =>{
+  
     
     const celdas1=document.createElement("div");
     celdas1.className="celdas1";
@@ -104,6 +167,13 @@ dataLibros.forEach(l =>{
     contenedorCeldas1.appendChild(celdas1);
 })
 caja1.appendChild(contenedorCeldas1);
+
+
+for (let i=0;i<8; i++){
+  let llamardiv=contenedorCeldas1.children[i];
+  llamardiv.id=(i);
+  
+}
 
 
 const caja4= document.getElementById("Personajes");
@@ -280,31 +350,6 @@ caja3.appendChild(contenedorCeldas3);
 
 
 
-
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
 
 // When the user clicks on <span> (x), close the modal
 
