@@ -6,10 +6,3 @@ const getBooks = () => {
 export {
     getBooks
 };
-/*
-(function(){
-  const list = document.querySelector('.menuItems');
-  const menu = document.querySelector('.boxMenu');
-
-  menu.addEventListener('click', ()=> list.classList.toggle('mostrar'));
-})*/
