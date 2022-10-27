@@ -1,4 +1,4 @@
-import { filterGender, filterStatus, filterSpecies, statisticsFrequency, ordenAZ, ordenZA} from '../src/data.js';
+import { filterGender, filterStatus, filterSpecies, statisticsFrequency, ordenAZ, ordenZA, buscar} from '../src/data.js';
 
 const originalData = {
   "results": [
@@ -93,16 +93,16 @@ describe('filterStatus', () => {
   
 });
 // método sort (A-Z)
-describe('ordenAZ', () => {
+describe('ordenZA', () => {
   it('is a function', () => {
-    expect(typeof ordenAZ).toBe('function');
+    expect(typeof ordenZA).toBe('function');
   });
 
   //  it('returns true si la función orden() ordena `name` de forma ascendente', () => {
   //    expect(ordenAZ(data)).toStrictEqual(data.sort(data.name));
   //  });
   it('returns true si la función ordenAZ() ordena `name` de forma ascendente', () => {
-    expect(ordenAZ(data)).toStrictEqual([
+    expect(ordenZA(data)).toStrictEqual([
       {
         "id": 16,
         "name": "Amish Cyborg",
@@ -137,9 +137,9 @@ describe('ordenAZ', () => {
 });
 
 // método sort (Z-A)
-describe('ordenZA', () => {
+describe('ordenAZ', () => {
   it('is a function', () => {
-    expect(typeof ordenZA).toBe('function');
+    expect(typeof ordenAZ).toBe('function');
   });
 
   // it('returns true si la función sortOrdenZ() ordena `name` de forma descendente', () => {
@@ -147,7 +147,7 @@ describe('ordenZA', () => {
   // });
 
   it('returns true si la función orderZA() ordena `name` de forma descendente', () => {
-    expect(ordenZA(data)).toStrictEqual([ 
+    expect(ordenAZ(data)).toStrictEqual([ 
       {
         "id": 3,
         "name": "Summer Smith",
@@ -188,5 +188,26 @@ describe('statisticsFrequency', () => {
 
   it('returns personajes mujeres cuando selecciona`Female`', () => {
     expect(statisticsFrequency(data, filterGender (data, "Female"))).toBe(25);
+  });
+});
+
+// Buscar
+describe('buscar', () => {
+  it('is a function', () => {
+    expect(typeof buscar).toBe('function');
+  });
+
+  it('cuando se busca Summer Smith retorna card del personaje Summer', () => {
+    expect(buscar(data, 'name', "Summer Smith")).toStrictEqual(
+      [ 
+        {
+          "id": 3,
+          "name": "Summer Smith",
+          "status": "Alive",
+          "species": "Human",
+          "gender": "Female",
+       }]
+
+    );
   });
 });

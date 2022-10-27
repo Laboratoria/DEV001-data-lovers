@@ -93,10 +93,10 @@ nav {
   display: flex;
   border-radius: 1rem;
   background-color: #2d2f30;
-  padding: 20px;
+  padding: 10px;
   flex-direction: column;
   align-items: center;
-  height: 200px;
+  height: auto;
 }
 
 .cards {
@@ -115,6 +115,10 @@ nav {
 
 .filter {
   grid-area: filter;
+}
+
+#clear-button {
+  cursor: pointer;
 }
 
 footer {
@@ -289,14 +293,17 @@ h3 {
   justify-content: center;
   max-width: max-content;
 }
-
+.statistics {
+  color: white;
+  margin: 2px;
+}
 /* Menu escritorio*/
 #container-mobile {
-  margin: auto;
+  margin-top: 10px;
   color: white;
-  display:inline-flex;
-  
-}
+  justify-content: center;
+  text-align: center;
+  }
 
 select {
   margin: 10px 5px;
@@ -305,7 +312,7 @@ select {
   position: relative;
   display: inline-block;
   max-width: 260px;
- }
+}
 
 
 #inMenu {
@@ -336,8 +343,10 @@ option:hover {
   font-size: 25px;
   color: white;
   background-color: #000000;
-  border: #000000;
+  border: #69D91A solid 2px;
   width: 95vw;
+  padding: 10px;
+  border-radius: 3px;
 }
 
 #container-mobile select:active {
@@ -353,12 +362,6 @@ option:hover {
 a {
   text-decoration: none;
   color: white;
-}
-
-.tip,
-.tip:hover {
-  background-color: #000000;
-  font-family: var(--font-headings);
 }
 
 /* Inicio interfaz mobile */
@@ -379,15 +382,15 @@ a {
     padding: 5px;
   }
 
-  #inMenu {
+   #inMenu {
     display: none;
   }
 
-  input:checked~select {
+  input:checked ~ select {
     display: block;
   }
 
-  .statistics,
+  .statisticsbtn,
   .quiz {
     display: none;
     border: white solid 2px;
@@ -404,7 +407,8 @@ a {
     flex-direction: column;
     font-size: 30px;
     border-radius: 0;
-    padding: 5px;
+    padding: 10px;
+    border: #69D91A solid 3px;
   }
 
   optgroup {
@@ -424,7 +428,8 @@ a {
     font-size: 25px;
     color: white;
     background-color: #000000;
-    border: #000000;
+    border: #69D91A solid 2px;
+    width: 95vw;
   }
 
   #container-mobile select:active {
@@ -444,18 +449,7 @@ a {
 
   i {
     float: right;
-  }
-
-  .tip,
-  .tip:hover {
-    background-color: #000000;
-    font-family: var(--font-headings);
-  }
-
-  option[value="all"] {
-    border: white solid 2px !important;
-  }
-  
+  }  
 }
 
 /* Fin interfaz mobile */

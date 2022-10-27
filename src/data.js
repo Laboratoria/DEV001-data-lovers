@@ -25,7 +25,7 @@ export const ordenAZ = (dataFilter) => {
     if (a.name > b.name) {
       return -1;
     }
-return 0;
+//return 0;
 })
 return sortOrdenAZ;
 };
@@ -39,7 +39,7 @@ const sortOrdenZA =  dataFilter.sort(function (a, b) {
   if (a.name < b.name) {
     return -1;
   }
- return 0;
+ //return 0;
  
 })
 return sortOrdenZA;
@@ -52,7 +52,7 @@ export const statisticsFrequency = (originalDataLength, categoryDataLength) => {
   return Math.round(secondData * 100 / firstData);
 };
 
-//buscar
+//Buscar
 export const buscar = (data, condition, value) => {
   return data.filter(item => item[condition].toLowerCase().includes(value.toLowerCase()));
 }
