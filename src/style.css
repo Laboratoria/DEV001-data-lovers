@@ -1,14 +1,13 @@
 body{
- background-image: url("totoro.png");
- background-repeat: no-repeat;
- background-attachment: fixed;
- background-position:bottom right;
- background-size: 25%;
-
+    background-image: url("totoro.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:bottom right;
+    background-size: 25%;
+   
 }
 .main {
   width: 1920px;
-
 }
 header{  
  width: 100%;  
