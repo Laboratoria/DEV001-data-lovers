@@ -6,7 +6,8 @@
     position: fixed;
     top: 0;
     background: var(--menu_degradado);
-    z-index: 100;
+    z-index: 10;
+   
 }
 
 
@@ -159,6 +160,7 @@
      .container__menu{
         height: 50px;
         align-items: center;
+        
     }
  
     .lista_inicio{
@@ -174,7 +176,9 @@
         opacity: 0;
         visibility: hidden;
     } 
-     
+    .menu{
+        margin: 0;
+    }
     .menu_inicio a{
         font-size: 10px;
         padding: 10px;

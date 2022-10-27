@@ -178,19 +178,19 @@ estadisticasData();
 function estadisticasData(){
   const estadistica = estadisticaData(datosTodasPeliculas());
 
-const imgDirect =[
+// const imgDirect =[
 
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Gor%C5%8D_Miyazaki.jpg/220px-Gor%C5%8D_Miyazaki.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/e/e2/Hayao_Miyazaki_cropped_1_Hayao_Miyazaki_201211.jpg",
-   "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hiromasa_Yonebayashi.jpg/220px-Hiromasa_Yonebayashi.jpg",
-   "https://lthumb.lisimg.com/709/103709.jpg?width=280&sharpen=true",
-  "https://m.media-amazon.com/images/M/MV5BNDM5OTc2NjI1MV5BMl5BanBnXkFtZTgwOTI3MjA4MTE@._V1_.jpg",
-  "https://www.cartoonbrew.com/wp-content/uploads/2016/02/isaotakahata.jpg",
-]
+//   "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Gor%C5%8D_Miyazaki.jpg/220px-Gor%C5%8D_Miyazaki.jpg",
+//   "https://upload.wikimedia.org/wikipedia/commons/e/e2/Hayao_Miyazaki_cropped_1_Hayao_Miyazaki_201211.jpg",
+//    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hiromasa_Yonebayashi.jpg/220px-Hiromasa_Yonebayashi.jpg",
+//    "https://lthumb.lisimg.com/709/103709.jpg?width=280&sharpen=true",
+//   "https://m.media-amazon.com/images/M/MV5BNDM5OTc2NjI1MV5BMl5BanBnXkFtZTgwOTI3MjA4MTE@._V1_.jpg",
+//   "https://www.cartoonbrew.com/wp-content/uploads/2016/02/isaotakahata.jpg",
+// ]
 
-const img = [...imgDirect]
+//const img = [...imgDirect]
   const estadistic = document.getElementById("contenedor_etadistica");
-  const estadisticImg = document.getElementById("cont_imagenes");
+ // const estadisticImg = document.getElementById("cont_imagenes");
   const nameDirec = document.getElementById("name_direc");
  for(const [key, value] of Object.entries(estadistica)){
    nameDirec.innerHTML += 
@@ -209,13 +209,13 @@ const img = [...imgDirect]
   `
   //<div class="barra_name"></div>⭐${key}
  }
- for (let clave in img){
-  estadisticImg.innerHTML +=
-  `<div class="directores">
-  <img src="${img[clave]}" alt=""></img>
-  </div>
-  `
-}
+//  for (let clave in img){
+//   estadisticImg.innerHTML +=
+//   `<div class="directores">
+//   <img src="${img[clave]}" alt=""></img>
+//   </div>
+//   `
+// }
  
  
 }

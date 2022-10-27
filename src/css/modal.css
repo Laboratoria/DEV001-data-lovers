@@ -227,3 +227,30 @@
         width: 100%;
     }
 }
+
+@media (max-width: 450px){
+    .modal{
+        width: 100%;
+    }
+    .modal_titulo_descripcion h2{
+        font-size: 20px;
+    }
+    .section_personajes h2{
+        font-size: 20px;
+    }
+    .cont_people{
+        width: 100px;
+        height: 120px;
+    }
+
+    .cont_people img{
+      
+        height: 40px;
+    }
+    .con_people_text{
+        padding-left: 2px;
+        padding-bottom: 15px;
+        font-size: 10px;
+    
+    }
+}

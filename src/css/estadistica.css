@@ -6,10 +6,17 @@
     color: var(--rosa_claro_color);
     -webkit-text-stroke: 1px rgba(157, 0, 41, 0.8);
     margin-bottom: 10px;
+    overflow: hidden;
 }
-
+.texto_estadistica{
+    width: 100%;
+    overflow: hidden;
+}
 .textos_p_estadistica{
+    width: 80%;
     margin-bottom:15px;
+    overflow: hidden;
+    margin:auto;
 }
 .estadistica{
     width: 80%;
@@ -82,7 +89,7 @@
     
 }
 .name_direc{
-   
+    text-align:center;
     width: 80%;
     height: 10%;
     font-size: 15px;
@@ -115,6 +122,26 @@
 
 /*RESPONSIVE*/
 
+@media (max-width: 1100px){
+    .barra {
+        margin-left: 40px;
+        
+    }
+    .directores_name{
+        margin-left: 8px;    
+    }
+}
+@media (max-width: 1024px){
+   
+ .barra {
+    margin-left: 35px;
+}
+.directores_name{
+    margin-left: 15px;    
+}
+    
+}
+
 
 @media (max-width: 900px){
     
@@ -125,7 +152,7 @@
     }
     .barra{
         width: 60px;
-        margin-left: 15px;
+        margin-left: 25px;
     }
     
     .directores{
@@ -140,7 +167,11 @@
 @media (max-width: 768px){
     .directores_name{
         
-        margin-left: 5px;
+        margin-left: 12px;
+    }
+    .barra{
+        width: 60px;
+        margin-left: 15px;
     }
     .directores img{
         width: 45px;
@@ -167,17 +198,24 @@
     }
     
 }
-
+@media (max-width: 684px){
+    .barra{
+        width: 60px;
+        margin-left: 22px;
+    }
+}
 @media (max-width: 667px){
     .barra{
-        width: 50px;
-        margin-left: 15px;
+        width: 60px;
+        margin-left: 20px;
     }
     .directores_name{
         font-size: 10px;
         margin-left: 5px;
     }
 }
+
+
 
 @media (max-width: 500px){
     .directores_name{
@@ -198,7 +236,7 @@
     }
     .barra{
         width: 40px;
-        margin-left: 15px;
+        margin-left: 16px;
     }
     .directores img{
         width: 30px;
@@ -207,24 +245,21 @@
     }
     .name_direc{
         width: 100%;
-        margin-left: 0px;
+        margin-left: 30px;
     }
     .linea{
         width: 5%;
     }
-    .barra{
-        width: 50px;
-        margin-left: 20px;
-    }
+    
     .directores_name{
         width: 50px;
         font-size: 8px;
-        margin-left: 9px;
-        text-align: center;
+        margin-left: 8px;
+        text-align: line;
     }
     .directores{
         width: 40px;
-        margin-left: 18px;
+        margin-left: 50px;
     }
 
     .linea::before{

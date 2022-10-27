@@ -3,7 +3,7 @@
 
 export const mostrarPeliculaIndividual = (id, data) => {
   const idCard = id;
-  const filmsId = data.filter(data => data.id == idCard);
+  const filmsId = data.filter(data => data.id === idCard);
 
   return filmsId
 }
@@ -13,7 +13,7 @@ export const mostrarPeliculaIndividual = (id, data) => {
 export const filtrarDirectores = (directores, data) => {
 
   const filDirectores = directores;
-  const filtroDirectores = data.filter(data => data.director == filDirectores);
+  const filtroDirectores = data.filter(data => data.director === filDirectores);
   return filtroDirectores;
 }
 
