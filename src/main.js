@@ -35,15 +35,6 @@ buttonLibros.addEventListener("click", () => {
   document.body.style.backgroundImage = 'none';
 })
 
-const verMas = window.querySelector(".button");
-verMas.addEventListener("click", clicked);
-function clicked () {
-  return alert ("holas");
-}
-
-import {getBooks} from './data.js';
-/*import harrypotter from "./data/harrypotter/data.js"*/
-
 
 const  addElement =() =>{
   let newDiv = document.getElementById("listas");
@@ -58,10 +49,6 @@ const  addElement =() =>{
   newDiv.appendChild(newContent);
 });
 }
-
-
-
-
 const buttonPelis= document.getElementById("peliculas");
 
 buttonPelis.addEventListener("click",()=>{
