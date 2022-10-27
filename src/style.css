@@ -1,33 +1,64 @@
-body{
-    background-image: url("./fondo1.png");
+body {
+    background: url(./fondo1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed
 }
 
-#container{
+#cont-card {
     display: flex;
     flex-wrap: wrap;
+    width: 80%;
+    height: auto;
+    background-color: rgba(166, 74, 16, 0.68);
+    margin: 100px auto;
+    overflow: auto;
+    padding: 25px;
+    align-items: left;
+}
+#card {
+    background-color: #eee;
+    border-radius: 20px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 200px;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.solucion{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 90%;
     justify-content: center;
     padding: 10%;
    }
-   
-   #card{
-       background-color: #eee;
-       border-radius: 20px;
-       box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-       margin: 10px;
-       padding: 20px;
-       text-align: center;
-       width: 200px;
+/*
+   .container{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
    }
-   
-    #card.img-container {
-       background-color: rgba(255, 255, 255, 0.6);
+   #root {
+    word-wrap: break-word;
+    background: yellow;
+   }*/
+/*
+    #card.img {
+       background-color: #000;
        border-radius: 50%;
        width: 120px;
        height: 120px;
        text-align: center;
        margin: auto;
-   }
-   
+    }*/
+/*
    #card.img-container img {
        margin-top: 20px;
        max-width: 90%;
@@ -37,7 +68,7 @@ body{
        margin-top: 20px;
    }
    
-   .card .number {
+   .card.number {
        background-color: rgba(0, 0, 0, 0.1);
        border-radius: 10px;
        font-size: 0.8em;
@@ -62,4 +93,31 @@ body{
        justify-content: center;
        cursor: pointer;
    }
-   
+   */
+
+/*
+.contenedor { /*la clase de todos los elementos
+display: flex;
+flex-wrap: wrap;
+align-content: flex-start;
+}
+*/
+/*#padre {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: auto;
+    background-color: rgba(166, 74, 16, 0.68);
+    margin: 300px auto;
+    overflow: auto;
+    padding: 25px;
+    align-items: left;
+}*/
+
+/*
+#card.num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }*/
