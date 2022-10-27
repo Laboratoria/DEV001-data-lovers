@@ -1,219 +1,32 @@
-/*Aplicando estilos globales*/
-*{
-    margin: 0%;
-    box-sizing: border-box;
-}
-
 body{
-    background-image: url(img/HP.png);
-    background-size: 100% 100%;
-    background-attachment: fixed;
-    font-family:sans-serif;
-    padding: 90px 20px 0;
-    height: 100%;
+    background-image: url("https://allgamersin.com/wp-content/uploads/2020/02/Hogwarts1.jpg");
+    background-repeat:no-repeat;
+    background-size: 100%;
+}
+
+#rectangle{
+    height: 100px;
+    left: 0px;
+    top: -100px;
+    background-color: transparent;
     display: flex;
-    justify-content: center;
-    justify-items: end;
-    align-items: flex-end;
-    align-self: flex-end;
-}
-
-/*Modificando el header*/
-.header{
-    background-color: #2F5166;
-    height: 80px;
-    position: fixed;
-    width: 100%;
-    top:0%;
-    left:0%;
-}
-
-.nav{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-
-.nav-item{
-    color: white;
-    text-decoration: none;
-}
-
-.logo{
-    font-size: 30px;
-    font-weight: bold;
-    padding: 0 40px;
-    line-height: 80px;  
-}
-
-.nav-menu{
-    display:flex;
-    margin-right: 40px;
-    list-style: none;
-}
-
-.nav-menu-item{
-    font-size: 10px;
-    margin: 0 10px;
-    line-height: 80px;
-    text-transform: uppercase;
-   /* width: max-content; /*sirve para no borrar el texto de mas de 2 palabras*/
-}
-
-.nav-item2{
-    padding: 0;
-    border-radius: 3px;
-}
-.nav-item2:hover{
-    background-color: #5B87A4;
-    transition: 0.5s;
-}
-
-/*modificando el boton Hamburguesa*/
-.nav-toggle{
-    color:white;
-    background-color: #2F5166;
-    border: none;
-    font-size: 30px;
-    padding: 0 20px;
-    line-height: 60px;
-    display: none;
-    cursor: pointer;
-}
-
-/*Dando formato a botones*/
-.boton{
-    background-color: rgba(192, 192, 192, 0.3);
-    background-position-x: 50%;
-    background-position-y: 50%;
-    background-repeat: no-repeat;
-    background-size: 250px 300px;
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
-    cursor: pointer;
-    height: 250px;
-    width: 250px;
-    margin: 30px;
-    padding: 15px;
-    border-color: rgb(247, 246, 246);
-    border-width: 10px;
-    top: -20px;
-}
-
-#peliculas{
-    background-image: url("https://i.pinimg.com/564x/c2/89/d7/c289d7e9fdc72ad76cfceba98633021f.jpg");
-}
-
-#libros {
-    background-image: url("https://i.pinimg.com/564x/48/ff/27/48ff27d5997431991ec075d673067a97.jpg");
-}
-
-#personajes {
-    background-image: url("https://i.pinimg.com/564x/64/17/90/6417901a7b11b41fbe8101481d65528b.jpg");
-}
-
-#deporte {
-    background-image: url("https://i.pinimg.com/564x/af/b7/4d/afb74d3cabf110f566460e0b92cae9e1.jpg");
-}
-
-
-.lista{
-    display: flex;
-    height: 85vh;
-    align-items: flex-end;
-}
-
-
-.informacion{
-    background-image: url(img/pergamino.png);
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-    height: 800px;
-    padding:30px;
-    margin: 20px;
-    border-radius: 10px;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
 }
 
-.text-total{
-    padding: 10px 40px 5px 40px;
-}
-.text{
-    text-align: center;
-    padding: 0px 0px 10px 0px;
-}
-
-.button{
-    padding: auto;
+.imag{
+    width: 100%;
+    max-width: 150px;
+    display: flex;
+    position: relative;
+    left: -200px;
 }
 
-.orden{
-    background: none;
-    border: none;
-}
+il{
+    color:aliceblue;
+    position: relative;
+    left: -800px;
+    font-size: 40px;
 
-/*Responsive*/
-@media(max-width:800px){
-    body{
-        background-image: url(img/HP\ responsive.png) ;
-        background-repeat:no-repeat;
-        background-size: 100% 100%;
-        background-attachment: fixed;
-        background-position-y: bottom;
-        padding: 190px 70px 0px 70px;
-    }
-    
-    .header{
-        height: 60px;
-    }
-
-    .logo{
-        font-size: 25px;
-        padding: 0 20px;
-        line-height: 60px;  
-    }
-
-    .nav-menu{
-        flex-direction: column;
-        align-items: center;
-        margin-right: 20px;
-        background-color: #2c3e50;
-        position: fixed;
-        left: 0;
-        top: 60px;
-        width: 100%;
-        padding: 20px 0;
-        height: calc(100% - 60px);
-        overflow-y: auto;
-        left: 100%;
-        transition: 0.3s;
-    }
-
-    .nav-menu-item{
-        line-height: 70px;
-    }
-
-    .nav-item2:hover{
-        background: none;
-        color: #83c5f7;
-    }
-
-    .nav-toggle{
-        display: block;
-    }
-
-    .nav-menu1 {
-        left: 0;
-    }
-
-    .lista{
-        flex-direction: column;
-
-    }
-    
 }

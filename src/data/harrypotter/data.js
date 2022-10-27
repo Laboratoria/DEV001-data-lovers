@@ -16174,13 +16174,15 @@ export default {
       "title": "Harry Potter and the Sorcerer's Stone",
       "releaseDay": "June 26, 1997",
       "author": "J. K. Rowling",
+      "img":"https://librotea.com/wp-content/uploads/2019/05/23/12/05/6c9c14d629404b7ffe4e145aaf0a7763.jpg",
       "description": "On his birthday, Harry Potter discovers that he is the son of two well-known wizards, from whom he has inherited magical powers. He must attend a famous school of magic and sorcery, where he establishes a friendship with two young men who will become his companions on his adventure. During his first year at Hogwarts, he discovers that a malevolent and powerful wizard named Voldemort is in search of a philosopher's stone that prolongs the life of its owner."
-    },
+        },
     {
       "id": 2,
       "img": "https://i.pinimg.com/564x/1d/2f/fe/1d2ffef323a06a67ae7600d4ae14ed73.jpg",
       "title": "Harry Potter and the chamber of secrets",
       "releaseDay": "July 2, 1998",
+      "img":"https://i.pinimg.com/originals/94/c0/b1/94c0b1fbd18ee9b1c06312ea51944c54.jpg",
       "author": "J. K. Rowling",
       "description": "Harry Potter and the sophomores investigate a malevolent threat to their Hogwarts classmates, a menacing beast that hides within the castle."
     },
@@ -16188,7 +16190,8 @@ export default {
       "id": 3,
       "img": "https://i.pinimg.com/564x/93/e2/55/93e255c770c8a6e676365828357b236a.jpg",
       "title": "Harry Potter and the Prisoner of Azkaban",
-      "releseDay": "July 8, 1999",
+      "releaseDay": "July 8, 1999",
+      "img":"https://librotea.com/wp-content/uploads/2019/05/27/17/14/ad4552431ee250fc6994006b6393f7ae-300x0-c-default.jpg",
       "author": "J. K. Rowling",
       "description": "Harry's third year of studies at Hogwarts is threatened by Sirius Black's escape from Azkaban prison. Apparently, it is a dangerous wizard who was an accomplice of Lord Voldemort and who will try to take revenge on Harry Potter."
     },
@@ -16197,6 +16200,7 @@ export default {
       "img": "https://i.pinimg.com/564x/47/61/1e/47611e7a821249249d65a7480d51f145.jpg",
       "title": "Harry Potter and the Goblet of Fire",
       "releaseDay": "July 8, 2000",
+      "img":"https://images.payhip.com/o_1f5rlbb8r1cpa1j3c18r411mc17c8r.jpg",
       "author": "J. K. Rowling",
       "description": "Hogwarts prepares for the Triwizard Tournament, in which three schools of wizardry will compete. To everyone's surprise, Harry Potter is chosen to participate in the competition, in which he must fight dragons, enter the water and face his greatest fears."
     },
@@ -16205,6 +16209,7 @@ export default {
       "img": "https://i.pinimg.com/564x/6b/2e/3d/6b2e3da279d7cf7a07b1f3ac78293bc7.jpg",
       "title": "Harry Potter and the Order of the Phoenix",
       "releaseDay": "June 21, 2003",
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqaqFmB_JAUNJGnCTp1jPCzsICgOS5Jfc0kOgDKCjvTx5UduMb82xfQf1SXaWFEhomGCo&usqp=CAU",
       "author": "J. K. Rowling",
       "description": "In his fifth year at Hogwarts, Harry discovers that many members of the wizarding community do not know the truth about his encounter with Lord Voldemort. Cornelius Fudge, Minister of Magic, appoints Dolores Umbridge as Defense Against the Dark Arts teacher because he believes that Professor Dumbledore plans to take over her job. But his teachings are inadequate, so Harry prepares the students to defend the school against evil."
     },
@@ -16213,6 +16218,7 @@ export default {
       "img": "https://i.pinimg.com/564x/97/ac/8e/97ac8eea2b3f71c793fa1d6b9bfc7669.jpg",
       "title": "Harry Potter and the Half-Blood Prince",
       "releaseDay": "July 16, 2005",
+      "img":"https://loresumo.com/wp-content/uploads/2019/09/harry-potter-y-el-misterio-del-Pr%C3%ADncipe-1.jpg",
       "author": "J. K. Rowling",
       "description": "Harry discovers a powerful book and, while trying to discover its origins, collaborates with Dumbledore in the search for a series of magical objects that will aid in the destruction of Lord Voldemort."
     },
@@ -16221,6 +16227,7 @@ export default {
       "img": "https://i.pinimg.com/564x/b6/40/76/b640767915dfe91d6ae85706181b61fa.jpg",
       "title": "Harry Potter and the Deathly Hallows",
       "releaseDay": "July 21, 2007",
+      "img":"https://www.lancomperu.com/imagenes/9788498/978849838929.GIF",
       "author": "J. K. Rowling",
       "description": "Harry, Ron and Hermione go on a dangerous mission to locate and destroy the secret of Voldemort's immortality and destruction - the Horcruces. Alone, without the guidance of their teachers or the protection of Professor Dumbledore, the three friends must lean on each other more than ever. But there are Dark Forces in between that threaten to tear them apart. Harry Potter is getting closer and closer to the task for which he has been preparing since the first day he set foot in Hogwarts: the last battle with Voldemort."
     },
@@ -16229,6 +16236,7 @@ export default {
       "img": "https://i.pinimg.com/564x/db/e6/a1/dbe6a10f58bd208870ca5781e6895e38.jpg",
       "title": "Harry Potter and the Cursed Child",
       "releaseDay": "July 30, 2016",
+      "img":"https://images.cdn3.buscalibre.com/fit-in/360x360/a2/ea/a2ea4887a569c9be552a8aa10f174d43.jpg",
       "author": "J. K. Rowling",
       "description": "Harry's second son entered Hogwarts, but in Slytherin. His relationship with Harry is getting worse and he became close friends with Draco's son, Scorpius Malfoy who is said to be Lord Voldemort's son."
     }
