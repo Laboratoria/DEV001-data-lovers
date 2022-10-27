@@ -1,3 +1,5 @@
+// estas funciones son de ejemplo
+
 export const filterData = (data, condition) => {
   const result = [];
 
@@ -10,4 +12,3 @@ export const filterData = (data, condition) => {
 
   return result;
 };
-
