@@ -1,12 +1,14 @@
-body{
-    background-image: url("./fondo1.png");
-    background-repeat:o
+body {
+    background: url(./fondo1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed
 }
 
-#container{
+#cont-card {
     display: flex;
     flex-wrap: wrap;
-    justify-content: justify;
+    justify-content: center;
     padding: 10%;
    }
    
@@ -27,8 +29,8 @@ body{
        height: 120px;
        text-align: center;
        margin: auto;
-   }
-   
+    }*/
+/*
    #card.img-container img {
        margin-top: 0px;
        max-width: 100%;
@@ -38,7 +40,7 @@ body{
        margin-top: 20px;
    }
    
-   .card .number {
+   .card.number {
        background-color: rgba(0, 0, 0, 0.1);
        border-radius: 10px;
        font-size: 0.8em;
@@ -63,4 +65,31 @@ body{
        justify-content: center;
        cursor: pointer;
    }
-   
+   */
+
+/*
+.contenedor { /*la clase de todos los elementos
+display: flex;
+flex-wrap: wrap;
+align-content: flex-start;
+}
+*/
+/*#padre {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: auto;
+    background-color: rgba(166, 74, 16, 0.68);
+    margin: 300px auto;
+    overflow: auto;
+    padding: 25px;
+    align-items: left;
+}*/
+
+/*
+#card.num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }*/
