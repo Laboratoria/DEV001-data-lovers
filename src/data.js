@@ -1,6 +1,6 @@
 // estas funciones son de ejemplo
 
-export const filterData = (data, condition) => {
+export const filterDataByProperty = (data, condition) => {
   const result = [];
 
   data.filter((data) => {
@@ -11,4 +11,13 @@ export const filterData = (data, condition) => {
   });
 
   return result;
+
 };
+
+
+export const filterDataByValue = (data, condition,value) => {
+
+  return data.filter(film=>film[condition]===value);
+
+};
+

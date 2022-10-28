@@ -25,7 +25,7 @@ const gFilms=data.films;
     const producer = document.querySelector(".producers"); //aquí accedo al div con el class = "productores"
     const showProducer = document.createDocumentFragment();
 
-    filterData(gFilms,"director").forEach(function (value) {
+    filterData(gFilms,"producer").forEach(function (value) {
         const item = document.createElement("DIV"); //Esto crea un elemento de HTML (es en mayúscula porque es sensible)
         item.innerHTML = value; //esto lo va guardando en un div
         showProducer.appendChild(item); //esto crea el div
