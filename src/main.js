@@ -52,15 +52,6 @@ dataLibros.forEach(l =>{
     button.label="Ver más";
     celdas.appendChild(button);
 
-    
-    
-
-    for (let i=0;i<8; i++){
-      let llamarbutton=celdas.lastElementChild;
-      llamarbutton.id=[i];
-      console.log(llamarbutton);
-      
-    }
 
     const modal = document.getElementById("myModal");
 
@@ -91,6 +82,15 @@ dataLibros.forEach(l =>{
 }) 
 
 caja.appendChild(contenedorCeldas);
+
+
+for (let i=0;i<8; i++){
+  let llamardiv2=contenedorCeldas.children[i];
+  let llamar= llamardiv2.lastChild;
+  llamar.id= "boton" + i;
+  console.log(llamar)
+  
+}
 
 
 

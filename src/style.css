@@ -190,6 +190,10 @@ body{
 										text-align: center;
 									}
 
+									#boton0{
+										background-color: #24691A;
+									}
+
 									.modal {
 										display: none; /* Hidden by default */
 										position: fixed; /* Stay in place */
