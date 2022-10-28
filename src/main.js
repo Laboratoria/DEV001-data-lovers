@@ -33,3 +33,24 @@ const gFilms=data.films;
     
     producer.appendChild(showProducer); //y aquí se muestra
 
+
+    console.log(filterDataByValue (gFilms,"producer","Hayao Miyazaki"));
+
+
+
+
+    const showData=(data,property)=>{
+
+        data.forEach(data=>{
+        
+        let name=data[property];
+        //let movieTitle=data.title;
+        
+        document.getElementById("name").innerHTML +=`<h2>${name}</h2>`;
+        
+        });
+        
+        
+        }
+
+        showData(filterDataByValue (gFilms,"producer","Hayao Miyazaki"),"title");
