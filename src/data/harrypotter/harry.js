@@ -16179,7 +16179,7 @@ export default {
     },
     {
       "id": 2,
-      "title": "Harry Potter and the chamber of secrets",
+      "title": "Harry Potter and the Chamber of secrets",
       "releaseDay": "July 2, 1998",
       "author": "J. K. Rowling",
       "portada": "https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/HarryPotterYLaCamaraSecreta.jpg",

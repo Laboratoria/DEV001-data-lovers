@@ -8,14 +8,31 @@ const dataPersonajes=data.characters;
 const dataPociones=data.potions;
 const dataHechizos=data.spells;
 
-/*const datas=[];
-for(let i=0; i<8; i++){
-    datas.push(dataLibros[i].title)
+
+//obtiene el boton ordenar que esta en html
+document.getElementById("ordenar").addEventListener("click", ordenarData);
+//console.log(ordenar);
+//al hacer click en el boton ordenar este cumple la funcion ordenarData
+//ordenar.addEventListener("onclick",ordenarData);
+
+//ordenar.addEventListener(onclick, ordenarData)
+
+
+//funcion para ordenar la data
+function ordenarData(){
+  //crear constante con array vacio
+  const datas=[];
+  //bucle que itera sobre dataLibros
+  for(let i=0; i<8; i++){
+    //titulo que pertenece a dataLibros es agregado al nuevo array
+    datas.push(dataLibros[i].title); 
+  }
+  //returna una alerta con el nuevo array (titulos organizados)
+  return document.getElementById("pnuevoslibros").innerHTML= (datas.sort());
+
 }
-const tt=datas.sort();
-function verMas(){
-    console.log("verMas")
-}*/
+
+//console.log(ordenarData);
 
 
 const caja= document.getElementById("libros");
@@ -52,15 +69,27 @@ dataLibros.forEach(l =>{
     button.label="Ver más";
     celdas.appendChild(button);
 
+  /* 
+  for (let i=0;i<8; i++){
 
+    let llamardiv=celdas.childNodes[i];
+    let llamarid=llamardiv.ELEMENT_NODE[2];
+    //let llamarid2=llamarid.childNodes[2];
+   
+    
+    
+    console.log(llamarid);
+  }
+  */
+    
     const modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
+    // Get the button that opens the modal
 
-// Get the <span> element that closes the modal
+    // Get the <span> element that closes the modal
     const span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
+    // When the user clicks the button, open the modal 
     button.onclick = function() {
       modal.style.display = "block";
     }
@@ -85,12 +114,19 @@ caja.appendChild(contenedorCeldas);
 
 
 for (let i=0;i<8; i++){
+  let llamardiv=contenedorCeldas.children[i];
+  llamardiv.id=(i);
+  //console.log(llamardiv)
+}
+
+for (let i=0;i<8; i++){
   let llamardiv2=contenedorCeldas.children[i];
   let llamar= llamardiv2.lastChild;
   llamar.id= "boton" + i;
-  console.log(llamar)
+  //console.log(llamar)
   
 }
+
 
 
 
@@ -172,7 +208,7 @@ caja1.appendChild(contenedorCeldas1);
 for (let i=0;i<8; i++){
   let llamardiv=contenedorCeldas1.children[i];
   llamardiv.id=(i);
-  
+  //console.log(llamardiv)
 }
 
 

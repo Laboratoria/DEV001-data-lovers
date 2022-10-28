@@ -5,7 +5,7 @@
   export const anotherExample = () => {
     return 'OMG';
   };*/
-  import data from './data/harrypotter/harry.js';
+  //import data from './data/harrypotter/harry.js';
 
   
   
