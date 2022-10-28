@@ -1,4 +1,4 @@
-import { filterData} from './data.js';
+import { filterDataByProperty,filterDataByValue} from './data.js';
 
 import data from './data/ghibli/ghibli.js';
 
@@ -25,10 +25,11 @@ const gFilms=data.films;
     const producer = document.querySelector(".producers"); //aquí accedo al div con el class = "productores"
     const showProducer = document.createDocumentFragment();
 
-    filterData(gFilms,"producer").forEach(function (value) {
+    filterDataByProperty(gFilms,"producer").forEach(function (value) {
         const item = document.createElement("DIV"); //Esto crea un elemento de HTML (es en mayúscula porque es sensible)
         item.innerHTML = value; //esto lo va guardando en un div
         showProducer.appendChild(item); //esto crea el div
       });
     
     producer.appendChild(showProducer); //y aquí se muestra
+
