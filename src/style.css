@@ -1,20 +1,30 @@
+*{
+    margin:0;
+    padding: 0;
+}
 body {
     background: url(./fondo1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed
 }
-
+.logo { 
+    background-color: aliceblue;
+    width: 100%;
+    margin:auto;
+    position: fixed;
+    height: 25%;
+    padding: 2%;
+}
 #cont-card {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 100%;
     height: auto;
     background-color: rgba(166, 74, 16, 0.68);
-    margin: 100px auto;
+    margin-top: 0%;
     overflow: auto;
-    padding: 25px;
-    align-items: left;
+    padding: 2%;
 }
 #card {
     background-color: #eee;
@@ -24,19 +34,41 @@ body {
     padding: 20px;
     text-align: center;
     flex-wrap: wrap;
-    width: 200px;
+    width:70%;
+    height: auto;
+    justify-content: space-evenly;
     text-transform: capitalize;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;   
 }
-
-
+#card:hover{
+    background-color: bisque;
+   }
 .solucion{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 90%;
+    flex-grow: 1;
+    width: 80%;
+    height: auto;
     justify-content: center;
-    padding: 10%;
+    padding: 1%;
+    background-color: aqua;
+    margin-top: 300px;
+   }
+   footer{
+    background-color: black;
+    color: #fff;
+    padding: 2% 2% 2% 2%;
+    width: 100%;
+    text-align: center;
+   }
+
+
+   /*PARA LOS BOTONES:
+   Podemos usar:
+   .id.active{
+    background-color: #fff; esto lo que hace es que la dar clic cambia de color
+    https://www.youtube.com/watch?v=yc1bCB689bE&list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR&index=9
    }
 /*
    .container{
