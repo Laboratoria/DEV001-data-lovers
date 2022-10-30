@@ -15,9 +15,22 @@ export const filterDataByProperty = (data, condition) => {
 };
 
 
-export const filterDataByValue = (data, condition,value) => {
+export const filterDataByValue = (data, condition, value) => {
 
-  return data.filter(film=>film[condition]===value);
+  return data.filter(film => film[condition] === value);
 
 };
 
+
+export const filterDataByProperties = (data, properties) => {
+
+  return data.map(data => {
+
+    const obj = new Object();
+
+    properties.forEach(value => { obj[value] = data[value]; });
+
+    return obj;
+  });
+
+};

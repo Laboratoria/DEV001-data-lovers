@@ -30,8 +30,6 @@ header h1 {
   background-color: #D99982;
 }
 
-
-
 .menuLeft a {
   text-decoration: none;
   color: #A68F97;
@@ -86,7 +84,7 @@ a img {
   vertical-align: middle;
 }
 
-section {
+.mainSection {
   padding: 150px;
   width: 100%;
   background-color: transparent;
@@ -116,7 +114,7 @@ section h1 {
 }
 
 
-.producers {
+.section__ghibliInfo {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -125,7 +123,7 @@ section h1 {
   margin: auto;
 }
 
-.producers div {
+.producers {
   font-family: 'Mingzat', sans-serif;
   width: 300px;
   height: 200px;
@@ -196,7 +194,7 @@ section h1 {
       text-align: left;
     }
 
-    .producers div {
+    .producers {
       width: 170px;
       height: 125px;
       margin-bottom: 40px;
@@ -204,7 +202,7 @@ section h1 {
       font-size: 25px;
     }
 
-    .producers div:hover {
+    .producers:hover {
       font-size: 30px;
       width: 200px;
       height: 150px;
