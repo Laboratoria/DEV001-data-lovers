@@ -1,4 +1,4 @@
-import { filterDataByProperty, filterDataByValue, filterDataByProperties } from './data.js';
+import { filterDataByProperty, filterDataByValue, filterDataByProperties, sortDataAZ } from './data.js';
 
 import data from './data/ghibli/ghibli.js';
 
@@ -84,5 +84,8 @@ function showDirectors(event) {
     showData(filterDataByProperty(gFilms, 'director'), false);
 }
 
-const properties = ["title", "poster"];
-console.log(filterDataByProperties(gFilms, properties));
+console.log(filterDataByProperties(gFilms, ["title", "poster"]));
+
+const obj2=sortDataAZ(filterDataByProperties(gFilms, ["title", "poster"]),"title");
+
+obj2.forEach((obj2)=>{ console.log( "orderAZ: " + ": " + obj2["title"])});
