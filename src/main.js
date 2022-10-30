@@ -54,30 +54,6 @@ producer.appendChild(showProducer); //y aquí se muestra
 //console.log(filterDataByValue(gFilms, "producer", "Hayao Miyazaki"));
 //console.log(filterDataByValue(gFilms, "director", "Isao Takahata"));
 
-
-const showData = (data, property) => {
-
-    if (property === false) {
-
-        data.forEach(value => {
-            document.getElementById('section__gContainer').insertAdjacentHTML('beforeend', `<div class="gibliInfo" id="${value}">${value}</div>`)
-
-        });
-
-    }
-    else {
-        //let movieTitle=data.title;
-        data.forEach(data => {
-
-            const name = data[property];
-            document.getElementById('section__gContainer').insertAdjacentHTML('beforeend', `<div class="gibliInfo" id="${name}">${name}</div>`)
-
-        });
-
-    }
-
-}
-
 //console.log("P: " + filterDataByProperty(gFilms, 'producer'));
 //console.log("D: " + filterDataByProperty(gFilms, 'director'));
 
@@ -93,7 +69,9 @@ document
           directorsSection.section__ghibliInfo.style.visibility = 'visible';*/
 
 
-        showData(filterDataByProperty(gFilms, 'director'), false);
+        const directorsList=filterDataByProperty(gFilms, 'director');
+
+        showProducers_Directors(directorsList);
 
     })
 
@@ -109,7 +87,11 @@ document
          let producersSection = document.querySelector('.mainSection__producers');
          producersSection.style.visibility = 'visible';*/
 
-        showData(filterDataByProperty(gFilms, 'producer'), false);
+        //showData(filterDataByProperty(gFilms, 'producer'), false);
+
+        const producersList=filterDataByProperty(gFilms, 'producer');
+
+        showProducers_Directors(producersList);
 
     })
 
@@ -127,19 +109,7 @@ document
 
         const movies = filterDataByProperties(gFilms, ["title", "poster"]);
 
-        const moviesFragment = document.createDocumentFragment();
-
-        movies.forEach(movie => {
-            const title = document.createElement("p");
-            title.innerText = movie.title;
-            const poster = document.createElement("img");
-            poster.src = movie.poster;
-            const movieCard = document.createElement("div");
-            movieCard.appendChild(poster);
-            movieCard.appendChild(title);
-            moviesFragment.appendChild(movieCard);
-        });
-        document.querySelector(".movies").appendChild(moviesFragment);
+        showMovies(movies);
 
         const obj2 = sortDataAZ(movies, "title");
 
@@ -149,6 +119,46 @@ document
 
     })
 
+      
+const showMovies = (movies)=>{
+
+
+    const moviesFragment = document.createDocumentFragment();
+
+    movies.forEach(movie => {
+        const title = document.createElement("p");
+        title.innerText = movie.title;
+        const poster = document.createElement("img");
+        poster.src = movie.poster;
+        const movieCard = document.createElement("div");
+        movieCard.className="gibliInfo";
+        movieCard.id=movie.title;
+        movieCard.appendChild(poster);
+        movieCard.appendChild(title);
+        moviesFragment.appendChild(movieCard);
+    });
+    document.querySelector(".section__gContainer").appendChild(moviesFragment);
+}
+     
+const showProducers_Directors = (names)=>{
+
+
+    const producersFragment = document.createDocumentFragment();
+
+    names.forEach(name => {
+        const nameP = document.createElement("p");
+        nameP.innerText = name;
+        const nameCard = document.createElement("div");
+        nameCard.className="gibliInfo";
+        nameCard.id=name;
+        nameCard.appendChild(nameP);
+        producersFragment.appendChild(nameCard);
+    });
+
+    document.querySelector(".section__gContainer").appendChild(producersFragment);
+
+
+}
 
 //console.log(filterDataByProperties(gFilms, ["title", "poster"]));
 
