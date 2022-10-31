@@ -14,7 +14,8 @@ header{
  overflow:hidden;
  background-color: #6C9B98;
  margin-bottom:20px;
-};
+
+}
 header .logo {
 	color:#f2f2f2;
 	font-size:50px;
@@ -23,9 +24,18 @@ header .logo {
     padding-top: 50px;
 }
 
+.cardPrincipal img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    object-fit: contain;
+    max-width: 80px;
+}
+
 header nav {
 	float:right;
-	line-height:100px;
+	line-height:80px;
+    
 }
 
 header nav a {
@@ -52,11 +62,7 @@ font-family: 'Poppins', sans-serif;
  padding: 10px;
  padding-left: 30px;
 }
-img {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-}
+
 .parrafo{
     display: flex;
     flex-direction:column;
@@ -85,4 +91,16 @@ img {
     margin: 10px auto;
     cursor: pointer;
     text-decoration: none;
+
+}
+
+.cardPrincipal{
+    /*display: inline;*/
+    width: 20vw;
+    padding: 1rem;
+   
+}
+#root {
+    display: flex;
+    flex-wrap: wrap;
 }

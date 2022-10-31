@@ -4,44 +4,20 @@ import objetoghibli from './data/ghibli/ghibli.js'; /*libera nuestra data*/
 
 console.log(objetoghibli);
 
-
-let show = function (dataGhibli){
+//Funcion para mostrar las peliculas
+let show = function (dataGhibli){ 
+  let newHtml=""
     dataGhibli.films.forEach(function(film){
         console.log (film);
-        document.getElementById("root").innerHTML+=film.title;
+        let templatePelicula =`
+        <div class="cardPrincipal">
+          <img src="${film.poster}" alt="Castle in the Sky">
+          ${film.title}
+          
+        </div>`;
+       newHtml+= templatePelicula;
     });
+    document.getElementById("root").innerHTML = newHtml;
 }
+
 show(objetoghibli);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Funcion para recorrer el arreglo y tener acceso a sus personajes de ellos tomar imágen, nombre y género
-function loopArray(objetoghibliFilms){
-  for(let i = 0; i <objetoghibliFilms.length; i++){
-    showcharacters (objetoghibliFilms[i].people);
-  }
-  showGenders(genderCharacters);
-  }*/
-
-
-
-
-
-
-
-//console.log(example, objetoghibli);
-
-
