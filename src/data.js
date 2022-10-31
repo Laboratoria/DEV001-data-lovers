@@ -4,12 +4,12 @@ export const filterDataByProperty = (data, condition) => {
   const result = [];
 
   data.filter((data) => {
+
     if (!result.includes(data[condition])) { result.push(data[condition]); }
 
     return result;
 
   });
-
   return result;
 
 };
@@ -35,7 +35,6 @@ export const filterDataByProperties = (data, properties) => {
 
 };
 
-
 export const sortDataAZ= (data,sortBy) => {
   return [...data].sort((itemLeft, itemRight) => {
       // el titulo de la izquierda va primero
@@ -44,9 +43,12 @@ export const sortDataAZ= (data,sortBy) => {
       }
       // el titulo de la derecha va primero
       if (itemLeft[sortBy] > itemRight[sortBy]) {
+
         return 1;
       }
       // los titulos son iguales
       return 0;
   });
+
 };
+

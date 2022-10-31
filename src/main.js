@@ -1,8 +1,10 @@
 import { filterDataByProperty, filterDataByProperties, sortDataAZ } from './data.js';
 
+
 import data from './data/ghibli/ghibli.js';
 
 const gFilms = data.films;
+
 /*
 
 window.addEventListener('load', init, false);
@@ -19,8 +21,6 @@ function init() {
 }*/
 
 
-
-
 //console.log(data["films"][0]["producer"]);
 
 const iconHamburger = document.getElementById("hamburgerIcon");
@@ -28,6 +28,7 @@ const iconHamburger = document.getElementById("hamburgerIcon");
 iconHamburger.addEventListener('click', showMenuLeftResponsive);
 
 function showMenuLeftResponsive() {
+
 
     const x = document.getElementById("menuLeft");
     if (x.className === "menuLeft") {
@@ -171,4 +172,5 @@ function showDirectors(event) {
 
     showData(filterDataByProperty(gFilms, 'director'), false);
 }*/
+
 
