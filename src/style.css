@@ -163,29 +163,38 @@ body{
 						}
             #libros{
               display: flex;
+							flex-flow: row wrap;
+							gap: 10px 10px;	
             }
 
-				    	.contenedorCeldas{
-                display: flex;
-                flex-flow: row wrap;
-                gap: 10px 10px;	
-
-							}
+				    	
 
 								.celdas{	
 									display: flex;
 									flex-direction: column;
 									background: white;
-									flex: 1 1 20%;
+						
 									border-radius: 20px;
 									padding: 20px;
+									
+                flex-flow: row wrap;
+                flex: 1 1 20%;
 								}
+
+									#img {
+										height: 400px;
+										display:block;
+										margin: auto;
+		
+										border-radius: 10px;
+									}
+
 									.h1Celdas{
 											text-align: center;
 											padding-top: 10px;
 										}
 
-									.buttonVerMas{
+									.button{
 										margin: 0 auto;
 										text-align: center;
 									}
@@ -234,6 +243,7 @@ body{
 
 						#libros1{
 							display:flex;
+							flex-direction: column;
 							
                             
 						}
@@ -289,6 +299,7 @@ body{
 									flex: 1 1 100%;
 									
 								}
+
 										
 				.Personajes{
 					display: flex;
@@ -322,71 +333,75 @@ body{
 							}
 	
 				
-        .Pociones{
-					display: flex;
-					flex-direction: column ;
-        }
+							.Pociones{
+								display: flex;
+								flex-direction: column ;
+							}
+								#pociones{
+										display: flex;
+										flex-flow: row wrap;
+										gap: 10px 10px;	
 
-					.contenedorCeldas2{
-						display: flex;
-						flex-flow: row wrap;
-						gap: 10px 10px;	
-
+									}
+									.contenedorPociones{
+										display: flex;
+										
+										
+				
+									}
+											.pociones01{	
+											display: flex;
+											flex-direction: column;
+											background: white;
+											flex: 1 1 17%;
+											border-radius: 20px;
+											padding: 20px;
+										}
+											.idPociones{
+												text-align: center;
+												padding-top: 10px;
+											}
+											.namePociones{
+												text-align: center;
+												padding-top: 10px;
+											}
+											.desPociones{
+												
+												text-align:center;
+												padding-top: 10px;
+											}
+			
+					.Hechizos
+							{
+								display: flex;
+								flex-direction: column ;
 					}
-
-						.celdas2{	
-							display: flex;
-							flex-direction: column;
-							background: white;
-							flex: 1 1 17%;
-							border-radius: 20px;
-							padding: 20px;
-						}
-							.idCeldas2{
-								text-align: center;
-								padding-top: 10px;
-							}
-							.nameCeldas2{
-								text-align: center;
-								padding-top: 10px;
-							}
-							.desCeldas2{
-								
-								text-align:center;
-								padding-top: 10px;
-							}
-
-        .Hechizos
-				{
-					display: flex;
-					flex-direction: column ;
-        }
-
-					.contenedorCeldas3{
-						display: flex;
-						flex-flow: row wrap;
-						gap: 10px 10px;	
-
-					}
-
-						.celdas3{	
-							display: flex;
-							flex-direction: column;
-							background: white;
-							flex: 1 1 17%;
-							border-radius: 20px;
-							padding: 20px;
-						}
-							.h1Celdas3{
-								text-align: center;
-								padding-top: 10px;
-							}
-							
-							.pCeldas3{
-								
-								text-align:center;
-								padding-top: 10px;
-							}
+			
+								.contenedorHechizos{
+									display: flex;
+									flex-flow: row wrap;
+									gap: 10px 10px;	
+			
+								}
+			
+									.hechizos{	
+										display: flex;
+										flex-direction: column;
+										background: white;
+										flex: 1 1 17%;
+										border-radius: 20px;
+										padding: 20px;
+									}
+										.h1hechizos{
+											text-align: center;
+											padding-top: 10px;
+										}
+										
+										.phechizos{
+											
+											text-align:center;
+											padding-top: 10px;
+										}
 
 
         

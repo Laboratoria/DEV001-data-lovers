@@ -1,14 +1,46 @@
 import data from './data/harrypotter/harry.js';
 
+import { llamarData,llamarModal } from './mostrardata.js';
+
+
+
 // eslint-disable-next-line no-unused-vars
 
 
-const dataLibros=data.books;
-const dataPersonajes=data.characters;
-const dataPociones=data.potions;
-const dataHechizos=data.spells;
+//const dataLibros=data.books;
+//const dataPersonajes=data.characters;
+//const dataPociones=data.potions;
+//const dataHechizos=data.spells;
 
 
+let copiaDataLibros= [...data.books];
+llamarData(copiaDataLibros);
+
+mostrarModal();
+
+function mostrarModal(){
+  const celdas=document.querySelectorAll(".celdas");
+  const span = document.getElementsByClassName("close");
+  celdas.forEach(tarjeta  =>{
+    tarjeta.addEventListener("click", () =>{
+      document.querySelector("#libros1").style.display="flex";
+      llamarModal(copiaDataLibros);
+
+    }
+    );
+  
+
+    span.addEventListener("click", () => {
+      document.querySelector("#libros1").style.display = "none";
+    }
+    );
+   
+  })
+}
+
+
+
+/*
 //obtiene el boton ordenar que esta en html
 document.getElementById("ordenar").addEventListener("click", ordenarData);
 //console.log(ordenar);
@@ -32,8 +64,85 @@ function ordenarData(){
 
 }
 
+
 //console.log(ordenarData);
 
+const caja= document.getElementById("libros");
+dataLibros.forEach(l =>{
+
+  
+
+  const abrir= () => modal.style.display="block";
+
+  let dataHarry = `
+  <div class= "celdas">
+  <img id="img" src=${l.portada}>
+  <h1 class= "h1Celdas">${l.title}</h1>
+  <button class="button"  value="ver Mas" onclick=${this.abrir()} >ver más</button>
+  </div>`
+
+  caja.insertAdjacentHTML("beforeend", dataHarry);
+});
+
+    
+      const caja1= document.getElementById("libros1");
+      const modal = document.getElementById("myModal");
+      const span = document.getElementsByClassName("close")[0];
+      // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+            modal.style.display = "none";
+          }
+      
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+        /*
+        botonvermas.addEventListener("click", () =>{
+            modal.style.display = "flex";
+          });
+        
+
+
+dataLibros.forEach(l =>{
+  let dataModal = `<div class= "contenedorCeldas1">
+  <div class= "celdas1">
+  <img class="img1" src=${l.portada}>
+  <h1 class= "h1Celdas1">${l.title}</h1>
+  <p class="p1celdas1"><b>Autora: </b> ${l.author}</p>
+  <p class="p2celdas1"><b>Fecha: </b> ${l.releaseDay}</p>
+  <p class="p3celdas1"><b>Descripción: </b> ${l.description}</p>
+
+  </div>
+  
+  </div>`
+  
+
+  caja1.insertAdjacentHTML("beforeend", dataModal);
+});
+
+const caja4= document.getElementById("Personajes");
+
+
+dataPersonajes.forEach(l =>{
+  let dataPersonas= `<div class= "contenedorCeldas4">
+  <div class= "celdas4">
+  <h1 class= "nameCeldas4">${l.name}</h1>
+  <p class="descrpcionCeldas4"><b>Casa: </b> ${l.house}</p>
+  </div>
+  
+  </div>`
+  
+
+  caja4.insertAdjacentHTML("beforeend", dataPersonas);
+});
+
+
+
+
+
+/*
 
 const caja= document.getElementById("libros");
 const contenedorCeldas=document.createElement("div");
@@ -80,7 +189,7 @@ dataLibros.forEach(l =>{
     
     console.log(llamarid);
   }
-  */
+  
     
     const modal = document.getElementById("myModal");
 
@@ -127,7 +236,7 @@ for (let i=0;i<8; i++){
   
 }
 
-
+*/
 
 
 /*const modal = document.getElementById("myModal");
@@ -156,6 +265,7 @@ window.onclick = function(event) {
 }*/
 
 
+/*
 
 const caja1= document.getElementById("libros1");
 const contenedorCeldas1=document.createElement("div");
@@ -210,8 +320,9 @@ for (let i=0;i<8; i++){
   llamardiv.id=(i);
   //console.log(llamardiv)
 }
+*/
 
-
+/*
 const caja4= document.getElementById("Personajes");
 const contenedorCeldas4=document.createElement("div");
 
@@ -244,19 +355,42 @@ dataPersonajes.forEach(l =>{
     button.className="buttonVerMas";
     button.label="Ver más";
     buttonData.appendChild(button);
-    celdas.appendChild(buttonData);*/
+    celdas.appendChild(buttonData);
 
     contenedorCeldas4.appendChild(celdas4);  
 }) 
 caja4.appendChild(contenedorCeldas4);
 
 
+*/
+/*dataPociones.forEach(l=>{
+const caja2=document.getElementById("pociones");
+
+const plantillaPociones=   
+`<div class="contenedorPociones">
+<div class="pociones01">
+ <h1 class="idPociones">${l.id}</h1><br>
+  <h1 class="namePociones"> ${ l.name }</h1>
+  <p class="desPociones><b>Descripción: </b>${ l.description}<br> 
+ </div>
+ </div>`;
+ 
+ caja2.insertAdjacentHTML("beforeend", plantillaPociones);})*/
 
 
+/*
+dataHechizos.forEach(l=>{
+const plantillaHechizos=   
+`<div class="contenedorHechizos">
+<div class="hechizos">
+ <h1 class="h1hechizos"><b>Nombre: </b>${l.name}</h1><br>
+  <p class="phechizos"><b>Pronunciación: </b> ${ l.pronunciation }</p>
+  <p><b>Descripción: </b>${ l.description}<br> 
+ </div>`;
+document.body.innerHTML = plantillaHechizos;})
 
-
-
-const caja2= document.getElementById("pociones");
+*/
+/*const caja2= document.getElementById("pociones");
 const contenedorCeldas2=document.createElement("div");
 
 contenedorCeldas2.className="contenedorCeldas2";
@@ -294,14 +428,14 @@ dataPociones.forEach(l =>{
     buttonData.appendChild(button);
     celdas.appendChild(buttonData);*/
 
-    contenedorCeldas2.appendChild(celdas2);  
-}) 
-caja2.appendChild(contenedorCeldas2);
+    //contenedorCeldas2.appendChild(celdas2);  
+//}) 
+//caja2.appendChild(contenedorCeldas2);*/
 
 
 
 
-const caja3= document.getElementById("hechizos");
+/*const caja3= document.getElementById("hechizos");
 const contenedorCeldas3=document.createElement("div");
 
 contenedorCeldas3.className="contenedorCeldas3";
@@ -325,7 +459,7 @@ dataHechizos.forEach(l =>{
     contenedorCeldas3.appendChild(celdas3);  
 }) 
 
-caja3.appendChild(contenedorCeldas3);
+caja3.appendChild(contenedorCeldas3);*/
 
 
 
@@ -391,5 +525,7 @@ caja3.appendChild(contenedorCeldas3);
 
 
 // When the user clicks anywhere outside of the modal, close it
+
+
 
 
