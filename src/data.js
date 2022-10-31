@@ -1,4 +1,6 @@
-export const filterData = (data, condition) => {
+// estas funciones son de ejemplo
+
+export const filterDataByProperty = (data, condition) => {
   const result = [];
 
   data.filter((data) => {
@@ -9,26 +11,44 @@ export const filterData = (data, condition) => {
 
   });
   return result;
+
 };
 
-/**
- * Ordena las peliculas por titulo en orden ascendente(a-z) por defecto
- * @param {array} movies
- * @param {string} order(default asc)
- * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#sorting_array_of_objects}
- * @returns {array}
- */
-export function orderByTitle(movies) {
-  return [...movies].sort((movieLeft, movieRight) => {
+
+export const filterDataByValue = (data, condition, value) => {
+
+  return data.filter(film => film[condition] === value);
+
+};
+
+
+export const filterDataByProperties = (data, properties) => {
+
+  return data.map(data => {
+
+    const obj = new Object();
+
+    properties.forEach(value => { obj[value] = data[value]; });
+
+    return obj;
+  });
+
+};
+
+export const sortDataAZ= (data,sortBy) => {
+  return [...data].sort((itemLeft, itemRight) => {
       // el titulo de la izquierda va primero
-      if (movieLeft.title < movieRight.title) {
+      if (itemLeft[sortBy] < itemRight[sortBy]) {
         return -1;
       }
       // el titulo de la derecha va primero
-      if (movieLeft.title > movieRight.title) {
+      if (itemLeft[sortBy] > itemRight[sortBy]) {
+
         return 1;
       }
       // los titulos son iguales
       return 0;
   });
-}
+
+};
+
