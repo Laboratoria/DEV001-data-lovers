@@ -38,20 +38,46 @@ body {
 buscar pointer */ 
 .menu p {
     margin-right: 2rem;
-   cursor: pointer;
+   cursor: pointer; /*cursor pointer hace que cuando me posicione en el menu, la flecha se convierta en manito */
 }
 
 
 /*Para que aparezca el menú desplegable*/ 
 .menu p:hover {
     background-color: #999494;
+    transition: background-color .3s ease-in-out; /*para que el hover tenga transición */
    
 }
 
 main {
-    background: url(fotosHP/harry3.jpeg)no-repeat;
-    background-size: 100%;
+ /*   background: url(fotosHP/harry3.jpeg)no-repeat; */
+ /*   background-size: 100%; */
+    position: relative;
+
 }
+main::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+
+}
+.maininterno {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.cuerpo {
+    width: 100%;
+    height: 100%;
+
+}
+
 .content {
     margin-top: 2rem;
 
@@ -68,6 +94,16 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+video {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .inicio h1 {
@@ -89,10 +125,12 @@ main {
 }
 
 .barajas {
+    gap: 1rem;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 10px;
+
 }
 
 .tarjeta {
@@ -114,6 +152,14 @@ main {
     object-fit: cover;
     box-shadow: 6px 6px 6px 1px rgb(0 0 0 / 50%);
 }
+.header_tarjeta2 img {
+    width: 70%;
+    display: inline-block;
+    object-fit: cover;
+    box-shadow: 6px 6px 6px 1px rgb(0 0 0 / 50%);
+    padding: 3px;
+}
+
 
 .tarjetabody {
     color: white;
@@ -121,6 +167,7 @@ main {
 }
 
 .personajes {
+    gap: 1rem;
     color: white;
     text-align: center;
     height: 100vh;
@@ -167,11 +214,35 @@ main {
     font-size: 30px;
 }
 
+.barraSort {
+    padding: 5px;
+    margin: 5px;
+}
+.barraHouse {
+    padding: 5px;
+    margin: 5px;
+}
+.barraGender {
+    padding: 5px;
+    margin: 5px;
+}
+
+
 .footer {
+    background-color: black;
+    width: 100%;
+    height: 30px;
+/*ancla la barra en la parte de abajo*/
+    position: fixed; 
+    display: flex;
+    justify-content: center;
+    bottom: 0px;
     color: white;
     font-size: 15px;
     text-align: center;
-    margin: 10px;
+    margin: 0;
+    align-items: center;
+    z-index: 2;
 }
 
 .tarjeta2body {
