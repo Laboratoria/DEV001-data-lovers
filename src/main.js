@@ -12,7 +12,7 @@ let show = function (dataGhibli){
         console.log (film);
         let templatePelicula =`
         <div class="cardPrincipal">
-          <img src="${film.poster}" alt="Castle in the Sky">
+          <img src="${film.poster}" alt="poster">
           ${film.title}
           
         </div>`;
