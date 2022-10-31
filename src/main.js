@@ -160,7 +160,7 @@ const showProducers_Directors = (names)=>{
 
 }
 
-//console.log(filterDataByProperties(gFilms, ["title", "poster"]));
+console.log(filterDataByProperties(gFilms, ["title", "poster"]));
 
 
 /*let d = document.getElementById("directorsMenu"); // Encuentra el elemento "p" en el sitio
