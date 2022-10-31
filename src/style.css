@@ -5,21 +5,20 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: black
+  background-color: var(--black-color);
 }
 
 /* Colores y fuentes utilizados */
 :root {
-  --background-color: black;
-  --navbar-color: black;
-  --cards-section-color: paleturquoise;
-  --footer-color: #96D966;
-  --border-color: black;
-  --button-color: #69D91A;
+  --black-color: black;
+  --grey-color: grey;
+  --light-green-color: #96D966;
+  --effects-green-color: #90BF49;
+  --portal-green-color: #69D91A;
+  --white-font-color: #FFFBFB;
   --white-color: #fff;
   --blue-color: #5791E7;
-  --grey-color: #2D2E2D;
-
+  --border-radius: 8px;
   --font-headings: 'Grandstander', cursive;
   --font-body: 'Nunito', sans-serif;
   ;
@@ -51,7 +50,7 @@ body {
 }
 
 .card-container {
-  background-color: grey;
+  background-color: var(--grey-color);
   height: 170px;
   width: 170px;
 }
@@ -81,7 +80,7 @@ body {
 
 nav {
   grid-area: nav;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 5em;
@@ -107,7 +106,7 @@ nav {
   justify-content: center;
   gap: 20px;
   background-image: url("/src/img/rickandmortypattern.svg");
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   padding: 20px;
   max-width: 1250px;
   min-width: auto;
@@ -124,7 +123,7 @@ nav {
 footer {
   grid-area: footer;
   text-align: center;
-  background-color: var(--footer-color);
+  background-color: var(--light-green-color);
   margin-top: 10px;
   bottom: 0;
   width: 100vw;
@@ -149,9 +148,9 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   padding: 10px;
-  border: 1px solid #000000;
+  border: 1px solid var(--black-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   cursor: pointer;
   transition: all 150ms ease-in-out;
   box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
@@ -161,7 +160,7 @@ footer {
 .card img {
   justify-content: center;
   align-self: center;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
 }
 
 .card p {
@@ -191,27 +190,27 @@ button {
   color: var(--white-color);
   border: #90BF49 solid 4px;
   box-shadow: #D4D955 2px;
-  background-color: var(--background-color);
+  background-color: var(--black-color);
 }
 
 @keyframes hover-button {
   0% {
-    box-shadow: 0px 0px 20px 3px #90BF49;
+    box-shadow: 0px 0px 20px 3px var(--effects-green-color);
     background-color: #262626;
   }
 
   25% {
-    box-shadow: 0px 0px 40px 3px #90BF49;
+    box-shadow: 0px 0px 40px 3px var(--effects-green-color);
     background-color: #595959;
   }
 
   50% {
-    box-shadow: 0px 0px 30px 3px #90BF49;
+    box-shadow: 0px 0px 30px 3px var(--effects-green-color);
     background-color: #262626;
   }
 
   100% {
-    box-shadow: 0px 0px 20px 3px #90BF49;
+    box-shadow: 0px 0px 20px 3px var(--effects-green-color);
     background-color: #0D0D0D;
   }
 }
@@ -252,32 +251,32 @@ span {
 }
 
 .search {
-  background-color: #69D91A;
+  background-color: var(--portal-green-color);
   display: inline-block;
   margin: 5px;
   padding: 10px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   font-size: 25;
   text-align: center;
 }
 
 h2 {
-  color: #FFFBFB;
-  text-shadow: 2px 2px #28711C;
+  color: var(--white-font-color);
+  text-shadow: 2px 2px darkgreen;
   margin-bottom: 20px;
   font-size: 40px;
 }
 
 h3 {
-  color: #FFFBFB;
+  color: var(--white-font-color);
   margin-bottom: 10px;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 2px var(--black-color);
 }
 
 .seccion-botones {
-  background-color: #000000;
-  border-radius: 5px;
+  background-color: var(--black-color);
+  border-radius: var(--border-radius);
   margin: 5px;
   padding: 7px;
   display: inline-flex;
@@ -294,13 +293,13 @@ h3 {
   max-width: max-content;
 }
 .statistics {
-  color: white;
+  color: var(--white-color);
   margin: 2px;
 }
 /* Menu escritorio*/
 #container-mobile {
   margin-top: 10px;
-  color: white;
+  color: var(--white-color);
   justify-content: center;
   text-align: center;
   }
@@ -308,7 +307,7 @@ h3 {
 select {
   margin: 10px 5px;
   font-family: var(--font-headings);
-  border-color: grey;
+  border-color: var(--grey-color);
   position: relative;
   display: inline-block;
   max-width: 260px;
@@ -319,50 +318,129 @@ select {
   display: none;
 }
 
-label {
+.iconoMenu {
    display: none;
 }
 
 optgroup {
   border-radius: 0;
-  background-color: #000000;
+  background-color: var(--black-color);
   width: 100px;
 }
 
 option {
   padding: 5px;
-  border-color: grey;
+  border-color: var(--grey-color);
   width: 100px;
 }
 
 option:hover {
-  background-color: grey;
+  background-color: var(--grey-color);
 }
 
 #container-mobile select {
   font-size: 25px;
-  color: white;
-  background-color: #000000;
-  border: #69D91A solid 2px;
+  color: var(--white-color);
+  background-color: var(--black-color);
+  border: var(--portal-green-color) solid 2px;
   width: 95vw;
   padding: 10px;
   border-radius: 3px;
 }
 
 #container-mobile select:active {
-  border: #000000;
-  background-color: #000000;
+  border: var(--black-color);
+  background-color: var(--black-color);
 }
 
 #container-mobile select:hover {
-  background-color: grey;
+  background-color: var(--grey-color);
   border-radius: 0;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--white-color);
 }
+/* Inicio Sección modal box */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding: 30px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100%; /* Full height */
+  overflow: scroll; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  color: var(--black-color);
+}
+
+/* Modal Content */
+.modal-content {
+  color: var(--black-color);
+  background-color: #fefefe;
+  margin: auto;
+  padding: 50px;
+  width: 30vw;
+  border: 1px solid #888;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-headings);
+  font-size: 20px;
+}
+
+.modal-content h2 {
+  color: var(--portal-green-color);
+  text-shadow: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 35px;
+  background-color: #fefefe;
+}
+.modal-content h3 {
+  font-size: 30px;
+  color: var(--black-color);
+  text-shadow: none;
+  text-align: center;
+}
+
+.modal-content button {
+  height: auto;
+  font-size: 30px;
+}
+.modal-content input[type="radio"] {
+  border: 0px;
+  height: 20px;
+  width: 20px;
+  accent-color: var(--light-green-color);
+}
+
+#cardPersonaje {
+  text-align: center;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  align-self: end;
+  font-size: 28px;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--black-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Fin Sección modal box */
+
 
 /* Inicio interfaz mobile */
 @media (max-width: 700px) {
@@ -370,7 +448,7 @@ a {
     width: 70vw;
   }
 
-  label {
+  .iconoMenu {
     box-sizing: border-box;
     display: inline-block;
   }
@@ -392,10 +470,15 @@ a {
 
   .statisticsbtn,
   .quiz {
-    display: none;
-    border: white solid 2px;
+    display: flex;
+    position: relative;
+    border:  solid 2px;
+    flex-direction: column;
   }
-
+nav {
+  display: flex;
+  flex-direction: column;
+}
   .category,
   .section-title {
     padding: 5px;
@@ -408,12 +491,12 @@ a {
     font-size: 30px;
     border-radius: 0;
     padding: 10px;
-    border: #69D91A solid 3px;
+    border: var(--portal-green-color) solid 3px;
   }
 
   optgroup {
     border-radius: 0;
-    background-color: #000000;
+    background-color: var(--black-color);
   }
 
   option {
@@ -421,30 +504,30 @@ a {
   }
 
   select option:hover {
-    background-color: grey;
+    background-color: var(--grey-color);
   }
 
   #container-mobile select {
     font-size: 25px;
-    color: white;
-    background-color: #000000;
-    border: #69D91A solid 2px;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    border: var(--portal-green-color) solid 2px;
     width: 95vw;
   }
 
   #container-mobile select:active {
-    border: #000000;
-    background-color: #000000;
+    border: var(--black-color);
+    background-color: var(--black-color);
   }
 
   #container-mobile select:hover {
-    background-color: grey;
+    background-color: var(--grey-color);
     border-radius: 0;
   }
 
   a {
     text-decoration: none;
-    color: white;
+    color: var(--white-color);
   }
 
   i {
