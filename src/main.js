@@ -2,6 +2,7 @@ import objetoghibli from './data/ghibli/ghibli.js'; /*libera nuestra data*/
 //console.log(objetoghibli.films[0]);
 //console.log(objetoghibli.films.length);
 
+// eslint-disable-next-line no-console
 console.log(objetoghibli);
 
 //Funcion para mostrar las peliculas
