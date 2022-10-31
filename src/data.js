@@ -55,4 +55,9 @@ export const statisticsFrequency = (originalDataLength, categoryDataLength) => {
 //Buscar
 export const buscar = (data, condition, value) => {
   return data.filter(item => item[condition].toLowerCase().includes(value.toLowerCase()));
+};
+
+// función selección al azar de personaje Quiz
+export function quiz (data){
+  return data [Math.floor(Math.random()*data.length)]
 }
