@@ -22,10 +22,10 @@ export const tarjeta2 = (datos) => {
   let plantilla2 = `
   <article class="tarjeta2">
       <header class="header_tarjeta2">
-       
+        <img src="${datos.img}">
       </header>
       <div class="tarjeta2body">
-        <p class="name">Nombre: ${datos.name} </p>
+        <p class="name">Name: ${datos.name} </p>
         <p class="birth">Birthday: ${datos.birth} </p>
         <p class="species">Species: ${datos.species}</p>
         <p class="gender">Gender: ${datos.gender}</p>
@@ -34,4 +34,25 @@ export const tarjeta2 = (datos) => {
   </article>
    `
   return plantilla2
- }
+}
+
+//Plantilla para nuestra página Funfacts
+// export const tarjeta3 = (datos) => {
+//   //plantillas de llos personajes que se van a mostrar//
+//   //<img src="${datos.img}">
+//   let plantilla3 = `
+//   <article class="tarjeta2">
+//       <header class="header_tarjeta2">
+//         <img src="${datos.img}">
+//       </header>
+//       <div class="tarjeta2body">
+//         <p class="name">Name: ${datos.name} </p>
+//         <p class="birth">Birthday: ${datos.birth} </p>
+//         <p class="species">Species: ${datos.species}</p>
+//         <p class="gender">Gender: ${datos.gender}</p>
+//         <p class="house">House: ${datos.house}</p>
+//       </div>
+//   </article>
+//    `
+//   return plantilla3
+//}

@@ -6,25 +6,40 @@ export const getbooks = (data) => {
 };
 //con esta funcion estamos llamando los personajes desde 1 al 40
 export const getcharacters = (data) => {
-  let dataindividuos = data.characters.slice(1, 46)
+  let dataindividuos = data.characters
   return dataindividuos;
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
-
-//export const filterByHouse = (data, houseName) => {
-//  return data.characters.filter(character => {
-//    character.house == houseName
-//  })
-//}
-
 //función para filtrar que debemos utilizar 
 export const filterByHouse = (data, houseName) => {
-  const arrPersonajesCasas = data.characters.filter(character => character.house == houseName);
+  const arrPersonajesCasas = data.filter(character => character.house == houseName);
   return arrPersonajesCasas
 }
+
+export const filterByGender = (data, genero) => {
+  const arrGender = data.filter(genders => genders.gender == genero);
+  return arrGender
+}
+
+//esta función nos ordena de la A a la Z
+export const sortByNameAz = (data) => {
+  const Az = data.sort(function (Az, Za) {
+  if (Az.name < Za.name) {
+    return -1;
+  }  
+  })
+  return Az;
+}
+
+// export const sortByNameZa = (data) => {
+//   const Za = data.sort(function (Az, Za) {
+//     if (Az.name > Za.name) {
+//       return -1;
+//     }
+//   })
+//   return Za;
+// }
+
 
 
 
