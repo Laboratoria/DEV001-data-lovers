@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Raleway:wght@200;400;600;700;900&display=swap');
+
+
+/*Modal Result Pokemon*/
+
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 5;
+    background: rgba(25, 26, 32, 0.9);
+  }
+  
+  .modal-container {
+    background-color: white;
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    /*border: 5px solid #5b5b5b;*/
+    font-family: "Poppins", sans-serif;
+  }
+
+  .container-features-poke{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-img{
+    width: 10%;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+  }
+  
+  .modal-container .img-modal {
+    width: 25%;
+    position: absolute;
+    right: -15%;
+    bottom: -20px;
+    animation-name: bounce;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .modal-features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .close-button-modal{
+    width: 10%;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    transition: 2s;
+    z-index: 100;
+  }
+  .close-button-modal:hover{
+    cursor: pointer;
+    width: 12%;
+    right: -22px;
+    top: -22px;
+    transition: 2s;
+  }
+
+/*estilos para el primer hijo*/
+  .childrenOne{
+    width: 100%;
+    height: 210px;
+    /*background-color:#fdae01;*/
+    border-radius: 0 0 98% 98% / 100%;
+    margin-bottom: 2rem;
+    box-shadow: 0px 5px 5px rgb(36, 36, 36, 0.5)
+  }
+
+  .container-img-num-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #id-pokemon{
+    position: absolute;
+    left: 3rem;
+    z-index: 100;
+    top:17px;
+  }
+
+  #generation-pokemon{
+    z-index: 100;
+    padding-right: 20px;
+    position: absolute;
+    right: 1.2rem;
+    top:17px;
+    text-transform: uppercase;
+  }
+
+  .background{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: -2%;
+  
+  }
+  
+
+  .generationId{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    color:rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  
+  .modal-container p {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 600;
+    color: rgb(44, 43, 43);
+  }
+  
+  .modal-container h3 {
+    color: #072146;
+    font-size: 1.2rem;
+  }
+  
+  .container-features-poke{
+    border-radius: 30px;
+  }
+  
+  #name-pokemon{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    z-index: 100;
+    text-shadow: 3px 4px 4px rgba(15, 15, 15, 0.5);
+
+  }
+
+  #circleTwo{
+    position:absolute;
+    z-index:2;
+    background-color: rgb(255, 255, 255);
+    width: 145px;
+    height: 145px;
+    border-radius: 100%;
+    top: 90px;
+    box-shadow: 0px 5px 5px rgb(36, 36, 36, 0.5);
+    right: 35%;
+  }
+
+  #img-poke{
+    position: absolute;
+    z-index: 100;
+    width: 140px;
+    right: 35%;
+    top:90px
+    
+  }
+
+  .childrenTwo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4%;
+  }
+
+  .about-pokemon{
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  #fondo{
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top:0
+
+  }

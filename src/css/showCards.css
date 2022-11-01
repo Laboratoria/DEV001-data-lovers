@@ -1,0 +1,281 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.container-cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #F7F8F8;
+  margin-bottom: 50px;
+}
+
+/*imagen que al hacele click te envia hacia arriba*/
+.img-fixed{
+  position: fixed;
+  right: -1100px;
+  bottom: 15px;
+  z-index: 4;
+  max-width: 1200px;
+}
+
+.img-fixed:hover{
+  cursor: pointer;
+}
+
+.img-top{
+  width: 7%;
+}
+
+/* diseño a contenedor sort cards*/
+.sort-cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 60px;
+  background-color: #F7F8F8;
+  box-sizing: border-box;
+  max-width: 1280px;
+  width: 88%;
+}
+
+.container-cards-pokemon-a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  gap: 30px;
+
+}
+
+.container-numbers-pokemons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  gap: 30px;
+
+}
+
+.cuadroPokemon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 200px;
+  height: 220px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  gap: 20px;
+  box-shadow: 10px 5px 5px rgb(182, 182, 182)
+}
+
+.cuadroPokemon:hover{
+  cursor: pointer;
+  background-color: rgb(214, 214, 214);
+}
+
+.type{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.type-span{
+  padding: 8px;
+  /*background-color: rgba(84, 3, 100, 0.26);*/
+  border-radius: 10px;
+  font-weight: 600;
+  color: #ffff;
+  width: 60px;
+  text-align: center;
+
+}
+
+.photoStyle{
+  position:relative;
+  margin-bottom: 28px;
+}
+
+#circle{
+  position:relative;
+  z-index:0;
+  background-color: rgb(216, 216, 216);
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin-top: 10px;
+}
+
+#img{
+  position: absolute;
+  z-index:1;
+  width: 120%;
+}
+
+.introCard{
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+  color: #16133A;
+  font-size: 1.3em;
+  text-transform: capitalize;
+}
+
+.sort-pokemons-by{
+  background-color: #1512A8;
+  border-radius:8px;
+  color: white;
+  padding: 10px 15px;
+  font-weight: 600;
+  border: none;
+  flex-grow: 0.1;
+  font-size: 0.75rem;
+}
+
+.subtitle-pokemon{
+  color: #16133a ;
+  font-weight: 900;
+  font-size: 1.4em;
+  font-size: 22px;
+}
+
+
+.parteSuperior{
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -4%;
+
+}
+
+.container-num-region{
+  display: flex;
+  text-transform: capitalize;
+  font-size: 17px;
+  font-weight: 600;
+  opacity: 0.8;
+  justify-content: space-between;
+  width: 220px;
+}
+
+.subtitle-result{
+  color: #16133a ;
+  font-weight: 600;
+  opacity: 0.8;
+  font-size: 17px;
+}
+
+#pokebola{
+  width: 1em;
+}
+
+
+
+
+/*Media query celular*/
+
+@media screen and (max-device-width: 600px) {
+
+  .sort-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    /*max-width: 580px;*/
+    width: 95%;
+  }
+
+  .father-selects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .sort-pokemons-by{
+    border-radius: 15px;
+    width: 80%;
+    padding: 20px 30px;
+    font-size: 37px;
+    text-align: center;
+  }
+
+  .subtitle-pokemon{
+    font-size: 45px;
+  
+  }
+
+  .subtitle-result{
+    font-size: 30px;
+  }
+
+  .container-cards-pokemon-a{
+    gap: 45px;
+  
+  }
+
+  .cuadroPokemon{
+    padding: 20px;
+    width: 30%;
+    height: 270px;
+    gap: 25px;
+  }
+
+  .type-span{
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 70px;
+  
+  }
+
+  #circle{
+    width: 120px;
+    height: 120px;
+  }
+
+  #img{
+    width: 130%;
+  }
+  
+  .introCard{
+    font-size: 25px;
+    margin-bottom: 1px;
+  }
+  
+  .parteSuperior{
+    width: 300px;
+  
+  }
+
+  .container-num-region{
+    font-size: 22px;
+    width: 300px;
+  }
+
+  /*diseño a boton que lleva hacia arriba*/
+
+  .img-fixed{
+    top: 1400px;
+    margin-right: 40px;
+  }
+  
+  .img-top{
+    width: 10%;
+  }
+  
+}

@@ -1,12 +1,155 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <title>Data Lovers - PokeLab</title>
+    <!-- Reset CSS | Resetea los estilos por defecto del navegador -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <!-- Aquí irá nuestros archivos CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/header-style.css" />
+    <link rel="stylesheet" href="./css/carousel-style.css" />
+    <link rel="stylesheet" href="./css/showCards.css" />
+    <link rel="stylesheet" href="./css/modal.css">
   </head>
   <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <main id="root">
+      <section class="container-header">
+        <nav class="container-nav">
+          <a href="index.html">
+            <img src="./assets/images/pokelab.png" alt="logo-pokelab"
+          /></a>
+        </nav>
+
+
+        <div class="container-title-carousel" id="title">
+          <h2 class="title-carousel">Select the type of Pokemons.<span class="span-title">&#160;</span></h2>
+          <img src="./assets/images/Pokemon10.png" alt="pokebola-title" class="img-title-carousel">
+        </div>
+        
+
+        <section class="container-type-pokemon" id="type-pokemon">
+          <img
+            src="./assets/images/left-icon.png"
+            alt="arrow-left"
+            class="img-carousel"
+            id="img-carousel-left"
+          />
+          <div class="containerTypesPoke" id="containerTypes">
+            <!-- Añadimos con javascript, los tipos de pokemos (nombre, icono y color del contenedor)-->
+          </div>
+          <img
+            src="./assets/images/rigth-icon.png"
+            alt="arrow-rigth"
+            class="img-carousel"
+            id="img-carousel-rigth"
+          />
+        </section>
+        
+        <section class="container-intro-text">
+          <img
+            src="./assets/images/TOGEPI.png"
+            alt="pokemon-togepi"
+            class="img-pokemon-header"
+          />
+          <div class="container-search">
+            <h1 class="title-header">
+              Catch Pokémon
+              <p>Find your buddy!</p>
+            </h1>
+
+            <img
+              src="./assets/images/pikachu.png"
+              alt="search-pikachu"
+              class="search-pikachu"
+            />
+            <input
+              type="text"
+              placeholder="Search your pokémon..."
+              class="input-search-pokemon"
+              id="input-search-name"
+            />
+            <p id="text-error" class="text-error-validator">
+              Enter only letters
+            </p>
+          </div>
+
+          <img
+            src="./assets/images/DRAGONITE.png"
+            alt="pokemon-dragonite"
+            class="img-pokemon-header"
+          />
+        </section>
+      </section>
+
+      <section class="container-cards">
+        <div class="sort-cards">
+
+          <h2 class="subtitle-pokemon">
+            Pokemons <span class="subtitle-result">(251 results)</span>
+          </h2>
+          <a href="#title" class="img-fixed"><img src="./assets/images/arriba.png" alt="pokemon-img-header" class="img-top"></a>
+
+          <div class="father-selects">
+            <select
+              name="sort-by-Num"
+              id="sort-by-Num"
+              class="sort-pokemons-by"
+            >
+              <option disabled selected>Sort pokemons by # Pokedex:</option>
+              <option value="00-MAX">MIN-MAX</option>
+              <option value="MAX-00">MAX-MIN</option>
+            </select>
+            <select
+              name="filter-generation"
+              id="regionName"
+              class="sort-pokemons-by"
+            >
+              <option disabled selected>Filter by region:</option>
+              <option value="all">All Generations</option>
+              <option value="kanto">Kanto</option>
+              <option value="johto">Johto</option>
+            </select>
+            <select
+              name="sort-pokemons-by"
+              id="sort-pokemons-by"
+              class="sort-pokemons-by"
+            >
+              <option disabled selected>Sort pokemons by:</option>
+              <option value="default">Default</option>
+              <option value="a-z">A-Z</option>
+              <option value="z-a">Z-A</option>
+            </select>
+          </div>
+        </div>
+        <div class="container-cards-pokemon-a" id="pokemonsContainer">
+          <section
+            class="container-numbers-pokemons"
+            id="numbers-pokemons"
+          ></section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Contenedor Modal -->
+    <section id="modal" class="modalHide">
+      <div class="modal-container">
+        <img
+            src="./assets/images/Pokemon06.png"
+            class="img-modal"
+            id="img-modal"
+            alt="img-modal"
+          />
+        <section id="modal-container-features" class="modal-features">
+
+        </section>
+        <img id="close" class="close-button-modal" src="./assets/images/cerrar.png"/>
+        <img class="header-img" src="./assets/images/cabeza-2.png"/>
+      </div>
+    </section>
+
+
+    <script src="./main.js" type="module"></script>
+    <!-- <script src="./showCards.js" type="module"></script> -->
   </body>
 </html>

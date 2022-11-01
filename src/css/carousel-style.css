@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Raleway:wght@200;400;600;700;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.container-type-pokemon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 900px;
+  width: 65%; /*ayuda a regular cuantas tarjetas de tipo se verán en el slaider*/
+}
+
+.containerTypesPoke {
+  width: 98%;
+  height: 180px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  overflow-x: auto;
+  gap: 10px;
+}
+
+.containerTypesPoke::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+.CardTypePokemon {
+  min-width: 60px; /*tamaño de la tarjeta*/
+  height: 60px;
+  padding: 15px 15px;
+    /*esto ayuda a dar espacio*/
+  position: relative;
+  left: 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 15px;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+
+.CardTypePokemon .container-img-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 145px;
+  border: 3px solid rgb(249, 249, 249);
+  border-radius: 50%;
+}
+
+.CardTypePokemon .icon-type-pokemon {
+  width: 50%;
+  height: auto;
+}
+
+.CardTypePokemon .name-type-pokemon {
+  font-size: 0.8rem;
+  color: rgb(247, 247, 247);
+  font-weight: 600;
+}
+/*imagenes derecha e izquierda*/
+.img-carousel {
+  width: 30px;
+  height: 30px;
+
+  top: 40%;
+  cursor: pointer;
+
+  z-index: 1;
+}
+
+.img-carousel:hover {
+  cursor: pointer;
+}
+
+/*Media query celular*/
+
+@media screen and (max-device-width: 600px) {
+  .container-type-pokemon {
+    width: 85%; /*ayuda a regular cuantas tarjetas de tipo se verán en el slaider*/
+  }
+
+  .containerTypesPoke {
+    width: 100%;
+    height: 225px;
+    gap: 25.3px;
+  }
+
+  .CardTypePokemon {
+    min-width: 180px; /*tamaño de la tarjeta*/
+    height: 180px;
+    padding: 14px 14px;
+    gap: 18px;
+    border-radius: 35px;
+  }
+
+  .CardTypePokemon .container-img-type {
+    width: 100px;
+    height: 100px;
+    border: 3px solid rgb(249, 249, 249);
+  }
+
+  .CardTypePokemon .icon-type-pokemon {
+    width: 60%;
+  }
+
+  .CardTypePokemon .name-type-pokemon {
+    font-size: 28px;
+  }
+
+  .img-carousel {
+    width: 60px;
+    height: 60px;
+  }
+
+  /*borde de type card*/
+  .borderRed{
+    border-width: 2px;
+    border-color: rgb(59, 59, 59);
+  }
+
+}
