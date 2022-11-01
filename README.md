@@ -22,11 +22,9 @@ En este proyecto usamos 5 hstorias de usuario:
 4- HU  Yo como fan quiero poder filtrar la data para conocer la cantidad de personajes por género.
 5- HU  Yo como fan quiero poder ver los personajes ordenados de forma alfabéticamente, ascendene y descente.
 
-## 3. Pototipo inicial.
-Nuestroprimer prototipo lo diseñamos usando FIGMA.
-
-![Primer prototipo 2022-11-01 154916](https://user-images.githubusercontent.com/113929552/199314441-7da7bb71-8e42-4dbd-a0d5-4d8e0c86a2dd.png)
-![prototipo inicial-2 2022-11-01 155029](https://user-images.githubusercontent.com/113929552/199314480-7d5e3ade-f11c-4132-8f69-d226770ad090.png)
+## 3. Pototipo de baja fidelidad.
+Nuestro primer prototipo lo diseñamos usando una hoja de papel y lapiz, esta fue nuestra idea inicial de lo que queriamos crear. 
+![prototipo de baja](https://user-images.githubusercontent.com/113929552/199323563-42721f71-35e0-4007-9d86-222d3f0e769e.jpeg)
 
 ## 4.Protoripo de alta fidelidad.
 Este fue realizado en FIGMA haciendo 4 diseños principales.
