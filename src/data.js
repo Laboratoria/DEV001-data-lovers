@@ -15,7 +15,7 @@ export const filterByHouse = (data, houseName) => {
   const arrPersonajesCasas = data.filter(character => character.house == houseName);
   return arrPersonajesCasas
 }
-
+//función para filtrar qpor genero
 export const filterByGender = (data, genero) => {
   const arrGender = data.filter(genders => genders.gender == genero);
   return arrGender
@@ -26,19 +26,20 @@ export const sortByNameAz = (data) => {
   const Az = data.sort(function (Az, Za) {
   if (Az.name < Za.name) {
     return -1;
-  }  
+  }
   })
   return Az;
 }
+export const sortByNameZa = (data) => {
+  const Za = data.sort(function (Az, Za) {
+    if (Az.name < Za.name) {
+      return -1;
+    }
+  })
+  return Za.reverse();
+}
 
-// export const sortByNameZa = (data) => {
-//   const Za = data.sort(function (Az, Za) {
-//     if (Az.name > Za.name) {
-//       return -1;
-//     }
-//   })
-//   return Za;
-// }
+
 
 
 

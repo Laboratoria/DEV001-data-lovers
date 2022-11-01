@@ -1,6 +1,6 @@
 //import { example } from './data.js';
 import data from './data/harrypotter/data.js';
-import { getbooks, getcharacters, filterByHouse, filterByGender, sortByNameAz   } from "./data.js"
+import { getbooks, getcharacters, filterByHouse, filterByGender, sortByNameAz,sortByNameZa  } from "./data.js"
 //aqui importamos la tarjeta desde el archivo que creamos nosotras plantilla.js
 import { tarjeta, tarjeta2 } from './plantilla.js'
 
@@ -63,27 +63,27 @@ let generofiltros = document.querySelector(".personajes")
    })
 })
 
-//con este let mostramos los personajes ordenados de la A a la Z
-let select3 = document.getElementById("selectordenar")
-   select3.addEventListener("change", (e) => {
-      let arregloascendente = sortByNameAz(data.characters, e.target.value)
-      
-let nombresascendentes = document.querySelector(".personajes")
+   //con este let mostramos los personajes ordenados de la A a la Z
+let select3 = document.getElementById("selectordenar");
+select3.addEventListener("change", (e) => {
+   //console.log(e.target.value)//
+   if (e.target.value == "za") {
+      let arreglodescendente = sortByNameZa (data.characters, e.target.value);
+      let nombresdescendentes = document.querySelector(".personajes")
+      nombresdescendentes.innerHTML = ""
+      arreglodescendente.forEach(personajes => {
+         capturetarjeta2.insertAdjacentHTML("beforeend", tarjeta2(personajes));
+      })
+
+      //con este let mostramos los personajes ordenados de la Z a la A
+   } else {
+      let arregloascendente = sortByNameAz(data.characters, e.target.value);
+      let nombresascendentes = document.querySelector(".personajes")
       nombresascendentes.innerHTML = ""
       arregloascendente.forEach(personajes => {
          capturetarjeta2.insertAdjacentHTML("beforeend", tarjeta2(personajes));
       })
-   })
+   }
+})
 
 
-// con este let mostramos las cartillas de funfact
-// let select4 = document.getElementById("selectordenar")
-// select4.addEventListener("change", (e) => {
-//    let arreglodescendente = sortByNameZa(data.characters, e.target.value)
-
-//    let nombresdescendentes = document.querySelector(".personajes")
-//    nombresdescendentes.innerHTML = ""
-//    arreglodescendente.forEach(personajes => {
-//       capturetarjeta2.insertAdjacentHTML("beforeend", tarjeta2(personajes));
-//    })
-// })
