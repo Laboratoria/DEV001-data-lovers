@@ -37,8 +37,9 @@ Este fue realizado en FIGMA haciendo 4 diseños principales.
 
 
 ## 5 Testeos de usabilidad.
-
 Se realizaron testeo del producto con un 100% de aceptacion, esto para estar seguras de que el usuario no iba a tener problemasal entrar a nuestra web.
+![fototest](https://user-images.githubusercontent.com/113929552/199324847-9dd9b3d9-9dfa-4de6-943e-89827067155e.png)
+
 
 ## 6 Trello.
 Se realizo en trello un esquema de trabajo que nos permitio trabajar de una manera mas ordenada en la metodologia., en este esquema se desarrollo las historias de usuario y la manera como ibamos a trabajar como equipo. 
