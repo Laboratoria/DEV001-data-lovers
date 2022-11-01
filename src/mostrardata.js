@@ -4,10 +4,10 @@ export let llamarData = (data2) =>{
   data2.forEach(l =>{
       
     let dataHarry = `
-    <div class= "celdas">
+    <div class= "${l.id} celdas">
     <img id="img" src=${l.portada}>
     <h1 class= "h1Celdas">${l.title}</h1>
-    <button class="button"  value="ver Mas" onclick=${this.abrir()} >ver más</button>
+
     </div>`
       
   contenedor.insertAdjacentHTML("beforeend", dataHarry);
@@ -16,8 +16,9 @@ export let llamarData = (data2) =>{
 }
 
 
-const contenedor1=document.getElementById("myModal");
+const contenedor1=document.getElementById("libros1");
 export const llamarModal=(modal)=>{
+
 
     let dataModal = `<div class= "contenedorCeldas1">
     <div class= "celdas1">
@@ -31,6 +32,11 @@ export const llamarModal=(modal)=>{
     
     </div>`
     contenedor1.insertAdjacentHTML("beforeend", dataModal)
+
+  }
   
-}
+
+
+
+
 

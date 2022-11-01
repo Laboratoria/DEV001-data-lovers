@@ -50,24 +50,31 @@
       </section>
 
       <section class="Libros" id="Data_libros">
-        <h1 class="h1Seccion">libros</h1>
-        <button id="ordenar" class="ordenar">Ordenar</button>
-        <p id="pnuevoslibros"></p>
+        <h1 class="h1Seccion">LIBROS</h1>
+        <select name="select" id="select">
+          <option value="filtrar" selected disabled >Filtrar</option>
+          <option value="all">Sin filtrar</option>
+          <option value="ordenarAZ">Ordenar A-Z</option>
+          <option value="ordenarZA">Ordenar Z-A</option>
+          <option value="recienteAntiguo">Ordenar Reciente-Antiguo</option>
+          <option value="antiguoReciente">Ordenar Antiguo-Reciente</option>
+          
+          
+        </select>
+        
+
         <div id="libros">
         </div>
-        <div id="botonprueba">
-          <!--<button  id="myBtn">Ver más</button>-->
-          <!-- The Modal -->
-          <div id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <div id="libros1"></div>
-            </div>
-          </div>
-        </div>
-        <div id="libros1"></div>
+        
       </section>
+
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div id="libros1"></div>
+        </div>
+      </div>
 
       <section class="Personajes" id="Personajes">
         <h1 class="h1Seccion">Personajes</h1>
