@@ -2,164 +2,50 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje generales](#3-objetivos-de-aprendizaje-generales)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hito Opcional](#6-hito-opcional)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Objetivos de aprendizaje](#8-objetivos-de-aprendizaje)
-* [9. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [10. Para considerar Project Feedback](#9-para-considerar-project-feedback)
-
+* [1. Proyecto Harry Potter
+* [2. Historias de usuario.
+* [3. Prototipo iniciales 
+* [4. Prototipo de alta fidelidad (FIGMA).
+* [5. Testeos de usabilidad.
+* [6. Trello.
 ***
 
-## 1. Preámbulo
+## 1. Proyecto Harry Potter.
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+Se diseño una pagina para los fanaticos de Harry Potter, donde podemos apreciar  breves imagenes y video de la popular saga, luego de esto podemos apreciar un MENU con varias opciones que nos llevaran a recorrer un poco este maravilloso mundo, en este encontraras sus libros y todos los personajes con algunas descripciones de ellos mismos, ademas de esto puedes ordenar de la A-Z y de Z-A todos los personajes y filtarlos por sus respectivas casas y genero. Se reliazo un diseño resposivo para que los fanaticos de Harry puedan verlo desde sus dispositivos moviles.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+## 2. Historias de usuario.
+En este proyecto usamos 5 hstorias de usuario:
+1- HU  Yo como fan de Harry Potter quiero poder ver un listado de todos libros publicados hasta el año 2022.
+2- HU  Yo como fan quiero ver el listado de personajes principales.
+3- HU  Yo como fan quiero poder filtrar la data para conocer la cantidad de personajes por casa.
+4- HU  Yo como fan quiero poder filtrar la data para conocer la cantidad de personajes por género.
+5- HU  Yo como fan quiero poder ver los personajes ordenados de forma alfabéticamente, ascendene y descente.
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario
-al lado derecho.
+## 3. Pototipo inicial.
+Nuestroprimer prototipo lo diseñamos usando FIGMA.
 
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+![Primer prototipo 2022-11-01 154916](https://user-images.githubusercontent.com/113929552/199314441-7da7bb71-8e42-4dbd-a0d5-4d8e0c86a2dd.png)
+![prototipo inicial-2 2022-11-01 155029](https://user-images.githubusercontent.com/113929552/199314480-7d5e3ade-f11c-4132-8f69-d226770ad090.png)
 
-## 2. Resumen del proyecto
+## 4.Protoripo de alta fidelidad.
+Este fue realizado en FIGMA haciendo 4 diseños principales.
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+![prototipo final  ](https://user-images.githubusercontent.com/113929552/199317087-09483df7-d477-4d44-8324-bde91e54e254.png)
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
+![prototipo libros ](https://user-images.githubusercontent.com/113929552/199317290-4629e8a5-0e83-4813-9fc6-42a316b1cbe7.png)
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
-
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
-
-Estos son datos que te proponemos:
-
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
-
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
-
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
-
-* [Juegos Olímpicos de Río de Janeiro](src/data/athletes/athletes.json).
-  Este set nos proporciona la lista de los atletas que ganaron medallas en las
-  olímpiadas de Río de Janeiro.
-  - [Investigación con interesados en juegos olímpicos de Río de Janeiro](src/data/athletes/README.md)
-
-* [Studio Ghibli](src/data/ghibli/ghibli.json).
-  En este set encontrarás una lista de las animaciones y sus personajes del
-  [Studio Ghibli](https://ghiblicollection.com/).
-  - [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md)
-
-* [Harry Potter](src/data/harrypotter/harry.json).
-  En este set encontrarás una lista de los personajes,libros pociones
-  y hechizos de toda la saga de
-  [Harry Potter](https://harrypotter.fandom.com).
-  - [Investigación con seguidoras de Harry Potter](src/data/harrypotter/README.md)
-
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
+![prototipo - 2 ](https://user-images.githubusercontent.com/113929552/199317320-c6d5068b-f201-4d0a-bf07-fef0005ac1ca.png)
 
 
-## 3. Objetivos de aprendizaje generales
+## 5 Testeos de usabilidad.
 
-Como continuación del Proyecto 1, volverás a trabajar sobre fundamentos de JavaScript, objetos y arreglos, manipulación básica del DOM, fundamentos de HTML y CSS.
+Se realizaron testeo del producto con un 100% de aceptacion, esto para estar seguras de que el usuario no iba a tener problemasal entrar a nuestra web.
 
-Mientras desarrollas este proyecto, te familiarizarás con estos nuevos conceptos:
+## 6 Trello.
+Se realizo en trello un esquema de trabajo que nos permitio trabajar de una manera mas ordenada en la metodologia., en este esquema se desarrollo las historias de usuario y la manera como ibamos a trabajar como equipo. 
 
-- Como trabajar con un juego de data y diseñar una interfaz para visualizar y manipular esta data.
-- Uso de Flexbox en CSS para lograr hacer una página web responsiva. 
-- Arreglos y sus métodos para manipularlos (`filter`, `sort`, `reduce`).
-- Como escribir HTML y manipular el DOM de una manera dinámica desde JavaScript.
-
-## 4. Consideraciones generales
-
-* Este proyecto se debe resolver en duplas.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-* Tiempo para completarlo: Toma como referencia 4 semanas.
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-Los criterios para considerar que has completado este proyecto son:
-
-### Definición del producto
-
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
-
-### Historias de usuario
-
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
-
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
-
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
-
-#### [Ejemplo de Historia de usuario]
-
-Yo como usuario [visitante del sitio] quiero poder VER todos lxs personajes/películas/deportistas para familiarizarme.
-
-**Criterios de Aceptación. Edita/agrega de acuerdo a tu implementación exactamente:**
-
->* La UI es responsive (teléfonos y PC).
->* Todos los personajes/películas/deportistas aparecen en una misma vista, en forma
->de grilla (cuadrícula) sin ningún orden en particular.
->* La vista no tiene paginación, se hace scroll desde el primer elemento hasta el último.
->* Cada cuadrícula contiene:
->
->>* Nombre de personaje/película/deportista.
->>* [XXX]
->>
->* Al hacer _click/tap_ en cada cuadrícula sucede [XXX].
->
->* La UI es exactamente igual al prototipo de alta fidelidad (colores, tamaños de bloques,tipo de letra, tamaño de letra, imágenes, etc. )
-
-**Definición de Terminado. Edita/agrega de acuerdo a tu implementación exactamente**
-
->* Todo el código está en la rama principal/main del repositorio.
->
->* La página está publicada en Github Pages y es accesible mediante un enlace/link/liga.
->* Cada estudiante del equipo ha hecho _code review_ del código escrito por la(s) otra persona(s).
->* Se hacen pruebas de usabilidad con al menos 2 usuarias y se incorporan las mejoras identificadas en la versión.
+![trello](https://user-images.githubusercontent.com/113929552/199321186-12ea578a-ac9d-4b4b-b511-68d18f39587f.jpeg)
 
 
 ### Diseño de la Interfaz de Usuario
