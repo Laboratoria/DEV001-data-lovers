@@ -7,8 +7,8 @@ console.log(objetoghibli);
 
 //Funcion para mostrar las peliculas
 let show = function (dataGhibli){ 
-  let newHtml=""
-    dataGhibli.films.forEach(function(film){
+  let newHtml= ""
+    dataGhibli.forEach(function(film){
         console.log (film);
         let templatePelicula =`
         <div class="cardPrincipal">
@@ -21,4 +21,4 @@ let show = function (dataGhibli){
     document.getElementById("root").innerHTML = newHtml;
 }
 
-show(objetoghibli);
+show(objetoghibli.films);
