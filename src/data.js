@@ -60,4 +60,4 @@ export const buscar = (data, condition, value) => {
 // función selección al azar de personaje Quiz
 export function quiz (data){
   return data [Math.floor(Math.random()*data.length)]
-}
+};
