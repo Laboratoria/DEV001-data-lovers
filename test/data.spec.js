@@ -1,4 +1,6 @@
+
 import { filterByHouse, filterByGender, getbooks, getcharacters,sortByNameAz,sortByNameZa } from '../src/data.js';
+
 
 //primer test para saber si la funciona general (filtro de casas) funciona
 describe('Estos personajes pertenecen a una casa', () => {
@@ -36,6 +38,7 @@ describe('Estos personajes pertenecen a una casa', () => {
 
 });
 
+//test para saber si la funciona filtro de género funciona
 describe('Estos personajes pertenecen a una género', () => {
   it('is a function', () => {
     expect(typeof filterByGender).toBe('function');
@@ -45,17 +48,17 @@ describe('Estos personajes pertenecen a una género', () => {
   it('devuelve un objeto de un género determinado', () => {
 
     const arrayMale = [{
-        "name": "Hermione Granger's father",
-        "gender": "Male",
-      },
-      {
-        "name": "Rubeus Hagrid",
-        "gender": "Male",
-      },
-      {
-        "name": "Draco Malfoy",
-        "gender": "Male",
-      }]
+      "name": "Hermione Granger's father",
+      "gender": "Male",
+    },
+    {
+      "name": "Rubeus Hagrid",
+      "gender": "Male",
+    },
+    {
+      "name": "Draco Malfoy",
+      "gender": "Male",
+    }]
 
     //con esta funcion recorre todo desde el array, luego el objeto y finalmente el elemento
     expect(filterByGender(arrayMale, "Male")).toEqual(
@@ -66,11 +69,9 @@ describe('Estos personajes pertenecen a una género', () => {
       ])
     );
   });
-
-  //it ...
-
 })
-  
+
+//test para saber si se obtiene la data de los libros
 describe('Estos books pertenecen a una data', () => {
   it('is a function', () => {
     expect(typeof getbooks).toBe('function');
@@ -96,11 +97,12 @@ describe('Estos books pertenecen a una data', () => {
 
     //con esta funcion recorre todo desde el array
     expect(getbooks(arrayBooks, "books")).toEqual(
-      
+
     );
   });
 })
 
+//test para saber se se obtiene la data de los personajes
 describe('Estos personajes pertenecen a la data', () => {
   it('is a function', () => {
     expect(typeof getcharacters).toBe('function');
@@ -119,24 +121,26 @@ describe('Estos personajes pertenecen a la data', () => {
           "id": 2,
           "name": "Ronald Weasley",
         }],
-      
+
       books: [
         {
           "id": 1,
           "title": "Harry Potter and the Sorcerer's Stone",
         }]
-      }];
+    }];
 
     //con esta funcion recorre todo desde el array
-      expect(getcharacters(arrayCharacters, "characters")).toEqual(
+    expect(getcharacters(arrayCharacters, "characters")).toEqual(
 
     );
   });
 })
 
+
 //funcion para ordenar de ls A-Z
 
 describe('Ordenar de la A_Z', () => {
+
   it('is a function', () => {
     expect(typeof sortByNameAz).toBe('function');
   });
@@ -175,3 +179,4 @@ describe('Ordenar de la A_Z', () => {
 
 
 //'Ordenar de la Z_A'
+

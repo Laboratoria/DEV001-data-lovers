@@ -10,12 +10,13 @@ export const getcharacters = (data) => {
   return dataindividuos;
 };
 
-//función para filtrar que debemos utilizar 
+//función para filtrar la casa que debemos utilizar 
 export const filterByHouse = (data, houseName) => {
   const arrPersonajesCasas = data.filter(character => character.house == houseName);
   return arrPersonajesCasas
 }
-//función para filtrar qpor genero
+
+//función para filtrar por genero
 export const filterByGender = (data, genero) => {
   const arrGender = data.filter(genders => genders.gender == genero);
   return arrGender
@@ -38,6 +39,7 @@ export const sortByNameZa = (data) => {
   })
   return Za.reverse();
 }
+
 
 
 
