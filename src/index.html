@@ -1,12 +1,186 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Lovers</title>
+  <script src="https://kit.fontawesome.com/da6daf1276.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="/src/img/favicon/favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!--Inicio menu-->
+  <div id="container-mobile">
+    <input type="checkbox" id="inMenu">
+    <label class="iconoMenu" for="inMenu"><i class="fa-solid fa-bars"></i></label>
+
+    <select name="Gender" id="filterGender">
+      <optgroup label="Genders">
+        <option value="all">All Genders</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Genderless">Genderless</option>
+        <option value="unknown">Unknown</option>
+      </optgroup>
+    </select>
+    <select name="Status" id="filterStatus">
+      <optgroup label="Status">
+        <option value="all">All Status</option>
+        <option value="Alive">Alive</option>
+        <option value="Dead">Dead</option>
+        <option value="unknown">Unknown</option>
+      </optgroup>
+    </select>
+    <select name="Species" id="filterSpecies">
+      <optgroup label="Species">
+        <option value="all">All Species</option>
+        <option value="Human">Human</option>
+        <option value="Alien">Alien</option>
+        <option value="Mytholog">Mytholog</option>
+        <option value="unknown">Unknown</option>
+        <option value="Robot">Robot</option>
+        <option value="Poopybutthole">Poopybutthole</option>
+        <option value="Parasite">Parasite</option>
+        <option value="Animal">Animal</option>
+        <option value="Disease">Disease</option>
+        <option value="Humanoid">Humanoid</option>
+        <option value="Cronenberg">Cronenberg</option>
+        <option value="Vampire">Vampire</option>
+      </optgroup>
+    </select>
+    <button id="clear-button">Clear Filter</button>
+  </div>
+
+  <div class="container">
+    <nav>
+      <div class="statisticsbtn">
+        <div class="statistics-button">
+          <a href="index2.html"><button>Statistics</button></a>
+        </div>
+      </div>
+      <div class="logo">
+        <a href="index.html">
+          <img src="./img/rickandmorty.png" alt="Logo Rick and Morty " id="home"></a>
+      </div>
+      <div class="quiz">
+        <!--Inicio Modal-->
+        <button id="myBtn">Quiz</button>
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Quiz</h2>
+            <h3> Which Rick and Morty character are you?</h3>
+            <div id="checkedornot">
+              <h4>Choose Gender</h4>
+
+              <input type="radio" id="genderFemale" name="quizGender" value="Female">
+              <label for="genderFemale"> Female</label> <br>
+              <input type="radio" id="genderMale" name="quizGender" value="Male">
+              <label for="genderMale">Male</label> <br>
+              <input type="radio" id="genderLess" name="quizGender" value="Genderless">
+              <label for="genderLess"> Genderless</label> <br>
+              <input type="radio" id="genderUnknown" name="quizGender" value="unknown">
+              <label for="genderUnknown"> Unknown</label> <br>
+            </div>
+            <br>
+            <div id="checkedornot2">
+              <h4>Choose Status</h4>
+              <input type="radio" id="StatusAlive" name="quizStatus" value="Alive">
+              <label for="StatusAlive">Alive</label> <br>
+              <input type="radio" id="StatusDead" name="quizStatus" value="Dead">
+              <label for="StatusDead">Dead</label> <br>
+              <input type="radio" id="StatusUnknown" name="quizStatus" value="unknown">
+              <label for="StatusUnknown">Unknown</label> <br>
+            </div>
+            <br>
+            <div id="checkedornot3">
+              <h4>Choose Food</h4>
+              <input type="radio" name="quizfood" id="pizza">
+              <label for="pizza">Pizza</label> <br>
+              <input type="radio" name="quizfood" id="iceCream">
+              <label for="iceCream">Ice Cream</label> <br>
+              <input type="radio" name="quizfood" id="burgers">
+              <label for="burgers">Burgers and fries</label> <br>
+              <input type="radio" name="quizfood" id="chocolate">
+              <label for="chocolate">Chocolate</label> <br>
+              <br>
+              <h4>Choose Drink</h4>
+              <input type="radio" name="quizdrink" id="beer">
+              <label for="beer">Beer</label> <br>
+              <input type="radio" name="quizdrink" id="whiskey">
+              <label for="whiskey">Whiskey</label> <br>
+              <input type="radio" name="quizdrink" id="gin">
+              <label for="gin">Gin</label> <br>
+              <input type="radio" name="quizdrink" id="vodka">
+              <label for="vodka">Vodka</label> <br>
+              <button id="random-function">Send your answers</button>
+            </div>
+            <div id="cardPersonaje"></div>
+          </div>
+        </div>
+        <!--Fin Modal-->
+      </div>
+    </nav>
+    <!--Fin menu-->
+
+
+    <!--Inicio menú categorías, search y sort-->
+    <div class="category" id="category">
+
+      <div class="section-title">
+        <h2>CHARACTERS</h2>
+        <div class="statistics" id="statistics"> </div>
+
+        <div class="seccion-botones">
+          <div class="search">
+            <h3>Search</h3>
+            <input id="buscar" type="text" placeholder="Search your character!">
+          </div>
+
+          <div class="filter-data">
+            <h3>Order the characters</h3>
+            <section>
+              <select name="ordenar" id="sort">
+                <option value="title">Order by</option>
+                <option value="name">Name A-Z</option>
+                <option value="nameZ">Name Z-A</option>
+
+              </select>
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fin menú categorías, search y sort-->
+    <!--Inicio sección cards de personajes-->
+
+
+
+    <div class="cards" id="cards">
+      <div class="card-1">
+      </div>
+    </div>
+
+
+
+    <!--Fin sección cards de personajes-->
+    <!--Inicio footer-->
+    <footer>
+      <div class="credits">Made with &#x1F499 by <span>Gabriela Villarreal</span> and <span>Pilar Muñoz</span> for
+        #DEV001 Laboratoria
+        <p id="schwifty">You gotta get schwifty!</p>
+      </div>
+    </footer>
+    <!--Fin footer-->
+  </div>
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
