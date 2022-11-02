@@ -1,29 +1,89 @@
+*{
+    margin:0;
+    padding: 0;
+}
 body {
     background: url(./fondo1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed
 }
-
+.logo { 
+    background-color: aliceblue;
+    width: 100%;
+    margin:auto;
+    position: fixed;
+    height: 25%;
+    padding: 2%;
+}
 #cont-card {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color: rgba(166, 74, 16, 0.68);
+    margin-top: 0%;
+    overflow: auto;
+    padding: 2%;
+}
+#card {
+    background-color: #eee;
+    border-radius: 20px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+    width:70%;
+    height: auto;
+    justify-content: space-evenly;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+#card:hover{
+    background-color: bisque;
+   }
+.solucion{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-grow: 1;
+    width: 80%;
+    height: auto;
     justify-content: center;
-    padding: 10%;
+    padding: 1%;
+    background-color: aqua;
+    margin-top: 300px;
    }
-   
-   #card{
-       background-color: #eee;
-       border-radius: 20px;
-       box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-       margin: 10px;
-       padding: 20px;
-       text-align: center;
-       width: 200px;
+   footer{
+    background-color: black;
+    color: #fff;
+    padding: 2% 2% 2% 2%;
+    width: 100%;
+    text-align: center;
    }
-   
-    #card.img-container {
-       background-color: rgba(255, 255, 255, 0.6);
+
+
+   /*PARA LOS BOTONES:
+   Podemos usar:
+   .id.active{
+    background-color: #fff; esto lo que hace es que la dar clic cambia de color
+    https://www.youtube.com/watch?v=yc1bCB689bE&list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR&index=9
+   }
+/*
+   .container{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+   }
+   #root {
+    word-wrap: break-word;
+    background: yellow;
+   }*/
+/*
+    #card.img {
+       background-color: #000;
        border-radius: 50%;
        width: 120px;
        height: 120px;

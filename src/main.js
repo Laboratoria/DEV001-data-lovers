@@ -9,13 +9,11 @@ const infoPokemon = data.pokemon;
 
 infoPokemon.forEach((card) => {
   const pokemonHTML = `
-  <div class="cont.cards" id="container">
-  <div class="card" id="card">
-  <img class="img" src=${card.img} </img>
-  </div>
-  <div> 
-  <p><class= "namepokemon">${card.name}</p>
+  <div class="cont.card" id=${card.num}>
+  <div class="card" id="card"><img class="img" src=${card.img} </img><div> 
+  <p><class= "namepokemon">${card.name} </p>
   <p><class= "numpokemon">${card.num}</p>
+
   </div>
   
   </div>
