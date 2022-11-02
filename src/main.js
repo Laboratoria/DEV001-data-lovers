@@ -21,6 +21,7 @@ mostrarModal();
 
 
 
+
 function mostrarModal(){
   const celdas=document.querySelectorAll(".celdas");
   const span = document.getElementsByClassName("close")[0];

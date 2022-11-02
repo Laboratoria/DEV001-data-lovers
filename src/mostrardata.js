@@ -33,8 +33,13 @@ export const llamarModal=(modal)=>{
     </div>`
     contenedor1.insertAdjacentHTML("beforeend", dataModal)
 
-  }
-  
+}
+
+/*
+fetch('https://hp-api.herokuapp.com/api/characters')
+  .then(response => response.json())  // convertir a json
+  .then(data => console.log(data))
+*/ 
 
 
 
