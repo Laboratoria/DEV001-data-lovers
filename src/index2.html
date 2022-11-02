@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -10,8 +10,8 @@
 
 <body>
 
-<!--Inicio menú sección estadísticas-->  
-  <div class="container">
+  <!--Inicio menú sección estadísticas-->
+  <div class="container2">
     <nav>
       <div class="statistics">
         <div class="statistics-button">
@@ -19,38 +19,227 @@
         </div>
       </div>
       <div class="logo">
-        <a href="index.html"><img
-            src="./img/rickandmorty.png"
-            id="home"></a>
+        <a href="index.html"><img src="./img/rickandmorty.png" id="home"></a>
       </div>
       <div class="quiz">
-        <a href="" class="quiz"><button>Quiz</button></a>
+      
+        <div class="quiz">
+          <!--Inicio Modal-->
+          <button id="myBtn">Quiz</button>
+          <div id="myModal" class="modal">
+  
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Quiz</h2>
+              <h3> Which Rick and Morty character are you?</h3>
+              <div id="checkedornot">
+                <h4>Choose Gender</h4>
+  
+                <input type="radio" id="genderFemale" name="quizGender" value="Female">
+                <label for="genderFemale"> Female</label> <br>
+                <input type="radio" id="genderMale" name="quizGender" value="Male">
+                <label for="genderMale">Male</label> <br>
+                <input type="radio" id="genderLess" name="quizGender" value="Genderless">
+                <label for="genderLess"> Genderless</label> <br>
+                <input type="radio" id="genderUnknown" name="quizGender" value="unknown">
+                <label for="genderUnknown"> Unknown</label> <br>
+              </div>
+              <br>
+              <div id="checkedornot2">
+                <h4>Choose Status</h4>
+                <input type="radio" id="StatusAlive" name="quizStatus" value="Alive">
+                <label for="StatusAlive"> Alive</label> <br>
+                <input type="radio" id="StatusDead" name="quizStatus" value="Dead">
+                <label for="StatusDead">Dead</label> <br>
+                <input type="radio" id="StatusUnknown" name="quizStatus" value="unknown">
+                <label for="StatusUnknown"> Unknown</label> <br>
+              </div>
+              <br>
+              <div id="checkedornot3">
+                <h4>Choose Food</h4>
+                <input type="radio" name="quizfood" id="pizza">
+                <label for="pizza"> Pizza</label> <br>
+                <input type="radio" name="quizfood" id="iceCream">
+                <label for="iceCream">Ice Cream</label> <br>
+                <input type="radio" name="quizfood" id="burgers">
+                <label for="brugers"> Burgers and fries</label> <br>
+                <input type="radio" name="quizfood" id="chocolate">
+                <label for="chocolate">Chocolate</label> <br>
+                <br>
+                <h4>Choose Drink</h4>
+                <input type="radio" name="quizdrink" id="beer">
+                <label for="beer"> Beer</label> <br>
+                <input type="radio" name="quizdrink" id="whiskey">
+                <label for="whiskey">Whiskey</label> <br>
+                <input type="radio" name="quizdrink" id="gin">
+                <label for="gin"> Gin </label> <br>
+                <input type="radio" name="quizdrink" id="vodka">
+                <label for="vodka"> Vodka </label> <br>
+                <button id="random-function">Send your answers</button>
+              </div>
+              <div id="cardPersonaje"></div>
+            </div>
+          </div>
+          <!--Fin Modal-->
+        </div>
       </div>
     </nav>
-<!--Fin menú sección estadísticas--> 
-            
-<!--Inicio categoría de estadísticas-->
-    <div class="category">
-        
-    <div class="section-title">
-     <h2>STATISTICS</h2>
-     
-      <div class="seccion-botones">
-  
-        <button>Gender</button>
-        <button>Species</button>
-        <button>Status</button>
-      </div>
+    
+    <!--Inicio categoría de estadísticas-->
+     <div class="section-title2">
+      <h2>STATISTICS</h2>
     </div>
-    </div>
-<!--Fin categoría de estadísticas-->
   </div>
-<!--Inicio footer-->
+  <div class="contenedorGrafico">
+  <div class="grafico">
+    <h3> % Characters by gender</h3>
+    <canvas id="myChart"></canvas>
+  </div>
+  <div class="grafico">
+    <h3> % Characters by status</h3>
+    <canvas id="myChart2"></canvas>
+  </div>
+</div>
+
+  <!--Fin categoría de estadísticas-->
+  </div>
+  <!--Inicio footer-->
   <footer>
-    <div class="credits">Made with &#x1F499 by <span>Gabriela Villarreal</span> and <span>Pilar Muñoz</span> for #DEV001 Laboratoria
-     <p id="schwifty">You gotta get schwifty!</p>
+    <div class="credits">Made with &#x1F499 by <span>Gabriela Villarreal</span> and <span>Pilar Muñoz</span> for #DEV001
+      Laboratoria
+      <p id="schwifty">You gotta get schwifty!</p>
     </div>
   </footer>
-<!--Fin footer-->
+  <!--Fin footer-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js" integrity="sha512-Tfw6etYMUhL4RTki37niav99C6OHwMDB2iBT5S5piyHO+ltK2YX8Hjy9TXxhE1Gm/TmAV0uaykSpnHKFIAif/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
+  <script>
+    Chart.register(ChartDataLabels);
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Female', 'Male', 'Genderless', 'Unknown'],
+        datasets: [{
+          label: '% Characters by gender',
+          data: [15, 75, 1, 9],
+          backgroundColor: [
+            '#69D91A',
+            '#5791E7',
+            '#fee504', 
+            '#f20fb5',
+            
+          ],
+          borderColor: [
+            '#69D91A',
+            '#5791E7',
+            '#fee504',
+            '#f20fb5',
+            
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        layout: {
+          padding: 10
+        },
+        plugins: {
+          legend: {
+          labels: {
+            color: '#FFFBFB'
+          }
+        },
+          labels: [
+            {
+              render: 'label',
+              position: 'outside',
+              fontStyle: 'bolder',
+              fontColor: '#FFFBFB',
+            },
+            {
+              fontColor: '#000000',
+              fontStyle: 'bolder',
+            }
+            ],
+            datalabels: {
+              color: '#000000',
+              render: 'percentage',
+              formatter: (value, ctx) => { return value + '% ' ;
+                 } ,
+              fontStyle: 'bolder',
+              display: false
+            }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+      
+    //Gráfico Status
+    const ctx2 = document.getElementById('myChart2').getContext('2d');
+    const myChart2 = new Chart(ctx2, {
+      type: 'pie',
+      data: {
+        labels: ['Alive', 'Dead', 'Unknown'],
+        datasets: [{
+          label: '% Characters by status',
+          data: [57, 30, 13],
+          backgroundColor: [
+            '#69D91A',
+            '#5791E7',
+            '#fee504', 
+                    
+          ],
+          borderColor: [
+            '#69D91A',
+            '#5791E7',
+            '#fee504',
+                     
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        layout: {
+          padding: 10
+        },
+        plugins: {
+          legend: {
+          labels: {
+            color: '#FFFBFB'
+          }
+          },
+          labels: [
+            {
+              render: 'label',
+              position: 'outside',
+              fontStyle: 'bolder',
+              fontColor: '#FFFBFB',
+                        
+            },
+            {
+              fontColor: '#000000',
+              fontStyle: 'bolder',
+            }
+            ],
+            datalabels: {
+              color: '#000000',
+              render: 'percentage',
+              formatter: (value, ctx) => { return value + '% ' ;
+                 } ,
+              fontStyle: 'bolder',
+              display: false
+            }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+  </script>
+
+  <script src="main.js" type="module"></script>
 </body>
+
 </html>

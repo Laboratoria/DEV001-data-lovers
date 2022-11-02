@@ -1,5 +1,6 @@
 import rickandmorty from './data/rickandmorty/rickandmorty.js';
 import { filterGender, filterStatus, filterSpecies, statisticsFrequency, ordenAZ, ordenZA, buscar, quiz } from './data.js';
+
 // Data por utilizar Rick and Morty
 let data = rickandmorty.results;
 
@@ -23,19 +24,17 @@ const span = document.getElementsByClassName("close")[0];
 // Usuario hace click y modal se abre
 btn.onclick = function () {
     modal.style.display = "block";
-}
-
+};
 // Usuario hace click en <span> (x), modal se cierra
 span.onclick = function () {
     modal.style.display = "none";
-}
-
+};
 // Usuario hace click fuera del modal, modal se cierra
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
+};
 // Random function en quiz
 const randomButton = document.getElementById("random-function");
 randomButton.addEventListener("click", () => {
@@ -52,35 +51,31 @@ randomButton.addEventListener("click", () => {
             dataRandom = filterGender(data, item.value);
 
         }
-    }
+    };
     // Recorre todos los children de checked2, regresa los filtrados según selección de usuario, retorna valor final de dataRandom   
     for (let item of checked2children) {
         if (item.checked) {
             dataRandom = filterStatus(dataRandom, item.value);
             console.log(dataRandom);
         }
-    }
-    
+    };
     // Ingresa valor de variable dataRandom a la función `quiz` y guarda el valor en la variable dataRandom
     dataRandom = quiz(dataRandom);
-       // Template de card en el quiz, se inserta en el innerHTML en el div con id "mostrarCardQuiz"
-    let cardQuiz = `</div><h3>You're sooo ${dataRandom.name}!</h3><div class="cardQuiz"><img src="${dataRandom.image}"><br><p><strong>Name:</strong> ${dataRandom.name}</p><br><p><strong>Status:</strong> ${dataRandom.status}</p><br><p><strong>Species:</strong> ${dataRandom.species}</p><br><p><strong>Gender:</strong> ${dataRandom.gender}</p><br><p><strong>Origin:</strong> ${dataRandom["origin"].name}</p>`;
+    // Template de card en el quiz, se inserta en el innerHTML en el div con id "mostrarCardQuiz"
+    let cardQuiz = `</div><h3>You're sooo ${dataRandom.name}!</h3><div class="cardQuiz"><img class="imgRandom" src="${dataRandom.image}"><br><p><strong>Name:</strong> ${dataRandom.name}</p><br><p><strong>Status:</strong> ${dataRandom.status}</p><br><p><strong>Species:</strong> ${dataRandom.species}</p><br><p><strong>Gender:</strong> ${dataRandom.gender}</p><br><p><strong>Origin:</strong> ${dataRandom["origin"].name}</p>`;
     mostrarCardQuiz.innerHTML = cardQuiz;
-    
-      
 });
-
 // Oculta información del modal cuando se envían las respuestas ingresadas en el quiz
 randomButton.addEventListener("click", () => {
-        let x = document.getElementById("checkedornot3");
-        let y = document.getElementById("checkedornot");
-        let z = document.getElementById("checkedornot2");
-        if (x.hidden === false && y.hidden === false && z.hidden === false) {
-            x.hidden = true;
-            y.hidden = true;
-            z.hidden = true;
-        }
- });
+    let x = document.getElementById("checkedornot3");
+    let y = document.getElementById("checkedornot");
+    let z = document.getElementById("checkedornot2");
+    if (x.hidden === false && y.hidden === false && z.hidden === false) {
+        x.hidden = true;
+        y.hidden = true;
+        z.hidden = true;
+    }
+});
 // fin modal
 
 // Template de cards personajes en container, muestra las cards en la interfaz e incluye método de ordenar AZ-ZA. Depende de la data ingresada.
@@ -102,7 +97,6 @@ const templateTarjeta = (x) => {
 
     });
 };
-
 // Define función de búsqueda de personajes por nombre. Depende de data ingresada.
 const searchInput = (x) => {
     buscarPersonajes.addEventListener('keyup', () => {
@@ -110,16 +104,12 @@ const searchInput = (x) => {
         containerData.innerHTML = "";
         return templateTarjeta(dataPersonajes);
     });
-}
-
-
+};
 // clear button
 templateTarjeta(data);
-
 clearButton.addEventListener("click", () => {
     return window.location.reload();
-})
-
+});
 
 //funcion filtrado por Gender
 filterOptionGender.addEventListener("click", () => {
@@ -145,16 +135,13 @@ filterOptionGender.addEventListener("click", () => {
             dataFiltrada = templateTarjeta(data);
             templateTarjeta(dataFiltrada);
             break;
-    }
-// Función buscar en input por dataFiltrada
+    };
+    // Función buscar en input por dataFiltrada
     searchInput(dataFiltrada);
-// Agrega mensaje en pantalla con estadísticas de la categoría
+    // Agrega mensaje en pantalla con estadísticas de la categoría
     let options = filterOptionGender.value;
     mostrarStatistics.innerHTML = `Did you know that ${options} represents ${statisticsFrequency(data, dataFiltrada)}% of the ${data.length} characters in the show`;
-
-
 });
-
 
 //funcion filtrado por Species
 filterOptionSpecies.addEventListener("click", () => {
@@ -212,14 +199,14 @@ filterOptionSpecies.addEventListener("click", () => {
             dataFiltrada = templateTarjeta(data);
             templateTarjeta(dataFiltrada);
             break;
-
-    }
-// Función buscar en input por dataFiltrada
+    };
+    // Función buscar en input por dataFiltrada
     searchInput(dataFiltrada);
-// Agrega mensaje en pantalla con estadísticas de la categoría
+    // Agrega mensaje en pantalla con estadísticas de la categoría
     let optionsSpecies = filterOptionSpecies.value;
     mostrarStatistics.innerHTML = `Did you know that ${optionsSpecies} represents ${statisticsFrequency(data, dataFiltrada)}% of the ${data.length} characters in the show`;
 });
+
 //funcion filtrado por Status
 filterOptionStatus.addEventListener("change", () => {
     let dataFiltrada;
@@ -240,60 +227,17 @@ filterOptionStatus.addEventListener("change", () => {
             dataFiltrada = templateTarjeta(data);
             templateTarjeta(dataFiltrada);
             break;
-
     }
-// Función buscar en input por dataFiltrada
+    // Función buscar en input por dataFiltrada
     searchInput(dataFiltrada);
-// Agrega mensaje en pantalla con estadísticas de la categoría
+    // Agrega mensaje en pantalla con estadísticas de la categoría
     let optionsStatus = filterOptionStatus.value;
     mostrarStatistics.innerHTML = `Did you know that ${optionsStatus} represents ${statisticsFrequency(data, dataFiltrada)}% of the ${data.length} characters in the show`;
 });
 
-
-// Sección estadísticas
-// Estadística de proporción de categorías en el total de la data
-const filterFemale = filterGender(data, "Female");
-console.log(filterFemale.length)
-console.log(data.length)
-console.log(statisticsFrequency(data, filterFemale))
-
-
-// const filterMale = filterGender (data, "Male");
-// console.log(filterMale.length);
-// console.log(statisticsFrequency(data, filterMale));
-
-// const filterAlive = filterStatus (data, "Alive");
-// console.log(filterAlive.length)
-// console.log(statisticsFrequency(data, filterAlive));
-
-// const filterDead = filterStatus (data, "Dead");
-// console.log(filterDead.length)
-// console.log(statisticsFrequency(data, filterDead));
-
-// const filterunknown = filterStatus (data, "Unknown");
-// console.log(filterunknown.length)
-// console.log(statisticsFrequency(data, filterunknown));
-
-// Menú-mobile responsivo según orientación del dispositivo
-// const mediaQueryList = window.matchMedia("(orientation: portrait)");
-// const x = window.matchMedia("(max-width:700px)")
-// function mobileScreen(x) {
-//     if (x.matches && containerMobile.style.display === "none") {
-//         return containerMobile.style.display = "block";
-//     } else {
-//         return containerMobile.style.display = "none";
-//     }
-// }
-
-// mobileScreen(x);
-// // Escucha evento 'change' cuando dispositivo mobile cambia a orientación portrait y ejecuta función mobileScreen
-// mediaQueryList.addEventListener('change', mobileScreen);
-
 //buscar
-
 buscarPersonajes.addEventListener('keyup', () => {
     let dataPersonajes = buscar(data, 'name', buscarPersonajes.value);
     containerData.innerHTML = "";
     templateTarjeta(dataPersonajes);
 });
-
