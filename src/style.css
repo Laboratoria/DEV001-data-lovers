@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+.filtrarSpells{
+    display:none;
+}
+
 body{
     background-image: url(img/HP.png);
     background-size: 100% 100%;
@@ -115,7 +119,7 @@ body{
     background-image: url("https://i.pinimg.com/564x/64/17/90/6417901a7b11b41fbe8101481d65528b.jpg");
 }
 
-#deporte {
+#spells{
     background-image: url("https://i.pinimg.com/564x/af/b7/4d/afb74d3cabf110f566460e0b92cae9e1.jpg");
 }
 
@@ -216,36 +220,4 @@ body{
         flex-direction: column;
 
     }
-    
-body{
-    background-image: url("https://allgamersin.com/wp-content/uploads/2020/02/Hogwarts1.jpg");
-    background-repeat:no-repeat;
-    background-size: 100%;
-}
-
-#rectangle{
-    height: 100px;
-    left: 0px;
-    top: -100px;
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.imag{
-    width: 100%;
-    max-width: 150px;
-    display: flex;
-    position: relative;
-    left: -200px;
-}
-
-il{
-    color:aliceblue;
-    position: relative;
-    left: -800px;
-    font-size: 40px;
-}
 }

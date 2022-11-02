@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" ></option>
   <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" ></option>
   <script src="https://kit.fontawesome.com/2fa6b325e3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -31,23 +31,36 @@
     </nav>
   </header>
   <!--Creando botones de acceso-->
+  
   <div class="botones">
     <div id="lista" class="lista">
       <button class="harry boton" type="button" id="peliculas"></button>
       <button class="harry boton" type="button" id="libros"></button>
       <button class="harry boton" type="button" id="personajes"></button>
-      <button class="harry boton" type="button" id="deporte"></button>
+      <button class="harry boton" type="button" id="spells"></button>
     </div>
     <div id="card" class="card">
     </div>
-  </div>
-  <h1>holaqqqq</h1>
+    <select id="filtrarSpells" style="visibility:hidden">
+      <option value="Todos" selected>Todos</option>
+      <option value="Charm">Charm</option>
+      <option value="Jinx">Jinx</option>
+      <option value="Transfiguration">Transfiguration</option>
+      <option value="Curse">Curse</option>
+      <option value="Spell">Spell</option>
+      <option value="Hex">Hex</option>
+      <option value="Healing Spell">Healing Spell</option>
+      <option value="Conjuration">Conjuration</option>
+      <option value="Dark Arts">Dark Arts</option>
+      <option value="Dark Charm">Dark Charm</option>
+      <option value="Vanishment">Vanishment</option>
+    </select>
+    <div id="cardSpells" class="cardSpells">
+    </div>
+  </div>  
+  
+
   <!--Creando filtro para ordenar-->
-  <div class="ordenar">
-    <label><input type="radio" name="date" value="Antiguo"> Mas Antiguo</label>
-    <label><input type="radio" name="date" value="Reciente"> Mas Reciente</label>
-  </div>
-  </div>
   <script type="module" src="./main.js"></script>
   <script type="module" src="./index.js"></script>
 </body>
