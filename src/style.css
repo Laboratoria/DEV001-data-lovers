@@ -1,155 +1,158 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
 }
+
 body {
-    background: url(./fondo1.png);
+    background: url(./imagenes/fondo.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed
 }
-.logo { 
-    background-color: aliceblue;
+
+.encabezadoPadre {
+
+    display: flex;
+    /*background: blue;*/
     width: 100%;
-    margin:auto;
-    position: fixed;
-    height: 25%;
-    padding: 2%;
+    height: auto;
+    flex-wrap: wrap;
 }
+
+/*.cabecera {
+    background: white;
+    display: flex;
+    margin: ;
+    padding: 1em;
+    float: left;
+}*/
+
+#logo {
+    width: 18%;
+    height: auto;
+    position: sticky;
+    align-content: center;
+    display: flex;
+    padding: 1%;
+    margin-left: 5%;
+}
+
+#pikachu {
+    display: flex;
+    width: 15%;
+    height: auto;
+    margin: 0%;
+    padding: 0%;
+}
+
+/*#filtrar{
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    background-color: blue;
+    align-content:flex-end;
+}
+*/
+
+#sloganid {
+    width: 40%;
+    display: block;
+    align-items: center;
+    margin: auto;
+    padding-top: 2%;
+
+
+}
+
 #cont-card {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     height: auto;
-    background-color: rgba(166, 74, 16, 0.68);
     margin-top: 0%;
+    position: relative;
+     /*background-color: rgba(166, 74, 16, 0.9);
     overflow: auto;
     padding: 2%;
+    overflow-y: scroll;*/
 }
+
+    /*#card:hover {
+    background-color:  rgb(247, 249, 252); 
+}*/
+
 #card {
-    background-color: #eee;
     border-radius: 20px;
-    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-    margin: 10px;
+    background-image: url(./imagenes/pokemon-estrellas.png);
+    background-size:cover;
+    box-shadow: 5px 5px 10px #92f1fc;
+    margin: 40px;
     padding: 20px;
     text-align: center;
     flex-wrap: wrap;
-    width:70%;
-    height: auto;
+    width: 70%;
+    height: 80%;
     justify-content: space-evenly;
     text-transform: capitalize;
-    font-family: Arial, Helvetica, sans-serif;   
+    font-family: Arial, Helvetica, sans-serif, bold;
+    font-size: 20px;
+    color: whitesmoke;
+    /*overflow-y: scroll;
+    font-size: 30px;*/
 }
-#card:hover{
-    background-color: bisque;
-   }
-.solucion{
+
+.solucion {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction:row;
     flex-grow: 1;
     width: 80%;
     height: auto;
     justify-content: center;
     padding: 1%;
-    background-color: aqua;
-    margin-top: 300px;
-   }
-   footer{
+    /*background-color: aqua, 0.9;
+    margin-top: 15%;
+    overflow-y: scroll;*/
+}
+/*.detalle {
+    display: flex;
+}*/
+
+/*#circulo {
+    display: flex;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 5px 5px 10px #89d3e6;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+
+}*/
+
+/*.img {
+    width: 150px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}*/
+
+footer {
     background-color: black;
     color: #fff;
     padding: 2% 2% 2% 2%;
+    margin-top: 50px;
     width: 100%;
     text-align: center;
-   }
+}
 
 
-   /*PARA LOS BOTONES:
+/*PARA LOS BOTONES:
    Podemos usar:
    .id.active{
     background-color: #fff; esto lo que hace es que la dar clic cambia de color
     https://www.youtube.com/watch?v=yc1bCB689bE&list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR&index=9
    }
 /*
-   .container{
-    display: inline-flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-   }
-   #root {
-    word-wrap: break-word;
-    background: yellow;
-   }*/
-/*
-    #card.img {
-       background-color: #000;
-       border-radius: 50%;
-       width: 120px;
-       height: 120px;
-       text-align: center;
-       margin: auto;
-    }*/
-/*
-   #card.img-container img {
-       margin-top: 0px;
-       max-width: 100%;
-   }
-   
-   #card.info {
-       margin-top: 20px;
-   }
-   
-   .card.number {
-       background-color: rgba(0, 0, 0, 0.1);
-       border-radius: 10px;
-       font-size: 0.8em;
-       padding: 5px 10px;
-   }
-   
-   .card.name {
-       margin: 15px 0 7px;
-       letter-spacing: 1px;
-   }
-   
-   .modal {
-       position: fixed;
-       top: 0;
-       left: 0;
-       margin: auto;
-       width: 100%;
-       height: 100vh;
-       background: rgba(0, 0, 0, 0.753);
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       cursor: pointer;
-   }
-   */
-
-/*
-.contenedor { /*la clase de todos los elementos
-display: flex;
-flex-wrap: wrap;
-align-content: flex-start;
-}
-*/
-/*#padre {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    height: auto;
-    background-color: rgba(166, 74, 16, 0.68);
-    margin: 300px auto;
-    overflow: auto;
-    padding: 25px;
-    align-items: left;
-}*/
-
-/*
-#card.num {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
- }*/
