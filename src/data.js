@@ -10,12 +10,12 @@ export const getcharacters = (data) => {
   return dataindividuos;
 };
 
-//función para filtrar que debemos utilizar 
+//función para filtrar la casa que debemos utilizar 
 export const filterByHouse = (data, houseName) => {
   const arrPersonajesCasas = data.filter(character => character.house == houseName);
   return arrPersonajesCasas
 }
-
+//función para filtrar por género
 export const filterByGender = (data, genero) => {
   const arrGender = data.filter(genders => genders.gender == genero);
   return arrGender
@@ -31,14 +31,17 @@ export const sortByNameAz = (data) => {
   return Az;
 }
 
-// export const sortByNameZa = (data) => {
-//   const Za = data.sort(function (Az, Za) {
-//     if (Az.name > Za.name) {
-//       return -1;
-//     }
-//   })
-//   return Za;
-// }
+export const sortByNameZa = (data) => {
+  const Za = data.sort(function (Az, Za) {
+    if (Az.name < Za.name) {
+      return -1;
+    }
+  })
+  return Za.reverse();
+}
+
+
+
 
 
 

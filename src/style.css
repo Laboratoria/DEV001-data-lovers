@@ -251,6 +251,8 @@ video {
     text-align: center;
 }
 
+
+
 /* Visualización para tablets (media query) */
 @media (min-width: 600px) and (max-width: 767px) {
 }

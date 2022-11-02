@@ -1,4 +1,4 @@
-import { filterByHouse, filterByGender, getbooks, getcharacters} from '../src/data.js';
+import { filterByHouse, filterByGender, getbooks, getcharacters, sortByNameAz, sortByNameZa } from '../src/data.js';
 
 //primer test para saber si la funciona general (filtro de casas) funciona
 describe('Estos personajes pertenecen a una casa', () => {
@@ -36,6 +36,7 @@ describe('Estos personajes pertenecen a una casa', () => {
 
 });
 
+//test para saber si la funciona filtro de género funciona
 describe('Estos personajes pertenecen a una género', () => {
   it('is a function', () => {
     expect(typeof filterByGender).toBe('function');
@@ -45,17 +46,17 @@ describe('Estos personajes pertenecen a una género', () => {
   it('devuelve un objeto de un género determinado', () => {
 
     const arrayMale = [{
-        "name": "Hermione Granger's father",
-        "gender": "Male",
-      },
-      {
-        "name": "Rubeus Hagrid",
-        "gender": "Male",
-      },
-      {
-        "name": "Draco Malfoy",
-        "gender": "Male",
-      }]
+      "name": "Hermione Granger's father",
+      "gender": "Male",
+    },
+    {
+      "name": "Rubeus Hagrid",
+      "gender": "Male",
+    },
+    {
+      "name": "Draco Malfoy",
+      "gender": "Male",
+    }]
 
     //con esta funcion recorre todo desde el array, luego el objeto y finalmente el elemento
     expect(filterByGender(arrayMale, "Male")).toEqual(
@@ -66,11 +67,9 @@ describe('Estos personajes pertenecen a una género', () => {
       ])
     );
   });
-
-  //it ...
-
 })
-  
+
+//test para saber si se obtiene la data de los libros
 describe('Estos books pertenecen a una data', () => {
   it('is a function', () => {
     expect(typeof getbooks).toBe('function');
@@ -96,11 +95,12 @@ describe('Estos books pertenecen a una data', () => {
 
     //con esta funcion recorre todo desde el array
     expect(getbooks(arrayBooks, "books")).toEqual(
-      
+
     );
   });
 })
 
+//test para saber se se obtiene la data de los personajes
 describe('Estos personajes pertenecen a la data', () => {
   it('is a function', () => {
     expect(typeof getcharacters).toBe('function');
@@ -119,50 +119,55 @@ describe('Estos personajes pertenecen a la data', () => {
           "id": 2,
           "name": "Ronald Weasley",
         }],
-      
+
       books: [
         {
           "id": 1,
           "title": "Harry Potter and the Sorcerer's Stone",
         }]
-      }];
+    }];
 
     //con esta funcion recorre todo desde el array
-      expect(getcharacters(arrayCharacters, "characters")).toEqual(
+    expect(getcharacters(arrayCharacters, "characters")).toEqual(
 
     );
   });
 })
 
-// describe('Estos personajes se ordenan de la A a la Z', () => {
-//   it('is a function', () => {
-//     expect(typeof sortByNameAz).toBe('function');
-//   });
+//test para saber si la funciona ordenar de la A a la Z funciona
+describe('sortByNameAz', () => {
+  it('is a function', () => {
+    expect(typeof sortByNameAz).toBe('function');
+  });
 
-//   //especificamos que nos retorne objetos específicos y que los ordene de la A a la Z
-//   it('devuelve un objeto ordenado de la A a la Z', () => {
+  //especificamos que nos retorne objetos específicos y que los ordene de la A a la Z
+  it('devuelve un objeto ordenado de la A a la Z', () => {
+    const arraySortAz = [
+      { "name": "Hermione Granger's father" }, { "name": "Rubeus Hagrid" }, { "name": "Draco Malfoy" }
+    ]
+    const retorna = [
+      { "name": "Draco Malfoy" }, { "name": "Hermione Granger's father" }, { "name": "Rubeus Hagrid" }
+    ]
+    //con esta funcion recorre todo desde el array, luego el objeto y finalmente el elemento para ordenarlo de la A a la Z
+    expect(sortByNameAz(arraySortAz)).toEqual(retorna)
+  })
+});
 
-//     const arraySortAz = getData(data).sort(((a, b) => {
-//       [
-//         {
-//           "name": "Hermione Granger's father",
-//           "gender": "Male",
-//         },
-//         {
-//           "name": "Rubeus Hagrid",
-//           "gender": "Male",
-//         },
-//         {
-//           "name": "Draco Malfoy",
-//           "gender": "Male",
-//         }]
-//     }));
+//test para saber si la funciona ordenar de la Z a la A funciona
+describe('sortByNameZa', () => {
+  it('is a function', () => {
+    expect(typeof sortByNameZa).toBe('function');
+  });
 
-//     //con esta funcion recorre todo desde el array, luego el objeto y finalmente el elemento para ordenarlo de la A a la Z
-//     expect(sortByNameAz(getData(data).toEqual(arraySortAz)
-      
-//     ),
-//     );
-//   }
-//   )
-// })
+  //especificamos que nos retorne objetos específicos y que los ordene de la A a la Z
+  it('devuelve un objeto ordenado de la Z a la A', () => {
+    const arraySortZa = [
+      { "name": "Hermione Granger's father" }, { "name": "Rubeus Hagrid" }, { "name": "Draco Malfoy" }
+    ]
+    const retorna = [
+      { "name": "Rubeus Hagrid" }, { "name": "Hermione Granger's father" }, { "name": "Draco Malfoy" } 
+    ]
+    //con esta funcion recorre todo desde el array, luego el objeto y finalmente el elemento para ordenarlo de la Z a la A
+    expect(sortByNameZa(arraySortZa)).toEqual(retorna)
+  })
+});
