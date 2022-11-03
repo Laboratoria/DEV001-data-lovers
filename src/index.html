@@ -22,7 +22,7 @@
       <p data-target="#books">Books</p>
       <p data-target="#characters">Characters</p>
 
-      <p data-target="#statistics">Statistics</p>
+      <!--<p data-target="#statistics">Statistics</p>-->
 
     </div>
   </header>
@@ -35,18 +35,16 @@
           <div class="inicio">
             <!-- <section class="barajas"></section> -->
             <article class="presentacion">
-              <h1>El Fantástico mundo de Harry Potter</h1><br>
+              <h1>The fantastic world of Harry Potter</h1><br>
               <p class="texto">
-                Harry Potter es una serie de novelas fantásticas, escritas por la autora
-                británica J. K. Rowling, en las que se describen las aventuras del joven
-                aprendiz de magia y hechicería Harry Potter y sus amigos: Hermione Granger
-                y Ron Weasley, durante los años que pasan en el Colegio de Magia y Hechicería,
-                HOGWARTS.
+                "Harry Potter" is a series of fantasy novels, written by the British author J. K. Rowling, which describes the adventures
+                of the young wizard, Harry Potter and his friends: Hermione Granger and Ron Weasley, during the years they
+                spend in the College of Witchcraft and Wizardry,<br>
+                <h2>HOGWARTS.</h2><br>
               </p><br>
               <p class="texto">
-                El argumento se centra principalmente en la lucha entre Harry Potter y el
-                malvado mago lord Voldemort, quien asesinó a los padres de Harry en su afán
-                de conquistar el mundo mágico.
+                The plot focuses mainly on the fight between Harry Potter and the evil wizard Lord Voldemort, who murdered Harry's
+                parents in his quest to conquer the wizarding world.
               </p><br>
             </article>
           </div>
@@ -78,11 +76,11 @@
             <div class="barraHouse">
               <span> House </span>
               <select name="" id="selectfiltrar">
-                <option value="All">Select</option>
-                <option value="Gryffindor">Gryffindor</option>
-                <option value="Slytherin">Slytherin</option>
-                <option value="Hufflepuff">Hufflepuff</option>
-                <option value="Ravenclaw">Ravenclaw</option>
+                  <option value="All">Select</option>
+                  <option value="Gryffindor">Gryffindor</option>
+                  <option value="Slytherin">Slytherin</option>
+                  <option value="Hufflepuff">Hufflepuff</option>
+                  <option value="Ravenclaw">Ravenclaw</option>
               </select>
             </div>
 
@@ -95,6 +93,9 @@
               </select>
             </div>
 
+            <button  class= "reset" onClick="window.location.reload()">Reload Page</button>
+
+
           </div>
 
           <div class="personajes">
@@ -104,9 +105,13 @@
         </div>
 
 
-        <div data-content id="statistics" class="estadisticas">
+ <!--<div data-content id="statistics" class="estadisticas">
+          <canvas id="myChart" width="200" height="200"></canvas> 
+
+        </div>-->
 
 
+        
         </div>
       </div>
 
@@ -115,7 +120,7 @@
       </div>
 
 
-    </div>
+
   </main>
   <footer>
     <section class="footer">
@@ -125,7 +130,9 @@
 
   <script src="main.js" type="module"></script>
   <!--este link se utiliza para vincular nuestro gráfico chart.js-->
-
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"
+  integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
 
 </body>
 
