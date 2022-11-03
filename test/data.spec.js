@@ -176,7 +176,20 @@ describe('Ordenar de la A_Z', () => {
         
       })
         });
-
-
 //'Ordenar de la Z_A'
+
+
+// estadísticas -P
+// describe('statisticsFrequency', () => {
+//   it('is a function', () => {
+//     expect(typeof statisticsFrequency).toBe('function');
+//   });
+
+//   it('returns personajes mujeres cuando selecciona`Female`', () => {
+//     expect(statisticsFrequency(data, filterGender(data, "Female"))).toBe(25);
+//   });
+//});
+
+
+
 

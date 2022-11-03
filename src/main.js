@@ -54,7 +54,8 @@ select.addEventListener("change", (e) => {
    })
 })
 
-// con este let capturamos los personajes por generos//
+
+//con este let capturamos los personajes por generos//
 let select2 = document.getElementById("selectgender")
 select2.addEventListener("change", (e) => {
    let generofiltrado = filterByGender(data.characters, e.target.value)
@@ -95,3 +96,6 @@ select3.addEventListener("change", (e) => {
       })
    }
 })
+
+
+

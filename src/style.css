@@ -17,13 +17,13 @@ body {
 
 /*Para que lo aplique a toda mi página (Selector universal) */
 * {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 
-/*Display: flex es para que los botones se coloquen uno al lado del otro / Juntify content se utiliza para colocar los botones en el centro*/ 
+/*Display: flex es para que los botones se coloquen uno al lado del otro / Juntify content se utiliza para colocar los botones en el centro*/
 .menu {
     color: white;
     list-style: none;
@@ -35,36 +35,40 @@ body {
 
 
 /*buscar se significa 2rem 
-buscar pointer */ 
+buscar pointer */
 .menu p {
     margin-right: 2rem;
-   cursor: pointer; /*cursor pointer hace que cuando me posicione en el menu, la flecha se convierta en manito */
+    cursor: pointer;
+    /*cursor pointer hace que cuando me posicione en el menu, la flecha se convierta en manito */
 }
 
 
-/*Para que aparezca el menú desplegable*/ 
+/*Para que aparezca el menú desplegable*/
 .menu p:hover {
     background-color: #999494;
-    transition: background-color .3s ease-in-out; /*para que el hover tenga transición */
-   
+    transition: background-color .3s ease-in-out;
+    /*para que el hover tenga transición */
+
 }
 
 main {
- /*   background: url(fotosHP/harry3.jpeg)no-repeat; */
- /*   background-size: 100%; */
+    /*   background: url(fotosHP/harry3.jpeg)no-repeat; */
+    /*   background-size: 100%; */
     position: relative;
 
 }
-main::before{
+
+main::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .5);
 
 }
+
 .maininterno {
     position: absolute;
     z-index: 2;
@@ -95,6 +99,7 @@ main::before{
     flex-direction: column;
     align-items: center;
 }
+
 video {
     position: absolute;
     z-index: 2;
@@ -107,12 +112,12 @@ video {
 }
 
 .inicio h1 {
-    font-size: 50px;
+    font-size: 40px;
     text-shadow: 2px 2px 0px rgb(0, 0, 0), 4px 4px 0px rgb(16, 47, 1);
 }
 
 .inicio p {
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 900;
     text-shadow: 2px 2px 0px rgb(0, 0, 0), 4px 4px 0px rgb(16, 47, 1);
 }
@@ -152,6 +157,7 @@ video {
     object-fit: cover;
     box-shadow: 6px 6px 6px 1px rgb(0 0 0 / 50%);
 }
+
 .header_tarjeta2 img {
     width: 70%;
     display: inline-block;
@@ -190,7 +196,7 @@ video {
     box-shadow: 4px 4px 6px 1px rgb(249 245 245 / 50%)
 }
 
-.funfact{
+.funfact {
     color: white;
     text-align: center;
     height: 100vh;
@@ -201,8 +207,8 @@ video {
 }
 
 .active[data-content] {
-    display:block;
-    
+    display: block;
+
 }
 
 .barra {
@@ -218,10 +224,12 @@ video {
     padding: 5px;
     margin: 5px;
 }
+
 .barraHouse {
     padding: 5px;
     margin: 5px;
 }
+
 .barraGender {
     padding: 5px;
     margin: 5px;
@@ -232,8 +240,8 @@ video {
     background-color: black;
     width: 100%;
     height: 30px;
-/*ancla la barra en la parte de abajo*/
-    position: fixed; 
+    /*ancla la barra en la parte de abajo*/
+    position: fixed;
     display: flex;
     justify-content: center;
     bottom: 0px;
@@ -251,10 +259,65 @@ video {
     text-align: center;
 }
 
+.reset {
+    background-color: rgb(10, 83, 10);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    box-shadow: 2px 2px 3px 1px rgb(249 245 245 / 50%)
+}
+.inicio h2 {
+    font-size: 40px;
+    text-shadow: 2px 2px 0px rgb(0, 0, 0), 4px 4px 0px rgb(16, 47, 1);
+}
 
 
 /* Visualización para tablets (media query) */
 @media (min-width: 600px) and (max-width: 767px) {
+    .inicio {
+        flex-direction: row;
+    }
+    .tarjeta {
+        width: 20%;
+    }
+    .tarjeta2 {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header_tarjeta2 {
+        width: 90%;
+    }
+    .menu {
+        font-size: 25px;
+    }
+    .inicio h1 {
+        font-size: 55px;
+    }
+    .inicio p {
+        font-size: 35px;
+    }
+    .reset {
+        font-size: 25px;
+    }
+    .barra {
+        font-size: 40px;
+    }
+    #selectordenar {
+        font-size: 25px;
+    }
+    #selectfiltrar {
+        font-size: 25px;
+    }
+    #selectgender {
+        font-size: 25px;
+    }
+    .inicio h2 {
+        font-size: 50px;
+        text-shadow: 2px 2px 0px rgb(0, 0, 0), 4px 4px 0px rgb(16, 47, 1);
+    }
 }
 
 /* Visualización para desktop */
@@ -262,14 +325,55 @@ video {
     .inicio {
         flex-direction: row;
     }
-    
     .tarjeta {
-        width: 25%;
-    }
-
-    .tarjeta2 {
         width: 20%;
     }
+    .tarjeta2 {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header_tarjeta2 {
+        width: 90%;
+    }
+    .menu {
+        font-size: 30px;
+    }
+    .inicio h1 {
+        font-size: 60px;
+    }
+    .inicio p {
+        font-size: 40px;
+    }
+    .reset {
+        font-size: 25px;
+    }
+    .barra {
+        font-size: 30px;
+    }
+    #selectordenar {
+        font-size: 20px;
+    }  
+    #selectfiltrar {
+        font-size: 20px;
+    }  
+    #selectgender {
+        font-size: 20px;
+    }
+    .inicio h2 {
+        font-size: 50px;
+        text-shadow: 2px 2px 0px rgb(0, 0, 0), 4px 4px 0px rgb(16, 47, 1);
+    }
 }
+
+/*.estadisticas {
+    width: 40%;
+    margin: auto;
+}
+
+canvas {
+    max-width: 100%;
+}*/
 
 /*  COMENTAR */
