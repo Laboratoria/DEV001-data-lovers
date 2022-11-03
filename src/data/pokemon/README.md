@@ -1,37 +1,39 @@
-# Pokémon
+### POKEMON
 
-Pokémon GO es una experiencia de juego internacional que cuenta con más de mil
-millones de descargas y ha sido nombrada "el mejor juego para móviles" por
-Game Developers Choice Awards y "la mejor aplicación del año" por TechCrunch
-(tomado de Google Play). Los usuarios del juego se convierten en "Maestros/
-entrenadores de Pokémon" y pueden:
+## Preámbulo
 
-- **Descubrir el mundo Pokémon:** explorar y descubrir nuevos Pokémon allá
-  donde vayan.
-- **Atrapar** distintos Pokémon para completar su Pokédex.
-- **Pelear** contra Pokémon de otros entrenadores y conquistar un gimnasio.
-- **Competir** en épicos combates contra otros entrenadores.
-- **Hacer equipo** con otros entrenadores para atrapar poderosos Pokémon
-  durante las incursiones.
+Pokémon Go es un juego de realidad aumentada, que extiende sus dominios fuera de las consolas de videojuego para alojarse en los teléfonos inteligentes. Y en el "mundo real".
 
-## Hallazgos
+Los jugadores buscan sobresalir como entrenadores de Pokémones, unas criaturas de ficción con diferentes habilidades que "viven" en unas bolas especiales.
 
-Para entender mejor qué necesidades complementarias a la app tienen los
-usuarios, hicimos una rápida investigación (research) y estos son algunos
-de los hallazgos.
+De acuerdo con el concepto original, los entrenadores buscan capturar Pokémones hasta completar una colección. El otro objetivo es adiestrarlos para que ganen batallas frente a otras criaturas.
 
-- Los Pokémon tienen características únicas que determinan las decisiones que
-  toma el usuario (tipo, debilidad, peso, multiplicador, etc.)
-- Un maestro Pokémon antes de salir a casar los Pokémon tienen que:
-  saber el top 10 de frecuencia de aparición de los Pokémon.
-- Los Pokémon tienen distintos tipos y debilidades de combate. Estas
-  características son importantes cuando un maestro Pokémon elige al Pokémon
-  más adecuado para su batalla. Hay veces que tiene que elegir a los que
-  tienen menos cantidad de debilidades y saber de que tipo son. Por ello, es
-  importante para un maestro Pokémon poder ordenarlos por estas 2
-  características.
-- Los Pokémon evolucionan y es importante para un
-  maestro Pokémon saber cuántas y cuáles son las evoluciones que tienen antes y
-  después.
-- Los Pokémon se alimentan de caramelos y un maestro Pokémon necesita saber
-  cuántos caramelos necesita un Pokémon para evolucionar.
+Para la captura, el jugador debe literalmente lanzarse a las calles de su ciudad. Haciendo uso del GPS del teléfono, la app le avisará con una vibración y una luz intermitente cuando se encuentra cerca de un Pokémon.
+
+
+
+## Resumen del proyecto
+"Pokemon" es una página creada pensando tanto en los usuarios que por primera vez se acercan al mundo de Pokemon Go como en los que ya tienen experiencia con el.
+En la página se encuentra la información de 251 pokemons de la regiones de Kanto y Jhonto, los cuales puedes clasificar de diferentes formas para asi facilitar el atraparlos, adiestrarlos y la preparación para las batallas.
+
+Todas las funcionalidades de la página estan dirigidas e inspiradas en las historias de nuestros usuarios, usamos sus opiniones para crear las diferentes maneras de explorarla.
+
+"Pokemon" posee un diseño sencillo, amable y responsivo que facilita la navegabilidad  para nuestros usuarios.
+Tambien es altamente descriptiva con cada pokemon, brindando información detallada.
+
+## Historias de usuario
+#### Historia de usuario N1
+Yo como nueva aspirante a maestra pokémon quiero primero conocer la imagen, nombre y número de los pokemones en una solo pantalla.
+
+Prototipo historia de usuario Nº1
+<img src= "imagenes/PrototipoHU1.png">
+
+## Tecnologìas utilizadas
+- Javascript
+- CSS
+- HTML
+
+## Desarrolladoras
+
+- Karla García
+- Silvana Gonzalez
