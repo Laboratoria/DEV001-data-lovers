@@ -3,23 +3,27 @@ import data from './data/harrypotter/data.js';
 
 import { getbooks, getcharacters, filterByHouse, filterByGender, sortByNameAz, sortByNameZa } from "./data.js"
 
-
 //aqui importamos la tarjeta desde el archivo que creamos nosotras plantilla.js
 import { tarjeta, tarjeta2 } from './plantilla.js'
 
 
 
-//con const hacemos el llamado desde el html 
+//con const targets le estamos diciendo al docmuento html que tome el valor de data targes es decir que lo hale aca// 
 const targets = document.querySelectorAll('[data-target]')
 const content = document.querySelectorAll('[data-content]')
 
-// comentar  despues de entender bien el videotargets.forEach//
+// target es un arreglo y aplicamos foreach para que recorra book y character
+//luego a cada target dentro del for eac se le aplica un evento addevelist al cual  hace un llamado a la funcion anonima
+
 targets.forEach(target => {
    target.addEventListener("click", () => {
       content.forEach(c => {
+        //con remove, removemos el mismo titulo, es decir que no se vea cuando el usuario lo preciona
          c.classList.remove("active")
       })
+      //dataset lo utilizamos para ser el llamado desde html con el data-target
       const t = document.querySelector(target.dataset.target)
+      // con este classlist axcede a la lista de clase de nuestro elemnto (nuestro menu de inicio)
       t.classList.add("active")
    })
 })
@@ -31,15 +35,14 @@ let capturetarjeta2 = document.querySelector(".personajes")
 //let capturetarjeta3 = ducument.querySelector(".fotofun")
 
 
-//el foreach recorre todos los libros//
+//el foreach recorre todos los libros luego lo insertamos en cada tarjeta con el insertAdjacentHTML//
 getbooks(data).forEach(libro => {
    capturetarjeta.insertAdjacentHTML("beforeend", tarjeta(libro));
 })
-//el foreach recorre todos los personajes//
+//el foreach recorre todos los personajes, con el beforeend recorre justo dentro del elemento despues de su ultimo elemnto hijo//
 getcharacters(data).forEach(nombre => {
    capturetarjeta2.insertAdjacentHTML("beforeend", tarjeta2(nombre));
 })
-
 
 
 // con el id seleccionamos la casa y con el change sabemos cuando se cambia de casa

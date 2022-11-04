@@ -52,12 +52,12 @@ buscar pointer */
 }
 
 main {
-    /*   background: url(fotosHP/harry3.jpeg)no-repeat; */
-    /*   background-size: 100%; */
+    /*  se tuliza para traer adelante la foto de harry potter de la cabecera  */
     position: relative;
 
 }
-
+ /*before hace que la pantalla este detras del texto*/
+ /* position absolution lleva la imagen de harry potter detras para apreciar las cartas y libros */
 main::before {
     content: '';
     position: absolute;
@@ -68,25 +68,21 @@ main::before {
     background-color: rgba(0, 0, 0, .5);
 
 }
-
+ /* z index y position absolute nos funciono para colocar la foto detras del texto*/
 .maininterno {
     position: absolute;
     z-index: 2;
     width: 100%;
     height: 100%;
 }
-
+ /* foto de harry dobby */
 .cuerpo {
     width: 100%;
     height: 100%;
 
 }
 
-.content {
-    margin-top: 2rem;
-
-}
-
+ 
 .presentacion {
     color: white;
     text-align: center;
@@ -128,7 +124,12 @@ video {
     justify-content: space-evenly;
     margin: 10px;
 }
+ /* space evenly hace que en la derecha e izquierda y centro sean la misma medida
+ gap  son los espacios entre lineas   */
 
+
+
+ /* display flex me ayuda a trabajar mejor con las cajas */
 .barajas {
     gap: 1rem;
     display: flex;
@@ -196,12 +197,8 @@ video {
     box-shadow: 4px 4px 6px 1px rgb(249 245 245 / 50%)
 }
 
-.funfact {
-    color: white;
-    text-align: center;
-    height: 100vh;
-}
 
+/*  muestra las paginas del html es decir que se abra tanto books como character */
 [data-content] {
     display: none;
 }
@@ -273,7 +270,7 @@ video {
 }
 
 
-/* Visualización para tablets (media query) */
+/* Visualización para tablets (media query)  */
 @media (min-width: 600px) and (max-width: 767px) {
     .inicio {
         flex-direction: row;
