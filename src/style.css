@@ -15,7 +15,7 @@ header{
  overflow:hidden;
  background-color: #6C9B98;
  margin-bottom: 20px;
- justify-content: center;
+ align-items: center;
 }
 header .logo {
 	color:#f2f2f2;
@@ -43,6 +43,7 @@ header .logo {
 header nav {
 	float:right;
 	line-height:80px;
+    position: sticky;
 }
 
 header nav a {
@@ -108,7 +109,7 @@ h1 {
     padding: 1rem;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    flex-direction: column;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -119,6 +120,60 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.modal {
+    display: none;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.modal-content {
+    position:absolute;
+    background-color:#6C9B98;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 1.5rem;
+    width: 300px;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    display: inline;
+    animation: mymove 2s forwards;
+   /* opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;*/
+}
+@keyframes mymove {
+    from {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+  }
 /*responsive*/
 @media screen and (max-width: 600px){
     .cardPrincipal {
@@ -126,3 +181,4 @@ h1 {
     }
 }
 
+  
