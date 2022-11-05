@@ -1,225 +1,226 @@
-*{
-    box-sizing: border-box;
-    margin:0;
-    font-family: 'Nanum Gothic', sans-serif;
-		
-
+* {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: 'Nanum Gothic', sans-serif;
 }
-body{
+
+body {
 	background-color: #1F4068;
 }
-.padre{
-    display: flex;
-    flex-flow: column nowrap;
-}
 
-    .header{
-        display: flex;  
-        flex-flow: column nowrap;
-        background-color: rgb(255, 255, 255);
-        position: fixed;
-        right: 0;
-        left: 0;
-        top:0; 
-		padding:10px;   
-    }
+	.padre {
+		display: flex;
+		flex-flow: column nowrap;
+	}
 
-        .container{
-            display: flex; 
-            flex-flow: row; 
-            align-items: center;
-            justify-content: space-between;    
-        }
+		.header {
+			display: flex;
+			flex-flow: column nowrap;
+			background-color: rgb(255, 255, 255);
+			position: fixed;
+			right: 0;
+			left: 0;
+			top: 0;
+			padding: 10px;
+		}
 
-            .logo{
-				text-align: center;
-            }
+			.container {
+				display: flex;
+				flex-flow: row;
+				align-items: center;
+				justify-content: space-between;
+			}
 
-            .nav-label, .nav-input{
-                display: none;
-            }
-            .nav-label{
+				.logo {
+					text-align: center;
+				}
 
-            }
-            .nav-input{
+				.nav-label,
+				.nav-input {
+					display: none;
+				}
 
-            }
-            .navigation{
-                display: flex;
-                flex-flow: row wrap;   
-            }
-                .navigation ul{
-                    display: flex;
-                    flex-flow: row wrap;
-                    list-style: none;
-                    gap: 48px;          							      
-                }
+				.nav-label {}
 
-                    .nav-item{
-                        text-decoration: none;
-                        color:black;
-												font-weight: bold;
-	
-                    }
+					.nav-input {}
 
-					.nav-item:hover{
-						color: #24691A;                
-				 }
-    .main{
-        padding-top: 30px;
-        display: flex;
-        flex-flow: row wrap;
-        
-       
-    }
-    h1{
-        font-family: 'Cinzel', serif;
-    }
-        .Inicio{
-            
-            display: flex;
-            background-image: url("https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Harry-Potter-y-la-camara-de-los-secretos-scaled.jpg");
-            background-size: contain;
-            background-repeat:no-repeat;
-						
-         
-           
-        }
-            #recuadro{
-              padding: 300px 50px;
-            }
+				.navigation {
+					display: flex;
+					flex-flow: row wrap;
+				}
 
-                #descripcion{
-                  background-color: rgba(255, 255, 255, 0.678);
-                  padding: 50px;
-				  				border-radius: 10px;
-									        
-                }
+					.navigation ul {
+						display: flex;
+						flex-flow: row wrap;
+						list-style: none;
+						gap: 48px;
+					}
 
-									#textoDescripcion{
-										font-size: 20pt;
-									}
-        .Libros,.Personajes,.Pociones, .Hechizos {
-					padding:5%;
-					
-				}  
-
-
-        .Libros{
-          display: flex;
-          flex-direction: column;
-            
-        }	
-						#select{
-							display: flex;
-							align-self:end;
-							width: 300px;
-							margin-bottom: 20px;
-							font-size: 15pt;
-							border-radius: 10px;
-							padding: 2px;
+						.nav-item {
+							text-decoration: none;
+							color: black;
+							font-weight: bold;
 						}
-						
-						.h1Seccion{
-							color: white;
-							padding-bottom: 2%;
-							font-size: 25pt;
-						}
-            #libros{
-              display: flex;
-							flex-flow: row wrap;
-							gap: 10px 10px;	
-            }
 
-				    	
-
-								.celdas{	
-									display: flex;
-									flex-direction: column;
-									background: white;
-						
-									border-radius: 20px;
-									padding: 20px;
-									
-                flex-flow: row wrap;
-                flex: 1 1 20%;
-								}
-
-								.celdas:hover{
-									background-color: #fdc647 ;
-									cursor: pointer;
-								}
-
-									#img {
-										height: 400px;
-										display:block;
-										margin: auto;
-		
-										border-radius: 10px;
-									}
-
-									.h1Celdas{
-											text-align: center;
-											padding-top: 10px;
-									}
-
-
-									.modal {
-										display: none; /* Hidden by default */
-										position: fixed; /* Stay in place */
-										z-index: 1; /* Sit on top */
-										padding-top: 100px; /* Location of the box */
-										left: 0;
-										top: 0;
-										width: 100%; /* Full width */
-										height: 100%; /* Full height */
-										overflow: auto; /* Enable scroll if needed */
-										background-color: rgb(0,0,0); /* Fallback color */
-										background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-										
-									}
-									
-									/* Modal Content */
-									.modal-content {
-										background-color: #fefefe;
-										margin: auto;
-										padding: 20px;
-										border: 1px solid #888;
-										width: 80%;
-										border-radius: 20px;
-									}
-									
-									/* The Close Button */
-									.close {
-										color: #aaaaaa;
-										float: right;
-										font-size: 28px;
-										font-weight: bold;
-									}
-									
-									.close:hover,
-									.close:focus {
-										color: #000;
-										text-decoration: none;
-										cursor: pointer;
-									}
-
-						#libros1{
-							display:flex;
-							flex-direction: column;
-							
-							
-                            
-						}
-							.contenedorCeldas1{
-								display: flex;
-								flex-flow: row wrap;
-								gap: 10px 10px;	
-								border-radius: 10px;
-
+							.nav-item:hover {
+								color: #24691A;
 							}
 
-							.celdas1{	
+		.main {
+			padding-top: 30px;
+			display: flex;
+			flex-flow: row wrap;
+		}
+
+h1 {
+	font-family: 'Cinzel', serif;
+}
+
+			.Inicio {
+				display: flex;
+				background-image: url("https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Harry-Potter-y-la-camara-de-los-secretos-scaled.jpg");
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+
+				#recuadro {
+					padding: 300px 50px;
+				}
+
+					#descripcion {
+						background-color: rgba(255, 255, 255, 0.678);
+						padding: 50px;
+						border-radius: 10px;
+					}
+
+						#textoDescripcion {
+							font-size: 20pt;
+						}
+
+			.Libros,
+			.Personajes,
+			.Pociones,
+			.Hechizos {
+				padding: 5%;
+			}
+
+
+			.Libros {
+				display: flex;
+				flex-direction: column;
+			}
+				.h1Seccion {
+					color: white;
+					padding-bottom: 2%;
+					font-size: 25pt;
+				}
+
+				#select {
+					display: flex;
+					align-self: end;
+					width: 300px;
+					margin-bottom: 20px;
+					font-size: 15pt;
+					border-radius: 10px;
+					padding: 2px;
+				}
+
+				#libros {
+					display: flex;
+					flex-flow: row wrap;
+					gap: 10px 10px;
+				}
+
+					.celdas {
+						display: flex;
+						flex-direction: column;
+						background: white;
+						border-radius: 20px;
+						padding: 20px;
+						flex-flow: row wrap;
+						flex: 1 1 20%;
+					}
+
+					.celdas:hover {
+						background-color: #fdc647;
+						cursor: pointer;
+					}
+
+						#img {
+							height: 400px;
+							display: block;
+							margin: auto;
+							border-radius: 10px;
+						}
+
+						.h1Celdas {
+							text-align: center;
+							padding-top: 10px;
+						}
+
+
+			.modal {
+				display: none;
+				/* Hidden by default */
+				position: fixed;
+				/* Stay in place */
+				z-index: 1;
+				/* Sit on top */
+				padding-top: 100px;
+				/* Location of the box */
+				left: 0;
+				top: 0;
+				width: 100%;
+				/* Full width */
+				height: 100%;
+				/* Full height */
+				overflow: auto;
+				/* Enable scroll if needed */
+				background-color: rgb(0, 0, 0);
+				/* Fallback color */
+				background-color: rgba(0, 0, 0, 0.4);
+				/* Black w/ opacity */
+
+			}
+
+/* Modal Content */
+				.modal-content {
+					background-color: #fefefe;
+					margin: auto;
+					padding: 20px;
+					border: 1px solid #888;
+					width: 80%;
+					border-radius: 20px;
+				}
+
+/* The Close Button */
+					.close {
+						color: #aaaaaa;
+						float: right;
+						font-size: 28px;
+						font-weight: bold;
+					}
+
+					.close:hover,
+					.close:focus {
+						color: #000;
+						text-decoration: none;
+						cursor: pointer;
+					}
+
+					#libros1 {
+						display: flex;
+						flex-direction: column;
+					}
+
+						.contenedorCeldas1 {
+							display: flex;
+							flex-flow: row wrap;
+							gap: 10px 10px;
+							border-radius: 10px;
+						}
+
+							.celdas1 {
 								display: flex;
 								flex-flow: row wrap;
 								background: white;
@@ -227,194 +228,379 @@ body{
 								border-radius: 20px;
 								padding: 20px;
 								align-items: center;
- 					 			
+							}
+
+							.h1Celdas1 {
+								flex: 1 1 70%;
+								text-align: center;
+								font-size: 50pt;
+							}
+
+							.img1 {
+								height: auto;
+								width: 1px;
+								flex: 1 1 20%;
+								border-radius: 30px;
+								padding: 20px;
 
 							}
-								.h1Celdas1{
-										flex:1 1 70%;
-										text-align: center;
-										font-size: 50pt;	
-								}
-								
-								.img1{
-									
-									height: auto;
-									width: 1px;
-									flex: 1 1 20%;
-									border-radius: 30px;
-									padding: 20px;
-								
-								}
 
-								.p1celdas1{
-									flex: 1 1 100%;
-									padding: 2px;
+							.p1celdas1 {
+								flex: 1 1 100%;
+								padding: 2px;
 
-								}
-								.p2celdas1{
-									flex: 1 1 100%;
-									padding: 2px;
-								}
-								.p3celdas1{
-									padding: 2px;
-									flex: 1 1 100%;
-								}
+							}
 
-										
-				.Personajes{
+							.p2celdas1 {
+								flex: 1 1 100%;
+								padding: 2px;
+							}
+
+							.p3celdas1 {
+								padding: 2px;
+								flex: 1 1 100%;
+							}
+
+			.Personajes {
+				display: flex;
+				flex-direction: column;
+			}
+				#contenedorselects{
 					display: flex;
-					flex-direction: column ;
-        }
+					justify-content: space-between;
+				}
+					#select1 {
+						display: flex;
+						order: 4;
+						width: 300px;
+						margin-bottom: 20px;
+						font-size: 15pt;
+						border-radius: 10px;
+						padding: 2px;
+					}
+					#select2 {
+						display: flex;
+						order: 3;
+						width: 300px;
+						margin-bottom: 20px;
+						font-size: 15pt;
+						border-radius: 10px;
+						padding: 2px;
+					}
+					#select3 {
+						display: flex;
+						order: 2;
+						width: 300px;
+						margin-bottom: 20px;
+						font-size: 15pt;
+						border-radius: 10px;
+						padding: 2px;
+					}
+					#select4 {
+						display: flex;
+						order: 1;
+						width: 300px;
+						margin-bottom: 20px;
+						font-size: 15pt;
+						border-radius: 10px;
+						padding: 2px;
+					}
 
-				#personajes{
+				#personajes {
 					display: flex;
 					flex-flow: row wrap;
-					gap: 10px 10px;	
+					gap: 10px 10px;
 				}
 
+					.celdas2 {
+						display: flex;
+						flex-direction: column;
+						background: white;
+						border-radius: 20px;
+						padding: 20px;
+						flex: 1 1 5%;
+					}
+					.celdas2:hover{
+						background-color:#fdc647;
+						cursor: pointer;
+					}
 
-						.celdas4{	
+						#img2 {
+							height: 150px;
+							display: block;
+							margin: auto;
+							border-radius: 10px;
+						}
+
+						.nameCeldas2 {
+							text-align: center;
+							padding-top: 10px;
+						}
+
+						.houseCeldas2 {
+							text-align: center;
+							padding-top: 10px;
+						}
+
+			.modal1 {
+				display: none;
+				/* Hidden by default */
+				position: fixed;
+				/* Stay in place */
+				z-index: 1;
+				/* Sit on top */
+				padding-top: 100px;
+				/* Location of the box */
+				left: 0;
+				top: 0;
+				width: 100%;
+				/* Full width */
+				height: 100%;
+				/* Full height */
+				overflow: auto;
+				/* Enable scroll if needed */
+				background-color: rgb(0, 0, 0);
+				/* Fallback color */
+				background-color: rgba(0, 0, 0, 0.4);
+				/* Black w/ opacity */
+
+			}
+
+/* Modal Content */
+				.modal-content1 {
+					background-color: #fefefe;
+					margin: auto;
+					padding: 20px;
+					border: 1px solid #888;
+					width: 80%;
+					border-radius: 20px;
+				}
+
+/* The Close Button */
+					.close1 {
+						color: #aaaaaa;
+						float: right;
+						font-size: 28px;
+						font-weight: bold;
+					}
+
+					.close1:hover,
+					.close1:focus {
+						color: #000;
+						text-decoration: none;
+						cursor: pointer;
+					}
+
+					#personajes1{					
+					}
+					.contenedorCeldas3 {
+						display: flex;
+						flex-flow: row wrap;
+						gap: 10px 10px;
+						border-radius: 10px;
+					}
+
+						.celdas3 {
 							display: flex;
-							flex-direction: column;
+							flex-flow: row wrap;
 							background: white;
-						
+							flex: 1 1 80%;
 							border-radius: 20px;
 							padding: 20px;
-							flex: 1 1 1%;
-									
-              
-            
+							align-items: center;
 						}
-							
-							.nameCeldas4{
+
+							.h1Celdas3 {
+								flex: 1 1 70%;
 								text-align: center;
-								padding-top: 10px;
+								font-size: 50pt;
 							}
-							
-							.houseCeldas4{
-								
-								text-align:center;
-								padding-top: 10px;
+
+							.img3 {
+								height: auto;
+								width: 1px;
+								flex: 1 1 20%;
+								border-radius: 30px;
+								padding: 20px;
+
 							}
-	
-				
-							.Pociones{
-								display: flex;
-								flex-direction: column ;
+
+							.p1celdas3 {
+								flex: 1 1 100%;
+								padding: 2px;
+
 							}
-								#pociones{
-										display: flex;
-										flex-flow: row wrap;
-										gap: 10px 10px;	
 
-									}
-									.contenedorPociones{
-										display: flex;
-										
-										
-				
-									}
-											.pociones01{	
-											display: flex;
-											flex-direction: column;
-											background: white;
-											flex: 1 1 17%;
-											border-radius: 20px;
-											padding: 20px;
-										}
-											.idPociones{
-												text-align: center;
-												padding-top: 10px;
-											}
-											.namePociones{
-												text-align: center;
-												padding-top: 10px;
-											}
-											.desPociones{
-												
-												text-align:center;
-												padding-top: 10px;
-											}
-			
-					.Hechizos
-							{
-								display: flex;
-								flex-direction: column ;
-					}
-			
-								.contenedorHechizos{
-									display: flex;
-									flex-flow: row wrap;
-									gap: 10px 10px;	
-			
-								}
-			
-									.hechizos{	
-										display: flex;
-										flex-direction: column;
-										background: white;
-										flex: 1 1 17%;
-										border-radius: 20px;
-										padding: 20px;
-									}
-										.h1hechizos{
-											text-align: center;
-											padding-top: 10px;
-										}
-										
-										.phechizos{
-											
-											text-align:center;
-											padding-top: 10px;
-										}
+							.p2celdas3 {
+								flex: 1 1 100%;
+								padding: 2px;
+							}
+
+							.p3celdas3 {
+								padding: 2px;
+								flex: 1 1 100%;
+							}
+
+							.p4celdas3 {
+								padding: 2px;
+								flex: 1 1 100%;
+							}
+
+							.p5celdas3 {
+								padding: 2px;
+								flex: 1 1 100%;
+							}
+
+							.p6celdas3 {
+								padding: 2px;
+								flex: 1 1 100%;
+							}
+
+							.p7celdas3 {
+								padding: 2px;
+								flex: 1 1 100%;
+							}
+
+							.p8celdas3 {
+								padding: 2px;
+								flex: 1 1 100%;
+							}
+
+							.p9celdas3 {
+								padding: 2px;
+								flex: 1 1 100%;
+							}
+
+							.p10celdas3 {
+								padding: 2px;
+								flex: 1 1 100%;
+							}
+
+							.p11celdas3 {
+								padding: 2px;
+								flex: 1 1 100%;
+							}
+						
+/*.Pociones {
+	display: flex;
+	flex-direction: column;
+}
+
+#pociones {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 10px 10px;
+}
+
+.contenedorPociones {
+	display: flex;
+}
+
+.pociones01 {
+	display: flex;
+	flex-direction: column;
+	background: white;
+	flex: 1 1 17%;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+.idPociones {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.namePociones {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.desPociones {
+
+	text-align: center;
+	padding-top: 10px;
+}
+
+.Hechizos {
+	display: flex;
+	flex-direction: column;
+}
+
+.contenedorHechizos {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 10px 10px;
+
+}
+
+.hechizos {
+	display: flex;
+	flex-direction: column;
+	background: white;
+	flex: 1 1 17%;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+.h1hechizos {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.phechizos {
+
+	text-align: center;
+	padding-top: 10px;
+}
+*/
 
 
-        
-    .footer{
-		}
+.footer {}
 
-		@media (max-width:700px) {
-			.nav-label{
-					/*display:block= mi info se muestre*/
-			 display: block;
-					/*cursor:pointer= al pasar el cursor sobre mi elemento,en este caso el nav-label que contiene la imagen del menu hamburgues, el cursor se convierta en una  manito de seleccion */
-				 cursor: pointer;
-					}
-					.navigation{
-							/* position:fixed= salga del flujo, es decir ya no este*/
-					   position:fixed;
-							/* top:80px= salga del flujo*/
-					    top:49px;
-							/* apartir de la cantidad de pixeles (80px) ocupe todo el alto */
-					    background: rgb(0, 145, 255);
-							width: 50%;
-							right:0;
-							display: none;
-							text-align: right;       
-			} 
-	
-			.navigation ul{
-					display: flex;
-					flex-direction: column;
-					padding-right: 20px;
-			}  
-	
-			
-			.nav-input:checked + .navigation{
-				 display:block;
-			}
-	};*/
-	
-	#Inicio{
-			display: flex;
-			block-size: 700px ;
-			height: 400px;
-			background-repeat: no-repeat;
-	background-image: url("https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Harry-Potter-y-la-camara-de-los-secretos-scaled.jpg") ;
+@media (max-width:700px) {
+	.nav-label {
+		/*display:block= mi info se muestre*/
+		display: block;
+		/*cursor:pointer= al pasar el cursor sobre mi elemento,en este caso el nav-label que contiene la imagen del menu hamburgues, el cursor se convierta en una  manito de seleccion */
+		cursor: pointer;
 	}
-	
-	
-	#libros01{
-			display: flex;
+
+	.navigation {
+		/* position:fixed= salga del flujo, es decir ya no este*/
+		position: fixed;
+		/* top:80px= salga del flujo*/
+		top: 49px;
+		/* apartir de la cantidad de pixeles (80px) ocupe todo el alto */
+		background: rgb(0, 145, 255);
+		width: 50%;
+		right: 0;
+		display: none;
+		text-align: right;
 	}
-	
+
+	.navigation ul {
+		display: flex;
+		flex-direction: column;
+		padding-right: 20px;
+	}
+
+
+	.nav-input:checked+.navigation {
+		display: block;
+	}
+}
+
+;
+
+*/ #Inicio {
+	display: flex;
+	block-size: 700px;
+	height: 400px;
+	background-repeat: no-repeat;
+	background-image: url("https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Harry-Potter-y-la-camara-de-los-secretos-scaled.jpg");
+}
+
+
+#libros01 {
+	display: flex;
+}

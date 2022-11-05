@@ -1,10 +1,10 @@
 import data from './data/harrypotter/harry.js';
 
-import { llamarData , llamarModal} from './mostrardata.js';
-import { encontrarId, ordenarAaZ, ordenarFecha } from './data.js';
+import { llamarDataLibros , llamarModalLibros, llamarDataPersonajes, llamarModalPersonajes} from './mostrardata.js';
+import { encontrarId, ordenarAaZ, ordenarFecha, filtrarCasa, ordenarImportancia, filtrarGenero, filtrarEspecie } from './data.js';
 
 
-
+//filtrarCasa(data.characters,"Gryffindor");
 
 // eslint-disable-next-line no-unused-vars
 
@@ -16,8 +16,13 @@ import { encontrarId, ordenarAaZ, ordenarFecha } from './data.js';
 
 
 let copiaDataLibros= [...data.books];
-llamarData(copiaDataLibros);
+llamarDataLibros(copiaDataLibros);
 mostrarModal();
+
+let copiaDataPersonajes=[...data.characters];
+llamarDataPersonajes(copiaDataPersonajes);
+mostrarModalPersonajes();
+
 
 
 
@@ -30,23 +35,23 @@ function mostrarModal(){
       document.querySelector("#myModal").style.display="flex";
       const idtarjeta= celda.className.split(" ")[0];
       //console.log(idtarjeta)
-      llamarModal(encontrarId(idtarjeta, data.books));
+      llamarModalLibros(encontrarId(idtarjeta, data.books));
     }
     );
-    const contenedor1=document.getElementById("libros1");
+    let contenedor2=document.getElementById("libros1");
     span.onclick = function() {
       document.querySelector("#myModal").style.display = "none";
-      contenedor1.innerHTML=" ";
+      contenedor2.innerHTML=" ";
     }
     window.onclick = function(event) {
       if (event.target == document.querySelector("#myModal")) {
         document.querySelector("#myModal").style.display = "none";
-        contenedor1.innerHTML=" ";
+        contenedor2.innerHTML=" ";
+        
       }
     }
   })
 }
-
 let contenedor1= document.getElementById("libros");
 
 const selector=document.getElementById("select");
@@ -55,38 +60,188 @@ selector.addEventListener("change", () => {
   switch (selector.value) {
     case "all":
 
-      llamarData(data.books);
+      llamarDataLibros(data.books);
       
       break;
     case "ordenarAZ":
-      llamarData(ordenarAaZ(data.books));
+      llamarDataLibros(ordenarAaZ(data.books));
       break;
     case "ordenarZA":
-      llamarData(ordenarAaZ(data.books).reverse());
+      llamarDataLibros(ordenarAaZ(data.books).reverse());
       break;
     case "recienteAntiguo":
-      llamarData(ordenarFecha(data.books));
+      llamarDataLibros(ordenarFecha(data.books));
       break;
     case "antiguoReciente":
-      llamarData(ordenarFecha(data.books).reverse());
+      llamarDataLibros(ordenarFecha(data.books).reverse());
       break;
-    
-
   }
   mostrarModal();
+});
+
+
+function mostrarModalPersonajes(){
+  const celdas2=document.querySelectorAll(".celdas2");
+  const span2 = document.getElementsByClassName("close1")[0];
+  celdas2.forEach(celda  =>{
+    celda.addEventListener("click", () =>{
+      document.querySelector("#myModal1").style.display="flex";
+      const idtarjeta2= celda.className.split(" ")[0];
+      llamarModalPersonajes(encontrarId(idtarjeta2, data.characters));
+    }
+    );
+    let contenedor4=document.getElementById("personajes1");
+    span2.onclick = function() {
+      document.querySelector("#myModal1").style.display = "none";
+      contenedor4.innerHTML=" ";
+    }
+    window.onclick = function(event) {
+      if (event.target == document.querySelector("#myModal1")) {
+        document.querySelector("#myModal1").style.display = "none";
+        contenedor4.innerHTML=" ";
+      }
+    }
+  })
+}
+
+const contenedor3=document.getElementById("personajes");
+const selector1=document.getElementById("select1");
+selector1.addEventListener("change", () => {
+  contenedor3.innerHTML=" ";
+  switch (selector1.value) {
+    case "all":
+      llamarDataPersonajes(data.characters);
+      break;
+    case "menorImportancia":
+      llamarDataPersonajes(ordenarImportancia(data.characters));
+      break;
+    case "mayorImportancia":
+      llamarDataPersonajes(ordenarImportancia(data.characters).reverse());
+      break;
+    
+  }
+
+  mostrarModalPersonajes();
+});
+
+const selector2=document.getElementById("select2");
+selector2.addEventListener("change", () => {
+  contenedor3.innerHTML=" ";
+  switch (selector2.value) {
+    case "all":
+      llamarDataPersonajes(data.characters);
+      break;
+    case "Gryffindor":
+      llamarDataPersonajes(filtrarCasa(data.characters, "Gryffindor"));
+      break;
+      case "Slytherin":
+        llamarDataPersonajes(filtrarCasa(data.characters, "Slytherin"));
+      break;
+    case "Ravenclaw":
+      llamarDataPersonajes(filtrarCasa(data.characters, "Ravenclaw"));
+      break;
+    case "Hufflepuff":
+      llamarDataPersonajes(filtrarCasa(data.characters, "Hufflepuff"));
+      break;
+    case "null":
+      llamarDataPersonajes(filtrarCasa(data.characters, null));
+      break;
+  }
+
+  mostrarModalPersonajes();
+});
+
+
+const selector3=document.getElementById("select3");
+selector3.addEventListener("change", () => {
+  contenedor3.innerHTML=" ";
+  switch (selector3.value) {
+    case "all":
+      llamarDataPersonajes(data.characters);
+      break;
+    case "Hombres":
+      llamarDataPersonajes(filtrarGenero(data.characters, "Male"));
+      break;
+      case "Mujeres":
+        llamarDataPersonajes(filtrarGenero(data.characters, "Female"));
+      break;
+  }
+
+  mostrarModalPersonajes();
+});
+
+const selector4=document.getElementById("select4");
+
+
+selector4.addEventListener("change", () => {
+  contenedor3.innerHTML=" ";
+  
+  let humanos=["Human", "humans", "Human (Globin ancenstry)", "Human (Seer)", "Human (Metamorphmagus)",
+"Human (Werewolf traits)", "werewolf (formerly Human)", "Veela or part-Veela", "Veela", "1/4 Veela",
+"Human (Veela ancestry)", "Half-Human", "Portrait; formerly Human", "Human (Maledictus affliction; formerly)",
+"Portrait" ]
+
+  let animales=["Phoenix", "Great grey owl", "Boarhound", "Centaur", "Three-headed dog", "Gorilla", 
+  "Werewolf (formerly Human)", "Screech owl", "Mice", "Part-Kneazle cat", "Part-Kneazle", "Scops owl", 
+  "Dog (breed: bulldog)", "Owl", "Thestral", "Toad", "Werewolf", "Snowy Owl", "Acromantula",
+  "Selkie (Merpeople)", "Norwegian Ridgeback", "Cat", "Mermaid", "Human (Maledictus affliction; formerly)",
+  "Basilisk", "Hippogriff", "Peacock", "Rabbit", "Pygmy Puff", "Half-Kneazle"];
+  let fantasmas=["Human (formerly)", "Poltergeist", "Ghost"];
+  let elfos=["House-elf", "House-elves"];
+  let gigantes=["Giant","Human or Giant", "Half-Human/Half-Giant", "Human or Giantess"];
+  
+
+  switch (selector4.value) {
+    case "all":
+      llamarDataPersonajes(data.characters);
+      break;
+    case "Humanos":
+      for(let i=0; i<humanos.length;i++){
+      llamarDataPersonajes(filtrarEspecie(data.characters,humanos[i]));
+    }
+      break;
+    case "Animales":
+      for(let i=0; i<animales.length;i++){
+        llamarDataPersonajes(filtrarEspecie(data.characters, animales[i]));
+      }
+      llamarDataPersonajes(filtrarEspecie(data.characters, "Male"));
+      break;
+    case "Vampiros":
+      llamarDataPersonajes(filtrarEspecie(data.characters, "Vampire"));
+      break;
+    case "Fantasmas":
+      for(let i=0; i<fantasmas.length;i++){
+      llamarDataPersonajes(filtrarEspecie(data.characters, fantasmas[i]));
+      }
+      break;
+    case "Duendes":
+      llamarDataPersonajes(filtrarEspecie(data.characters, "Goblin"));
+      break;
+    case "Elfos":
+      for(let i=0; i<elfos.length;i++){
+      llamarDataPersonajes(filtrarEspecie(data.characters, elfos[i]));
+    }
+      break;
+    case "Gigantes":
+      for(let i=0; i<gigantes.length;i++){
+        llamarDataPersonajes(filtrarEspecie(data.characters, gigantes[i]));
+      }
+      break;
+    case "Trolls":
+      llamarDataPersonajes(filtrarEspecie(data.characters, "Part-troll human (possibly)"));
+      break;
+
+  }
+  mostrarModalPersonajes();
 });
 
 
 
 
 
-    
+
 
 /*
-
-const caja4= document.getElementById("Personajes");
-
-
 dataPersonajes.forEach(l =>{
   let dataPersonas= `<div class= "contenedorCeldas4">
   <div class= "celdas4">

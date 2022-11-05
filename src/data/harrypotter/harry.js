@@ -824,7 +824,8 @@ export default {
         "Marauders",
         "Order of the Phoenix"
       ],
-      "books_featured_in": [1, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Sirius-Black_.jpg"
     },
     {
       "id": 51,
@@ -1647,7 +1648,8 @@ export default {
       "patronus": "None",
       "house": null,
       "associated_groups": ["Lord Voldemort", "Death Eaters", "Hogwarts School of Witchcraft and Wizardry"],
-      "books_featured_in": [4, 5, 6]
+      "books_featured_in": [4, 5, 6],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Bartemius-Crounch_.jpg"
     },
     {
       "id": 100,
@@ -1951,7 +1953,8 @@ export default {
         "Circle of Khanna",
         "Death Eaters (alternate timeline)"
       ],
-      "books_featured_in": [3, 4, 5, 6, 7]
+      "books_featured_in": [3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Cedric-Diggory_.jpg"
     },
     {
       "id": 118,
@@ -2056,7 +2059,8 @@ export default {
         "Hogwarts School of Witchcraft and Wizardry",
         "S.P.E.W."
       ],
-      "books_featured_in": [2, 3, 4, 5, 6, 7]
+      "books_featured_in": [2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/dobby.jpg"
     },
     {
       "id": 124,
@@ -2195,7 +2199,8 @@ export default {
         "Dumbledore family",
         "Hogwarts School of Witchcraft and Wizardry"
       ],
-      "books_featured_in": [4, 5, 6, 7]
+      "books_featured_in": [4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/aberforth-dumbledore-1655976935.jpg"
     },
     {
       "id": 132,
@@ -2227,7 +2232,8 @@ export default {
       "patronus": null,
       "house": null,
       "associated_groups": ["Dursley family", "Evans family", "Smeltings Academy", "His gang (formerly)"],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Els-Dursley-3.jpg"
     },
     {
       "id": 134,
@@ -2243,7 +2249,8 @@ export default {
       "patronus": null,
       "house": null,
       "associated_groups": ["Dursley family", "Grunnings"],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Els-Dursley.jpg"
     },
     {
       "id": 135,
@@ -2504,7 +2511,8 @@ export default {
       "patronus": null,
       "house": null,
       "associated_groups": ["Hogwarts School of Witchcraft and Wizardry", "Inquisitorial Squad (formerly)", "Mrs Norris"],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Argus_.jpg"
     },
     {
       "id": 151,
@@ -2822,7 +2830,8 @@ export default {
         "Fudge family",
         "Hogwarts School of Witchcraft and Wizardry"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/CORNELIUS_%20(1).jpg"
     },
     {
       "id": 169,
@@ -3215,7 +3224,8 @@ export default {
       "patronus": "None",
       "house": null,
       "associated_groups": ["Lord Voldemort", "Death Eaters (unofficially)", "Snatchers", "Werewolf army"],
-      "books_featured_in": [3, 6, 7]
+      "books_featured_in": [3, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/fenrir_.jpg"
     },
     {
       "id": 195,
@@ -3231,7 +3241,8 @@ export default {
       "patronus": null,
       "house": null,
       "associated_groups": ["The Alliance", "Acolytes", "Durmstrang Institute"],
-      "books_featured_in": [1, 7]
+      "books_featured_in": [1, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Gellert_Grindelwald_.jpg"
     },
     {
       "id": 196,
@@ -3398,7 +3409,8 @@ export default {
         "Albus Dumbledore",
         "Harry Potter"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Rubeus-Hagrid_.jpg"
     },
     {
       "id": 206,
@@ -3959,7 +3971,8 @@ export default {
         "Krum family",
         "Death Eaters (Imperiused)"
       ],
-      "books_featured_in": [4, 5, 6, 7]
+      "books_featured_in": [4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Viktor-Krum_.jpg"
     },
     {
       "id": 240,
@@ -4149,7 +4162,8 @@ export default {
         "St Mungo's Hospital for Magical Maladies and Injuries",
         "Order of Merlin"
       ],
-      "books_featured_in": [2, 3, 4, 5, 6]
+      "books_featured_in": [2, 3, 4, 5, 6],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Gilderoy-Lockhart_.jpg"
     },
     {
       "id": 251,
@@ -4233,7 +4247,8 @@ export default {
         "S.P.E.W.",
         "Abbott family"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Neville-Longbottom_.jpg"
     },
     {
       "id": 255,
@@ -4256,7 +4271,8 @@ export default {
         "Order of the Phoenix",
         "Harry Potter"
       ],
-      "books_featured_in": [4, 5, 6, 7]
+      "books_featured_in": [4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/xenophilius.jpg",
     },
     {
       "id": 256,
@@ -4320,7 +4336,8 @@ export default {
         "Order of the Phoenix",
         "Advance Guard"
       ],
-      "books_featured_in": [3, 4, 5, 6, 7]
+      "books_featured_in": [3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Remus-Lupin_.jpg"
     },
     {
       "id": 259,
@@ -4476,7 +4493,8 @@ export default {
       "patronus": "None",
       "house": "Malfoy family",
       "associated_groups": [],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Draco-Malfoy_.jpg"
     },
     {
       "id": 268,
@@ -4492,7 +4510,8 @@ export default {
       "patronus": "None",
       "house": "Malfoy family",
       "associated_groups": [],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Lucius-Malfoy_.jpg"
     },
     {
       "id": 269,
@@ -4788,7 +4807,8 @@ export default {
         "British Ministry of Magic",
         "Auror Department"
       ],
-      "books_featured_in": [4, 5, 6, 7]
+      "books_featured_in": [4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Alastor-Ojoloco-Moody_.jpg"
     },
     {
       "id": 286,
@@ -5082,7 +5102,8 @@ export default {
         "Hogwarts School of Witchcraft and Wizardry",
         "Ravenclaw"
       ],
-      "books_featured_in": [1, 4, 6, 7]
+      "books_featured_in": [1, 4, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Ollivander_.jpg"
     },
     {
       "id": 304,
@@ -5245,7 +5266,8 @@ export default {
         "Death Eaters",
         "R (formerly)"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Peter-Pettigrew_.jpg"
     },
     {
       "id": 313,
@@ -5489,7 +5511,8 @@ export default {
         "Department of Magical Law Enforcement",
         "S.P.E.W."
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Harry-Potter_.jpg"
     },
     {
       "id": 327,
@@ -5888,7 +5911,8 @@ export default {
         "British Ministry of Magic (only under his control)",
         "Borgin and Burkes"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Lord-Voldemort_.jpg"
     },
     {
       "id": 351,
@@ -6207,7 +6231,8 @@ export default {
       "patronus": "Non-corporeal",
       "house": null,
       "associated_groups": ["British Ministry of Magic", "Auror Office"],
-      "books_featured_in": [5, 6, 7]
+      "books_featured_in": [5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/rufus.jpg"
     },
     {
       "id": 370,
@@ -6247,7 +6272,8 @@ export default {
         "Hogwarts School of Witchcraft and Wizardry",
         "Potterwatch"
       ],
-      "books_featured_in": [5, 6, 7]
+      "books_featured_in": [5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/kingsley.jpg"
     },
     {
       "id": 372,
@@ -6356,7 +6382,8 @@ export default {
         "Dumbledore's Army (during the Battle of Hogwarts)",
         "Apothecarium of Horace E. F. Slughorn"
       ],
-      "books_featured_in": [6, 7]
+      "books_featured_in": [6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Horace-Slughorn_.jpg"
     },
     {
       "id": 378,
@@ -6453,7 +6480,8 @@ export default {
         "Lord Voldemort (formerly)",
         "Death Eaters (defected)"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Severus-Snape_.jpg"
     },
     {
       "id": 383,
@@ -7243,7 +7271,8 @@ export default {
         "Hogwarts School of Witchcraft and Wizardry",
         "Gryffindor"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/arthur-weasley_.jpg"
     },
     {
       "id": 470,
@@ -7311,7 +7340,8 @@ export default {
         "Weasley family",
         "Prewett family"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/fred-weasley.jpg"
     },
     {
       "id": 473,
@@ -7337,7 +7367,8 @@ export default {
         "Prewett family",
         "Weasleys' Wizard Wheezes"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/george-Weasley.jpg"
     },
     {
       "id": 474,
@@ -7408,7 +7439,8 @@ export default {
         "Weasleys' Wizard Wheezes",
         "Chudley Cannons"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Ron-Weasley_.jpg"
     },
     {
       "id": 477,
@@ -7433,7 +7465,8 @@ export default {
         "Delacour family",
         "Circle of Khanna"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/billWeas.jpg"
     },
     {
       "id": 478,
@@ -8137,7 +8170,8 @@ export default {
       "patronus": "Non-corporeal",
       "house": null,
       "associated_groups": ["Daily Prophet", "Witch Weekly", "The Quibbler", "Order of the Phoenix (indirectly)"],
-      "books_featured_in": [4, 5, 6, 7]
+      "books_featured_in": [4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Rita-Skeeter_.jpg"
     },
     {
       "id": 520,
@@ -8367,7 +8401,8 @@ export default {
         "Ravenclaw",
         "Ravenclaw Quidditch team"
       ],
-      "books_featured_in": [3, 4, 5, 6, 7]
+      "books_featured_in": [3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Cho-Chang_.jpg"
     },
     {
       "id": 534,
@@ -8598,7 +8633,8 @@ export default {
         "Order of the Phoenix",
         "Gringotts Wizarding Bank"
       ],
-      "books_featured_in": [4, 5, 6, 7]
+      "books_featured_in": [4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Fleur-Delacour_.jpg"
     },
     {
       "id": 548,
@@ -8790,7 +8826,8 @@ export default {
       "patronus": null,
       "house": null,
       "associated_groups": ["Evans family", "Dursley family"],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Els-Dursley-2.jpg"
     },
     {
       "id": 560,
@@ -9209,7 +9246,8 @@ export default {
         "Department for the Regulation and Control of Magical Creatures",
         "Department of Magical Law Enforcement"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Hermione-Granger_.jpg"
     },
     {
       "id": 588,
@@ -9342,7 +9380,8 @@ export default {
       "patronus": null,
       "house": null,
       "associated_groups": ["Harry Potter (owner)", "Eeylops Owl Emporium (formerly)", "Hogwarts Owlery"],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/hedwig-harry-potter-1548147924.jpg"
     },
     {
       "id": 596,
@@ -9774,7 +9813,8 @@ export default {
       "patronus": "None",
       "house": "House of Black",
       "associated_groups": [],
-      "books_featured_in": [4, 5, 6, 7]
+      "books_featured_in": [4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Bellatrix-Lestrange_.jpg"
     },
     {
       "id": 623,
@@ -9835,7 +9875,8 @@ export default {
         "Order of the Phoenix",
         "The Quibbler"
       ],
-      "books_featured_in": [4, 5, 6, 7]
+      "books_featured_in": [4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Luna-Lovegood_.jpg"
     },
     {
       "id": 626,
@@ -9979,7 +10020,8 @@ export default {
       "patronus": null,
       "house": "House of Black",
       "associated_groups": [],
-      "books_featured_in": [1, 4, 5, 6, 7]
+      "books_featured_in": [1, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/narcissa_.jpg"
     },
     {
       "id": 635,
@@ -10082,7 +10124,7 @@ export default {
       "name": "Olympe Maxime",
       "birth": null,
       "death": null,
-      "species": "Half-human/Half-giant",
+      "species": "Half-Human/Half-Giant",
       "ancestry": "Part-Human (Half-giant)",
       "gender": "Female",
       "hair_color": "Brown",
@@ -10151,7 +10193,8 @@ export default {
         "Order of the Phoenix",
         "Dumbledore's Army"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Minerva-McGonagall_.jpg"
     },
     {
       "id": 645,
@@ -11046,7 +11089,8 @@ export default {
       "patronus": "Non-corporeal",
       "house": null,
       "associated_groups": ["Three Broomsticks Inn", "Draco Malfoy (while under the Imperius Curse)"],
-      "books_featured_in": [3, 4, 6]
+      "books_featured_in": [3, 4, 6],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/madame-rosmerta_.jpg"
     },
     {
       "id": 699,
@@ -11233,7 +11277,8 @@ export default {
         "Order of the Phoenix (during Battle of the Astronomy Tower and Battle of Hogwarts)",
         "Dumbledore's Army (during Battle of the Astronomy Tower and Battle of Hogwarts)"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://github.com/nicole11robayo/DEV001-data-lovers/blob/main/src/src_imagenes/pomona-sprout-harry-potter-1655976761.jpg?raw=true"
     },
     {
       "id": 711,
@@ -11387,7 +11432,8 @@ export default {
         "Order of the Phoenix",
         "Advance Guard"
       ],
-      "books_featured_in": [5, 6, 7]
+      "books_featured_in": [5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/nymphadora-tonks_.jpg"
     },
     {
       "id": 720,
@@ -11427,7 +11473,8 @@ export default {
         "Divination Workshop (possibly)",
         "Trelawney family"
       ],
-      "books_featured_in": [3, 4, 5, 6, 7]
+      "books_featured_in": [3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Sybil-Trelawney_.jpg"
     },
     {
       "id": 722,
@@ -11523,7 +11570,8 @@ export default {
       "patronus": "Persian cat",
       "house": "Slytherin",
       "associated_groups": [],
-      "books_featured_in": [5, 6, 7]
+      "books_featured_in": [5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Dolores-Umbridge_.jpg"
     },
     {
       "id": 728,
@@ -11773,7 +11821,8 @@ export default {
         "Holyhead Harpies",
         "Daily Prophet"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Ginny-Weasley_.jpg"
     },
     {
       "id": 744,
@@ -11796,7 +11845,8 @@ export default {
         "Hogwarts School of Witchcraft and Wizardry",
         "Gryffindor"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Molly_Weasley_.jpg"
     },
     {
       "id": 745,
@@ -12014,7 +12064,8 @@ export default {
         "International Confederation of Wizards",
         "Dumbledore family"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "imagen":"https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Albus-Dumbledore_.jpg"
     }
   ],
   funFacts: [

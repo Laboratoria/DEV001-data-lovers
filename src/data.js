@@ -35,6 +35,30 @@
     return sortFecha;
   };
   
+  export const ordenarImportancia=(dataHarry)=>{
+    const copiaData=[...dataHarry];
+    const sortImportancia=copiaData.sort((a,b)=>{
+      if((a.books_featured_in.length) < (b.books_featured_in.length)){
+        return -1;
+      }
+    });
+    return sortImportancia;
+  }
 
-  
+  export const filtrarCasa=(dataHarry,value)=>{
+    const copiaData=[...dataHarry];
+    const filterCasa= copiaData.filter(casa => casa.house==value)
+    return filterCasa;
+  }
+
+  export const filtrarGenero=(dataHarry,value)=>{
+    const copiaData=[...dataHarry];
+    const filterGenero= copiaData.filter(genero => genero.gender==value)
+    return filterGenero;
+  }
+  export const filtrarEspecie=(dataHarry,value)=>{
+    const copiaData=[...dataHarry];
+    const filterEspecie= copiaData.filter(especie => especie.species==value)
+    return filterEspecie;
+  }
   

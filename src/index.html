@@ -29,8 +29,8 @@
 
             <li><a href="#Data_libros" class="nav-item">Libros</a></li>
             <li><a href="#Personajes" class="nav-item">Personajes</a></li>
-            <li><a href="#Pociones" class="nav-item">Pociones</a></li>
-            <li><a href="#Hechizos" class="nav-item">Hechizos</a></li>
+           <!-- <li><a href="#Pociones" class="nav-item">Pociones</a></li>
+            <li><a href="#Hechizos" class="nav-item">Hechizos</a></li>-->
           </ul>
         </nav>
       </div>
@@ -52,20 +52,17 @@
       <section class="Libros" id="Data_libros">
         <h1 class="h1Seccion">LIBROS</h1>
         <select name="select" id="select">
-          <option value="filtrar" selected disabled >Filtrar</option>
-          <option value="all">Sin filtrar</option>
+          <option value="filtrar" selected disabled >Ordenar</option>
+          <option value="all">Sin ordenar</option>
           <option value="ordenarAZ">Ordenar A-Z</option>
           <option value="ordenarZA">Ordenar Z-A</option>
           <option value="recienteAntiguo">Ordenar Reciente-Antiguo</option>
           <option value="antiguoReciente">Ordenar Antiguo-Reciente</option>
-          
-          
         </select>
         
-
         <div id="libros">
-        </div>
-        
+          <!--info se muestra en tarjetas-->
+        </div> 
       </section>
 
       <div id="myModal" class="modal">
@@ -76,11 +73,58 @@
         </div>
       </div>
 
-      <section class="Personajes">
-        <h1 class="h1Seccion">Personajes</h1>
-        <div id="personajes"></div>
-        <div id="personajes1"></div>
-      </section>
+      
+        <section class="Personajes" id="Personajes">
+          <h1 class="h1Seccion">PERSONAJES</h1>
+          <div id="contenedorselects">
+            <select name="select" id="select1">
+              <option value="filtrar" selected disabled >Ordenar</option>
+              <option value="all">Sin Ordenar</option>
+              <option value="menorImportancia">Menor a mayor importancia</option>
+              <option value="mayorImportancia">Mayor a menor importancia</option>
+            </select>
+            <select name="select" id="select2">
+              <option value="filtrar" selected disabled >Filtrar por casa</option>
+              <option value="all">Sin filtrar</option>
+              <option value="Gryffindor">Gryffindor</option>
+              <option value="Slytherin">Slytherin</option>
+              <option value="Ravenclaw">Ravenclaw</option>
+              <option value="Hufflepuff">Hufflepuff</option>
+              <option value="null">Sin casa</option>
+            </select>
+            <select name="select" id="select3">
+              <option value="filtrar" selected disabled >Filtrar por género</option>
+              <option value="all">Sin filtrar</option>
+              <option value="Hombres">Hombres</option>
+              <option value="Mujeres">Mujeres</option>
+            </select>
+            <select name="select" id="select4">
+              <option value="filtrar" selected disabled >Filtrar por especie</option>
+              <option value="all">Sin filtrar</option>
+              <option value="Humanos">Humanos</option>
+              <option value="Animales">Animales</option>
+              <option value="Vampiros">Vampiros</option>
+              <option value="Fantasmas">Fantasmas</option>
+              <option value="Duendes">Duendes</option>
+              <option value="Elfos">Elfos</option>
+              <option value="Gigantes">Gigantes</option>
+              <option value="Trolls">Trolls</option>
+            </select>
+          </div>
+        
+        
+          <div id="personajes">
+            <!--info se muestra en tarjetas-->
+          </div>
+        </section>
+
+      <div id="myModal1" class="modal1">
+        <!-- Modal content -->
+        <div class="modal-content1">
+          <span class="close1">&times;</span>
+          <div id="personajes1"></div>
+        </div>
+      </div>
 |
 
 
