@@ -51,14 +51,14 @@ randomButton.addEventListener("click", () => {
             dataRandom = filterGender(data, item.value);
 
         }
-    };
+    }
     // Recorre todos los children de checked2, regresa los filtrados según selección de usuario, retorna valor final de dataRandom   
     for (let item of checked2children) {
         if (item.checked) {
             dataRandom = filterStatus(dataRandom, item.value);
             console.log(dataRandom);
         }
-    };
+    }
     // Ingresa valor de variable dataRandom a la función `quiz` y guarda el valor en la variable dataRandom
     dataRandom = quiz(dataRandom);
     // Template de card en el quiz, se inserta en el innerHTML en el div con id "mostrarCardQuiz"
@@ -135,7 +135,7 @@ filterOptionGender.addEventListener("click", () => {
             dataFiltrada = templateTarjeta(data);
             templateTarjeta(dataFiltrada);
             break;
-    };
+    }
     // Función buscar en input por dataFiltrada
     searchInput(dataFiltrada);
     // Agrega mensaje en pantalla con estadísticas de la categoría
@@ -199,7 +199,7 @@ filterOptionSpecies.addEventListener("click", () => {
             dataFiltrada = templateTarjeta(data);
             templateTarjeta(dataFiltrada);
             break;
-    };
+    }
     // Función buscar en input por dataFiltrada
     searchInput(dataFiltrada);
     // Agrega mensaje en pantalla con estadísticas de la categoría
