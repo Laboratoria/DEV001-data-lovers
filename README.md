@@ -24,11 +24,12 @@ El sitio web está completamente en idioma inglés tal y como está en la data o
 
 La investigación con usuarios/as nos permitió definir las historias de usuarios que guiaron el desarrollo de la interfaz, el contenido y funcionalidad de la plataforma.
 
-![Historia de Usuario](/src/img/Historia1.png)
-![Historia de Usuario](/src/img/Historia2.png)
-![Historia de Usuario](/src/img/Historia3.png)
-![Historia de Usuario](/src/img/Historia4.png)
-![Historia de Usuario](/src/img/Historia5.png)
+![Historia1](https://user-images.githubusercontent.com/109252463/200329964-900b9f53-9201-4826-8e60-1510654edcc6.png)
+![Historia2](https://user-images.githubusercontent.com/109252463/200329975-b607607e-4b95-4efe-879d-c972ccc4afe9.png)
+![Historia3](https://user-images.githubusercontent.com/109252463/200329973-92467beb-8f5d-4b84-a2d8-6198c3b13262.png)
+![Historia4](https://user-images.githubusercontent.com/109252463/200329969-b2ae633d-e561-43b8-bfd1-b4d525a283ae.png)
+![Historia5](https://user-images.githubusercontent.com/109252463/200329976-6e356145-0433-46da-bbc3-4e7ec8d9b754.png)
+
 
 Historia de usuario 1:
 "Como usuario/a quiero ver a todos los personajes de la serie Rick and Morty"
@@ -52,21 +53,28 @@ Historia de usuario 6:
 
 Prototipo de Baja Fidelidad
 
-![Prototipo Baja Fidelidad](/src/img/prototipo1.jpeg)
+![Prototipo1](https://user-images.githubusercontent.com/109252463/200330711-b8546e4b-995b-47ee-82ed-63a8ab46fe00.jpeg)
 
 Prototipo de Alta Fidelidad
 
   - Versión Escritorio
 
-![Prototipo Alta Fidelidad](/src/img/prototipo2.png)
-![Prototipo Alta Fidelidad](/src/img/prototipo3.png)
+
+<img width="309" alt="Prototipo2" src="https://user-images.githubusercontent.com/109252463/200330824-de9a62ab-13f4-4ac2-bf55-bdef71dca54a.png">
+
+<img width="312" alt="Prototipo3" src="https://user-images.githubusercontent.com/109252463/200330845-97925ccb-f2eb-402e-b0cf-c36e15b6a90e.png">
 
   - Versión Mobile 
+<img width="396" alt="Prototipo4" src="https://user-images.githubusercontent.com/109252463/200330909-4cbd5ecc-7bfe-4869-83b0-c2447ba28bec.png">
+<img width="416" alt="Prototipo5" src="https://user-images.githubusercontent.com/109252463/200330918-12515e27-1073-4bf0-bf42-f8f2d41bdbc6.png">
+<img width="414" alt="Prototipo6" src="https://user-images.githubusercontent.com/109252463/200330924-372e0e1b-1285-4f3f-bc89-5769621ac855.png">
+<img width="207" alt="Prototipo7" src="https://user-images.githubusercontent.com/109252463/200330926-78d2855f-8dc2-402f-899d-e75828f295d8.png">
+<img width="202" alt="Prototipo8" src="https://user-images.githubusercontent.com/109252463/200330933-5614f357-4aaa-49b3-96b3-b4186a499a95.png">
 
-![Prototipo Alta Fidelidad](/src/img/prototipo4.png)
-![Prototipo Alta Fidelidad](/src/img/prototipo5.png)
-![Prototipo Alta Fidelidad](/src/img/prototipo6.png)
-![Prototipo Alta Fidelidad](/src/img/prototipo7.png)
-![Prototipo Alta Fidelidad](/src/img/prototipo8.png)
+
 
 ## 4. GitHub Pages  
+
+https://pibmunoz.github.io/DEV001-data-lovers/index.html
+
+
