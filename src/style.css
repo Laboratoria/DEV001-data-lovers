@@ -114,11 +114,27 @@ h1 {
     align-items: center;
     gap: 20px;
 }    
-
+#sort-movies-by{
+    display: flex;
+    background-color:#0d4642;
+    border-style: none;
+    border-radius: 5px;
+    font-family:'Poppins', sans-serif ;
+    color:white;
+    cursor: pointer;
+}
 #root {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+.showMore{
+  background-color:#0d4642;
+  border-style: none;
+  border-radius: 5px;
+  font-family:'Poppins', sans-serif ;
+  color:white;
+  cursor: pointer;
 }
 .modal {
     display: none;
@@ -132,7 +148,7 @@ h1 {
 
 .modal-content {
     position:absolute;
-    background-color:#6C9B98;
+    background-color:rgb(204, 226, 245);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
