@@ -265,11 +265,6 @@ new Chart (lienzo,{
   }
 });
 
-
-
-
-
-
 function mostrarModalEstadistica(){
   const botonEstadistica=document.getElementById("estadistica");
   const span3 = document.getElementsByClassName("close2")[0];
