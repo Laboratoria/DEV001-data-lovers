@@ -87,10 +87,8 @@ h1 {
     top: 35%;
 }
 .moreinfo{
-    display: flex;
-    width: 60%;
     max-width: 242px;
-    padding: 0.1rem;
+    padding: 10px 100px;
     border-style:none;
     border-radius:11px;
     font-size: 20px;
