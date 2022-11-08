@@ -7,7 +7,7 @@ import {sortPelis} from './data.js';
 let show = function (dataGhibli){ 
   let newHtml= ""
     dataGhibli.forEach(function(film,index){
-      console.log (film);
+      //console.log (film);
         let templatePelicula =`
         <div class="cardPrincipal">
           <img src="${film.poster}" alt="poster">
@@ -52,9 +52,6 @@ sortSelect.addEventListener("change",() =>{
   let copyData = objetoghibli ;
   //debugger;
 switch(sortSelect.value){
-case "default":
-   show(copyData.films);
-   break;
   case "a-z":
     show(sortPelis(copyData.films));
     break;
