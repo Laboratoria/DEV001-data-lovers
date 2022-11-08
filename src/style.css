@@ -185,11 +185,11 @@ h1 {
 
 /* Modal Content */
 				.modal-content {
+					display: flex;
 					background-color: #fefefe;
 					margin: auto;
 					padding: 20px;
 					border: 1px solid #888;
-					width: 80%;
 					border-radius: 20px;
 				}
 
@@ -351,6 +351,7 @@ h1 {
 							display: block;
 							margin: auto;
 							border-radius: 10px;
+							
 						}
 
 						.nameCeldas2 {
@@ -389,11 +390,11 @@ h1 {
 
 /* Modal Content */
 				.modal-content1 {
+					display: fle;
 					background-color: #fefefe;
 					margin: auto;
 					padding: 20px;
 					border: 1px solid #888;
-					width: 80%;
 					border-radius: 20px;
 				}
 
@@ -403,6 +404,7 @@ h1 {
 						float: right;
 						font-size: 28px;
 						font-weight: bold;
+						position: relative;
 					}
 
 					.close1:hover,
@@ -412,8 +414,7 @@ h1 {
 						cursor: pointer;
 					}
 
-					#personajes1{					
-					}
+					
 					.contenedorCeldas3 {
 						display: flex;
 						flex-flow: row wrap;
@@ -443,6 +444,7 @@ h1 {
 								flex: 1 1 20%;
 								border-radius: 30px;
 								padding: 20px;
+								flex-shrink: 1;
 
 							}
 
@@ -527,11 +529,11 @@ h1 {
 
 /* Modal Content */
 				.modal-content2 {
+					display: flex;
 					background-color: #fefefe;
 					margin: auto;
 					padding: 20px;
 					border: 1px solid #888;
-					width: 80%;
 					border-radius: 20px;
 				}
 
@@ -539,8 +541,10 @@ h1 {
 					.close2 {
 						color: #aaaaaa;
 						float: right;
-						font-size: 28px;
+						font-size: 28pt;
 						font-weight: bold;
+						position: absolute;
+
 					}
 
 					.close2:hover,
@@ -556,7 +560,12 @@ h1 {
 
 
 
-.footer {}
+.footer {
+	font-size: 18pt;
+	background-color: white;
+	text-align: center;
+	padding: 15px;
+}
 
 @media (max-width:700px) {
 	.nav-label {
@@ -585,17 +594,13 @@ h1 {
 		flex-direction: column;
 		padding: 10px;
 		margin: 0px;
-		gap: 0px;
-		
+		gap: 0px;	
 	}
 
 	.navigation ul li{
-	
-		
 		padding: 10px;
 		margin: 0px;
 	}
-
 
 	.nav-input:checked+.navigation {
 		display: block;

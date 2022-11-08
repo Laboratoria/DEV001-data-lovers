@@ -3,19 +3,6 @@ import data from './data/harrypotter/harry.js';
 import { llamarDataLibros , llamarModalLibros, llamarDataPersonajes, llamarModalPersonajes} from './mostrardata.js';
 import { encontrarId, ordenarAaZ, ordenarFecha, filtrarCasa, ordenarImportancia, filtrarGenero, filtrarEspecie, estadisticaCasas } from './data.js';
 
-
-//filtrarCasa(data.characters,"Gryffindor");
-
-// eslint-disable-next-line no-unused-vars
-
-
-//const dataLibros=data.books;
-//const dataPersonajes=data.characters;
-//const dataPociones=data.potions;
-//const dataHechizos=data.spells;
-
-
-
 let copiaDataLibros= [...data.books];
 llamarDataLibros(copiaDataLibros);
 mostrarModal();
@@ -23,10 +10,6 @@ mostrarModal();
 let copiaDataPersonajes=[...data.characters];
 llamarDataPersonajes(copiaDataPersonajes);
 mostrarModalPersonajes();
-
-
-
-
 
 function mostrarModal(){
   const celdas=document.querySelectorAll(".celdas");
@@ -60,9 +43,7 @@ selector.addEventListener("change", () => {
   contenedor1.innerHTML=" ";
   switch (selector.value) {
     case "all":
-
       llamarDataLibros(data.books);
-      
       break;
     case "ordenarAZ":
       llamarDataLibros(ordenarAaZ(data.books));
@@ -257,7 +238,7 @@ const datosEstadisticaCasas={
 };
 
 
-new Chart (lienzo,{
+new /*Chart*/ (lienzo,{
   type:"pie",
   data:{
     labels: etiquetas,
@@ -291,50 +272,6 @@ function mostrarModalEstadistica(){
 
   mostrarModalEstadistica();
 
-
-
-/*
-dataPersonajes.forEach(l =>{
-  let dataPersonas= `<div class= "contenedorCeldas4">
-  <div class= "celdas4">
-  <h1 class= "nameCeldas4">${l.name}</h1>
-  <p class="descrpcionCeldas4"><b>Casa: </b> ${l.house}</p>
-  </div>
-  
-  </div>`
-  
-
-  caja4.insertAdjacentHTML("beforeend", dataPersonas);
-});
-
-
-dataPociones.forEach(l=>{
-const caja2=document.getElementById("pociones");
-
-const plantillaPociones=   
-`<div class="contenedorPociones">
-<div class="pociones01">
- <h1 class="idPociones">${l.id}</h1><br>
-  <h1 class="namePociones"> ${ l.name }</h1>
-  <p class="desPociones><b>Descripción: </b>${ l.description}<br> 
- </div>
- </div>`;
- 
- caja2.insertAdjacentHTML("beforeend", plantillaPociones);})
-
-
-
-dataHechizos.forEach(l=>{
-const plantillaHechizos=   
-`<div class="contenedorHechizos">
-<div class="hechizos">
- <h1 class="h1hechizos"><b>Nombre: </b>${l.name}</h1><br>
-  <p class="phechizos"><b>Pronunciación: </b> ${ l.pronunciation }</p>
-  <p><b>Descripción: </b>${ l.description}<br> 
- </div>`;
-document.body.innerHTML = plantillaHechizos;})
-
-*/
 
 
 
