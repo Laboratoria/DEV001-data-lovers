@@ -1,9 +1,7 @@
 import objetoghibli from './data/ghibli/ghibli.js'; /*libera nuestra data*/
-//console.log(objetoghibli.films[0]);
-//console.log(objetoghibli.films.length);
-
+import {sortPelis} from './data.js';
 // eslint-disable-next-line no-console
-console.log(objetoghibli);
+//console.log(objetoghibli);
 
 //Funcion para mostrar las peliculas
 let show = function (dataGhibli){ 
@@ -47,8 +45,24 @@ function toggleModal(event) {
   document.getElementById (idModal).classList.toggle("show-modal");
     
 }
-//]*sort a-z y z-a*//
+//*sort a-z y z-a*//
+const sortSelect = document.getElementById("sort-movies-by");
 
+sortSelect.addEventListener("change",() =>{
+  let copyData = objetoghibli ;
+  //debugger;
+switch(sortSelect.value){
+case "default":
+   show(copyData.films);
+   break;
+  case "a-z":
+    show(sortPelis(copyData.films));
+    break;
+  case "z-a":
+    show(sortPelis(copyData.films).reverse());
+    break;
+}
+})
 
 
 
