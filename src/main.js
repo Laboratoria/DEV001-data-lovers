@@ -94,3 +94,43 @@ if (window.scrollY < 300) {
 }
 }
 
+/* buscar pokemon*/
+const search = document.getElementById("Buscar");
+const prueba = document.getElementById("prueba")
+prueba.addEventListener("click", () => {
+    const text = search.value;
+    let busca = searchFilter(data.pokemon, text)
+    /*  console.log(busca) */
+    div.innerHTML = " "
+    busca.forEach(nombre => {
+
+        div.innerHTML += drawCard(nombre)
+    });
+})
+
+export const searchFilter =  (pokemon,nombrePokemon)=> {
+  const nameFilter= pokemon.filter (x=>
+    x.name.toUpperCase()==nombrePokemon.toUpperCase())
+
+    
+  ;return nameFilter
+
+
+};
+
+export const ordenAzPokemon=(array)=>{
+
+  return array.sort(function (a, b) {
+    
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name> b.name) {
+      return 1;
+    }
+   return 0;
+  })
+  
+  
+}
+
