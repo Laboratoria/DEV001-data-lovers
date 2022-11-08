@@ -1,4 +1,4 @@
-import { encontrarId,ordenarAaZ, ordenarFecha} from '../src/data.js';
+import { encontrarId,ordenarAaZ, ordenarFecha, ordenarImportancia,filtrarCasa, filtrarGenero,filtrarEspecie,estadisticaCasas} from '../src/data.js';
 
 
 const dataPrueba=[
@@ -28,6 +28,142 @@ const dataPrueba=[
   }
 ]
 
+const dataPruebaPersonajes=[
+  {
+    "id": 585,
+    "name": "Miranda Goshawk",
+    "books_featured_in": [1, 2, 4]
+  },
+  {
+    "id": 587,
+    "name": "Hermione Granger",
+    "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+  },
+  {
+    "id": 586,
+    "name": "Gregory Goyle's mother",
+    "books_featured_in": [5]
+  }
+];
+
+const dataPruebaPersonajesCasaGenero=[
+  {
+    "id": 589,
+    "name": "Daphne Greengrass",
+    "birth": "Between 1 September 1979 and 31 August 1980",
+    "death": null,
+    "species": "Human",
+    "ancestry": "Pure-blood",
+    "gender": "Female",
+    "hair_color": null,
+    "eye_color": null,
+    "wand": null,
+    "patronus": null,
+    "house": "Slytherin",
+    "associated_groups": ["Hogwarts School of Witchcraft and Wizardry", "Slytherin", "Greengrass family"],
+    "books_featured_in": [5]
+  },
+  {
+    "id": 592,
+    "name": "Curious Gryffindor Girl",
+    "birth": "between 1 September 1980 and 31 August 1981 (most likely), Great Britain or Ireland",
+    "death": null,
+    "species": "Human",
+    "ancestry": null,
+    "gender": "Female",
+    "hair_color": null,
+    "eye_color": null,
+    "wand": null,
+    "patronus": null,
+    "house": "Gryffindor",
+    "associated_groups": [],
+    "books_featured_in": [5]
+  },
+  {
+    "id": 566,
+    "name": "Fawcett",
+    "birth": "Between 1 November 1977 and 31 August 1981, Great Britain or Ireland",
+    "death": null,
+    "species": "Human",
+    "ancestry": null,
+    "gender": "Female",
+    "hair_color": "Black",
+    "eye_color": null,
+    "wand": null,
+    "patronus": null,
+    "house": "Ravenclaw",
+    "associated_groups": ["Fawcett family", "Hogwarts School of Witchcraft and Wizardry", "Ravenclaw"],
+    "books_featured_in": [2, 4]
+  },
+  {
+    "id": 489,
+    "name": "Hengist of Woodcroft",
+    "birth": "982 or later",
+    "death": null,
+    "species": "Human",
+    "ancestry": null,
+    "gender": "Male",
+    "hair_color": "Red",
+    "eye_color": null,
+    "wand": null,
+    "patronus": null,
+    "house": "Hufflepuff",
+    "associated_groups": ["Hogsmeade", "Hogwarts School of Witchcraft and Wizardry", "Hufflepuff"],
+    "books_featured_in": [1]
+  }
+]
+
+const dataPruebaPersonajesEspecie=[
+  {
+    "id": 489,
+    "name": "Hengist of Woodcroft",
+    "birth": "982 or later",
+    "death": null,
+    "species": "Human",
+    "ancestry": null,
+    "gender": "Male",
+    "hair_color": "Red",
+    "eye_color": null,
+    "wand": null,
+    "patronus": null,
+    "house": "Hufflepuff",
+    "associated_groups": ["Hogsmeade", "Hogwarts School of Witchcraft and Wizardry", "Hufflepuff"],
+    "books_featured_in": [1]
+  },
+  {
+    "id": 751,
+    "name": "Winky's mother",
+    "birth": null,
+    "death": null,
+    "species": "House-elf",
+    "ancestry": null,
+    "gender": "Female",
+    "hair_color": null,
+    "eye_color": null,
+    "wand": null,
+    "patronus": null,
+    "house": null,
+    "associated_groups": ["Crouch family"],
+    "books_featured_in": [4]
+  },
+  {
+    "id": 352,
+    "name": "Ripper",
+    "birth": "c. 1980s",
+    "death": null,
+    "species": "Dog (breed: bulldog)",
+    "ancestry": null,
+    "gender": "Male",
+    "hair_color": "Brown and white",
+    "eye_color": "Black",
+    "wand": null,
+    "patronus": null,
+    "house": null,
+    "associated_groups": ["Marjorie Dursley"],
+    "books_featured_in": [3, 5]
+  },
+]
+
 
 describe('Quiero testear que el id de la tarjeta coincida con el id del objeto y me retorne dicho objeto', () => {
   const objetoData=
@@ -45,7 +181,6 @@ describe('Quiero testear que el id de la tarjeta coincida con el id del objeto y
     expect(encontrarId("6", dataPrueba)).toEqual(objetoData);
   });
 });
-
 
 describe('Quiero ordenar los libros de la A a la Z', () => {
  const dataOrdenadaAZ=[ 
@@ -146,7 +281,6 @@ describe('Quiero ordenar los libros de la Z a la A', () => {
 
  })
 
- 
  describe("Quiero ordenar los libros según su año de publicación del más reciente al más antiguo", () =>{
 
   const dataOrdenadaRecienteAntiguo=[ 
@@ -181,3 +315,138 @@ describe('Quiero ordenar los libros de la Z a la A', () => {
  })
 
  })
+
+ describe("quiero  ordenar los personajes por importancia en los libros de mayor a menor", ()=>{
+    const dataPersonajes=[
+      {
+        "id": 587,
+        "name": "Hermione Granger",
+        "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      },
+      {
+        "id": 585,
+        "name": "Miranda Goshawk",
+        "books_featured_in": [1, 2, 4]
+      },
+      {
+        "id": 586,
+        "name": "Gregory Goyle's mother",
+        "books_featured_in": [5]
+      }
+    ]
+    it("ordena los personajes de mayor a menor dependiendo en cuantos libros es mencionado",()=>{
+      expect(ordenarImportancia(dataPruebaPersonajes).reverse()).toEqual(dataPersonajes);
+    })
+}
+)
+
+describe("quiero  ordenar los personajes por importancia en los libros de menor a mayor", ()=>{
+  const dataPersonajes=[
+    {
+      "id": 586,
+      "name": "Gregory Goyle's mother",
+      "books_featured_in": [5]
+    },
+    {
+      "id": 585,
+      "name": "Miranda Goshawk",
+      "books_featured_in": [1, 2, 4]
+    },
+    {
+      "id": 587,
+      "name": "Hermione Granger",
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+    },
+    
+  ]
+  it("ordena los personajes de mayor a menor dependiendo en cuantos libros es mencionado",()=>{
+    expect(ordenarImportancia(dataPruebaPersonajes)).toEqual(dataPersonajes);
+  })
+}
+)
+
+describe("quiero filtrar los personajes dependiendo su casa", ()=>{
+  const dataPersonajes=[
+    {
+      "id": 592,
+      "name": "Curious Gryffindor Girl",
+      "birth": "between 1 September 1980 and 31 August 1981 (most likely), Great Britain or Ireland",
+      "death": null,
+      "species": "Human",
+      "ancestry": null,
+      "gender": "Female",
+      "hair_color": null,
+      "eye_color": null,
+      "wand": null,
+      "patronus": null,
+      "house": "Gryffindor",
+      "associated_groups": [],
+      "books_featured_in": [5]
+    },
+    
+  ]
+  it("filtra la data y solo muestra los personajes que pertenecen a Gryffindor", ()=>{
+    expect(filtrarCasa(dataPruebaPersonajesCasaGenero, "Gryffindor")).toEqual(dataPersonajes);
+  })
+})
+
+
+describe("quiero filtrar los personajes dependiendo su género", ()=>{
+  const dataPersonajes=[
+    {
+      "id": 489,
+      "name": "Hengist of Woodcroft",
+      "birth": "982 or later",
+      "death": null,
+      "species": "Human",
+      "ancestry": null,
+      "gender": "Male",
+      "hair_color": "Red",
+      "eye_color": null,
+      "wand": null,
+      "patronus": null,
+      "house": "Hufflepuff",
+      "associated_groups": ["Hogsmeade", "Hogwarts School of Witchcraft and Wizardry", "Hufflepuff"],
+      "books_featured_in": [1]
+    }
+    
+  ]
+  it("filtra la data y solo muestra los personajes que son hombres (male)", ()=>{
+    expect(filtrarGenero(dataPruebaPersonajesCasaGenero, "Male")).toEqual(dataPersonajes);
+  })
+})
+
+
+describe("quiero filtrar los personajes dependiendo su Especie", ()=>{
+  const dataPersonajes=[
+    {
+      "id": 352,
+      "name": "Ripper",
+      "birth": "c. 1980s",
+      "death": null,
+      "species": "Dog (breed: bulldog)",
+      "ancestry": null,
+      "gender": "Male",
+      "hair_color": "Brown and white",
+      "eye_color": "Black",
+      "wand": null,
+      "patronus": null,
+      "house": null,
+      "associated_groups": ["Marjorie Dursley"],
+      "books_featured_in": [3, 5]
+    },
+    
+  ]
+  it("filtra la data y solo muestra la especie Dog (breed: bulldog)", ()=>{
+    expect(filtrarEspecie(dataPruebaPersonajesEspecie, "Dog (breed: bulldog)")).toEqual(dataPersonajes);
+  })
+})
+
+
+describe("quiero filtrar los personajes dependiendo su género", ()=>{
+  const dataPersonajes=[1,1,1,1]
+  it("filtra la data y solo muestra los personajes que son hombres (male)", ()=>{
+    expect(estadisticaCasas(dataPruebaPersonajesCasaGenero)).toEqual(dataPersonajes);
+  })
+})
+

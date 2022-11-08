@@ -9314,22 +9314,6 @@ export default {
       "books_featured_in": [4, 5, 6]
     },
     {
-      "id": 592,
-      "name": "Curious Gryffindor Girl",
-      "birth": "between 1 September 1980 and 31 August 1981 (most likely), Great Britain or Ireland",
-      "death": null,
-      "species": "Human",
-      "ancestry": null,
-      "gender": "Female",
-      "hair_color": null,
-      "eye_color": null,
-      "wand": null,
-      "patronus": null,
-      "house": "Gryffindor",
-      "associated_groups": [],
-      "books_featured_in": [5]
-    },
-    {
       "id": 593,
       "name": "Gladys Gudgeon",
       "birth": null,

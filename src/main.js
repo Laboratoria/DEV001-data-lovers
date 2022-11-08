@@ -1,7 +1,7 @@
 import data from './data/harrypotter/harry.js';
 
 import { llamarDataLibros , llamarModalLibros, llamarDataPersonajes, llamarModalPersonajes} from './mostrardata.js';
-import { encontrarId, ordenarAaZ, ordenarFecha, filtrarCasa, ordenarImportancia, filtrarGenero, filtrarEspecie } from './data.js';
+import { encontrarId, ordenarAaZ, ordenarFecha, filtrarCasa, ordenarImportancia, filtrarGenero, filtrarEspecie, estadisticaCasas } from './data.js';
 
 
 //filtrarCasa(data.characters,"Gryffindor");
@@ -13,6 +13,7 @@ import { encontrarId, ordenarAaZ, ordenarFecha, filtrarCasa, ordenarImportancia,
 //const dataPersonajes=data.characters;
 //const dataPociones=data.potions;
 //const dataHechizos=data.spells;
+
 
 
 let copiaDataLibros= [...data.books];
@@ -235,9 +236,65 @@ selector4.addEventListener("change", () => {
   mostrarModalPersonajes();
 });
 
+const $grafica=document.getElementById("grafica");
+const lienzo=$grafica.getContext("2d");
+
+const etiquetas=["Gryffindor", "Slytherin", "Ravenclaw", "Hufflepuff"]
+
+const datosCasas= estadisticaCasas(copiaDataPersonajes);
+
+const datosEstadisticaCasas={
+  data: datosCasas,
+  backgroundColor:[
+    "rgba(77, 12, 30,1)",
+    "rgba(24, 56, 37, 1)",
+    "rgba(29, 71, 111, 1)",
+    "rgba(230, 148, 10, 1)"
+  ],
+  
+  borderWidth:0,
+  
+};
+
+
+new Chart (lienzo,{
+  type:"pie",
+  data:{
+    labels: etiquetas,
+    datasets:[datosEstadisticaCasas]
+  }
+});
 
 
 
+
+
+
+function mostrarModalEstadistica(){
+  const botonEstadistica=document.getElementById("estadistica");
+  const span3 = document.getElementsByClassName("close2")[0];
+  
+    botonEstadistica.addEventListener("click", () =>{
+      document.querySelector("#myModal2").style.display="flex";
+      
+    }
+    
+    );
+    
+    span3.onclick = function() {
+      document.querySelector("#myModal2").style.display = "none";
+      
+    }
+    window.onclick = function(event) {
+      if (event.target == document.querySelector("#myModal2")) {
+        document.querySelector("#myModal2").style.display = "none";
+        
+      }
+    }
+    mostrarModalEstadistica();
+  }
+
+  mostrarModalEstadistica();
 
 
 

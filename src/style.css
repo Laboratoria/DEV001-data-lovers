@@ -79,7 +79,7 @@ h1 {
 			.Inicio {
 				display: flex;
 				background-image: url("https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Harry-Potter-y-la-camara-de-los-secretos-scaled.jpg");
-				background-size: contain;
+				background-size: cover;
 				background-repeat: no-repeat;
 			}
 
@@ -268,13 +268,15 @@ h1 {
 				#contenedorselects{
 					display: flex;
 					justify-content: space-between;
+					flex-wrap:wrap;
+					flex-direction: row;
 				}
 					#select1 {
 						display: flex;
 						order: 4;
 						width: 300px;
 						margin-bottom: 20px;
-						font-size: 15pt;
+						font-size: 13pt;
 						border-radius: 10px;
 						padding: 2px;
 					}
@@ -283,7 +285,7 @@ h1 {
 						order: 3;
 						width: 300px;
 						margin-bottom: 20px;
-						font-size: 15pt;
+						font-size: 13pt;
 						border-radius: 10px;
 						padding: 2px;
 					}
@@ -292,7 +294,7 @@ h1 {
 						order: 2;
 						width: 300px;
 						margin-bottom: 20px;
-						font-size: 15pt;
+						font-size: 13pt;
 						border-radius: 10px;
 						padding: 2px;
 					}
@@ -301,24 +303,43 @@ h1 {
 						order: 1;
 						width: 300px;
 						margin-bottom: 20px;
-						font-size: 15pt;
+						font-size: 13pt;
 						border-radius: 10px;
 						padding: 2px;
+					}
+					#estadistica{
+						display: flex;
+						order: 5;
+						width: 160px;
+						font-size:13pt ;
+						border-radius: 10px;
+						padding: 2px;
+						margin-bottom: 20px;
+						padding-left: 10px;
+					
+					}
+					#estadistica:hover{
+						background-color: #fdc647;
+						cursor: pointer ;
 					}
 
 				#personajes {
 					display: flex;
-					flex-flow: row wrap;
+					flex-direction: row ;
+					flex-wrap: wrap;
 					gap: 10px 10px;
+					
 				}
 
 					.celdas2 {
 						display: flex;
+						flex-wrap: wrap;
 						flex-direction: column;
 						background: white;
 						border-radius: 20px;
 						padding: 20px;
 						flex: 1 1 5%;
+						
 					}
 					.celdas2:hover{
 						background-color:#fdc647;
@@ -480,79 +501,59 @@ h1 {
 								padding: 2px;
 								flex: 1 1 100%;
 							}
+			.modal2 {
+				display: none;
+				/* Hidden by default */
+				position: fixed;
+				/* Stay in place */
+				z-index: 1;
+				/* Sit on top */
+				padding-top: 100px;
+				/* Location of the box */
+				left: 0;
+				top: 0;
+				width: 100%;
+				/* Full width */
+				height: 100%;
+				/* Full height */
+				overflow: auto;
+				/* Enable scroll if needed */
+				background-color: rgb(0, 0, 0);
+				/* Fallback color */
+				background-color: rgba(0, 0, 0, 0.4);
+				/* Black w/ opacity */
+
+			}
+
+/* Modal Content */
+				.modal-content2 {
+					background-color: #fefefe;
+					margin: auto;
+					padding: 20px;
+					border: 1px solid #888;
+					width: 80%;
+					border-radius: 20px;
+				}
+
+/* The Close Button */
+					.close2 {
+						color: #aaaaaa;
+						float: right;
+						font-size: 28px;
+						font-weight: bold;
+					}
+
+					.close2:hover,
+					.close2:focus {
+						color: #000;
+						text-decoration: none;
+						cursor: pointer;
+					}	
+						#grafica{
+							max-height:500px ;
+						}		
 						
-/*.Pociones {
-	display: flex;
-	flex-direction: column;
-}
 
-#pociones {
-	display: flex;
-	flex-flow: row wrap;
-	gap: 10px 10px;
-}
-
-.contenedorPociones {
-	display: flex;
-}
-
-.pociones01 {
-	display: flex;
-	flex-direction: column;
-	background: white;
-	flex: 1 1 17%;
-	border-radius: 20px;
-	padding: 20px;
-}
-
-.idPociones {
-	text-align: center;
-	padding-top: 10px;
-}
-
-.namePociones {
-	text-align: center;
-	padding-top: 10px;
-}
-
-.desPociones {
-
-	text-align: center;
-	padding-top: 10px;
-}
-
-.Hechizos {
-	display: flex;
-	flex-direction: column;
-}
-
-.contenedorHechizos {
-	display: flex;
-	flex-flow: row wrap;
-	gap: 10px 10px;
-
-}
-
-.hechizos {
-	display: flex;
-	flex-direction: column;
-	background: white;
-	flex: 1 1 17%;
-	border-radius: 20px;
-	padding: 20px;
-}
-
-.h1hechizos {
-	text-align: center;
-	padding-top: 10px;
-}
-
-.phechizos {
-
-	text-align: center;
-	padding-top: 10px;
-}
-*/
 
 
 .footer {}
@@ -569,38 +570,36 @@ h1 {
 		/* position:fixed= salga del flujo, es decir ya no este*/
 		position: fixed;
 		/* top:80px= salga del flujo*/
-		top: 49px;
+		top: 50px;
 		/* apartir de la cantidad de pixeles (80px) ocupe todo el alto */
-		background: rgb(0, 145, 255);
-		width: 50%;
+		background: rgb(255, 255, 255);
+		width: 30%;
 		right: 0;
 		display: none;
 		text-align: right;
+		border-radius:10px ;
 	}
 
 	.navigation ul {
 		display: flex;
 		flex-direction: column;
-		padding-right: 20px;
+		padding: 10px;
+		margin: 0px;
+		gap: 0px;
+		
+	}
+
+	.navigation ul li{
+	
+		
+		padding: 10px;
+		margin: 0px;
 	}
 
 
 	.nav-input:checked+.navigation {
 		display: block;
 	}
-}
-
-;
-
-*/ #Inicio {
-	display: flex;
-	block-size: 700px;
-	height: 400px;
-	background-repeat: no-repeat;
-	background-image: url("https://raw.githubusercontent.com/nicole11robayo/DEV001-data-lovers/main/src/src_imagenes/Harry-Potter-y-la-camara-de-los-secretos-scaled.jpg");
-}
+};
 
 
-#libros01 {
-	display: flex;
-}

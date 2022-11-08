@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
+  
 </head>
 
 <body>
@@ -110,7 +111,18 @@
               <option value="Gigantes">Gigantes</option>
               <option value="Trolls">Trolls</option>
             </select>
+            <button class="estadistica" id="estadistica">Estadística Casas </button>
           </div>
+
+ <div id="myModal2" class="modal2">
+        <!-- Modal content -->
+        <div class="modal-content2">
+          <span class="close2">&times;</span>
+          <div id="casas">
+            <canvas id="grafica"></canvas>
+          </div>
+        </div>
+      </div>
         
         
           <div id="personajes">
@@ -125,28 +137,17 @@
           <div id="personajes1"></div>
         </div>
       </div>
-|
-
-
-      <section class="Pociones" id="Pociones">
-        <h1 class="h1Seccion">Pociones</h1>
-        <div id="pociones"></div>
-      </section>
-
-      <section class="Hechizos" id="Hechizos">
-
-        <h1 class="h1Seccion">Hechizos</h1>
-        <div id="hechizos"></div>
-       
-      </section>
 
     </main>
     <footer class="footer">
       Diseñado por Nicole Robayo Y Jennyfer Gamboa
     </footer>
   </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
   <script src="main.js" type="module"></script>
   <script src="mostrardata.js" type="module"></script>
+  
 </body>
 
 </html>
