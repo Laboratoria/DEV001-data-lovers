@@ -2,9 +2,11 @@
 <html>
 
 <head>
+  <meta name="google"content="notranslate"/>
     <meta charset="utf-8" />
     <!-- Con esto hacemos que sea también para pantalla de celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,24 +15,45 @@
 
     <main>
         <section class="portada">
-            <img src="imagenes/Portada.jpg">
         </section>
-
         <section>
-            <section class="Bienvenida">
-                <header>Bienvenidx a la Pokedex de Kanto</header>
-            </section>
-            <section class="Botones">
+          <section class="Bienvenida">
+            <header>Bienvenidx a la Pokedex de Kanto</header>
+          </section>
+          <div class="boton1">
+            <button onclick="myFunction()" class="tiposdepoke">por tipo</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#" class="planta">planta</a>
+              <a href="#" class="bicho">bicho</a>
+              <a href="#" class="electrico">electrico</a>
+              <a href="#" class="tierra">tierra</a>
+              <a href="#" class="roca">roca</a>
+              <a href="#" class="normal">normal</a>
+              <a href="#" class="agua">agua</a>
+              <a href="#" class="dragon">dragon</a>
+              <a href="#" class="hielo">hielo</a>
+              <a href="#" class="volador">volador</a>
+              <a href="#" class="acero">acero</a>
+              <a href="#"class= "veneno">veneno</a>
+              <a href="#" class="fantasma">fantasma</a>
+              <a href="#" class="hada">hada</a>
+              <a href="#" class="psiquico">psiquico</a>
+              <a href="#" class="fuego">fuego</a>
+              <a href="#" class="lucha">lucha</a>
+            </div>
 
-            </section>
-            <section class="contenedor" id="contenedor">
-            </section>
+          </div>
+          <section class="contenedor" id="contenedor">
+          </section>
         </section>
         <div id="root"></div>
-    </main>
+      </main>
+      <script src="main.js" type="module"></script>
+    </body>
+    </html>
+           
 
 
-    <script src="main.js" type="module"></script>
-</body>
+              
 
-</html>
+

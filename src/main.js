@@ -2,6 +2,7 @@ import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
+
 let pokeKanto = []
 data.pokemon.forEach(function(pokemon) {
     if (pokemon.generation.name === "kanto") {
@@ -18,17 +19,24 @@ const mostrartodo = (mostrar) => {
         const imagen = document.createElement("img"); //creo una variable para las fotos de la data
         const nombre = document.createElement("p"); //el nombre del pokemon de la data
         const numero = document.createElement("p"); //el número del pokemon extraído de la data
+        const tipo = document.createElement("p");
         numero.className = "numero"
         imagen.className = "imagen" //otorgamos una clase
         nombre.className = "nombre"
+        tipo.className = "tipo"
         imagen.src = `${hola.img}`
         nombre.innerHTML = `${hola.name}`
         numero.innerHTML = `${hola.num}`
+        tipo.innerHTML = `${hola.type}`
         div.appendChild(numero)
         div.appendChild(imagen)
         div.appendChild(nombre)
+        div.appendChild(tipo)
         tarjeta.appendChild(div)
 
     })
 }
-mostrartodo(pokeKanto)
+mostrartodo(pokeKanto);
+
+
+  
