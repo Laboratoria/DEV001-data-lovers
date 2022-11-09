@@ -10,7 +10,6 @@
   export const encontrarId = (id, dataHarry) => {
     const encontrarDataId = dataHarry.find(
     (tarjeta)=> tarjeta.id == id);
-    //console.log(findbyidPokemon);
     //console.log(encontrarDataId);
     return encontrarDataId;
   };

@@ -164,7 +164,6 @@ const dataPruebaPersonajesEspecie=[
   },
 ]
 
-
 describe('Quiero testear que el id de la tarjeta coincida con el id del objeto y me retorne dicho objeto', () => {
   const objetoData=
     {
@@ -244,9 +243,9 @@ describe('Quiero ordenar los libros de la Z a la A', () => {
    it('data original organizada de la Z a la A según su título ', () => {
      expect(ordenarAaZ(dataPrueba).reverse()).toEqual(dataOrdenadaZA);
    });
- });
+});
  
- describe("Quiero ordenar los libros según su año de publicación", () =>{
+describe("Quiero ordenar los libros según su año de publicación", () =>{
 
   const dataOrdenadaAntiguoReciente=[ 
     {
@@ -279,9 +278,9 @@ describe('Quiero ordenar los libros de la Z a la A', () => {
   expect(ordenarFecha(dataPrueba)).toEqual(dataOrdenadaAntiguoReciente);
  })
 
- })
+})
 
- describe("Quiero ordenar los libros según su año de publicación del más reciente al más antiguo", () =>{
+describe("Quiero ordenar los libros según su año de publicación del más reciente al más antiguo", () =>{
 
   const dataOrdenadaRecienteAntiguo=[ 
     {
@@ -314,7 +313,7 @@ describe('Quiero ordenar los libros de la Z a la A', () => {
   expect(ordenarFecha(dataPrueba).reverse()).toEqual(dataOrdenadaRecienteAntiguo);
  })
 
- })
+})
 
  describe("quiero  ordenar los personajes por importancia en los libros de mayor a menor", ()=>{
     const dataPersonajes=[
@@ -390,7 +389,6 @@ describe("quiero filtrar los personajes dependiendo su casa", ()=>{
   })
 })
 
-
 describe("quiero filtrar los personajes dependiendo su género", ()=>{
   const dataPersonajes=[
     {
@@ -416,7 +414,6 @@ describe("quiero filtrar los personajes dependiendo su género", ()=>{
   })
 })
 
-
 describe("quiero filtrar los personajes dependiendo su Especie", ()=>{
   const dataPersonajes=[
     {
@@ -441,7 +438,6 @@ describe("quiero filtrar los personajes dependiendo su Especie", ()=>{
     expect(filtrarEspecie(dataPruebaPersonajesEspecie, "Dog (breed: bulldog)")).toEqual(dataPersonajes);
   })
 })
-
 
 describe("quiero filtrar los personajes dependiendo su género", ()=>{
   const dataPersonajes=[1,1,1,1]

@@ -218,7 +218,7 @@ selector4.addEventListener("change", () => {
 });
 
 const $grafica=document.getElementById("grafica");
-const lienzo=$grafica.getContext("2d");
+
 
 const etiquetas=["Gryffindor", "Slytherin", "Ravenclaw", "Hufflepuff"]
 
@@ -238,7 +238,7 @@ const datosEstadisticaCasas={
 };
 
 
-new /*Chart*/ (lienzo,{
+new Chart ($grafica,{
   type:"pie",
   data:{
     labels: etiquetas,

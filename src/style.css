@@ -390,7 +390,7 @@ h1 {
 
 /* Modal Content */
 				.modal-content1 {
-					display: fle;
+					display: flex;
 					background-color: #fefefe;
 					margin: auto;
 					padding: 20px;
@@ -529,22 +529,23 @@ h1 {
 
 /* Modal Content */
 				.modal-content2 {
-					display: flex;
+					
 					background-color: #fefefe;
 					margin: auto;
 					padding: 20px;
 					border: 1px solid #888;
+					width: 80%;
 					border-radius: 20px;
+					
 				}
 
 /* The Close Button */
 					.close2 {
 						color: #aaaaaa;
 						float: right;
-						font-size: 28pt;
+						font-size: 28px;
 						font-weight: bold;
-						position: absolute;
-
+						
 					}
 
 					.close2:hover,
@@ -553,9 +554,9 @@ h1 {
 						text-decoration: none;
 						cursor: pointer;
 					}	
-						#grafica{
-							max-height:500px ;
-						}		
+					#grafica{
+						max-height:500px ;
+					}		
 						
 
 
