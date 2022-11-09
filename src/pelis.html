@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+</style>      
+<title>Data Lovers</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+    <div clas="encabezado">
+<img src="logo.svg" class="logoHome" alt="logo" width="296" height="69"/> 
+<nav>
+  <a href="./index.html" id="home">Home</a>
+  <a href="#" id="listapelis">Movies</a>
+</nav>
+    </div>
+    </header>
+<main>
+  <select name="sort-movies-by" id="sort-movies-by" class="sort-movies-by">
+    <option disabled selected>Sort movies by:</option>
+    <option value="a-z">A-Z</option>
+    <option value="z-a">Z-A</option>
+  </select>
+</main>
+<div id="root">
+</div>
+<script src="main.js" type="module"></script>
+</body>
+</html>

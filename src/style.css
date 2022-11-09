@@ -1,0 +1,198 @@
+body{
+    background-image: url("totoro.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:bottom right;
+    background-size: 25%;
+   
+}
+
+.main {
+  width: 1920px;
+}
+header{  
+ width: 100%;  
+ overflow:hidden;
+ background-color: #6C9B98;
+ margin-bottom: 20px;
+ align-items: center;
+}
+header .logo {
+	color:#f2f2f2;
+	font-size:50px;
+	line-height:200px;
+	float:left;
+    padding-top: 50px;
+}
+
+.cardPrincipal img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    object-fit:fill;
+    max-width: 230px;
+    width: 100%;
+    height: auto;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    gap: 20px;
+}
+
+header nav {
+	float:right;
+	line-height:80px;
+    position: sticky;
+}
+
+header nav a {
+display:inline-block;
+font-family:'Poppins', sans-serif ;
+color:white;
+text-decoration:none;
+padding:10px 20px;
+justify-content: center;
+line-height:normal;
+font-size:25px;
+font-weight:bold;
+-webkit-transition:all 500ms ease;
+-o-transition:all 500ms ease;
+transition:all 500ms ease;
+}
+
+header nav a:hover {
+	background:#f56f3a;
+	border-radius:50px;
+}
+h1 {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 62px;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.parrafo{
+    display: flex;
+    flex-direction:column;
+    font-family:'Poppins', sans-serif;
+    font-size: 36px;
+    text-align: left;
+    vertical-align: left;
+    text-align: justify;
+    margin: 0;
+    padding: 0 2rem;
+    position: absolute;
+    top: 35%;
+}
+.moreinfo{
+    max-width: 242px;
+    padding: 10px 100px;
+    border-style:none;
+    border-radius:11px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background:#428682;
+    color:white;
+    margin: 10px auto;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.cardPrincipal{
+    display: flex;
+    width: 20vw;
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}    
+#sort-movies-by{
+    display: flex;
+    background-color:#0d4642;
+    border-style: none;
+    border-radius: 5px;
+    font-family:'Poppins', sans-serif ;
+    color:white;
+    cursor: pointer;
+}
+#root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.showMore{
+  background-color:#0d4642;
+  border-style: none;
+  border-radius: 5px;
+  font-family:'Poppins', sans-serif ;
+  color:white;
+  cursor: pointer;
+}
+.modal {
+    display: none;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.modal-content {
+    position:absolute;
+    background-color:rgb(204, 226, 245);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 1.5rem;
+    width: 300px;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    display: inline;
+    animation: mymove 2s forwards;
+   /* opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;*/
+}
+@keyframes mymove {
+    from {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+  }
+/*responsive*/
+@media screen and (max-width: 600px){
+    .cardPrincipal {
+       width: 60%;
+    }
+}
+
+  

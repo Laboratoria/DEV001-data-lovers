@@ -1,23 +1,41 @@
-import { example, anotherExample } from '../src/data.js';
+import { sortPelis } from '../src/data.js';
 
-
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+let sortData = [
+{
+  title: "Castle in the Sky",
+},
+{
+  title: "Kiki's Delivery Service",
+},
+];
+let sortDataAZ = [
+  {
+    title: "Castle in the Sky",
+  },
+  {
+    title: "Kiki's Delivery Service",
+  },
+  ];
+  let sortDataZA = [
+    {
+      title:"Kiki's Delivery Service",
+    },
+    {
+      title: "Castle in the Sky",
+    },
+  ];
+describe('sortPelis', () => {
+  it('Es una funcion', () => {
+    expect(typeof sortPelis).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('Debe retornar las películas de ordenadas de A-Z', () => {
+    expect(sortPelis(sortData)).toEqual(sortDataAZ);
   });
+  
+  it('Debe retornar las peliculas de Z-A', () => {
+    expect(sortPelis(sortData).reverse()).toEqual(sortDataZA);
+  })
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});

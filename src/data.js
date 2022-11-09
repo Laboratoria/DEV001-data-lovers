@@ -1,9 +1,12 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
+//Sort A-Z Y Z-A
+export const sortPelis = (dataGhibli) =>{
+  let copyArray = dataGhibli;
+  const pelisOrdenadas = copyArray.sort((prev, next) =>{
+    if (prev.title < next.title) {
+     return -1;
+    }
+  });
+  return pelisOrdenadas;
+}
