@@ -1,0 +1,252 @@
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  color: #F2F2F2;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: #FFEAE2;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+header {
+  padding: 0px;
+  width: 100%;
+  color: #F2F2F2;
+}
+
+header h1 {
+  font-size: 80px;
+  padding-top: 135px;
+  padding-left: 40px;
+  padding-bottom: 30px;
+  background-color: #D99982;
+}
+
+.menuLeft a {
+  text-decoration: none;
+  color: #A68F97;
+  background-color: #F2F2F2;
+  font-size: 50px;
+  font-weight: 900;
+  padding: 17px;
+}
+
+.menuLeft a:hover,
+.menuLeft img:hover {
+  background-color: #ffffff;
+}
+
+.menuLeft .menuLeft__Hamburger {
+  display: none;
+}
+
+.producers div:hover {
+  background-color: #515a6c;
+  color: #FFFFFF;
+  text-shadow: none;
+  font-size: 50px;
+  width: 350px;
+  height: 250px;
+  transition: 1s;
+}
+
+nav{
+
+  background-color: #FFEAE2;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menuLeft {
+
+  width: 97%;
+  margin:auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+  background-color: #F2F2F2;
+
+}
+
+a img {
+  height: 50px;
+  background-color:transparent;
+  vertical-align: middle;
+}
+
+.mainSection {
+  padding: 150px;
+  width: 100%;
+  background-color: transparent;
+  font-size: 40px;
+  text-align: center;
+  color: #D99982;
+
+}
+
+
+section h1 {
+  padding-bottom: 60px;
+  font-weight: 1200;
+  font-size: 80px;
+}
+
+.section div {
+  margin-bottom: 30px;
+}
+
+
+.totoro {
+  position: fixed;
+  width: 13%;
+  bottom: 0;
+  right: 0;
+}
+
+
+
+.section__gContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: #FFEAE2;
+  padding: 50px;
+}
+
+.gibliInfo p {
+
+  font-size: 30px;
+  margin: auto;
+  padding:5px;
+  max-width: 100%
+}
+.gibliInfo img {
+  padding:5px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.gibliInfo {
+  font-family: 'Mingzat', sans-serif;
+  width: 256px;;
+  color: #FFFFFF;
+  background-color: #DDD3E0;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 80px;
+  margin-left: 60px;
+  font-size: 100%;
+  text-shadow: 0 0 5px #A99AAD;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid #FFFFFF;
+  display: block;
+  word-wrap: break-word;
+}
+
+.section__ghibliInfo img {
+  font-family: 'Mingzat', sans-serif;
+  width: 300px;
+  height: 200px;
+  color: #FFFFFF;
+  background-color: #DDD3E0;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 80px;
+  margin-left: 60px;
+  font-size: 40px;
+  text-shadow: 0 0 5px #A99AAD;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid #FFFFFF;
+}
+
+
+.footer {
+  padding: 20px;
+  width: 100%;
+  background-color: #A68F97;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.footer p {
+  color: #FFEAE2;
+}
+
+  @media screen and (max-width: 930px) {
+    .menuLeft a:not(:first-child) {
+      display: none;
+    }
+
+    .section__title {
+      font-size: 55px;
+      text-align: center;
+      margin: auto;
+    }
+
+    .section__description {
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+
+    .menuLeft a.menuLeft__Hamburger {
+      float: right;
+      display: block;
+    }
+
+    nav div  {
+      display: block;
+    }
+
+    .menuLeft.responsive {
+      position: relative;
+      display: block;
+    }
+
+    .menuLeft.responsive .menuLeft__Hamburger {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .menuLeft.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+
+    .gibliInfo {
+      width: 170px;
+      margin-bottom: 40px;
+      margin-left: 10px;
+      font-size: 25px;
+      
+    }
+
+    .gibliInfo:hover {
+      font-size: 30px;
+      width: 200px;
+    } 
+  }
+
+  @media screen and (max-width: 600px) {
+    .section__title {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    .section__description {
+        font-size: 25px;
+        margin-bottom: 0;
+    }
+  }

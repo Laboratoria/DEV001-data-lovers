@@ -1,23 +1,14 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterData } from '../src/data.js';
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
+describe('filterData', () => {
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('returns `filterData`', () => {
+    expect(filterData([
+      { age: 10, name: "hola", gender: "male" },
+      { age: 10, name: "hola", gender: "female" },
+      { age: 10, name: "hola", gender: "male" },
+      { age: 10, name: "hola", gender: "male" }
+    ], "gender")).toEqual(["male", "female"]);
   });
 });

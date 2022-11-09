@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mingzat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/totoro.png">
+    <link rel="icon" href="totoro.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Estudio Ghibli</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="root">
+        <div>
+            <img class="totoro" src="./img/totoro.png" alt="Totoro">
+        </div>
+        <header>
+            <h1>Estudio Ghibli</h1>
+            <nav>
+                <div class="menuLeft" id="menuLeft">
+
+                    <a href="index.html"><img src="./img/home.png" alt="Home" > Home </a>         
+                    <a id ="producersMenu" value ="producer" href="producers.html" onClick="showData(filterDataByProperty(gFilms,'producer'),false)"><img src="./img/producers.png" alt="Producers"> Producers</a>
+                    <a id="directorsMenu" href="directors.html"><img src="./img/producers.png" alt="Directors"> Directors</a>
+
+                    <a href="#"><img src="./img/aboutUs.png" alt="About Us"> About Us</a>
+                    <a  class="menuLeft__Hamburger" id = "hamburgerIcon"><img src="./img/hamburger.png" alt="hamburgerIcon"></a>
+                </div>
+            </nav>
+          </header>
+        <section >
+            <h1 class="section__title">Producers</h1>
+
+            <div class="section__box" id="section__box">
+                <button id="producers__ranking"></button>
+
+            </div>
+        </section>
+        <footer class="footer">
+            <p>Copyright © 2022 </p>    
+        </footer>
+    </div>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
