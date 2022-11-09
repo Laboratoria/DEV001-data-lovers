@@ -59,8 +59,7 @@ const modaldentro = document.createElement('div');
     cardInfo.appendChild(elementPokemon)
     //console.log(pokemonParaHTML)
   }
-}
-}
+
 
 
 //boton de ir arriba
