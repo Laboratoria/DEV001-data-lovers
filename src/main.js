@@ -1,15 +1,18 @@
 
-import pokemon from './data/pokemon/pokemon.js';
+//import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-
+import {searchFilter} from './data.js';
+//import ordenAzPokemon from './data.js';
 
 
 //AQUÍ YA LOGRÉ QUE SALGA EL ÚLTIMO POKEMON, IMAGEN, NOMBRE Y NUM usando: import data from './data/pokemon/pokemon.js';
+
 const cardInfo = document.getElementById("cont-card");
 const elementPokemon = document.createElement("div");
-elementPokemon.classList.add("solucion")
+elementPokemon.classList.add("solucion");
 const infoPokemon = data.pokemon;
 //Función que muestra todas las cartas
+//const nuestraCarta= ((infoPokemon)=>{
 infoPokemon.forEach((card) => {
   const pokemonHTML = `
   <div class="cont.card" id=${card.num}>
@@ -30,10 +33,11 @@ infoPokemon.forEach((card) => {
  
 }
 );
+//});
 
 
 
-const cardGrande=  (infoPokemon) => {  
+/*const cardGrande=  (infoPokemon) => {  
 let modal = document.getElementById("myModal");          
 let btn = document.getElementById("myBtn");              
 let span = document.getElementsByClassName("close")[0];
@@ -71,7 +75,7 @@ window.onclick = function(event) {
     cardGrande.innerHTML = '';
   }
 }
-}
+}*/
 
 
 //boton de ir arriba
@@ -94,43 +98,23 @@ if (window.scrollY < 300) {
 }
 }
 
-/* buscar pokemon*/
-const search = document.getElementById("Buscar");
-const prueba = document.getElementById("prueba")
+//buscar pokemon
+
+
+
+ //buscar pokemon
+const search = document.getElementById("search");
+const prueba = document.getElementById("boton")
 prueba.addEventListener("click", () => {
     const text = search.value;
     let busca = searchFilter(data.pokemon, text)
-    /*  console.log(busca) */
+     //console.log(busca) 
     div.innerHTML = " "
     busca.forEach(nombre => {
 
-        div.innerHTML += drawCard(nombre)
+      div.innerHTML += pokemonHTML
+      cardInfo.appendChild(elementPokemon)
     });
 })
 
-export const searchFilter =  (pokemon,nombrePokemon)=> {
-  const nameFilter= pokemon.filter (x=>
-    x.name.toUpperCase()==nombrePokemon.toUpperCase())
-
-    
-  ;return nameFilter
-
-
-};
-
-export const ordenAzPokemon=(array)=>{
-
-  return array.sort(function (a, b) {
-    
-    if (a.name < b.name) {
-      return -1;
-    }
-    if (a.name> b.name) {
-      return 1;
-    }
-   return 0;
-  })
-  
-  
-}
 
