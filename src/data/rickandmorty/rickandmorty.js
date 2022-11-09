@@ -545,7 +545,7 @@ export default {
               "name": "unknown",
               "url": ""
           },
-          "image": "/src/img/characters-404/antenna-rick.webp",
+          "image": "https://raw.githubusercontent.com/pibmunoz/DEV001-data-lovers/main/src/img/characters-404/antenna-rick.webp",
           "episode": [
               "https://rickandmortyapi.com/api/episode/10"
           ],
@@ -2455,7 +2455,7 @@ export default {
               "name": "Dorian 5",
               "url": "https://rickandmortyapi.com/api/location/29"
           },
-          "image": "/src/img/characters-404/doom-nomitron.webp",
+          "image": "https://raw.githubusercontent.com/pibmunoz/DEV001-data-lovers/main/src/img/characters-404/doom-nomitron.webp",
           "episode": [
               "https://rickandmortyapi.com/api/episode/25"
           ],

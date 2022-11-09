@@ -130,7 +130,7 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  background-image: url("/src/img/rickandmortypattern.svg");
+  background-image: url("https://raw.githubusercontent.com/pibmunoz/DEV001-data-lovers/403f0e1407aa9a2da40770530d58fb9984474e96/src/img/rickandmortypattern.svg");
   border-radius: var(--border-radius);
   padding: 20px;
   max-width: 1250px;
