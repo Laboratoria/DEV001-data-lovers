@@ -1,9 +1,10 @@
-
-
-
+* {
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    background: url(imagenes/fondo.png);
+    background: url(./imagenes/fondo.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed
@@ -12,12 +13,19 @@ body {
 .encabezadoPadre {
 
     display: flex;
-    /*background: blue;*/
+    background: blue;
     width: 100%;
     height: auto;
     flex-wrap: wrap;
 }
 
+/*.cabecera {
+    background: white;
+    display: flex;
+    margin: ;
+    padding: 1em;
+    float: left;
+}*/
 
 #logo {
     width: 18%;
@@ -25,7 +33,7 @@ body {
     position: sticky;
     align-content: center;
     display: flex;
-    padding: 1%;
+
     margin-left: 5%;
 }
 
@@ -37,15 +45,24 @@ body {
     padding: 0%;
 }
 
-#sloganid {
-    width: 40%;
-    display: block;
-    align-items: center;
-    margin: auto;
-    padding-top: 2%;
-
-
+/*#filtrar{
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    background-color: blue;
+    align-content:flex-end;
 }
+*/
+
+#sloganid {
+    width: 400px;
+    display:block;
+    align-items: center;
+    margin:auto;
+    padding-top: 2%;
+}
+
+
 
 #cont-card {
     display: flex;
@@ -60,18 +77,21 @@ body {
     overflow-y: scroll;*/
 }
 
-  
+    /*#card:hover {
+    background-color:  rgb(247, 249, 252); 
+}*/
+
 #card {
     border-radius: 20px;
-    background-image: url(imagenes/pokemon-estrellas.png);
+    background-image: url(./imagenes/pokemon-estrellas.png);
     background-size:cover;
     box-shadow: 5px 5px 10px #92f1fc;
     margin: 40px;
     padding: 20px;
     text-align: center;
     flex-wrap: wrap;
-    width: 70%;
-    height: 80%;
+    width: 170px;
+    height: 250px;
     justify-content: space-evenly;
     text-transform: capitalize;
     font-family: Arial, Helvetica, sans-serif, bold;
@@ -94,9 +114,32 @@ body {
     margin-top: 15%;
     overflow-y: scroll;*/
 }
+/*.detalle {
+    display: flex;
+}*/
 
+/*#circulo {
+    display: flex;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 5px 5px 10px #89d3e6;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
 
-footer {
+}*/
+
+/*.img {
+    width: 150px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}*/
+
+footer { 
     background-color: black;
     color: #fff;
     padding: 2% 2% 2% 2%;
@@ -106,37 +149,6 @@ footer {
 }
 
 
-html {
-    scroll-behavior: smooth;
-  }
-  
-  .container {
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    text-align: justify;
-  }
-  
-  .btn-scrolltop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 15px 20px;
-    background: rgb(223, 238, 17);
-    color: white;
-    border: 1px solid white;
-    border-radius: 100%;
-    cursor: pointer;
-    transform: translateY(100px);
-    transition: 0.3s;
-  }
-  
-  .btn-scrolltop-on {
-    transform: translateY(0);
-  }
-
 /*PARA LOS BOTONES:
    Podemos usar:
    .id.active{
@@ -144,82 +156,3 @@ html {
     https://www.youtube.com/watch?v=yc1bCB689bE&list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR&index=9
    }
 /*
-/*barra buscador*/
-
-
-
-input{
-   width: 200px;
-   font-size: 20px;
-}
-
-/* The Modal (background) */
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-  }
-  
-  /* Add Animation */
-  @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-  }
-  
-  @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-  }
-  
-  /* The Close Button */
-  .close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .modal-header {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-  }
-  
-  .modal-body {padding: 2px 16px;}
-  
-  .modal-footer {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-  }

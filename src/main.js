@@ -1,8 +1,7 @@
 
 //import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-import {searchFilter} from './data.js';
-//import ordenAzPokemon from './data.js';
+
 
 
 //AQUÍ YA LOGRÉ QUE SALGA EL ÚLTIMO POKEMON, IMAGEN, NOMBRE Y NUM usando: import data from './data/pokemon/pokemon.js';
@@ -12,7 +11,6 @@ const elementPokemon = document.createElement("div");
 elementPokemon.classList.add("solucion");
 const infoPokemon = data.pokemon;
 //Función que muestra todas las cartas
-//const nuestraCarta= ((infoPokemon)=>{
 infoPokemon.forEach((card) => {
   const pokemonHTML = `
   <div class="cont.card" id=${card.num}>
@@ -33,11 +31,10 @@ infoPokemon.forEach((card) => {
  
 }
 );
-//});
 
 
 
-/*const cardGrande=  (infoPokemon) => {  
+const cardGrande=  (infoPokemon) => {  
 let modal = document.getElementById("myModal");          
 let btn = document.getElementById("myBtn");              
 let span = document.getElementsByClassName("close")[0];
@@ -56,26 +53,14 @@ const modaldentro = document.createElement('div');
     <div class="modal-footer">
       <h3>Modal Footer</h3>
     </div>
-  </div>`  
-  document.querySelector('.modal-contet').appendChild(modaldentro); 
-                                                          
+    `;
 
-
-
-btn.onclick = function() {                                
-  modal.style.display = "block";
-}
-span.onclick = function() {                             
-  modal.style.display = "none";
-}
-window.onclick = function(event) {                       
-  if (event.target == modal) {
-    modal.style.display = "none";
-
-    cardGrande.innerHTML = '';
+    elementPokemon.innerHTML += pokemonHTML
+    cardInfo.appendChild(elementPokemon)
+    //console.log(pokemonParaHTML)
   }
 }
-}*/
+}
 
 
 //boton de ir arriba
@@ -117,4 +102,29 @@ prueba.addEventListener("click", () => {
     });
 })
 
+export const searchFilter =  (pokemon,nombrePokemon)=> {
+  const nameFilter= pokemon.filter (x=>
+    x.name.toUpperCase()==nombrePokemon.toUpperCase())
+
+    
+  ;return nameFilter
+
+
+};
+
+export const ordenAzPokemon=(array)=>{
+
+  return array.sort(function (a, b) {
+    
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name> b.name) {
+      return 1;
+    }
+   return 0;
+  })
+  
+  
+}
 
