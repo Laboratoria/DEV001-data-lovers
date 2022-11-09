@@ -1,8 +1,27 @@
 //import data from './data/pokemon/pokemon.js'
 
-//export const filterByType = (arrayObj, elementType) => {
-//const pokemon = arrayObj.filter(obj => obj.type.includes(elementType));
-//return pokemon;
-//};
+/*export const searchFilter =  (pokemon,nombrePokemon)=> {
+  const nameFilter= pokemon.filter (x=>
+    x.name.toUpperCase()==nombrePokemon.toUpperCase())
 
-// FILTRADO POR NOMBRE
+    
+  ;return nameFilter
+
+
+};*/
+
+/*export const ordenAzPokemon=(array)=>{
+
+  return array.sort(function (a, b) {
+    
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name> b.name) {
+      return 1;
+    }
+   return 0;
+  })
+  
+  
+}*/

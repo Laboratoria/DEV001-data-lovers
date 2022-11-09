@@ -13,7 +13,7 @@ body {
 .encabezadoPadre {
 
     display: flex;
-    background: blue;
+    /*background: blue;*/
     width: 100%;
     height: auto;
     flex-wrap: wrap;
@@ -53,16 +53,56 @@ body {
     align-content:flex-end;
 }
 */
-
-#sloganid {
-    width: 400px;
-    display:block;
-    align-items: center;
-    margin:auto;
-    padding-top: 2%;
+.contenedorBoton {
+    display: block;
+    margin: auto;
+    width: 300px;
 }
 
+#busqueda {
+    display: inline-block;
+    margin: 20 px;
+}
 
+#myBtn{
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 20px;
+}
+#search {
+    width: 200px;
+    font-size: 20px;
+    margin-left: 20px;
+    
+}
+
+.search {
+    margin-top: 10px;
+    
+    width: 200px;
+    font-size: 40px;
+    border-radius: 0.4em;
+    border: solid 1px #337f7b;
+    display: flex;
+    background-color: #ffffff;
+    justify-content: center;
+}
+#buscar{
+    width: 100px;
+    height: 20px;
+
+}
+
+#sloganid {
+    display: flex;
+    width: 400px;
+    display: block;
+    align-items: center;
+    margin: auto;
+    padding-top: 2%;
+}
 
 #cont-card {
     display: flex;
@@ -71,20 +111,20 @@ body {
     height: auto;
     margin-top: 0%;
     position: relative;
-     /*background-color: rgba(166, 74, 16, 0.9);
+    /*background-color: rgba(166, 74, 16, 0.9);
     overflow: auto;
     padding: 2%;
     overflow-y: scroll;*/
 }
 
-    /*#card:hover {
+/*#card:hover {
     background-color:  rgb(247, 249, 252); 
 }*/
 
 #card {
     border-radius: 20px;
     background-image: url(./imagenes/pokemon-estrellas.png);
-    background-size:cover;
+    background-size: cover;
     box-shadow: 5px 5px 10px #92f1fc;
     margin: 40px;
     padding: 20px;
@@ -104,7 +144,7 @@ body {
 .solucion {
     display: flex;
     flex-wrap: wrap;
-    flex-direction:row;
+    flex-direction: row;
     flex-grow: 1;
     width: 80%;
     height: auto;
@@ -114,32 +154,39 @@ body {
     margin-top: 15%;
     overflow-y: scroll;*/
 }
-/*.detalle {
-    display: flex;
-}*/
+/*SCROLL*/
+html {
+    scroll-behavior: smooth;
+}
 
-/*#circulo {
-    display: flex;
-    background-color: rgba(255, 255, 255);
-    box-shadow: 5px 5px 10px #89d3e6;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    position: absolute;
-    z-index: 1;
-    align-items: center;
-    justify-content: center;
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: justify;
+}
 
-}*/
+.btn-scrolltop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    background: rgb(223, 238, 17);
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 100%;
+    cursor: pointer;
+    transform: translateY(100px);
+    transition: 0.3s;
+}
 
-/*.img {
-    width: 150px;
-    height: auto;
-    position: relative;
-    z-index: 2;
-}*/
+.btn-scrolltop-on {
+    transform: translateY(0);
+}
 
-footer { 
+footer {
     background-color: black;
     color: #fff;
     padding: 2% 2% 2% 2%;
@@ -148,6 +195,36 @@ footer {
     text-align: center;
 }
 
+/*    Formato del buscador por tipo     */
+.menu-container {
+
+
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.filter {
+    display: none;
+}
+
+.menu-container select {
+    background-color: azure;
+    padding: 0.2em;
+    width: 150px;
+    height: 30px;
+    border-radius: 0.4em;
+    outline: 0;
+}
+
+.menu-container label {
+    padding: 0em 0.5em;
+    color: rgb(222, 222, 235);
+    font-size: 20px;
+    font-weight: bold;
+}
 
 /*PARA LOS BOTONES:
    Podemos usar:

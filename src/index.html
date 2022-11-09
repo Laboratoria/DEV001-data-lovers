@@ -5,13 +5,14 @@
   <meta charset="utf-8">
   <title>Pokemon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="http://pro.fontawesome.com/relea" integrity=""-->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <header>
   <div class="encabezadoPadre">
-    <img src= url(imagenes/pokemon-go.jpg) class="cabecera" id="logo">
+    <img src="imagenes/pokemon-go.jpg" class="cabecera" id="logo">
     <img src="imagenes/pikachu.png" class="cabecera" id="pikachu">
     <!-- <button class="cabecera" id="filtrar">hola</button>-->
   </div>
@@ -19,24 +20,32 @@
   </div>
 </header>
 
-
-
-
-
 <body>
+  <button id="myBtn">Open Modal</button>
+</body>
 
-  <main>
-    <div class="cont-card" id="cont-card"></div>
-    
-         
-        </div>
-   
-  </main>
+<div class="searcher">
+  <input type="search" id="search" clase="search comun" placeholder="Search by name" autocomplete="off"
+    spellcheck="false" />
+  <button id="buscar">Buscar</button>
+  </body>
+</div>
 
-  <footer>Aquí van nuestros nombres Silvana&Karla</footer>
+<main>
+  <button class="btn.scrolltop" id="btn-scrolltop"> <i class="fas fa.chevron-up"></i>
+  </button>
+  <div class="cont-card" id="cont-card"></div>
 
-  <div id="root"></div>
-  <script src="main.js" type="module"></script>
+
+  </div>
+
+</main>
+
+<footer>Aquí van nuestros nombres Silvana&Karla</footer>
+
+<div id="root"></div>
+
+<script src="main.js" type="module"></script>
 
 </body>
 
