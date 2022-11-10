@@ -1,47 +1,58 @@
-
-//import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-//import filterByType from './data.js';
-//import buscarPorNombre from './data.js';
+import { searchFilter } from './data.js';
 
-
-//AQUÍ YA LOGRÉ QUE SALGA EL ÚLTIMO POKEMON, IMAGEN, NOMBRE Y NUM usando: import data from './data/pokemon/pokemon.js';
-const cardInfo = document.getElementById("cont-card");
-const elementPokemon = document.createElement("div");
-elementPokemon.classList.add("solucion");
+// ---- Mostrar cartas de cada Poke ----
 const infoPokemon = data.pokemon;
+const cardInfo = document.getElementById("cont-card");
 
- infoPokemon.forEach((card) => {
- const pokemonHTML = `
-<div class="cont.card" id=${card.num}>
-    <div class="card" id="card"><img class="img" src=${card.img} </img>
-    <p><class= "namepokemon">${card.name} </p>
-    <p><class= "numpokemon">${card.num}</p><br>
-    <button id="myBtn">Open Modal</button>
-    </div>
-    </div>
-    
-    </div>
-    `;
+infoPokemon.forEach((persona) => {
+    cardInfo.innerHTML += cardTemplate(persona.img, persona.num, persona.name)
+});
 
-    elementPokemon.innerHTML += pokemonHTML
-    cardInfo.appendChild(elementPokemon)
-    //console.log(pokemonParaHTML)
+function cardTemplate(img, num, name) {
+    const pokemonHTML = `
+  <div class="cont.card" id=${num}>
+  <div class="card" id="card">
+  <img class="img" src=${img} </img><div> 
+  <p><class= "namepokemon">${name} </p>
+  <p><class= "numpokemon">${num}</p><br>
+  <button class="botonVerMas" id="myBtn">Ver más</button>
+  </div>
+  </div>
+  </div>
+  `;
+    return pokemonHTML
 }
-);
-/* buscar pokemon
-const search = document.getElementById("Buscar");
-const prueba = document.getElementById("prueba")
 
+// ---- Buscar por nombre
+const search = document.getElementById("search");
+const prueba = document.getElementById("botonBuscar")
 prueba.addEventListener("click", () => {
     const text = search.value;
-    let busca = searchFilter(data.pokemon, text)
-    //console.log(busca)
-    div.innerHTML = " "
+    let busca = searchFilter(infoPokemon, text)
+    /*  console.log(busca) */
+    cardInfo.innerHTML = " "
+    busca.forEach((nombre) => {
 
-    busca.forEach(nombre => {
-
-        div.innerHTML += drawCard(nombre)
+        cardInfo.innerHTML += cardTemplate(nombre.img, nombre.num, nombre.name)
     });
-})*/
+})
 
+// ---- Botón SCROLL ----
+const btn_scrolltop = document.getElementById("btn_scrolltop")
+btn_scrolltop.addEventListener('click', () => {
+    window.scrollTo(0, 0)
+})
+
+window.onscroll = () => {
+    add_btn_scrolltop()
+}
+
+const add_btn_scrolltop = () => {
+    if (window.scrollY < 300) {
+        btn_scrolltop.classList.remove("btn-scrolltop-on")
+    } else {
+        btn_scrolltop.classList.add("btn-scrolltop-on")
+
+    }
+}

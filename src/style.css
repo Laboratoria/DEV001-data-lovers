@@ -11,7 +11,6 @@ body {
 }
 
 .encabezadoPadre {
-
     display: flex;
     /*background: blue;*/
     width: 100%;
@@ -19,21 +18,12 @@ body {
     flex-wrap: wrap;
 }
 
-/*.cabecera {
-    background: white;
-    display: flex;
-    margin: ;
-    padding: 1em;
-    float: left;
-}*/
-
 #logo {
-    width: 18%;
+    width: 20%;
     height: auto;
     position: sticky;
     align-content: center;
     display: flex;
-
     margin-left: 5%;
 }
 
@@ -41,67 +31,62 @@ body {
     display: flex;
     width: 15%;
     height: auto;
-    margin: 0%;
+    margin-left: 5%;
     padding: 0%;
 }
 
-/*#filtrar{
-    font-size: 32px;
-    font-weight: bold;
-    color: #fff;
-    background-color: blue;
-    align-content:flex-end;
-}
-*/
-.contenedorBoton {
-    display: block;
-    margin: auto;
-    width: 300px;
-}
-
-#busqueda {
-    display: inline-block;
-    margin: 20 px;
-}
-
-#myBtn{
-    display: block;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    width: 100px;
-    height: 20px;
-}
-#search {
-    width: 200px;
-    font-size: 20px;
-    margin-left: 20px;
-    
-}
-
-.search {
-    margin-top: 10px;
-    
-    width: 200px;
-    font-size: 40px;
-    border-radius: 0.4em;
-    border: solid 1px #337f7b;
-    display: flex;
-    background-color: #ffffff;
-    justify-content: center;
-}
-#buscar{
-    width: 100px;
-    height: 20px;
-
-}
-
+/* ---- Atrápalos ya ---- */
 #sloganid {
     display: flex;
-    width: 400px;
+    width: 40%;
     display: block;
     align-items: center;
     margin: auto;
-    padding-top: 2%;
+    padding-top: 3%;
+}
+
+/* ---- Botón Ver Más --- */
+#myBtn {
+    display: block;
+    width: 100px;
+    height: 20px;
+    margin: auto;
+    /*para centrar el botón dentro de las tarjetas le di margin auto y lo comenté del html*/
+}
+
+/* ---- Buscador por nombre y su botón ---- */
+.searcher {
+    margin: 10px 10px 10px 20px;
+
+}
+
+#search {
+    width: 200px;
+    font-size: 15px;
+    border-radius: 0.4em;
+    border: solid 1px #337f7b;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 5px;
+}
+
+#bontonBuscar {
+    margin: 10px 10px 10px 20px;
+    width: 100px;
+    height: 20px;
+    font-size: 15px;
+    padding: 5px;
+}
+
+/* ---- Espacio que contiene todas las tarjetas ---- */
+#contenedorPadre {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin:auto;
+    overflow: auto;
+    align-items: center;
 }
 
 #cont-card {
@@ -109,52 +94,32 @@ body {
     flex-wrap: wrap;
     width: 100%;
     height: auto;
-    margin-top: 0%;
-    position: relative;
-    /*background-color: rgba(166, 74, 16, 0.9);
-    overflow: auto;
-    padding: 2%;
-    overflow-y: scroll;*/
+    margin:auto;
+    justify-content: center;
 }
 
-/*#card:hover {
-    background-color:  rgb(247, 249, 252); 
-}*/
-
-#card {
+#card{
+    align-content: center;
     border-radius: 20px;
-    background-image: url(./imagenes/pokemon-estrellas.png);
-    background-size: cover;
-    box-shadow: 5px 5px 10px #92f1fc;
-    margin: 40px;
-    padding: 20px;
+    background: url(./imagenes/pokemon-estrellas.png);
+    box-shadow: 5px 5px 10px #60d8e1;
+    margin: 50px;
     text-align: center;
     flex-wrap: wrap;
     width: 170px;
     height: 250px;
-    justify-content: space-evenly;
     text-transform: capitalize;
-    font-family: Arial, Helvetica, sans-serif, bold;
-    font-size: 20px;
-    color: whitesmoke;
-    /*overflow-y: scroll;
-    font-size: 30px;*/
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    justify-content: center;
+    padding: 18px;
 }
 
-.solucion {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    flex-grow: 1;
-    width: 80%;
-    height: auto;
-    justify-content: center;
-    padding: 1%;
-    /*background-color: aqua, 0.9;
-    margin-top: 15%;
-    overflow-y: scroll;*/
+card:hover {
+    background-color:#ffffff;
 }
-/*SCROLL*/
+
+/* ---- Scroll ---- */
 html {
     scroll-behavior: smooth;
 }
@@ -186,6 +151,7 @@ html {
     transform: translateY(0);
 }
 
+/* ---- Footer ----*/
 footer {
     background-color: black;
     color: #fff;
@@ -194,42 +160,3 @@ footer {
     width: 100%;
     text-align: center;
 }
-
-/*    Formato del buscador por tipo     */
-.menu-container {
-
-
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-
-}
-
-.filter {
-    display: none;
-}
-
-.menu-container select {
-    background-color: azure;
-    padding: 0.2em;
-    width: 150px;
-    height: 30px;
-    border-radius: 0.4em;
-    outline: 0;
-}
-
-.menu-container label {
-    padding: 0em 0.5em;
-    color: rgb(222, 222, 235);
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/*PARA LOS BOTONES:
-   Podemos usar:
-   .id.active{
-    background-color: #fff; esto lo que hace es que la dar clic cambia de color
-    https://www.youtube.com/watch?v=yc1bCB689bE&list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR&index=9
-   }
-/*
