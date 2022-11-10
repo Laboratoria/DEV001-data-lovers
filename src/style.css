@@ -112,8 +112,17 @@ h1 {
     align-items: center;
     gap: 20px;
 }    
-#sort-movies-by{
-    display: flex;
+#sort-movies-by{ 
+    flex-wrap: nowrap;
+    background-color:#0d4642;
+    border-style: none;
+    border-radius: 5px;
+    font-family:'Poppins', sans-serif ;
+    color:white;
+    cursor: pointer;
+}
+#filter-director{
+    flex-wrap: nowrap;
     background-color:#0d4642;
     border-style: none;
     border-radius: 5px;
@@ -124,7 +133,7 @@ h1 {
 #root {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .showMore{
   background-color:#0d4642;

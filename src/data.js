@@ -10,3 +10,10 @@ export const sortPelis = (dataGhibli) =>{
   });
   return pelisOrdenadas;
 }
+// Filter director
+export const filterDirector = (dataGhibli,nombreDirector) => {
+  const directorFiltrado = dataGhibli.filter(function(pelicula){
+    return pelicula.director == nombreDirector
+  })
+  return directorFiltrado;
+}

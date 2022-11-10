@@ -1,5 +1,5 @@
 import objetoghibli from './data/ghibli/ghibli.js'; /*libera nuestra data*/
-import {sortPelis} from './data.js';
+import {filterDirector, sortPelis} from './data.js';
 // eslint-disable-next-line no-console
 //console.log(objetoghibli);
 
@@ -50,16 +50,30 @@ const sortSelect = document.getElementById("sort-movies-by");
 
 sortSelect.addEventListener("change",() =>{
   let copyData = objetoghibli ;
-  //debugger;
+  
 switch(sortSelect.value){
-  case "a-z":
+  case "a-z": 
     show(sortPelis(copyData.films));
     break;
   case "z-a":
     show(sortPelis(copyData.films).reverse());
     break;
 }
-})
+});
+//*Filtrar por director*//
+const filterSelect = document.getElementById("filter-director");
+
+ filterSelect.addEventListener("change", () =>{
+ 
+  let newArray = objetoghibli;
+ show(filterDirector(objetoghibli.films,filterSelect.value));
+ });
+    
+
+
+
+
+
 
 
 
