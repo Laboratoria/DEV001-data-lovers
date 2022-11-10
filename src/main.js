@@ -1,8 +1,40 @@
 import objetoghibli from './data/ghibli/ghibli.js'; /*libera nuestra data*/
-import {filterDirector, sortPelis} from './data.js';
+import {filterDirector, sortPelis, filterGender} from './data.js';
 // eslint-disable-next-line no-console
 //console.log(objetoghibli);
 
+let showPersonaje = function(personas){
+  let newHtml= ""
+  personas.forEach(function(personaje,index){
+    //console.log (film);
+      let templatePelicula =`
+      <div class="cardPrincipal">
+        <img src="${personaje.img}" alt="img">
+        ${personaje.name}
+        <button class= "showMore" data-film-id="${index}">Show More</button>
+        <div class="modal" id="modal-film-${index}">
+          <div class= "modal-content">
+            <span class="close-button" data-film-id="${index}">&times;</span>
+            <p>${personaje.name}</p>
+            <p>Age: ${personaje.age}</p>
+            <p>Specie: ${personaje.specie}</p>
+          </div>
+        </div>
+      </div>`;
+     newHtml+= templatePelicula;
+  });
+  document.getElementById("root").innerHTML = newHtml;
+
+    const showMore = document.getElementsByClassName("showMore");
+    const closeButton = document.getElementsByClassName("close-button");
+
+    for(let i=0 ;i < showMore.length ; i++) {
+      showMore[i].addEventListener("click", toggleModal);
+    }
+    for(let i=0 ; i < closeButton.length ; i++) {
+      closeButton[i].addEventListener("click",toggleModal);
+    }
+}
 //Funcion para mostrar las peliculas
 let show = function (dataGhibli){ 
   let newHtml= ""
@@ -68,7 +100,17 @@ const filterSelect = document.getElementById("filter-director");
   let newArray = objetoghibli;
  show(filterDirector(objetoghibli.films,filterSelect.value));
  });
-    
+ /*Filtrado por gender */
+const filterSelect2 = document.getElementById("filter-gender");
+
+filterSelect2.addEventListener("change", () =>{
+
+  let newArray2 = objetoghibli;
+  //console.log(filterGender(objetoghibli, filterSelect2.value));
+  showPersonaje (filterGender(objetoghibli, filterSelect2.value));
+});
+
+
 
 
 

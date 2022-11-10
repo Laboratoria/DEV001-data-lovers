@@ -1,3 +1,7 @@
+*{
+margin: 0;
+padding: 0;
+}
 body{
     background-image: url("totoro.png");
     background-repeat: no-repeat;
@@ -122,6 +126,15 @@ h1 {
     cursor: pointer;
 }
 #filter-director{
+    flex-wrap: nowrap;
+    background-color:#0d4642;
+    border-style: none;
+    border-radius: 5px;
+    font-family:'Poppins', sans-serif ;
+    color:white;
+    cursor: pointer;
+}
+#filter-gender{
     flex-wrap: nowrap;
     background-color:#0d4642;
     border-style: none;
