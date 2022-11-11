@@ -2,9 +2,10 @@
 
 export const searchFilter =  (pokemon,nombrePokemon)=> {
   const nameFilter= pokemon.filter (x=>
-    x.name.toLowerCase()==nombrePokemon.toLowerCase())
+    x.name.toLowerCase()=== nombrePokemon.toLowerCase())
     ;return nameFilter
   };
+
 
 //export const ordenAzPokemon=(array)=>{
 

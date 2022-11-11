@@ -6,8 +6,27 @@ describe('searchFilter', () => {
     expect(typeof searchFilter).toBe('function');
   });
 
-  /*it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });*/
-});
+  it("Debería regresar el array venasaur", () => {
+    const pruebaArray = [{
+      "num": "001",
+      "name": "bulbasaur"
+    },
+    {
+      "num": "002",
+      "name": "ivysaur"
+    },
+    {
+      "num": "003",
+      "name": "venusaur"
+    }
+    ]
 
+    const resultado = [
+      {
+        "num": "003",
+        "name": "venusaur"
+      }
+    ]
+    expect(searchFilter(pruebaArray, "venusaur")).toEqual(resultado)
+  });
+});
