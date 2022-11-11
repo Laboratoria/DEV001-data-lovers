@@ -1,0 +1,164 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(./imagenes/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed
+}
+
+.encabezadoPadre {
+    display: flex;
+    /*background: blue;*/
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+#logo {
+    width: 20%;
+    height: auto;
+    position: sticky;
+    align-content: center;
+    display: flex;
+    margin-left: 5%;
+}
+
+#pikachu {
+    display: flex;
+    width: 15%;
+    height: auto;
+    margin-left: 5%;
+    padding: 0%;
+}
+
+/* ---- Atrápalos ya ---- */
+#sloganid {
+    display: flex;
+    width: 40%;
+    display: block;
+    align-items: center;
+    margin: auto;
+    padding-top: 3%;
+}
+
+/* ---- Botón Ver Más --- */
+#myBtn {
+    display: block;
+    width: 100px;
+    height: 20px;
+    margin: auto;
+    /*para centrar el botón dentro de las tarjetas le di margin auto y lo comenté del html*/
+}
+
+/* ---- Buscador por nombre y su botón ---- */
+.searcher {
+    margin: 10px 10px 10px 20px;
+
+}
+
+#search {
+    width: 200px;
+    font-size: 15px;
+    border-radius: 0.4em;
+    border: solid 1px #337f7b;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 5px;
+}
+
+#bontonBuscar {
+    margin: 10px 10px 10px 20px;
+    width: 100px;
+    height: 20px;
+    font-size: 15px;
+    padding: 5px;
+}
+
+/* ---- Espacio que contiene todas las tarjetas ---- */
+#contenedorPadre {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin:auto;
+    overflow: auto;
+    align-items: center;
+}
+
+#cont-card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin:auto;
+    justify-content: center;
+}
+
+#card{
+    align-content: center;
+    border-radius: 20px;
+    background: url(./imagenes/pokemon-estrellas.png);
+    box-shadow: 5px 5px 10px #60d8e1;
+    margin: 50px;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 170px;
+    height: 250px;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    justify-content: center;
+    padding: 18px;
+}
+
+card:hover {
+    background-color:#ffffff;
+}
+
+/* ---- Scroll ---- */
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.btn-scrolltop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    background: rgb(223, 238, 17);
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 100%;
+    cursor: pointer;
+    transform: translateY(100px);
+    transition: 0.3s;
+}
+
+.btn-scrolltop-on {
+    transform: translateY(0);
+}
+
+/* ---- Footer ----*/
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 2% 2% 2% 2%;
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
