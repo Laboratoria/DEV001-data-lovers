@@ -2,6 +2,15 @@ import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  window.onclick = function(event) {
+    if (!event.target.matches('.tiposdepoke')) {
+      
+    }
+  }
 
 let pokeKanto = []
 data.pokemon.forEach(function(pokemon) {
@@ -37,6 +46,17 @@ const mostrartodo = (mostrar) => {
     })
 }
 mostrartodo(pokeKanto);
+//const desplegar = document.getElementById("tiposdepoke")
+
+//function desplegar() {document.getElementById("myDropdown").classList.toggle("show")
+//;}
+//document.getElementById('tiposdepoke').addEventListener('click', ()=>{
+    
+//})
+// primero llamar al boton creado en html por su id tipos de poke
+// que al escuchar click este boton despliegue y muestre los botones que tiene adentro 
+// para cada uno de estos botones hijo hacer el filter, segun el tipo  de pokemon que refiere (fuego, agua, etc)
+// que aparezcan en pantalla las tARJETAS de aquellos pokemones que cumplen con ese tipo.(a pesar que tengas mas de un tipo)
 
 
   
