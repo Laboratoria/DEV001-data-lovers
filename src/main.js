@@ -1,3 +1,4 @@
+
 import data from './data/pokemon/pokemon.js';
 import { searchFilter } from './data.js';
 
@@ -56,3 +57,4 @@ const add_btn_scrolltop = () => {
 
     }
 }
+
