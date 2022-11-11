@@ -1,4 +1,4 @@
-import { sortPelis } from '../src/data.js';
+import { sortPelis , filterDirector } from '../src/data.js';
 
 let sortData = [
 {
@@ -32,10 +32,49 @@ describe('sortPelis', () => {
   it('Debe retornar las películas de ordenadas de A-Z', () => {
     expect(sortPelis(sortData)).toEqual(sortDataAZ);
   });
-  
+
   it('Debe retornar las peliculas de Z-A', () => {
     expect(sortPelis(sortData).reverse()).toEqual(sortDataZA);
   })
 });
+
+// test para filterDirector 
+let filtradosDirector =[
+  {
+    title: "Castle in The Sky",
+    director: "Hayao Miyazaki",
+  },
+  {
+    title:"When Marnie Was There",
+    director: "Hiromasa Yonebayashi",
+  }, 
+  {
+    title:"Kiki's Delivery Service",
+    director: "Hayao Miyazaki",
+  },
+];
+let Hayao =[
+  {
+    title: "Castle in The Sky",
+    director: "Hayao Miyazaki",
+  },
+  {
+    title:"Kiki's Delivery Service",
+    director: "Hayao Miyazaki",
+  },
+];
+
+describe("filterDirector", () => {
+ it ("Es una funcion", () => {
+  expect (typeof filterDirector).toBe("function");
+ });
+ it ("retorna una array solo con las peliculas del director HAYAO",() => {
+  expect(filterDirector(filtradosDirector,"Hayao Miyazaki")).toEqual(Hayao);
+ })
+});
+
+//test 
+
+
 
 

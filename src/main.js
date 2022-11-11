@@ -6,7 +6,7 @@ import {filterDirector, sortPelis, filterGender} from './data.js';
 let showPersonaje = function(personas){
   let newHtml= ""
   personas.forEach(function(personaje,index){
-    //console.log (film);
+    
       let templatePelicula =`
       <div class="cardPrincipal">
         <img src="${personaje.img}" alt="img">
@@ -39,7 +39,7 @@ let showPersonaje = function(personas){
 let show = function (dataGhibli){ 
   let newHtml= ""
     dataGhibli.forEach(function(film,index){
-      //console.log (film);
+      
         let templatePelicula =`
         <div class="cardPrincipal">
           <img src="${film.poster}" alt="poster">
@@ -97,7 +97,7 @@ const filterSelect = document.getElementById("filter-director");
 
  filterSelect.addEventListener("change", () =>{
  
-  let newArray = objetoghibli;
+  
  show(filterDirector(objetoghibli.films,filterSelect.value));
  });
  /*Filtrado por gender */
@@ -105,8 +105,7 @@ const filterSelect2 = document.getElementById("filter-gender");
 
 filterSelect2.addEventListener("change", () =>{
 
-  let newArray2 = objetoghibli;
-  //console.log(filterGender(objetoghibli, filterSelect2.value));
+  
   showPersonaje (filterGender(objetoghibli, filterSelect2.value));
 });
 

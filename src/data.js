@@ -22,7 +22,7 @@ export const filterGender = (dataGhibli,generoPersonaje) => {
   const personajesFiltrados = []
   dataGhibli.films.forEach(pelicula =>{
     pelicula.people.forEach(persona =>{
-      //console.log(persona);
+      
      if (persona.gender === generoPersonaje){
       personajesFiltrados.push(persona)
      }
@@ -30,17 +30,3 @@ export const filterGender = (dataGhibli,generoPersonaje) => {
   })
   return personajesFiltrados;
 }
-
-
-
-
-/*export const filterGender = (dataGhibli,nombreGenero) =>{
-  const generoFiltrado = dataGhibli.filter(function(personaje){
-    return personaje.gender == nombreGenero
-  });
-  return generoFiltrado;
-}
-
-//primero un forEach para mostrar cada pelicula
-//segundo forEach para que pase por cada array de personas de cada pelicula
-//si es del genero deseado que se agregue al nuevo array*/
