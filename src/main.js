@@ -25,6 +25,56 @@ function cardTemplate(img, num, name) {
     return pokemonHTML
 }
 
+
+/*const modal = document.getElementById("myModal");
+const btn = document.getElementById("myBtn");
+const span = document.getElementsByClassName("close")[0];
+ btn.addEventListener("click",()=>{
+    const verMas= (pokemon)=> {
+    const detallepokemonHTML= `
+    <div class= "general">
+      <img src="${pokemon.img}">
+   </div>
+   <div class="cardTipos-title">
+      <p>${pokemon.name}  ${pokemon.num}</p>
+   </div>
+   <div class="tipo">
+     <p> Tipo: ${pokemon.type}.</p>
+     <p> Altura: ${pokemon.size.height} Peso: ${pokemon.size.weight}</p>
+   </div>
+   <div class ="resistencia">
+      <p>Fortalezas: ${pokemon.resistant}</p>
+   </div>
+   <div class = "debilidades">
+      <p> Debilidades: ${pokemon.weaknesses}</p>
+   </div>
+   <div class ="about">
+      <p>Descripción:<br> ${pokemon.about}</p>
+   </div>
+   </div>
+   `
+   return detallepokemonHTML;
+};
+    
+});*/
+
+const btn_scrolltop = document.getElementById("btn_scrolltop")
+btn_scrolltop.addEventListener('click', () => {
+  window.scrollTo(0, 0)
+})
+
+window.onscroll = () => {
+add_btn_scrolltop()
+}
+
+const add_btn_scrolltop = () => {
+if (window.scrollY < 300) {
+  btn_scrolltop.classList.remove("btn-scrolltop-on")
+} else {
+  btn_scrolltop.classList.add("btn-scrolltop-on")
+}
+}
+
 // ---- Buscar por nombre
 const search = document.getElementById("search");
 const prueba = document.getElementById("botonBuscar")
@@ -82,3 +132,4 @@ ordenZA.addEventListener("click" , () => {
        cardInfo.innerHTML += cardTemplate(nombre.img, nombre.num, nombre.name)
     });
 })
+
