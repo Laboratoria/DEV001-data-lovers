@@ -1,4 +1,5 @@
-import { searchFilter } from '../src/data.js';
+
+import { searchFilter, ordenAzPokemon } from '../src/data.js';
 
 
 describe('searchFilter', () => {
@@ -28,5 +29,12 @@ describe('searchFilter', () => {
       }
     ]
     expect(searchFilter(pruebaArray, "venusaur")).toEqual(resultado)
+  });
+});
+
+//test de ordenar A_Z
+describe("ordenAzPokemon", () => {
+  it('is a function', () => {
+    expect(typeof ordenAzPokemon).toBe('function');
   });
 });
