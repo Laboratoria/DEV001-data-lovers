@@ -23,13 +23,13 @@ export const searchFilter =  (pokemon,nombrePokemon)=> {
 
 export const ordenZAPokemon=(array)=>{
 
-  return array.reverse(function (a, b) {
+  return array.sort(function (a, b) {
     
-    if (b.name < a.name) {
-      return -1;
-    }
-    if (b.name > a.name) {
+    if (a.name < b.name) {
       return 1;
+    }
+    if (a.name > b.name) {
+      return -1;
     }
    return 0;
   })
