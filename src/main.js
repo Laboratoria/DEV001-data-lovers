@@ -1,6 +1,6 @@
 
 import data from './data/pokemon/pokemon.js';
-import { searchFilter, ordenAzPokemon } from './data.js';
+import { searchFilter, ordenAZPokemon, ordenZAPokemon } from './data.js';
 
 // ---- Mostrar cartas de cada Poke ----
 const infoPokemon = data.pokemon;
@@ -59,15 +59,26 @@ const add_btn_scrolltop = () => {
 }*/
 
 //Ordenar de A a la Z
-const ordenAz = document.getElementById("A-Z");
+const ordenAZ = document.getElementById("A-Z");
 //const ordenZa = document.getElementById("Z-A");
-ordenAz.addEventListener("click" , () => {
-    const orden1= ordenAz;
-    let ordenada = ordenAzPokemon(infoPokemon,orden1) 
+ordenAZ.addEventListener("click" , () => {
+    const orden1= ordenAZ;
+    let ordenada = ordenAZPokemon(infoPokemon,orden1) 
     //console.log(ordenada);
     cardInfo.innerHTML = " "
    ordenada.forEach((nombre) => {
+       cardInfo.innerHTML += cardTemplate(nombre.img, nombre.num, nombre.name)
+    });
+})
 
+//Ordenar de Z a la A
+const ordenZA = document.getElementById("Z-A");
+ordenZA.addEventListener("click" , () => {
+    const orden2= ordenZA;
+    let desordenada = ordenZAPokemon(infoPokemon,orden2) 
+    //console.log(ordenada);
+    cardInfo.innerHTML = " "
+   desordenada.forEach((nombre) => {
        cardInfo.innerHTML += cardTemplate(nombre.img, nombre.num, nombre.name)
     });
 })
