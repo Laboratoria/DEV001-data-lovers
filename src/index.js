@@ -12,3 +12,14 @@ navToggle.addEventListener("click", ()=>{
     }
     }
 );
+
+let modal = document.getElementById('miModal');
+let cerrar = document.getElementById('close');
+cerrar.addEventListener('click', () => {
+    modal.style.display = "none";
+});
+
+/*let inicio = document.getElementById("inicio")
+    inicio.addEventListener("click", () => {
+      document.getElementById("funciones").style.visibility = "colapse";
+})*/
