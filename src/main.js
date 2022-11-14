@@ -106,7 +106,7 @@ const filterSelect2 = document.getElementById("filter-gender");
 filterSelect2.addEventListener("change", () =>{
 
   
-  showPersonaje (filterGender(objetoghibli, filterSelect2.value));
+  showPersonaje (filterGender(objetoghibli.films, filterSelect2.value));
 });
 
 

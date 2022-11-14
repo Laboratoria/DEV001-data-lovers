@@ -1,4 +1,4 @@
-import { sortPelis , filterDirector } from '../src/data.js';
+import { sortPelis , filterDirector, filterGender } from '../src/data.js';
 
 let sortData = [
 {
@@ -74,7 +74,57 @@ describe("filterDirector", () => {
 });
 
 //test filterGender
-
+let filtradoGender = [
+  {
+    people: [{
+      name: "Lusheeta Toel Ul Laputa",
+      gender: "Female",
+      },
+      {
+      name: "Satsuki Kusakabe",
+      gender: "Female",
+      },
+      {
+     name: "Romska Palo Ul Laputa",
+     gender: "Male",
+     },
+     {
+     name: "Tatsuo Kusakabe",
+     gender: "Male",
+     },
+    ]
+  }];
+let femaleGender = [
+  {
+    name: "Lusheeta Toel Ul Laputa",
+    gender: "Female",
+  },
+  {
+    name: "Satsuki Kusakabe",
+    gender: "Female",
+  },
+];
+let maleGender = [
+  {
+    name: "Romska Palo Ul Laputa",
+    gender: "Male",
+  },
+  {
+    name: "Tatsuo Kusakabe",
+    gender: "Male",
+  },
+];
+describe ("filterGender",()=>{
+  it ("Es una funcion", ()=>{
+    expect (typeof filterGender).toBe("function");
+  });
+  it ("Retorna un array solo con el genero female", () =>{
+    expect(filterGender(filtradoGender, "Female")).toEqual(femaleGender);
+  });
+  it ("Retorna una array solo con el genero male", () =>{
+    expect(filterGender(filtradoGender, "Male")).toEqual(maleGender);
+  })
+});
 
 
 
