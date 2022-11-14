@@ -1,12 +1,136 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Harry Potter</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://kit.fontawesome.com/2fa6b325e3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <h1 class="logo nav-item">Start</h1>
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-menu nav-menu1">
+        <li class="nav-menu-item">
+          <h1 class="nav-item nav-item2">Houses</h1>
+        </li>
+        <li class="nav-menu-item">
+          <h1 class="nav-item nav-item2">Potions</h1>
+        </li>
+        <li class="nav-menu-item">
+          <h1 class="nav-item nav-item2">Curiosities</h1>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!--Bienvenida-->
+  <div class="modal" id="miModal">
+    <div class="flex" id="flex">
+      <div class="aboutHP">
+        <div><span class="close" id="close">&times;</span> <br>
+          <div>
+            <h1 class="hp">Acerca de Harry Potter</h1>
+          </div>
+          <div><img class="iconHP" src="img/logo.png" alt=""></div>
+          <div class="centerText-1">
+            Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se
+            describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger
+            y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería. El argumento se
+            centra en la lucha entre Harry Potter y el malvado mago lord Voldemort, quien asesinó a los padres de Harry
+            en su afán de conquistar el mundo mágico.
+          </div>
+          <div><img class="iconHP" src="img/escudos.png" alt=""><br></div><br>
+          <div class="centerText-2">
+            Conoce acerca de este magico mundo,sus personajes, sus curiosidades, pociones, hechizos y mas ...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Creando botones de acceso-->
+  <div class="botones">
+    <div id="lista" class="lista">
+      <div class="bloque">
+        <h1>Characters</h1><button class="harry boton" type="button" id="peliculas"></button>
+      </div>
+      <div class="bloque">
+        <h1>Books</h1><button class="harry boton" type="button" id="libros"></button>
+      </div>
+      <div class="bloque">
+        <h1>Potions</h1><button class="harry boton" type="button" id="personajes"></button>
+      </div>
+      <div class="bloque">
+        <h1>Spells</h1><button class="harry boton" type="button" id="spells"></button>
+      </div>
+    </div>
+  </div>
+
+  <div id="card" class="card">
+  </div>
+
+  <div class="divGeneralContainer">
+    <div id="spellsContainer" style="display:none">
+      <h1>Filter by type</h1>
+      <select id="filtrarSpells">
+        <option value="Todos" selected>Todos</option>
+        <option value="Charm">Charm</option>
+        <option value="Jinx">Jinx</option>
+        <option value="Transfiguration">Transfiguration</option>
+        <option value="Curse">Curse</option>
+        <option value="Spell">Spell</option>
+        <option value="Hex">Hex</option>
+        <option value="Healing Spell">Healing Spell</option>
+        <option value="Conjuration">Conjuration</option>
+        <option value="Dark Arts">Dark Arts</option>
+        <option value="Dark Charm">Dark Charm</option>
+        <option value="Vanishment">Vanishment</option>
+      </select>
+      <div id="cardSpells" class="cardSpells">
+      </div>
+    </div>
+    <div id="potionsContainer">
+      <select id="filterAZ" style="display: none;">
+        <option disabled selected>Elige el orden</option>
+        <option id="filterAZS" value="aZ" selected>A - Z</option>
+        <option id="filterZA" value="zA">Z - A</option>
+      </select>
+      <div id="cardPotions" class="cardPotions"></div>
+      <div id="cardPotionsAZ" class="cardPotionsAZ"></div>
+      <div id="cardPotionsZA" class="cardPotionsZA"></div>
+    </div>
+    <div id="charactersContainer" style="display: none">
+      <h1>Filter</h1>
+      <select id="filterGender">
+        <option disabled selected>Filtrar Generos</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+      </select>
+      <select id="filterCasas">
+        <option disabled selected>Filtrar Casas</option>
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+        <option value="Hufflepuff">Hufflepuff</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="House of Gaunt">House of Gaunt</option>
+      </select>
+      <div id="cardPersonajes" class="cardPersonajes"></div>
+      <div id="cardPersonajesGenero" class="cardPersonajesGenero"></div>
+      <div id="cardPersonajesHouse" class="cardPersonajesHouse"></div>
+    </div>
+  </div>  
+
+
+  <script type="module" src="./main.js"></script>
+  <script type="module" src="./index.js"></script>
+</body>
+
 </html>

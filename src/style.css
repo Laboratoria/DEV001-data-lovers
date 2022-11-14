@@ -1,0 +1,622 @@
+/*Aplicando estilos globales*/
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.filtrarSpells {
+    display: none;
+}
+
+body {
+    background-image: url(img/HP.png);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    padding: 120px 10px 15px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: end;
+    align-items: flex-end;
+    align-self: flex-end;
+}
+
+
+/*Modificando el header*/
+.header {
+    background-color: #2F5166;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 10px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    /* width: max-content; /sirve para no borrar el texto de mas de 2 palabras*/
+}
+
+.nav-item2 {
+    padding: 0;
+    border-radius: 3px;
+}
+
+.nav-item2:hover {
+    background-color: #5B87A4;
+    transition: 0.5s;
+}
+
+/*modificando el boton Hamburguesa*/
+.nav-toggle {
+    color: white;
+    background-color: #2F5166;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+
+/*Agregando bienvenida*/
+.hp {
+    font-family: 'Lucida Sans';
+    font-weight: bold;
+    font-size: 50px;
+    color: #242f40;
+    text-align: center;
+}
+
+.modal {
+    /* display: none; */
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.452);
+}
+
+.flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutHP {
+    position: relative;
+    /*background-image: url("img/Patronus5.jpg.png");*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: white;
+    margin: auto;
+    width: 30%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.452);
+    animation-name: modal;
+    animation-duration: 2s;
+}
+
+@keyframes modal {
+    from {
+        top: -330px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.close {
+    float: right;
+    font-size: 48px;
+    padding: 5px;
+    margin: 5px;
+    background-color: salmon;
+}
+
+.close:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.iconHP {
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+
+.centerText-1,
+.centerText-2 {
+    margin: 0px auto;
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    color: #283618;
+    text-align: center;
+    width: 50%;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+/*Dando formato a botones*/
+.boton {
+    background-color: rgba(192, 192, 192, 0.3);
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: 250px 300px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    cursor: pointer;
+    height: 250px;
+    width: 250px;
+    margin: 30px;
+    padding: 15px;
+    border-color: rgb(247, 246, 246);
+    border-width: 10px;
+    top: -20px;
+}
+
+#peliculas {
+    background-image: url("https://i.pinimg.com/564x/c2/89/d7/c289d7e9fdc72ad76cfceba98633021f.jpg");
+}
+
+#libros {
+    background-image: url("https://i.pinimg.com/564x/48/ff/27/48ff27d5997431991ec075d673067a97.jpg");
+}
+
+#personajes {
+    background-image: url("https://pm1.narvii.com/6205/4cf70ff6299e4247a2f4e9652671d2007c02a3c1_hq.jpg");
+}
+
+#spells {
+    background-image: url("https://guiauniversitaria.mx/wp-content/uploads/2020/08/%C2%BFPor-qu%C3%A9-los-hechizos-de-Harry-Potter-se-pronuncian-en-lat%C3%ADn_.jpg");
+}
+
+.botones {
+    width: 100vw;
+}
+
+.lista {
+    display: flex;
+    height: 80px;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 80px;
+    margin: 30px;
+
+}
+
+.bloque {
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 90vh;
+
+
+}
+
+.card div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+
+.informacionBook {
+    background-image: url(img/fondo\ \(2\).jpg);
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 400px;
+    height: 800px;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.text-total {
+    padding: 10px 40px 5px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    text-align: center;
+    padding: 0px 0px 10px 0px;
+}
+
+.button {
+    padding: auto;
+}
+
+.orden {
+    background: none;
+    border: none;
+}
+
+
+.cardSpells {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.cardSpells div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+.informacionSpells{
+    background-image: url(img/pergamino.png);
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 400px;
+    height: 800px;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+.cardPotions,
+.cardPotionsAZ,
+.cardPotionsZA {
+    display: flex;
+    /* height: 1vh; */
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.cardPotions div,
+.cardPotionsAZ div,
+.cardPotionsZA div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.informacion3 {
+    background-image: url(img/imagen3.png);
+    background-position: center center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 350px;
+    height: 500px;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cardPotions {
+    display: flex;
+    height: 90vh;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.titulo3 {
+    display: flex;
+    width: 200px;
+    top: -90px;
+}
+
+.titulo3.id {
+    display: flex;
+    justify-content: center;
+
+}
+
+.cardPersonajes {
+    width: 100%;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.cardPersonajes div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+.my-class2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.informacionPersonajes {
+    background-color: #5B87A4;
+    width: 330px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.charactersContainer {
+    width: 100%;
+    position: absolute;
+    margin-top: 150px;
+}
+
+
+.informacionPersonajes:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.informacionPersonajes h1 {
+    font-weight: 600;
+    padding: 0 1rem;
+}
+
+.informacionPersonajes h5 {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.iconHP2 {
+
+    max-width: 1000px;
+    width: 4000px;
+    height: 400px;
+}
+
+
+
+/*Agregando description al button*/
+
+
+.modalBook {
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: white;
+    margin: auto;
+    /* width: 30%;*/
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.452);
+    animation-name: modal;
+    animation-duration: 2s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes modalBook {
+    from {
+        top: -330px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.closeBook {
+    float: right;
+    font-size: 48px;
+    padding: 5px;
+    margin: 5px;
+    background-color: salmon;
+}
+
+.closeBook:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#filterAZ {
+    position: absolute;
+    left: 0;
+    float: left;
+    top: 90px;
+    
+}
+
+.divGeneralContainer {
+    left: 0;
+    float: left;
+    top: 90px;
+}
+
+
+/*Responsive*/
+@media(max-width:800px) {
+    body {
+        background-image: url(img/HP\ responsive.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        background-position-y: bottom;
+        padding: 150px 70px 0px 70px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .aboutHP {
+        width: 90%;
+    }
+
+    .card {
+        flex-wrap: wrap;
+    }
+    .cardPersonajes{
+        flex-wrap: wrap;
+    }
+    .cardPotions,
+    .cardPotionsAZ,
+    .cardPotionsZA
+    {
+        flex-wrap: wrap;
+    }
+    .cardSpells{
+        flex-wrap: wrap;
+    }
+
+    .header {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: #2c3e50;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left: 100%;
+        transition: 0.3s;
+    }
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+
+    .nav-item2:hover {
+        background: none;
+        color: #83c5f7;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu1 {
+        left: 0;
+    }
+
+    .lista {
+
+        flex-direction: column;
+
+
+    }
+}
+
+/*modal books*/
+.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/** Modal */
+.modal-book {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+}
