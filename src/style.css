@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
-
-
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 body {
     background: linear-gradient(180deg, rgba(12, 22, 255, 0) 0%, #553B8B 100%);
     margin: 0%;
@@ -13,14 +12,13 @@ body {
 
 .portada {
     background-image: url(imagenes/Portada.jpg);
-    background-position: absolute; 
+    background-position: absolute;
     width: 100%;
     height: 650px;
     position: relative;
     background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-    
 
 .Bienvenida {
     font-family: 'Silkscreen';
@@ -28,7 +26,6 @@ body {
     font-weight: 400;
     font-size: 40px;
     line-height: 150px;
-    
     text-align: center;
     background: linear-gradient(180deg, #0D2259 0%, rgba(242, 35, 72, 0.47) 100%);
     -webkit-background-clip: text;
@@ -37,6 +34,7 @@ body {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 5%;
 }
+
 .contenedor {
     display: flex;
     flex-direction: row;
@@ -45,6 +43,7 @@ body {
     gap: 30px;
     /* distancia entre los hijos */
 }
+
 .tarjeta {
     display: flex;
     border: linear-gradient(180deg, #0D0012 0%, rgba(0, 235, 164, 0.09) 100%);
@@ -57,20 +56,23 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .numero {
-    display:flex;
+    display: flex;
     align-items: flex-start;
     font-family: 'Silkscreen';
     color: white;
     font-size: 20px;
     justify-content: center;
 }
+
 .imagen {
     width: auto;
     height: auto;
     padding-block: 10px;
     max-height: 150PX;
 }
+
 .nombre {
     font-family: 'Silkscreen';
     color: white;
@@ -78,6 +80,7 @@ body {
     text-align: center;
     margin-top: 0px;
 }
+
 .tipo {
     font-family: 'Silkscreen';
     color: white;
@@ -85,6 +88,7 @@ body {
     text-align: center;
     margin-top: 0px;
 }
+
 .tiposdepoke {
     background-color: rgba(96, 71, 181, 1);
     color: white;
@@ -95,123 +99,113 @@ body {
     width: 160px;
     margin-left: 38px;
 }
+
 .boton1 {
     position: relative;
-  display: inline-block;
+    display: inline-block;
 }
-.dropdown-content{
+
+.dropdown-content {
     display: none;
     position: relative;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
+
 .dropdown-content a {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     font-weight: bold;
 }
-.show {display:block;
+
+.show {
+    display: block;
 }
-.planta{
-    color:rgba(72, 87, 79, 1);
-    background-color:#7FFF8F;
+
+.planta {
+    color: rgba(72, 87, 79, 1);
+    background-color: #7FFF8F;
 }
-.bicho{
-    color:rgba(72, 87, 79, 1);
+
+.bicho {
+    color: rgba(72, 87, 79, 1);
     background-color: rgba(164, 254, 121, 1);
 }
-.electrico{
-    color:rgba(72, 87, 79, 1);
+
+.electrico {
+    color: rgba(72, 87, 79, 1);
     background-color: rgba(224, 227, 46, 1);
 }
-.tierra{
-    color:white;
-    background-color:rgba(223, 198, 110, 1);
+
+.tierra {
+    color: white;
+    background-color: rgba(223, 198, 110, 1);
 }
-.roca{
+
+.roca {
     color: white;
     background: rgba(112, 111, 101, 1);
 }
-.normal{
-    color:rgba(72, 87, 79, 1);
-    background-color:  rgba(202, 210, 201, 1);
+
+.normal {
+    color: rgba(72, 87, 79, 1);
+    background-color: rgba(202, 210, 201, 1);
 }
-.agua{
+
+.agua {
     color: rgba(65, 134, 143, 1);
     background: rgba(159, 241, 231, 1);
 }
-.dragon{
-    color:white;
+
+.dragon {
+    color: white;
     background: rgba(28, 230, 243, 1);
 }
-.hielo{
+
+.hielo {
     color: white;
     background: rgba(76, 87, 184, 1);
 }
-.volador{
+
+.volador {
     color: white;
     background: rgba(0, 50, 228, 1);
 }
-.acero{
+
+.acero {
     color: white;
     background: rgba(80, 135, 186, 1);
 }
-.veneno{
-    color:white;
-    background: rgba(174, 0, 235, 1) ;
+
+.veneno {
+    color: white;
+    background: rgba(174, 0, 235, 1);
 }
-.fantasma{
+
+.fantasma {
     color: white;
     background: rgba(120, 41, 148, 1);
 }
-.hada{
+
+.hada {
     color: white;
-    background: rgba(239, 111, 157, 1) ;
+    background: rgba(239, 111, 157, 1);
 }
-.psiquico{
+
+.psiquico {
     color: white;
     background: rgba(245, 153, 209, 1);
 }
-.fuego{
+
+.fuego {
     color: white;
     background: rgba(242, 0, 0, 1);
 }
-.lucha{
+
+.lucha {
     color: white;
     background: rgba(166, 16, 16, 1);
 }
-
-
-
-
-    
-
-
-
-
-
-
-
-
-    
-    
-
- 
-
-
-  
-    
-
-   
-
-   
-
-   
-
-
-
-    
-
