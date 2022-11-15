@@ -1,28 +1,12 @@
-import { example } from './data.js';
+import { filtroPokeKanto } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  window.onclick = function(event) {
-    if (!event.target.matches('.tiposdepoke')) {
-      
-    }
-  }
 
-let pokeKanto = []
-data.pokemon.forEach(function(pokemon) {
-    if (pokemon.generation.name === "kanto") {
-        pokeKanto.push(pokemon);
-    }
-})
-console.log(pokeKanto)
 const tarjeta = document.getElementById("contenedor");
 
 const mostrartodo = (mostrar) => {
-    mostrar.forEach((hola) => {
+    mostrar.forEach((elementos) => {
         const div = document.createElement("div"); //creamos un div
         div.className = "tarjeta"; //Le agregamos una clase
         const imagen = document.createElement("img"); //creo una variable para las fotos de la data
@@ -33,10 +17,10 @@ const mostrartodo = (mostrar) => {
         imagen.className = "imagen" //otorgamos una clase
         nombre.className = "nombre"
         tipo.className = "tipo"
-        imagen.src = `${hola.img}`
-        nombre.innerHTML = `${hola.name}`
-        numero.innerHTML = `${hola.num}`
-        tipo.innerHTML = `${hola.type}`
+        imagen.src = `${elementos.img}`
+        nombre.innerHTML = `${elementos.name}`
+        numero.innerHTML = `${elementos.num}`
+        tipo.innerHTML = `${elementos.type}`
         div.appendChild(numero)
         div.appendChild(imagen)
         div.appendChild(nombre)
@@ -45,18 +29,24 @@ const mostrartodo = (mostrar) => {
 
     })
 }
-mostrartodo(pokeKanto);
-//const desplegar = document.getElementById("tiposdepoke")
+mostrartodo(filtroPokeKanto(data.pokemon));
+const mySelect = document.getElementById("mySelect");
 
-//function desplegar() {document.getElementById("myDropdown").classList.toggle("show")
-//;}
-//document.getElementById('tiposdepoke').addEventListener('click', ()=>{
-    
-//})
-// primero llamar al boton creado en html por su id tipos de poke
-// que al escuchar click este boton despliegue y muestre los botones que tiene adentro 
-// para cada uno de estos botones hijo hacer el filter, segun el tipo  de pokemon que refiere (fuego, agua, etc)
-// que aparezcan en pantalla las tARJETAS de aquellos pokemones que cumplen con ese tipo.(a pesar que tengas mas de un tipo)
+function myFunction() {
+    const botonDesplegado = mySelect.value;
+    console.log(botonDesplegado);
+}
+mySelect.addEventListener("change", myFunction);
 
+//Crear un filter por tipo (agua, fuego, etc)
+//El filter debe pasar x pokeKanto ya que ahí están los 151 pokemones con los que estamos trabajando
+//POKEKANTO ES EL ARRAY NUEVO CREADO CON FOREACH
+//Según la selección del usuario, creada a través de mySelect donde se despliegan los tipos, 
+//debería mostrarse en pantalla el tipo correspondiente
 
-  
+//Desglose de.filter
+//La primera const en pokeKanto(es el array que queremos recorrer)
+//Crear otra const para el resultado (El tipo de pokemon), a ésta se le agrega el arreglo a recorrer, 
+// que podría ser pokeKanto( ? ) y el que queremos obtener(pokeKanto.filter)
+//Luego viene el recorrido del Array (pokeKanto) y la evaluación de cada uno (value)
+//Éste recorrido busca que coincida con lo que el usuario quiere buscar (según el tipo)

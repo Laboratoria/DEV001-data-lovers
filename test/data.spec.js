@@ -1,23 +1,48 @@
-import { example, anotherExample } from '../src/data.js';
+import { filtroPokeKanto } from '../src/data.js';
 
+const primeraGeneracion = [{
+    "num": "001",
+    "name": "bulbasaur",
+    "generation": {
+        "num": "generation i",
+        "name": "kanto"
+    }
+}, {
+    "num": "178",
+    "name": "xatu",
+    "generation": {
+        "num": "generation ii",
+        "name": "johto"
+    }
+}];
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
+describe('queremos testear el filtro de pokeKanto', () => {
+    it('al recorrer el array esta función filtre los pokemones de Kanto', () => {
+        expect(filtroPokeKanto(primeraGeneracion)).toEqual([{
+            "generation": {
+                "name": "kanto",
+                "num": "generation i",
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
+            },
+            "name": "bulbasaur",
+            "num": "001",
+
+        }]);
+
+    });
+
+    // it('returns `example`', () => {
+    //     expect(example()).toBe('example');
+    // });
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
+// describe('anotherExample', () => {
+//     it('is a function', () => {
+//         expect(typeof anotherExample).toBe('function');
+//     });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+//     it('returns `anotherExample`', () => {
+//         expect(anotherExample()).toBe('OMG');
+// });
+// });
