@@ -15,7 +15,7 @@
 
 En este proyecto lo trabajamos por duplas, y en nuestro caso decidimos usar la data de los Studios Ghibli.
 En el cual ordenamos las peliculas de la A-Z y viceversa usando nuestra función `Sort`, ademas hicimos uso de 
-`Filter`para filtrar primeramente los directores y en el segundo filtro lo usamos para filtrar personajes según 
+`Filter` para filtrar primeramente los directores y en el segundo filtro lo usamos para filtrar personajes según 
 su género.
 
 ## 2. Prototipo de baja fidelidad
