@@ -4,8 +4,8 @@
 
 
 * [1. Resumen del proyecto](#1-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje generales](#3-objetivos-de-aprendizaje-generales)
-* [4. Consideraciones generales](#4-consideraciones-generales)
+* [2. Prototipo de baja fidelidad](#2-prototipo-de-baja-fidelidad)
+* [4. Prototipo de alta fidelidad](#3-prototipo-de-alta-fidelidad)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
 * [6. Hito Opcional](#6-hito-opcional)
 * [7. Consideraciones técnicas](#7-consideraciones-técnicas)
@@ -24,19 +24,14 @@ su género.
 
 ## 2. Prototipo de baja fidelidad
 
+Así es como hicimos nuestro prototipo de baja fidelidad.
+
 ![prototipo de baja fidelidad](https://github.com/MelRV/DEV001-data-lovers/blob/main/Prototipo.png)
 
 
-## 3. Objetivos de aprendizaje generales
+## 3. Prototipo de alta fidelidad
 
-Como continuación del Proyecto 1, volverás a trabajar sobre fundamentos de JavaScript, objetos y arreglos, manipulación básica del DOM, fundamentos de HTML y CSS.
-
-Mientras desarrollas este proyecto, te familiarizarás con estos nuevos conceptos:
-
-- Como trabajar con un juego de data y diseñar una interfaz para visualizar y manipular esta data.
-- Uso de Flexbox en CSS para lograr hacer una página web responsiva. 
-- Arreglos y sus métodos para manipularlos (`filter`, `sort`, `reduce`).
-- Como escribir HTML y manipular el DOM de una manera dinámica desde JavaScript.
+Aquí podrán ver nuestro protoipo de alta fidelidad.
 
 ## 4. Consideraciones generales
 
