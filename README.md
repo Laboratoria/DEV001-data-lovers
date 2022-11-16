@@ -24,7 +24,7 @@ su género.
 
 ## 2. Prototipo de baja fidelidad
 
-![image text] (https://github.com/MelRV/DEV001-data-lovers/blob/main/Prototipo.png)
+![prototipo de baja fidelidad](https://github.com/MelRV/DEV001-data-lovers/blob/main/Prototipo.png)
 
 
 ## 3. Objetivos de aprendizaje generales
