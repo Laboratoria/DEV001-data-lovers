@@ -31,9 +31,13 @@ Así es como hicimos nuestro prototipo de baja fidelidad.
 
 ## 3. Prototipo de alta fidelidad
 
-![prototipo de alta fidelidad](https://github.com/MelRV/DEV001-data-lovers/blob/main/Pantalla%201.png)
-
 Aquí podrán ver nuestro protoipo de alta fidelidad.
+Primera pantalla:
+
+![prototipo primera pantalla](https://github.com/MelRV/DEV001-data-lovers/blob/main/Pantalla%201.png)
+
+Segunda pantalla:
+![prototipo segunda pantalla](https://github.com/MelRV/DEV001-data-lovers/blob/main/Pantalla%202%20(1).png)
 
 ## 4. Consideraciones generales
 
