@@ -5,13 +5,8 @@
 
 * [1. Resumen del proyecto](#1-resumen-del-proyecto)
 * [2. Prototipo de baja fidelidad](#2-prototipo-de-baja-fidelidad)
-* [4. Prototipo de alta fidelidad](#3-prototipo-de-alta-fidelidad)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hito Opcional](#6-hito-opcional)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Objetivos de aprendizaje](#8-objetivos-de-aprendizaje)
-* [9. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [10. Para considerar Project Feedback](#9-para-considerar-project-feedback)
+* [3. Prototipo de alta fidelidad](#3-prototipo-de-alta-fidelidad)
+* [4. Hisotrias de usuario](#4-historias-de-ususario)
 
 ***
 
@@ -39,12 +34,14 @@ Primera pantalla:
 Segunda pantalla:
 ![prototipo segunda pantalla](https://github.com/MelRV/DEV001-data-lovers/blob/main/Pantalla%202%20(1).png)
 
-## 4. Consideraciones generales
+## 4. Historias de usuario
 
-* Este proyecto se debe resolver en duplas.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-* Tiempo para completarlo: Toma como referencia 4 semanas.
+Estas son las historias de usuario que nosotras creamos para poder saber lo que las usuarias querían.
+
+>* UH 1: Yo como usuario quiero ver todas las películas de Ghibli, para identificar las películas que me faltan por ver o conocer.
+>* UH 2:Yo como usuaria quiero poder ordenar de la A-Z para conocer alfabeticamente las películas.
+>* UH 3: Yo como usuaria quiero poder filtrar por director para conocer las peliculas que esos directores hicieron.
+>* UH 4: Yo como usuaria quiero poder filtrar los personajes por género para conocer mejor cada uno y ver sus nombres, edad y especie.
 
 ## 5. Criterios de aceptación mínimos del proyecto
 
