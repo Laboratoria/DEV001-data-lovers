@@ -31,6 +31,8 @@ Así es como hicimos nuestro prototipo de baja fidelidad.
 
 ## 3. Prototipo de alta fidelidad
 
+![prototipo de alta fidelidad](https://github.com/MelRV/DEV001-data-lovers/blob/main/Prototipo.png)
+
 Aquí podrán ver nuestro protoipo de alta fidelidad.
 
 ## 4. Consideraciones generales
