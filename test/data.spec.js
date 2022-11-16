@@ -36,6 +36,9 @@ describe('sortPelis', () => {
   it('Debe retornar las peliculas de Z-A', () => {
     expect(sortPelis(sortData).reverse()).toEqual(sortDataZA);
   })
+  it ("Recorre el array en diferentes casos", () => {
+    expect(sortPelis([{title:"B"} ,{title: "A"}])).toEqual([{title:"A"} ,{title: "B"}]);
+  })
 });
 
 // test para filterDirector 
