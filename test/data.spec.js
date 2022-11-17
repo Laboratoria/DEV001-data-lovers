@@ -50,10 +50,6 @@ describe('Estos personajes pertenecen a un genero', () => {
   });
 })
 
-
-
-
-
 describe('Estos personajes pertenecen a una casa', () => {
   it('is a function', () => {
     expect(typeof filtrarcasas).toBe('function');
@@ -143,7 +139,7 @@ describe('gethechizos', () => {
   });
 });
 //Mostrar todo la data
-describe('getPosiciones', () => {
+describe('getPociones', () => {
   it('Debería ser una funcion', () => {
     expect(typeof getPotions).toBe('function');
   });

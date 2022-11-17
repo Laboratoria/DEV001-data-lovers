@@ -1,8 +1,8 @@
 import { getBooks, getSpells, getPotions, getCharacters, filtrargenero, filtrarcasas, ordenAZ, ordenZA } from './data.js';
 import data from './data/harrypotter/data.js';
 
-/Filtrando libros/
-const newDiv = document.getElementById("card");
+/*Filtrando libros*/
+const newDiv = document.getElementById("cardBook");
 const filtrarLibros = () => {
   getBooks().forEach(book => {
     const newContent = document.createElement("div");
@@ -21,7 +21,6 @@ const filtrarLibros = () => {
     const openmimodal = document.querySelector(`#verMas${book.id}`);
     openmimodal.addEventListener('click', (e) => {
       e.preventDefault();
-      //console.log('pruebas daniscas');
       document.getElementById("miModal").style.display = "block";
       let modalTitleBook = document.querySelector(".hp");
       modalTitleBook.innerText = `${book.title}`;
@@ -34,6 +33,7 @@ const filtrarLibros = () => {
 
   })
 }
+
 //Boton para acceder a los libros 
 const buttonLibros = document.getElementById("libros");
 buttonLibros.addEventListener("click", () => {
@@ -61,8 +61,7 @@ const addSpells = (data) => {
   newDiv.appendChild(newContent);
 }
 
-
-/* BOTON PARA ACCEDER A LA PAGINA */
+/* BOTON PARA ACCEDER A CARD SPELLS */
 const buttonSpells = document.getElementById("spells");
 const selectSpells = document.getElementById("filtrarSpells")
 const spellsContainer = document.getElementById("spellsContainer")
@@ -79,9 +78,9 @@ selectSpells.addEventListener("click", () => {
   const vals = [...selectSpells.options]
     .map(el => el.value);
   const typeSelected = vals[selectSpells.selectedIndex]
-  const typeFiltered = typeSelected !== "Todos" ? getSpells().filter(filtrar => {
+  const typeFiltered = typeSelected !== "Todos" ? getSpells().filter(spell => {
     /*return filtrar.spell_type == typeSelected; */
-    const typesFiltered = filtrar.spell_type === null ? [filtrar.spell_type] : filtrar.spell_type.split(',');
+    const typesFiltered = spell.spell_type === null ? [spell.spell_type] : spell.spell_type.split(',');
     return typesFiltered.includes(typeSelected)
   }) : getSpells()
   addSpells(typeFiltered)
@@ -110,7 +109,6 @@ const addPersonajes = (data) => {
 const selectCasas = document.getElementById("filterCasas")
 selectCasas.addEventListener("change", (e) => {
   let arreglofiltrado2 = filtrarcasas(data.characters, e.target.value)
-  //let containerarjetas2 = document.querySelector('.my-class2');
   let housefiltros = document.querySelector(".cardPersonajes");
   let personajesfiltros = document.querySelector(".cardPersonajesGenero");
   housefiltros.innerHTML = "";
@@ -122,13 +120,13 @@ selectCasas.addEventListener("change", (e) => {
     <h5>${characters.death}</h5>
     <h5>${characters.house}</h5>
     <span>Tipo: ${characters.species}</span><br>
-    <span>Tipo: ${characters.gender}</span><br><br><br></div>`
+    <span>Tipo: ${characters.gender}</span><br><br><br>
+    </div>`
   })
 });
 const selectGenero = document.getElementById("filterGender")
 selectGenero.addEventListener("change", (e) => {
   let arreglofiltrado2 = filtrargenero(data.characters, e.target.value)
-  //let containerarjetas2 = document.querySelector('.my-class2');
   let housefiltros = document.querySelector(".cardPersonajes");
   let personajesfiltros = document.querySelector(".cardPersonajesGenero");
   housefiltros.innerHTML = "";
@@ -180,8 +178,8 @@ const addPotions = (data) => {
   let newContent2 = document.createElement("div");
   newContent2.classList.add("my-class");
   data.forEach(potions => {
-    newContent2.innerHTML += `<div class="informacion3">
-                        <div class="titulo3">
+    newContent2.innerHTML += `<div class="informacionPotions">
+                        <div class="tituloPotions">
                         <h1 >${potions.id}</h1>
                         <h1 >${potions.name}</h1>
                         <span>Descripción: ${potions.description}</span></div></div>`;
@@ -204,8 +202,8 @@ const addPotions = (data) => {
       containerarjetasZA.innerHTML = ' ';
       //console.log('arreglo 11');
       arrayAZ.forEach(potions => {
-        containerarjetasAZ.innerHTML += `<div class="informacion3">
-                            <div class="titulo3">
+        containerarjetasAZ.innerHTML += `<div class="informacionPotions">
+                            <div class="tituloPotions">
                             <h1 >${potions.id}</h1>
                             <h1 >${potions.name}</h1>
                             <span>Descripción: ${potions.description}</span></div></div>`;
@@ -221,8 +219,8 @@ const addPotions = (data) => {
       containerarjetasAZ.innerHTML = ' ';
       //console.log('arreglo 21');
       arrayZA.forEach(potions => {
-        containerarjetasZA.innerHTML += `<div class="informacion3">
-                            <div class="titulo3">
+        containerarjetasZA.innerHTML += `<div class="informacionPotions">
+                            <div class="tituloPotions">
                             <h1 >${potions.id}</h1>
                             <h1 >${potions.name}</h1>
                             <span>Descripción: ${potions.description}</span></div></div>`;
@@ -290,7 +288,6 @@ let nombresdescendentes = document.querySelector(".cardPotions")
         arreglodescendente.forEach(potions => {
           $('.cardPotions').innerHTML("beforeend", (potions));
   })}
-
 else {
   let arregloascendente =potionsarray (data.potions);
   console.log(arregloascendente)

@@ -4,22 +4,20 @@
     box-sizing: border-box;
 }
 
+
 .filtrarSpells {
     display: none;
 }
 
-body {
+main {
     background-image: url(img/HP.png);
     background-size: 100% 100%;
     background-attachment: fixed;
     font-family: sans-serif;
     padding: 120px 10px 15px;
     height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    justify-items: end;
-    align-items: flex-end;
-    align-self: flex-end;
 }
 
 
@@ -31,6 +29,7 @@ body {
     width: 100%;
     top: 0%;
     left: 0%;
+    
 }
 
 .nav {
@@ -118,7 +117,6 @@ body {
 
 .aboutHP {
     position: relative;
-    /*background-image: url("img/Patronus5.jpg.png");*/
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
@@ -129,6 +127,7 @@ body {
     animation-name: modal;
     animation-duration: 2s;
 }
+
 
 @keyframes modal {
     from {
@@ -175,6 +174,14 @@ body {
 }
 
 /*Dando formato a botones*/
+
+.botones{
+    justify-content: center;
+    justify-items: end;
+    align-items: flex-end;
+    align-self: flex-end;
+}
+
 .boton {
     background-color: rgba(192, 192, 192, 0.3);
     background-position-x: 50%;
@@ -231,23 +238,16 @@ body {
     text-align: center;
 }
 
-.card {
+/*----------------------------------------------------------------------------------------------------*/
+
+/*Agregando cardBooks*/
+
+.cardBook {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 90vh;
-
-
 }
-
-.card div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-}
-
 
 .informacionBook {
     background-image: url(img/fondo\ \(2\).jpg);
@@ -262,7 +262,6 @@ body {
     border-radius: 10px;
     align-items: center;
     justify-content: center;
-
 }
 
 .text-total {
@@ -276,33 +275,22 @@ body {
     padding: 0px 0px 10px 0px;
 }
 
-.button {
-    padding: auto;
-}
-
-.orden {
-    background: none;
-    border: none;
-}
-
+/*Agregando cardSpells*/
 
 .cardSpells {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
 .cardSpells div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-
 }
 
-.informacionSpells{
+.informacionSpells {
     background-image: url(img/pergamino.png);
     background-position: center;
     display: flex;
@@ -315,10 +303,9 @@ body {
     border-radius: 10px;
     align-items: center;
     justify-content: center;
-
 }
 
-
+/*Agregando cardPotions*/
 
 .cardPotions,
 .cardPotionsAZ,
@@ -328,7 +315,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .cardPotions div,
@@ -337,11 +323,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
-.informacion3 {
-    background-image: url(img/imagen3.png);
+.informacionPotions {
+    background-image: url(img/fondoPotions.png.png);
     background-position: center center;
     display: flex;
     justify-content: space-between;
@@ -353,7 +338,6 @@ body {
     border-radius: 10px;
     align-items: center;
     justify-content: center;
-
 }
 
 .cardPotions {
@@ -363,33 +347,30 @@ body {
     justify-content: space-between;
 }
 
-.titulo3 {
+.tituloPotions {
     display: flex;
     width: 200px;
     top: -90px;
 }
 
-.titulo3.id {
+.tituloPotions.id {
     display: flex;
     justify-content: center;
-
 }
 
+/*Agregando cardPersonajes*/
+
 .cardPersonajes {
-    width: 100%;
-    height: 430px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto;
+    margin: auto;    
 }
 
 .cardPersonajes div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-
 }
 
 .my-class2 {
@@ -435,17 +416,8 @@ body {
     font-weight: 300;
 }
 
-.iconHP2 {
-
-    max-width: 1000px;
-    width: 4000px;
-    height: 400px;
-}
-
-
 
 /*Agregando description al button*/
-
 
 .modalBook {
     position: relative;
@@ -499,7 +471,8 @@ body {
     
 }
 
-.divGeneralContainer {
+.divContainerPotions,
+.divContainerSpells {
     left: 0;
     float: left;
     top: 90px;
@@ -508,27 +481,37 @@ body {
 
 /*Responsive*/
 @media(max-width:800px) {
-    body {
+    main {
         background-image: url(img/HP\ responsive.png);
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: 100% 100% ;
         background-attachment: fixed;
         background-position-y: bottom;
         padding: 150px 70px 0px 70px;
         display: flex;
         justify-content: center;
-        flex-direction: column;
+        overflow: scroll;
     }
 
     .aboutHP {
         width: 90%;
     }
 
-    .card {
-        flex-wrap: wrap;
+    .botones{
+        justify-content: center;
+        justify-items: end;
+        align-items: flex-end;
+        align-self: flex-start;
+    }
+
+    .cardBook {
+       flex-wrap: wrap;
+       justify-content: center;
+        
     }
     .cardPersonajes{
         flex-wrap: wrap;
+        
     }
     .cardPotions,
     .cardPotionsAZ,
@@ -538,6 +521,8 @@ body {
     }
     .cardSpells{
         flex-wrap: wrap;
+       
+       
     }
 
     .header {
