@@ -97,7 +97,8 @@ body {
     border: none;
     border-radius: 30px;
     width: 160px;
-    margin-left: 38px;
+    margin-left: 120px;
+    margin-bottom: 20px;
 }
 
 .boton1 {
@@ -105,24 +106,20 @@ body {
     display: inline-block;
 }
 
-.dropdown-content {
-    display: none;
+.boton2 {
     position: relative;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    display: inline-block;
 }
 
-.dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-weight: bold;
-}
-
-.show {
-    display: block;
+.orden {
+    background-color: rgba(96, 71, 181, 1);
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    width: 160px;
+    margin-left: 730%;
 }
 
 .planta {

@@ -1,11 +1,13 @@
-import { filtroPokeKanto } from './data.js';
+import { filtroPokeKanto, filtroPorTipo } from './data.js'; //importamos la función filtroxtipo y filtropokekanto
+
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-const tarjeta = document.getElementById("contenedor");
 
-const mostrartodo = (mostrar) => {
+const tarjeta = document.getElementById("contenedor");
+const mostrartodo = (mostrar) => { //Antes de hacer lo que sea hay que limpiar el espacio*****
+    tarjeta.innerHTML = '' //Se limpian los datos justo antes de aplicar filter ESTO APLICARLO EN MAIN
     mostrar.forEach((elementos) => {
         const div = document.createElement("div"); //creamos un div
         div.className = "tarjeta"; //Le agregamos una clase
@@ -17,8 +19,8 @@ const mostrartodo = (mostrar) => {
         imagen.className = "imagen" //otorgamos una clase
         nombre.className = "nombre"
         tipo.className = "tipo"
-        imagen.src = `${elementos.img}`
-        nombre.innerHTML = `${elementos.name}`
+        imagen.src = `${elementos.img}` //Investigar pq le pusimos template strings / mete una variable ${indica que es javascript, lo debe convertir a texto}
+        nombre.innerHTML = `${elementos.name}` //Trae un string del array
         numero.innerHTML = `${elementos.num}`
         tipo.innerHTML = `${elementos.type}`
         div.appendChild(numero)
@@ -33,10 +35,27 @@ mostrartodo(filtroPokeKanto(data.pokemon));
 const mySelect = document.getElementById("mySelect");
 
 function myFunction() {
-    const botonDesplegado = mySelect.value;
-    console.log(botonDesplegado);
+    const tipoSeleccionado = mySelect.value;
+    // console.log(tipoSeleccionado);
+    const tipoElegido = filtroPorTipo(filtroPokeKanto(data.pokemon), tipoSeleccionado); //Trabajamos la función de filtrado dentro del mySelect porque
+    //ahí la vamos a ocupar
+    mostrartodo(tipoElegido); //Función que contiene el filtropokekanto donde está la data de los 151 pokes ()
+
 }
 mySelect.addEventListener("change", myFunction);
+
+// const orden = document.getElementById("orden");
+
+// function ordenPoke() {
+//     const ordenSeleccionado = orden.value;
+//     console.log(ordenSeleccionado);
+//     const ordenElegido = ordenAlfabetico(filtroPokeKanto(data.pokemon), ordenSeleccionado);
+//     mostrartodo(ordenElegido);
+// }
+
+
+// mySelect.addEventListener("change", ordenPoke);
+
 
 //Crear un filter por tipo (agua, fuego, etc)
 //El filter debe pasar x pokeKanto ya que ahí están los 151 pokemones con los que estamos trabajando
@@ -50,3 +69,8 @@ mySelect.addEventListener("change", myFunction);
 // que podría ser pokeKanto( ? ) y el que queremos obtener(pokeKanto.filter)
 //Luego viene el recorrido del Array (pokeKanto) y la evaluación de cada uno (value)
 //Éste recorrido busca que coincida con lo que el usuario quiere buscar (según el tipo)
+
+
+
+//revisar tipos de datos / parámetros y funciones / cómo acceder a array y a objetos******
+//revisar arrays.includes
