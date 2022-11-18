@@ -42,6 +42,7 @@ function myFunction() {
     mostrartodo(tipoElegido); //Función que contiene el filtropokekanto donde está la data de los 151 pokes ()
 
 }
+mySelect.addEventListener("change", myFunction);
 
 // const orden = document.getElementById("orden");
 
@@ -52,7 +53,7 @@ function myFunction() {
 //     mostrartodo(ordenElegido);
 // }
 
-mySelect.addEventListener("change", myFunction);
+
 // mySelect.addEventListener("change", ordenPoke);
 
 
