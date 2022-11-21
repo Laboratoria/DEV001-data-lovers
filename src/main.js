@@ -1,4 +1,4 @@
-import { filtroPokeKanto, filtroPorTipo } from './data.js'; //importamos la función filtroxtipo y filtropokekanto
+import { filtroPokeKanto, filtroPorTipo, ordenAZ } from './data.js'; //importamos la función filtroxtipo y filtropokekanto
 
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
@@ -40,11 +40,40 @@ function myFunction() {
     const tipoElegido = filtroPorTipo(filtroPokeKanto(data.pokemon), tipoSeleccionado); //Trabajamos la función de filtrado dentro del mySelect porque
     //ahí la vamos a ocupar
     mostrartodo(tipoElegido); //Función que contiene el filtropokekanto donde está la data de los 151 pokes ()
-
+    // //************ */ console.log(ordenZA(filtroPokeKanto(data.pokemon)))*************
 }
 mySelect.addEventListener("change", myFunction);
 
-// const orden = document.getElementById("orden");
+const orden = document.getElementById("orden");
+
+function myFunction2() {
+    const ordenSeleccionado = orden.value;
+    // console.log(ordenSeleccionado);
+    const ordenElegido = ordenAZ(filtroPokeKanto(data.pokemon), ordenSeleccionado); //Trabajamos la función de filtrado dentro del mySelect porque
+    //ahí la vamos a ocupar
+    mostrartodo(ordenElegido);
+}
+orden.addEventListener("change", myFunction2);
+
+
+
+
+// const orden2 = document.getElementById("orden");
+
+// function myFunction3() {
+// const ordenSeleccionado = orden2.value;
+// console.log(tipoSeleccionado);
+//const ordenElegido = ordenZA(filtroPokeKanto(data.pokemon), ordenSeleccionado); //Trabajamos la función de filtrado dentro del mySelect porque
+//ahí la vamos a ocupar
+// mostrartodo(ordenElegido);
+// }
+// orden2.addEventListener("change", myFunction3);
+
+
+
+
+
+
 
 // function ordenPoke() {
 //     const ordenSeleccionado = orden.value;

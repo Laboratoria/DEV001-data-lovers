@@ -9,14 +9,28 @@ export function filtroPokeKanto(pokemones) {
 
 }
 
-export function filtroPorTipo(arraypokemon, tipo) { //Creamos una función para exportar/el arraypokemon no tiene valor aún es nuestro parámetro
+export const filtroPorTipo = (arraypokemon, tipo) => { //Creamos una función para exportar/el arraypokemon no tiene valor aún es nuestro parámetro
 
-    return arraypokemon.filter(elemento => elemento.type[0] === tipo);
+    return arraypokemon.filter(elemento => elemento.type.includes(tipo));
 }
-// export function ordenAlfabetico(arrayordenado) {
 
-//     return arrayordenado.sort();
-// }
+//Ordenar de la A a la Z
+export const ordenAZ = (arraypokemon, ordenSeleccionado) => {
+    if (ordenSeleccionado === "AZ") {
+        const ordenByAZ = arraypokemon.sort((a, b) =>
+            a.name.localeCompare(b.name)
+
+        )
+        return ordenByAZ
+    } else if (ordenSeleccionado === "ZA") {
+        const ordenByZA = arraypokemon.sort((a, b) =>
+            b.name.localeCompare(a.name)
+        )
+        return ordenByZA
+    } else { return arraypokemon }
+};
+
+
 
 //Creamos una función filter
 //Etapas filter: constante = parámetro.filter (recorrido x cada elemento del array desde el principio, con .type entramos al tipo
