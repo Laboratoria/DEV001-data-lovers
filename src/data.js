@@ -14,6 +14,23 @@ export const filtroPorTipo = (arraypokemon, tipo) => { //Creamos una función pa
     return arraypokemon.filter(elemento => elemento.type.includes(tipo));
 }
 
+// const pokes = filtroPorTipo
+// export function cantidadMayor(tiposdepoke) {
+// let cantidad = []
+//     tiposdepoke.forEach(function(pokemon) {
+//             if (pokemon.type === 'grass') {
+//                 cantidad +=
+//             }
+//         }
+
+//     )
+
+// }
+// Recorrer el array y sumar la cantidad de tipos repetidos (puede ser con un forEach o con un map)
+// Teniedn el recorrido y la suma, almacenarlo en un nuevo array de objeto (tipo/cantidad)
+// Hacer una función para definir cuál es el mayor (con un sort)
+// Hacer un console.log
+
 //Ordenar de la A a la Z
 export const ordenAZ = (arraypokemon, ordenSeleccionado) => {
     if (ordenSeleccionado === "AZ") {
