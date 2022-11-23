@@ -32,7 +32,6 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 5%;
 }
 
 .contenedor {
@@ -41,6 +40,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+    padding-bottom: 50px;
     /* distancia entre los hijos */
 }
 
@@ -185,11 +185,6 @@ body {
 .fantasma {
     color: white;
     background: rgba(120, 41, 148, 1);
-}
-
-.hada {
-    color: white;
-    background: rgba(239, 111, 157, 1);
 }
 
 .psiquico {

@@ -1,4 +1,4 @@
-import { filtroPokeKanto, filtroPorTipo } from '../src/data.js';
+import { filtroPokeKanto, filtroPorTipo, ordenAZ } from '../src/data.js';
 
 const primeraGeneracion = [{
     "num": "001",
@@ -66,4 +66,65 @@ describe('queremos testear filtro x tipo', () => {
             ]
         }])
     });
+});
+
+const ordenDePokemon = [{
+        "num": "001",
+        "name": "bulbasaur",
+    },
+    {
+        "num": "006",
+        "name": "charizard",
+    },
+    {
+        "num": "063",
+        "name": "abra"
+    }
+];
+
+describe('queremos testear sort, que ordene de AZ/ZA', () => {
+    it('Al recorrer el nuevo array ordene desde la A a la Z', () => {
+        expect(ordenAZ(ordenDePokemon, "AZ")).toEqual(
+
+            [{
+                    "num": "063",
+                    "name": "abra"
+                },
+
+                {
+                    "num": "001",
+                    "name": "bulbasaur"
+                },
+
+                {
+                    "num": "006",
+                    "name": "charizard"
+                }
+            ]
+        )
+    });
+});
+
+it('Al recorrer el nuevo array ordene desde la Z a la A', () => {
+    expect(ordenAZ(ordenDePokemon, "ZA")).toEqual(
+        [{
+                "num": "006",
+                "name": "charizard"
+            },
+
+            {
+                "num": "001",
+                "name": "bulbasaur"
+            },
+
+            {
+                "num": "063",
+                "name": "abra"
+            }
+        ]
+    )
+});
+
+it('El usuario no ingresa nada así que devuelve el array sin modificar', () => {
+    expect(ordenAZ(ordenDePokemon, "")).toEqual(ordenDePokemon)
 });
