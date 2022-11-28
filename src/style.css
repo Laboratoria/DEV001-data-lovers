@@ -98,7 +98,8 @@ body {
     border-radius: 30px;
     width: 160px;
     margin-left: 120px;
-    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-bottom: 30px;
 }
 
 .boton1 {
@@ -111,15 +112,36 @@ body {
     display: inline-block;
 }
 
-.orden {
-    background-color: rgba(96, 71, 181, 1);
+.buscador {
     color: white;
     padding: 15px;
     font-size: 16px;
     border: none;
     border-radius: 30px;
     width: 160px;
-    margin-left: 730%;
+    display: inline-block;
+    position: relative;
+}
+
+#search {
+    border-radius: 30px;
+    height: 50px;
+    width: 160px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    border-color: #553B8B;
+}
+
+.orden {
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    width: 160px;
+    background-color: rgba(96, 71, 181, 1);
+    margin-right: 40px;
 }
 
 .planta {

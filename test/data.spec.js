@@ -1,4 +1,4 @@
-import { filtroPokeKanto, filtroPorTipo, ordenAZ } from '../src/data.js';
+import { filtroPokeKanto, filtroPorTipo, ordenAZ, searchFilter } from '../src/data.js';
 
 const primeraGeneracion = [{
     "num": "001",
@@ -127,4 +127,29 @@ it('Al recorrer el nuevo array ordene desde la Z a la A', () => {
 
 it('El usuario no ingresa nada así que devuelve el array sin modificar', () => {
     expect(ordenAZ(ordenDePokemon, "")).toEqual(ordenDePokemon)
+});
+
+const busquedaPokemon = [{
+        "name": "charizard"
+    },
+
+    {
+        "name": "wartortle"
+    },
+
+    {
+        "name": "pikachu"
+    }
+];
+
+
+describe('queremos testear la función searchFilter', () => {
+    it('dependiendo del nombre que ingrese el usuario, la función trae el pokemon que contenga el input', () => {
+        expect(searchFilter(busquedaPokemon, "pikachu")).toEqual(
+
+            [{
+                "name": "pikachu"
+            }]
+        )
+    });
 });
