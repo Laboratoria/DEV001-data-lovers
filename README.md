@@ -2,7 +2,7 @@
 
 ## Índice
 
-* [1. Data Lovers-Pokemon](#1-Readme proceso)
+* [1. Data Lovers-Pokemon]
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Objetivos de aprendizaje generales](#3-objetivos-de-aprendizaje-generales)
 * [4. Consideraciones generales](#4-consideraciones-generales)
@@ -51,6 +51,16 @@ Figma, donde logramos conocer las diversas ventajas de trabajar con esta página
 [![Whats-App-Image-2022-11-29-at-1-39-51-PM.jpg](https://i.postimg.cc/k4dj8XV1/Whats-App-Image-2022-11-29-at-1-39-51-PM.jpg)](https://postimg.cc/67YLxKfn)
 
  link: https://www.figma.com/file/FZ8pyEUhHMAMDxzR9lRc6Y/Prototipo-Datalovers%2FPokemon?node-id=20%3A147&t=4Zm9uENqEClGmN96-1
+ 
+ ## Listado de errores de usabilidad encontrados
+- Cuando entro los pokemon estan ordenados por numero, después las opciones de orden me da a-z y z-a pero no puedo volver al original por número.
+
+- Cuando selecciono algún tipo, por ejemplo planta, y pongo ordenar se vuelven a poner todos los pokemon. No se ordenan solo los tipo planta.
+
+- Pasa lo mismo con buscar, busca dentro de todos, no solo el tipo que está seleccionado.
+
+- Si vuelvo el dropdown a "Por tipo" desaparecen todos los pokemon.
+
 
 ## 2. Resumen del proyecto
 
@@ -110,7 +120,6 @@ Estos son datos que te proponemos:
 El objetivo principal de este proyecto es que aprendas a diseñar y construir una
 interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
 usuario necesita.
-
 
 ## 3. Objetivos de aprendizaje generales
 
