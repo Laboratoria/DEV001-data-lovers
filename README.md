@@ -36,16 +36,17 @@ Historia 4:  Yo como jugador de Pokémon, me gustaría poder buscar los pokemone
 
 De estas historias de usuario, nacen los prototipos para comprender y establecer una estructura:
 
-Prototipo de baja fidelidad :para entender jerarquías y visualizaciones básicas a través de un dibujo simple .
-foto!!!!
+## Prototipo de baja fidelidad 
+para entender jerarquías y visualizaciones básicas a través de un dibujo simple .
+[![Whats-App-Image-2022-11-28-at-1-48-22-PM.jpg](https://i.postimg.cc/Xq8k9jfW/Whats-App-Image-2022-11-28-at-1-48-22-PM.jpg)](https://postimg.cc/bSZnhjVV)
 
-
-Prototipo de  alta fidelidad:  aquí pudimos establecer nuestra meta en base a nuestras aspiraciones tanto en lo visual como en lo funcional. Este prototipo fue hecho a través de
+## Prototipo de  alta fidelidad  
+Aquí pudimos establecer nuestra meta en base a nuestras aspiraciones tanto en lo visual como en lo funcional. Este prototipo fue hecho a través de
 Figma, donde logramos conocer las diversas ventajas de trabajar con esta página y el método Agile.
+[![Whats-App-Image-2022-11-29-at-1-40-58-PM.jpg](https://i.postimg.cc/RFQgT5KM/Whats-App-Image-2022-11-29-at-1-40-58-PM.jpg)](https://postimg.cc/9R0PWkLS)
+[![Whats-App-Image-2022-11-29-at-1-39-51-PM.jpg](https://i.postimg.cc/k4dj8XV1/Whats-App-Image-2022-11-29-at-1-39-51-PM.jpg)](https://postimg.cc/67YLxKfn)
 
-foto!!!!
- link: 
-
+ link: https://www.figma.com/file/FZ8pyEUhHMAMDxzR9lRc6Y/Prototipo-Datalovers%2FPokemon?node-id=20%3A147&t=4Zm9uENqEClGmN96-1
 
 ## 2. Resumen del proyecto
 
