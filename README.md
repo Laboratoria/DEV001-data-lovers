@@ -2,7 +2,7 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
+* [1. Data Lovers-Pokemon](#1-Readme proceso)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Objetivos de aprendizaje generales](#3-objetivos-de-aprendizaje-generales)
 * [4. Consideraciones generales](#4-consideraciones-generales)
@@ -15,23 +15,37 @@
 
 ***
 
-## 1. Preámbulo
+## 1. Data Lovers - Pokemon
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+Bienvenidxs a la Pokedex de Kanto !
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+Pokemon es una serie que sigue las aventuras de un impetuoso y joven entrenador llamado Ash Ketchum, y de Pikachu, su compañero Pokémon, mientras viajan por el mundo Pokémon visitando destinos exóticos, conociendo a montones de personas y Pokémon nuevos e interesantes, y viviendo muchas y emocionantes aventuras.
+La primera Gran aventura comienza en la isla de Kanto, la cual tomamos como inspiración para nuestro proyecto.
+Para los fanáticos nostálgicos de esta serie y también para los nuevos aficionados a la serie y jugadores de pokémon go, hemos creado esta página que engloba la primera generación y todos los pokemones de la primera pokedex (Kanto).
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario
-al lado derecho.
 
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+Nuestro proyecto de página web es capaz de filtrar, ordenar y buscar la data requerida, de acuerdo a las necesidades de nuestros usuarios, recopiladas en de 4 historias de usuario, descritas a continuación:
+
+Historia 1: Yo como aficionado a Pokémon desde sus inicios,quiero entrar a una página donde pueda visualizar los pokemones de la primera generación, para reconocer todos los pokemones de la primera pokedex, que es la de"kanto".
+
+Historia 2:  Yo como fanático de Pokémon, quiero poder seleccionar los tipos de pokemones que hay en la pokedex de kanto, para filtrarlo y visualizarlos por su o sus tipos.
+
+Historia 3: Yo siendo seguidor y aficionado a Pokémon primera generación, quisiera ordenar por nombre de la A a la Z y de la Z a la A, para buscarlos más fácilmente.
+
+Historia 4:  Yo como jugador de Pokémon, me gustaría poder buscar los pokemones por su nombre, y así facilitar encontrar el que necesito conocer.
+
+De estas historias de usuario, nacen los prototipos para comprender y establecer una estructura:
+
+Prototipo de baja fidelidad :para entender jerarquías y visualizaciones básicas a través de un dibujo simple .
+foto!!!!
+
+
+Prototipo de  alta fidelidad:  aquí pudimos establecer nuestra meta en base a nuestras aspiraciones tanto en lo visual como en lo funcional. Este prototipo fue hecho a través de
+Figma, donde logramos conocer las diversas ventajas de trabajar con esta página y el método Agile.
+
+foto!!!!
+ link: 
+
 
 ## 2. Resumen del proyecto
 
