@@ -1,0 +1,293 @@
+.texto_estadistica h2{
+    font-family: 'PT Serif', serif;
+    text-align: center;
+    font-size: 50px;
+    font-weight:700;
+    color: var(--rosa_claro_color);
+    -webkit-text-stroke: 1px rgba(157, 0, 41, 0.8);
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.texto_estadistica{
+    width: 100%;
+    overflow: hidden;
+}
+.textos_p_estadistica{
+    width: 80%;
+    margin-bottom:15px;
+    overflow: hidden;
+    margin:auto;
+}
+.estadistica{
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 50px;
+    overflow: hidden;
+   
+    
+}
+
+
+.cont_imagenes{
+    width: 80%;
+    height: 10%;
+    display:flex;
+   
+   
+    justify-content: flex-start;
+    align-items:flex-start;
+   
+}
+
+.directores img{
+   width: 60px;
+   height:60px;
+   border-radius: 50%;
+ 
+   
+}
+
+.directores{
+    width: 140px;
+    height: 100%;
+    
+    margin-left: 25px;
+}
+
+.linea{
+    width: 10%;
+    height: 100%;
+    border-left: 5px inset var(--cremita_color);
+}
+.linea::after{
+    font-size:15px;
+    font-weight:bold;
+    content:'100%';
+    position:absolute;
+    margin-right:20px;
+    
+}
+
+.linea::before{
+    font-size:15px;
+    font-weight:bold;
+    content:'0%';
+    position:absolute;
+    margin-top: 455px;
+}
+
+.barra {
+    width: 65px;
+    height:var(--bar-value);
+    margin-left:50px;
+    background-color:var(--rosa_fuerte_color);
+    border-radius:3px 3px 0 0;
+    
+}
+.name_direc{
+    text-align:center;
+    width: 80%;
+    height: 10%;
+    font-size: 15px;
+    display: flex;
+}
+.cont_estadistica{
+    width: 90%;
+    height: 100%;
+    border-bottom: 3px inset var(--cremita_color);
+    display: flex;
+    align-items:flex-end;
+    align-content:flex-end;
+   
+    
+}
+.directores_name{
+  
+    font-size: 15px;
+    margin-left: 20px;
+
+}
+
+
+.contenedor_etadistica{
+    width: 100%;
+    height: 80%;
+  
+}
+
+
+/*RESPONSIVE*/
+
+@media (max-width: 1100px){
+    .barra {
+        margin-left: 40px;
+        
+    }
+    .directores_name{
+        margin-left: 8px;    
+    }
+}
+@media (max-width: 1024px){
+   
+ .barra {
+    margin-left: 35px;
+}
+.directores_name{
+    margin-left: 15px;    
+}
+    
+}
+
+
+@media (max-width: 900px){
+    
+    .directores_name{
+        font-size: 12px;
+        margin-left: 10px;
+        text-align: line;
+    }
+    .barra{
+        width: 60px;
+        margin-left: 25px;
+    }
+    
+    .directores{
+        width: 100%;
+        margin-left:5px;
+    }
+    .textos_p_estadistica{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px){
+    .directores_name{
+        
+        margin-left: 12px;
+    }
+    .barra{
+        width: 60px;
+        margin-left: 15px;
+    }
+    .directores img{
+        width: 45px;
+        height: 45px;
+    }
+    .linea::before{
+        font-size: 10px;
+    }
+    .linea::after{
+        font-size: 10px;
+    }
+}
+@media (max-width: 684px){
+    .estadistica{
+        width: 100%;
+        height: 500px;
+    }
+    .linea::after{
+        font-size: 10px;
+    }
+    .linea::before{
+        font-size: 10px;
+        margin-top:380px;
+    }
+    
+}
+@media (max-width: 684px){
+    .barra{
+        width: 60px;
+        margin-left: 22px;
+    }
+}
+@media (max-width: 667px){
+    .barra{
+        width: 60px;
+        margin-left: 20px;
+    }
+    .directores_name{
+        font-size: 10px;
+        margin-left: 5px;
+    }
+}
+
+
+
+@media (max-width: 500px){
+    .directores_name{
+        font-size: 10px;
+        margin-left: 0px;
+    }
+    
+}
+
+@media (max-width: 414px){
+    .estadistica{
+        width: 100%;
+        height: 350px;
+        padding:0;
+    }
+    .cont_imagenes{
+        width: 100%;
+    }
+    .barra{
+        width: 40px;
+        margin-left: 16px;
+    }
+    .directores img{
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+    }
+    .name_direc{
+        width: 100%;
+        margin-left: 30px;
+    }
+    .linea{
+        width: 5%;
+    }
+    
+    .directores_name{
+        width: 50px;
+        font-size: 8px;
+        margin-left: 8px;
+        text-align: line;
+    }
+    .directores{
+        width: 40px;
+        margin-left: 50px;
+    }
+
+    .linea::before{
+        font-size: 10px;
+        margin-top:260px;
+    }
+    .textos_p_estadistica{
+        font-size: 10px;
+    }
+    .texto_estadistica h2{
+      font-size: 30px;
+    }
+}
+
+@media (max-width: 375px){
+    .directores_name{
+        width: 45px;
+        font-size: 8px;
+        margin-left: 8px;
+        text-align: center;
+    }
+    .directores img{
+       
+        margin-left: 0px;
+    }
+    .directores{
+        width: 35px;
+        margin-left: 15px;
+    }
+
+}

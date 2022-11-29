@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+:root{
+    --verde_color: #445f34;
+    --rosa_color:#b64e69;
+    --rosa_fuerte_color:#9d002b;
+    --rosa_claro_color:#dc8eb5;
+    --verde_claro_color:#a19d7a;
+    --cremita_color:#b0978c;
+    --marron_color:#3c2f29;
+    --modal_fondo: white;
+    --sombra : 0px 0px 10px 0px rgba(0,0,0,0.5);
+    --menu_degradado: linear-gradient(to right, rgba(176, 151, 140), rgba(181, 79, 106, 0.9));
+    --modal_degradado: linear-gradient(120deg, rgba(161, 157, 122)0%, rgba(68, 95, 52, 0.8))100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+body::-webkit-scrollbar{
+    display: none;
+    
+} 
+
+body{
+   width: 100%;
+}
+.contenedor{
+    width: 90%; 
+    max-width:1200px ;
+    overflow: hidden;
+    margin:  auto;
+    padding: 30px 0;
+}
+
+
+
+
+@media (max-width: 600px){
+    .contenedor{
+         padding-top: 40px;
+     }
+ }
+ 
