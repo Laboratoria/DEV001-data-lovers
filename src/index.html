@@ -1,12 +1,140 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- este comando para que mi código aplique a mobile -->
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="header">
+      <img src="fotosHP/fotocuatro.jpeg" alt="fotoprincipal" class="cabecera">
+    </div>
+
+    <!-- con este data target logramnos cargar la pagweb con 4 pestañas y 1 solo html, 
+      con este data-target estamos guardando toda la informacion de home,books, character -->
+    <div class="menu">
+      <p data-target="#inicio">Home</p>
+      <p data-target="#books">Books</p>
+      <p data-target="#characters">Characters</p>
+
+      <!--<p data-target="#statistics">Statistics</p>-->
+
+    </div>
+  </header>
+
+  <main>
+    <div class="main">
+      <div class="maininterno">
+        <!-- con este data content logramos vincular los menu junto al data target  -->
+        <div data-content id="inicio" class="active">
+          <div class="inicio">
+            <!-- <section class="barajas"></section> -->
+            <article class="presentacion">
+              <h1>The fantastic world of Harry Potter</h1><br>
+              <p class="texto">
+                "Harry Potter" is a series of fantasy novels, written by the British author J. K. Rowling, which describes the adventures
+                of the young wizard, Harry Potter and his friends: Hermione Granger and Ron Weasley, during the years they
+                spend in the College of Witchcraft and Wizardry,<br>
+                <h2>HOGWARTS.</h2><br>
+              </p><br>
+              <p class="texto">
+                The plot focuses mainly on the fight between Harry Potter and the evil wizard Lord Voldemort, who murdered Harry's
+                parents in his quest to conquer the wizarding world.
+              </p><br>
+            </article>
+          </div>
+          <video autoplay loop muted>
+            <source src="videos/intro.mp4">
+          </video>
+
+        </div>
+
+
+        <!-- con este data content logramos vincular los menu -->
+        <div data-content id="books" class="foto2">
+          <div class="barajas">
+          </div>
+        </div>
+
+        <div data-content id="characters" class="persona">
+
+          <div class="barra">
+            <div class="barraSort">
+              <span>Sort</span>
+              <select name="" id="selectordenar">
+                <option value="All">Select</option>
+                <option value="az">De A a Z</option>
+                <option value="za">De Z a A</option>
+              </select>
+            </div>
+
+            <div class="barraHouse">
+              <span> House </span>
+              <select name="" id="selectfiltrar">
+                  <option value="All">Select</option>
+                  <option value="Gryffindor">Gryffindor</option>
+                  <option value="Slytherin">Slytherin</option>
+                  <option value="Hufflepuff">Hufflepuff</option>
+                  <option value="Ravenclaw">Ravenclaw</option>
+              </select>
+            </div>
+
+            <div class="barraGender">
+              <span> Gender </span>
+              <select name="" id="selectgender">
+                <option value="All">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+
+            <button  class= "reset" onClick="window.location.reload()">Reload Page</button>
+
+
+          </div>
+
+          <div class="personajes">
+
+          </div>
+
+        </div>
+
+
+ <!--<div data-content id="statistics" class="estadisticas">
+          <canvas id="myChart" width="200" height="200"></canvas> 
+
+        </div>-->
+
+
+        
+        </div>
+      </div>
+
+      <div class="fotofondo">
+        <img src="fotosHP/harry3.jpeg" alt="fotofondo" class="cuerpo">
+      </div>
+
+
+
+  </main>
+  <footer>
+    <section class="footer">
+      By Adriana y Lorena
+    </section>
+  </footer>
+
+  <script src="main.js" type="module"></script>
+  <!--este link se utiliza para vincular nuestro gráfico chart.js-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"
+  integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+
+</body>
+
 </html>
