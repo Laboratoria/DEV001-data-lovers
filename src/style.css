@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(180deg, rgba(12, 22, 255, 0) 0%, #553B8B 100%);
+    margin: 0%;
+    width: 100%;
+}
+
+.portada {
+    background-image: url(imagenes/Portada.jpg);
+    background-position: absolute;
+    width: 100%;
+    height: 650px;
+    position: relative;
+    background-size: cover;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.Bienvenida {
+    font-family: 'Silkscreen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 150px;
+    text-align: center;
+    background: linear-gradient(180deg, #0D2259 0%, rgba(242, 35, 72, 0.47) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 50px;
+    /* distancia entre los hijos */
+}
+
+.tarjeta {
+    display: flex;
+    border: linear-gradient(180deg, #0D0012 0%, rgba(0, 235, 164, 0.09) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    flex-direction: column;
+    background: linear-gradient(180deg, #0D0012 0%, rgba(29, 177, 248) 100%);
+    width: 230px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.numero {
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Silkscreen';
+    color: white;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.imagen {
+    width: auto;
+    height: auto;
+    padding-block: 10px;
+    max-height: 150PX;
+}
+
+.nombre {
+    font-family: 'Silkscreen';
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.tipo {
+    font-family: 'Silkscreen';
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.tiposdepoke {
+    background-color: rgba(96, 71, 181, 1);
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    width: 160px;
+    margin-left: 120px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+.boton1 {
+    position: relative;
+    display: inline-block;
+}
+
+.boton2 {
+    position: relative;
+    display: inline-block;
+}
+
+.buscador {
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    width: 160px;
+    display: inline-block;
+    position: relative;
+}
+
+#search {
+    border-radius: 30px;
+    height: 50px;
+    width: 160px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    border-color: #553B8B;
+}
+
+.orden {
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    width: 160px;
+    background-color: rgba(96, 71, 181, 1);
+    margin-right: 40px;
+}
+
+.planta {
+    color: rgba(72, 87, 79, 1);
+    background-color: #7FFF8F;
+}
+
+.bicho {
+    color: rgba(72, 87, 79, 1);
+    background-color: rgba(164, 254, 121, 1);
+}
+
+.electrico {
+    color: rgba(72, 87, 79, 1);
+    background-color: rgba(224, 227, 46, 1);
+}
+
+.tierra {
+    color: white;
+    background-color: rgba(223, 198, 110, 1);
+}
+
+.roca {
+    color: white;
+    background: rgba(112, 111, 101, 1);
+}
+
+.normal {
+    color: rgba(72, 87, 79, 1);
+    background-color: rgba(202, 210, 201, 1);
+}
+
+.agua {
+    color: rgba(65, 134, 143, 1);
+    background: rgba(159, 241, 231, 1);
+}
+
+.dragon {
+    color: white;
+    background: rgba(28, 230, 243, 1);
+}
+
+.hielo {
+    color: white;
+    background: rgba(76, 87, 184, 1);
+}
+
+.volador {
+    color: white;
+    background: rgba(0, 50, 228, 1);
+}
+
+.acero {
+    color: white;
+    background: rgba(80, 135, 186, 1);
+}
+
+.veneno {
+    color: white;
+    background: rgba(174, 0, 235, 1);
+}
+
+.fantasma {
+    color: white;
+    background: rgba(120, 41, 148, 1);
+}
+
+.psiquico {
+    color: white;
+    background: rgba(245, 153, 209, 1);
+}
+
+.fuego {
+    color: white;
+    background: rgba(242, 0, 0, 1);
+}
+
+.lucha {
+    color: white;
+    background: rgba(166, 16, 16, 1);
+}

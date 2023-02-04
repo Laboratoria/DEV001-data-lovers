@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+
+<head>
+    <meta name="google" content="notranslate" />
+    <meta charset="utf-8" />
+    <!-- Con esto hacemos que sea también para pantalla de celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
+</head>
+
+<body>
+
+    <main>
+
+        <section class="portada">
+        </section>
+        <section>
+            <section class="Bienvenida">
+                <header>Bienvenidx a la Pokedex de Kanto</header>
+            </section>
+
+            <div class="boton1">
+                <select id="mySelect" class="tiposdepoke">
+                    <option value="" class="portipo" selected>Por tipo</option>
+                    <option value="grass" class="planta">planta</option>
+                    <option value="bug" class="bicho">bicho</option>
+                    <option value="electric" class="electrico">electrico</option>
+                    <option value="ground" class="tierra">tierra</option>
+                    <option value="rock" class="roca">roca</option>
+                    <option value="normal" class="normal">normal</option>
+                    <option value="water" class="agua">agua</option>
+                    <option value="dragon" class="dragon">dragon</option>
+                    <option value="ice" class="hielo">hielo</option>
+                    <option value="flying" class="volador">volador</option>
+                    <option value="steel" class="acero">acero</option>
+                    <option value="poison" class="veneno">veneno</option>
+                    <option value="ghost" class="fantasma">fantasma</option>
+                    <option value="psychic" class="psiquico">psiquico</option>
+                    <option value="fire" class="fuego">fuego</option>
+                    <option value="fighting" class="lucha">lucha</option>
+                </select>
+            </div>
+
+            <div class="boton2">
+                <select id="orden" class="orden">
+                    <option value="" class="ordenar" selected>Ordenar</option>
+                    <option id="AZ" value="AZ" class="AZ">A-Z</option>
+                    <option id="orden2" value="ZA" class="ZA">Z-A</option>
+                </select>
+            </div>
+
+            <div class="buscador">
+                <label for="search">
+                    <input type="search" id="search" placeholder="Buscar por nombre" autocomplete="off" spellcheck="false"/>
+                </label>
+            </div>
+
+            <section class="contenedor" id="contenedor">
+            </section>
+
+        </section>
+
+        <!-- <div id="root"></div> -->
+
+    </main>
+
     <script src="main.js" type="module"></script>
-  </body>
+</body>
+
 </html>
