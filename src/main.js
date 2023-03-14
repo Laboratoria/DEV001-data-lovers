@@ -1,6 +1,4 @@
 import ghibli from "./data/ghibli/ghibli.js";
-//import data from "./data/ghibli/data.json" assert {type: 'json'};
-//console.log(data)
 import {mostrarPeliculaIndividual, filtrarDirectores, ordenarYears, ordenarScore, estadisticaData } from './data.js';
 //Variables globales
 const pelicula = document.getElementById("peliculas");
@@ -11,22 +9,19 @@ const pagina = document.getElementById("muestra");
 const personajes = document.getElementById("personajes");
 const fecha = document.getElementById("fecha");
 const popular = document.getElementById("popular");
-const header = document.getElementById("header_inicio")
+const header = document.getElementById("header_inicio");
+
 //cargar pagina
 window.onload = () => {
   mostrarEnPantalla(datosTodasPeliculas());
   estadisticasData();
-  
+ 
 };
 //array con todas las peliculas
 function datosTodasPeliculas() {
   const films = ghibli.films
   return films
 }
-
-// fetch('./data/ghibli/data.json')
-//   .then(response => response.json())
-//   .then(data => peliculas(data));
 
 //seccion directores
 const directores = document.querySelectorAll(".menu_director");
@@ -38,11 +33,13 @@ directores.forEach((director => {
     mostrarEnPantalla(dataDirec);
   });
 }));
+
 //seccion home
 home.addEventListener("click", () => {
   pelicula.innerHTML = ""
   mostrarEnPantalla(datosTodasPeliculas());
 });
+
 //renderizar peluculas
 function mostrarEnPantalla(array) {
 const peliculas = array.map(function (array) {
@@ -66,15 +63,18 @@ pelicula.innerHTML += peliculas.join('')
 }
 //este es el modal con los detalles de las peliculas al dar click
 pelicula.addEventListener('mouseup', (e) => {
-  const abrir = e.path[0].className
+   //console.log(e.target.className)
+const abrir = e.target.className
   if (abrir === "select") {
-    modal.style.display = "block";
-    header.style.display = "none"
-  }
+     modal.style.display = "block";
+     header.style.display = "none"
+   }
 });
-//modal peliculas
-pelicula.addEventListener('mouseup', (e) => {
-const idCard = e.path[0].id
+// //modal peliculas
+ pelicula.addEventListener('mouseup', (e) => {
+  //console.log(e.target.id)
+const idCard = e.target.id;
+
 const id = mostrarPeliculaIndividual(idCard, datosTodasPeliculas());
 const idModal = id.map(function (element) {
    return`
@@ -115,7 +115,7 @@ const personajesPeople = id.map(function (persona) {
 });
 personajes.innerHTML = "";
 personajes.innerHTML += personajesPeople
-});
+ });
 //cerrar modal
 cerrar.addEventListener("click", function () {
   modal.style.display = "none";
