@@ -21,10 +21,22 @@
     "htmlhint": "^1.0.0",
     "jest": "^27.0.1",
     "opener": "^1.5.1",
-    "serve": "^13.0.2"
+    "serve": "^6.5.8"
   },
   "engines": {
     "node": ">=16.x"
-  }
+  },
+  "description": "* [1. Preámbulo](#1-preámbulo)\r * [2. Resumen del proyecto](#2-resumen-del-proyecto)\r * [3. Objetivos de aprendizaje generales](#3-objetivos-de-aprendizaje-generales)\r * [4. Consideraciones generales](#4-consideraciones-generales)\r * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)\r * [6. Hito Opcional](#6-hito-opcional)\r * [7. Consideraciones técnicas](#7-consideraciones-técnicas)\r * [8. Objetivos de aprendizaje](#8-objetivos-de-aprendizaje)\r * [9. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)\r * [10. Para considerar Project Feedback](#9-para-considerar-project-feedback)",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngieMacotela/DEV001-data-lovers.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/AngieMacotela/DEV001-data-lovers/issues"
+  },
+  "homepage": "https://github.com/AngieMacotela/DEV001-data-lovers#readme"
 }
-
